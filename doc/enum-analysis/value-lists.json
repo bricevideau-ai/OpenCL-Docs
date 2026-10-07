@@ -1,0 +1,1868 @@
+{
+ "CL_QUEUE_ON_DEVICE": [
+  {
+   "file": "api/opencl_runtime_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported queue creation properties by {clCreateCommandQueueWithProperties}",
+   "row": "{CL_QUEUE_PROPERTIES_anchor} include::{generated}/api/version-notes/CL_QUEUE_PROPERTIES.asciidoc[] | {cl_command_queue_properties_TYPE} | This is a bitfield and can be set to a combination of the foll",
+   "types": [
+    "cl_command_queue_properties"
+   ],
+   "functions": [
+    "clCreateCommandQueueWithProperties"
+   ],
+   "heading": [
+    "The OpenCL Runtime",
+    "Command-Queues"
+   ]
+  }
+ ],
+ "CL_QUEUE_ON_DEVICE_DEFAULT": [
+  {
+   "file": "api/opencl_runtime_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported queue creation properties by {clCreateCommandQueueWithProperties}",
+   "row": "{CL_QUEUE_PROPERTIES_anchor} include::{generated}/api/version-notes/CL_QUEUE_PROPERTIES.asciidoc[] | {cl_command_queue_properties_TYPE} | This is a bitfield and can be set to a combination of the foll",
+   "types": [
+    "cl_command_queue_properties"
+   ],
+   "functions": [
+    "clCreateCommandQueueWithProperties"
+   ],
+   "heading": [
+    "The OpenCL Runtime",
+    "Command-Queues"
+   ]
+  }
+ ],
+ "CL_QUEUE_OUT_OF_ORDER_EXEC_MODE_ENABLE": [
+  {
+   "file": "api/opencl_platform_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported param_names by {clGetDeviceInfo}",
+   "row": "{CL_DEVICE_QUEUE_ON_HOST_PROPERTIES_anchor} include::{generated}/api/version-notes/CL_DEVICE_QUEUE_ON_HOST_PROPERTIES.asciidoc[] | {cl_command_queue_properties_TYPE} | Describes the on host command-qu",
+   "types": [
+    "cl_command_queue_properties"
+   ],
+   "functions": [
+    "clGetDeviceInfo"
+   ],
+   "heading": [
+    "The OpenCL Platform Layer",
+    "Querying Devices"
+   ]
+  },
+  {
+   "file": "api/opencl_runtime_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported `cl_command_queue_property` values by {clCreateCommandQueue}",
+   "row": "{CL_QUEUE_OUT_OF_ORDER_EXEC_MODE_ENABLE} | Determines whether the commands queued in the command-queue are executed in-order or out-of-order. If set, the commands in the command-queue are executed out",
+   "types": [
+    "cl_command_queue_property"
+   ],
+   "functions": [
+    "clCreateCommandQueue"
+   ],
+   "heading": [
+    "The OpenCL Runtime",
+    "Command-Queues"
+   ]
+  },
+  {
+   "file": "api/opencl_runtime_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported param_names by {clGetProgramBuildInfo}",
+   "row": "{CL_PROGRAM_BINARY_TYPE_anchor} include::{generated}/api/version-notes/CL_PROGRAM_BINARY_TYPE.asciidoc[] | {cl_program_binary_type_TYPE} | Return the program binary type for device. This can be one of",
+   "types": [
+    "cl_program_binary_type"
+   ],
+   "functions": [
+    "clGetProgramBuildInfo"
+   ],
+   "heading": [
+    "{CL_MAP_READ}).",
+    "Program Objects",
+    "Program Object Queries"
+   ]
+  },
+  {
+   "file": "api/opencl_runtime_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported queue creation properties by {clCreateCommandQueueWithProperties}",
+   "row": "{CL_QUEUE_PROPERTIES_anchor} include::{generated}/api/version-notes/CL_QUEUE_PROPERTIES.asciidoc[] | {cl_command_queue_properties_TYPE} | This is a bitfield and can be set to a combination of the foll",
+   "types": [
+    "cl_command_queue_properties"
+   ],
+   "functions": [
+    "clCreateCommandQueueWithProperties"
+   ],
+   "heading": [
+    "The OpenCL Runtime",
+    "Command-Queues"
+   ]
+  }
+ ],
+ "CL_QUEUE_PROFILING_ENABLE": [
+  {
+   "file": "api/opencl_platform_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported param_names by {clGetDeviceInfo}",
+   "row": "{CL_DEVICE_QUEUE_ON_HOST_PROPERTIES_anchor} include::{generated}/api/version-notes/CL_DEVICE_QUEUE_ON_HOST_PROPERTIES.asciidoc[] | {cl_command_queue_properties_TYPE} | Describes the on host command-qu",
+   "types": [
+    "cl_command_queue_properties"
+   ],
+   "functions": [
+    "clGetDeviceInfo"
+   ],
+   "heading": [
+    "The OpenCL Platform Layer",
+    "Querying Devices"
+   ]
+  },
+  {
+   "file": "api/opencl_runtime_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported `cl_command_queue_property` values by {clCreateCommandQueue}",
+   "row": "{CL_QUEUE_PROFILING_ENABLE} | Enable or disable profiling of commands in the command-queue. If set, the profiling of commands is enabled. Otherwise profiling of commands is disabled.",
+   "types": [
+    "cl_command_queue_property"
+   ],
+   "functions": [
+    "clCreateCommandQueue"
+   ],
+   "heading": [
+    "The OpenCL Runtime",
+    "Command-Queues"
+   ]
+  },
+  {
+   "file": "api/opencl_runtime_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported queue creation properties by {clCreateCommandQueueWithProperties}",
+   "row": "{CL_QUEUE_PROPERTIES_anchor} include::{generated}/api/version-notes/CL_QUEUE_PROPERTIES.asciidoc[] | {cl_command_queue_properties_TYPE} | This is a bitfield and can be set to a combination of the foll",
+   "types": [
+    "cl_command_queue_properties"
+   ],
+   "functions": [
+    "clCreateCommandQueueWithProperties"
+   ],
+   "heading": [
+    "The OpenCL Runtime",
+    "Command-Queues"
+   ]
+  }
+ ],
+ "CL_QUEUE_PROPERTIES": [
+  {
+   "file": "api/opencl_runtime_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported queue creation properties by {clCreateCommandQueueWithProperties}",
+   "row": "{CL_QUEUE_PROPERTIES_anchor} include::{generated}/api/version-notes/CL_QUEUE_PROPERTIES.asciidoc[] | {cl_command_queue_properties_TYPE} | This is a bitfield and can be set to a combination of the foll",
+   "types": [
+    "cl_command_queue_properties"
+   ],
+   "functions": [
+    "clCreateCommandQueueWithProperties"
+   ],
+   "heading": [
+    "The OpenCL Runtime",
+    "Command-Queues"
+   ]
+  }
+ ],
+ "CL_BGRA": [
+  {
+   "file": "api/opencl_runtime_layer.asciidoc",
+   "kind": "table",
+   "label": "Compatible Image Channel Orders",
+   "row": "{CL_BGRA} | {CL_sBGRA}",
+   "types": [],
+   "functions": [],
+   "heading": [
+    "The OpenCL Runtime",
+    "Image Objects",
+    "Creating Image Objects",
+    "Image Descriptor"
+   ]
+  }
+ ],
+ "CL_RGBA": [
+  {
+   "file": "api/opencl_runtime_layer.asciidoc",
+   "kind": "table",
+   "label": "Compatible Image Channel Orders",
+   "row": "{CL_RGBA} | {CL_sRGBA}",
+   "types": [],
+   "functions": [],
+   "heading": [
+    "The OpenCL Runtime",
+    "Image Objects",
+    "Creating Image Objects",
+    "Image Descriptor"
+   ]
+  }
+ ],
+ "CL_RGB": [
+  {
+   "file": "api/opencl_runtime_layer.asciidoc",
+   "kind": "table",
+   "label": "Compatible Image Channel Orders",
+   "row": "{CL_RGB} | {CL_sRGB}",
+   "types": [],
+   "functions": [],
+   "heading": [
+    "The OpenCL Runtime",
+    "Image Objects",
+    "Creating Image Objects",
+    "Image Descriptor"
+   ]
+  }
+ ],
+ "CL_DEPTH": [
+  {
+   "file": "api/opencl_runtime_layer.asciidoc",
+   "kind": "table",
+   "label": "Compatible Image Channel Orders",
+   "row": "{CL_DEPTH} | {CL_R}",
+   "types": [],
+   "functions": [],
+   "heading": [
+    "The OpenCL Runtime",
+    "Image Objects",
+    "Creating Image Objects",
+    "Image Descriptor"
+   ]
+  }
+ ],
+ "CL_MEM_OBJECT_IMAGE2D": [
+  {
+   "file": "api/opencl_runtime_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported param_names by {clGetMemObjectInfo}",
+   "row": "{CL_MEM_TYPE_anchor} include::{generated}/api/version-notes/CL_MEM_TYPE.asciidoc[] | {cl_mem_object_type_TYPE} | Returns one of the following values: {CL_MEM_OBJECT_BUFFER_anchor} if _memobj_ is creat",
+   "types": [
+    "cl_mem_object_type"
+   ],
+   "functions": [
+    "clGetMemObjectInfo"
+   ],
+   "heading": [
+    "{CL_MAP_READ}).",
+    "Memory Object Queries"
+   ]
+  }
+ ],
+ "CL_MEM_OBJECT_IMAGE3D": [
+  {
+   "file": "api/opencl_runtime_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported param_names by {clGetMemObjectInfo}",
+   "row": "{CL_MEM_TYPE_anchor} include::{generated}/api/version-notes/CL_MEM_TYPE.asciidoc[] | {cl_mem_object_type_TYPE} | Returns one of the following values: {CL_MEM_OBJECT_BUFFER_anchor} if _memobj_ is creat",
+   "types": [
+    "cl_mem_object_type"
+   ],
+   "functions": [
+    "clGetMemObjectInfo"
+   ],
+   "heading": [
+    "{CL_MAP_READ}).",
+    "Memory Object Queries"
+   ]
+  }
+ ],
+ "CL_MEM_READ_WRITE": [
+  {
+   "file": "api/opencl_runtime_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported SVM memory flag values",
+   "row": "{CL_MEM_READ_WRITE} | This flag specifies that the SVM buffer will be read and written by a kernel. This is the default.",
+   "types": [],
+   "functions": [
+    "clSVMAlloc"
+   ],
+   "heading": [
+    "{CL_MAP_READ}).",
+    "Shared Virtual Memory",
+    "SVM Sharing Granularity: Coarse- and Fine- Grained Sharing"
+   ]
+  }
+ ],
+ "CL_MEM_WRITE_ONLY": [
+  {
+   "file": "api/opencl_runtime_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported SVM memory flag values",
+   "row": "{CL_MEM_WRITE_ONLY} | This flag specifies that the SVM buffer will be written but not read by a kernel. Reading from a SVM buffer created with {CL_MEM_WRITE_ONLY} inside a kernel is undefined. {CL_MEM",
+   "types": [],
+   "functions": [
+    "clSVMAlloc"
+   ],
+   "heading": [
+    "{CL_MAP_READ}).",
+    "Shared Virtual Memory",
+    "SVM Sharing Granularity: Coarse- and Fine- Grained Sharing"
+   ]
+  }
+ ],
+ "CL_MEM_READ_ONLY": [
+  {
+   "file": "api/opencl_runtime_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported SVM memory flag values",
+   "row": "{CL_MEM_READ_ONLY} | This flag specifies that the SVM buffer object is a read-only memory object when used inside a kernel. Writing to a SVM buffer created with {CL_MEM_READ_ONLY} inside a kernel is u",
+   "types": [],
+   "functions": [
+    "clSVMAlloc"
+   ],
+   "heading": [
+    "{CL_MAP_READ}).",
+    "Shared Virtual Memory",
+    "SVM Sharing Granularity: Coarse- and Fine- Grained Sharing"
+   ]
+  }
+ ],
+ "CL_DEVICE_MAX_MEM_ALLOC_SIZE": [
+  {
+   "file": "api/opencl_runtime_layer.asciidoc",
+   "kind": "inline",
+   "label": null,
+   "row": "  * values specified in _flags_ do not follow rules described for supported values in the <<svm-flags-table, SVM Memory Flags>> table",
+   "types": [],
+   "functions": [
+    "clSVMAlloc"
+   ],
+   "heading": [
+    "{CL_MAP_READ}).",
+    "Shared Virtual Memory",
+    "SVM Sharing Granularity: Coarse- and Fine- Grained Sharing"
+   ]
+  }
+ ],
+ "CL_MEM_IMMUTABLE_EXT": [
+  {
+   "file": "api/opencl_runtime_layer.asciidoc",
+   "kind": "inline",
+   "label": null,
+   "row": "  * values specified in _flags_ do not follow rules described for supported values in the <<svm-flags-table, SVM Memory Flags>> table",
+   "types": [],
+   "functions": [
+    "clSVMAlloc"
+   ],
+   "heading": [
+    "{CL_MAP_READ}).",
+    "Shared Virtual Memory",
+    "SVM Sharing Granularity: Coarse- and Fine- Grained Sharing"
+   ]
+  }
+ ],
+ "CL_MEM_SVM_ATOMICS": [
+  {
+   "file": "api/opencl_platform_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported param_names by {clGetDeviceInfo}",
+   "row": "{CL_DEVICE_ATOMIC_MEMORY_CAPABILITIES_anchor} include::{generated}/api/version-notes/CL_DEVICE_ATOMIC_MEMORY_CAPABILITIES.asciidoc[] | {cl_device_atomic_capabilities_TYPE} | Describes the various memo",
+   "types": [
+    "cl_device_atomic_capabilities"
+   ],
+   "functions": [
+    "clGetDeviceInfo"
+   ],
+   "heading": [
+    "The OpenCL Platform Layer",
+    "Querying Devices"
+   ]
+  },
+  {
+   "file": "api/opencl_runtime_layer.asciidoc",
+   "kind": "inline",
+   "label": null,
+   "row": "  * values specified in _flags_ do not follow rules described for supported values in the <<svm-flags-table, SVM Memory Flags>> table",
+   "types": [],
+   "functions": [
+    "clSVMAlloc"
+   ],
+   "heading": [
+    "{CL_MAP_READ}).",
+    "Shared Virtual Memory",
+    "SVM Sharing Granularity: Coarse- and Fine- Grained Sharing"
+   ]
+  }
+ ],
+ "CL_MEM_SVM_FINE_GRAIN_BUFFER": [
+  {
+   "file": "api/opencl_runtime_layer.asciidoc",
+   "kind": "inline",
+   "label": null,
+   "row": "  * values specified in _flags_ do not follow rules described for supported values in the <<svm-flags-table, SVM Memory Flags>> table",
+   "types": [],
+   "functions": [
+    "clSVMAlloc"
+   ],
+   "heading": [
+    "{CL_MAP_READ}).",
+    "Shared Virtual Memory",
+    "SVM Sharing Granularity: Coarse- and Fine- Grained Sharing"
+   ]
+  }
+ ],
+ "CL_INVALID_VALUE": [
+  {
+   "file": "api/opencl_runtime_layer.asciidoc",
+   "kind": "inline",
+   "label": null,
+   "row": "    the list of devices associated with _context_.",
+   "types": [],
+   "functions": [
+    "clCreateProgramWithBinary"
+   ],
+   "heading": [
+    "{CL_MAP_READ}).",
+    "Program Objects",
+    "Creating Program Objects"
+   ]
+  }
+ ],
+ "CL_INVALID_BINARY": [
+  {
+   "file": "api/opencl_runtime_layer.asciidoc",
+   "kind": "inline",
+   "label": null,
+   "row": "    the list of devices associated with _program_.",
+   "types": [],
+   "functions": [
+    "clBuildProgram"
+   ],
+   "heading": [
+    "{CL_MAP_READ}).",
+    "Program Objects",
+    "Building Program Executables"
+   ]
+  }
+ ],
+ "CL_INVALID_COMPILER_OPTIONS": [
+  {
+   "file": "api/opencl_runtime_layer.asciidoc",
+   "kind": "inline",
+   "label": null,
+   "row": "    the list of devices associated with _program_.",
+   "types": [],
+   "functions": [
+    "clCompileProgram"
+   ],
+   "heading": [
+    "{CL_MAP_READ}).",
+    "Program Objects",
+    "Separate Compilation and Linking of Programs"
+   ]
+  }
+ ],
+ "CL_INVALID_CONTEXT": [
+  {
+   "file": "api/opencl_runtime_layer.asciidoc",
+   "kind": "inline",
+   "label": null,
+   "row": "The list of errors that can be returned are:",
+   "types": [],
+   "functions": [
+    "clLinkProgram"
+   ],
+   "heading": [
+    "{CL_MAP_READ}).",
+    "Program Objects",
+    "Separate Compilation and Linking of Programs"
+   ]
+  }
+ ],
+ "CL_INVALID_LINKER_OPTIONS": [
+  {
+   "file": "api/opencl_runtime_layer.asciidoc",
+   "kind": "inline",
+   "label": null,
+   "row": "    the list of devices associated with _context_.",
+   "types": [],
+   "functions": [
+    "clLinkProgram"
+   ],
+   "heading": [
+    "{CL_MAP_READ}).",
+    "Program Objects",
+    "Separate Compilation and Linking of Programs"
+   ]
+  }
+ ],
+ "CL_PROGRAM_BINARY_TYPE_COMPILED_OBJECT": [
+  {
+   "file": "api/opencl_runtime_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported param_names by {clGetProgramBuildInfo}",
+   "row": "{CL_PROGRAM_BINARY_TYPE_anchor} include::{generated}/api/version-notes/CL_PROGRAM_BINARY_TYPE.asciidoc[] | {cl_program_binary_type_TYPE} | Return the program binary type for device. This can be one of",
+   "types": [
+    "cl_program_binary_type"
+   ],
+   "functions": [
+    "clGetProgramBuildInfo"
+   ],
+   "heading": [
+    "{CL_MAP_READ}).",
+    "Program Objects",
+    "Program Object Queries"
+   ]
+  }
+ ],
+ "CL_PROGRAM_BINARY_TYPE_EXECUTABLE": [
+  {
+   "file": "api/opencl_runtime_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported param_names by {clGetProgramBuildInfo}",
+   "row": "{CL_PROGRAM_BINARY_TYPE_anchor} include::{generated}/api/version-notes/CL_PROGRAM_BINARY_TYPE.asciidoc[] | {cl_program_binary_type_TYPE} | Return the program binary type for device. This can be one of",
+   "types": [
+    "cl_program_binary_type"
+   ],
+   "functions": [
+    "clGetProgramBuildInfo"
+   ],
+   "heading": [
+    "{CL_MAP_READ}).",
+    "Program Objects",
+    "Program Object Queries"
+   ]
+  }
+ ],
+ "CL_PROGRAM_BINARY_TYPE_LIBRARY": [
+  {
+   "file": "api/opencl_runtime_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported param_names by {clGetProgramBuildInfo}",
+   "row": "{CL_PROGRAM_BINARY_TYPE_anchor} include::{generated}/api/version-notes/CL_PROGRAM_BINARY_TYPE.asciidoc[] | {cl_program_binary_type_TYPE} | Return the program binary type for device. This can be one of",
+   "types": [
+    "cl_program_binary_type"
+   ],
+   "functions": [
+    "clGetProgramBuildInfo"
+   ],
+   "heading": [
+    "{CL_MAP_READ}).",
+    "Program Objects",
+    "Program Object Queries"
+   ]
+  }
+ ],
+ "CL_KERNEL_ARG_ADDRESS_PRIVATE": [
+  {
+   "file": "api/opencl_runtime_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported param_names by {clGetKernelArgInfo}",
+   "row": "{CL_KERNEL_ARG_ADDRESS_QUALIFIER_anchor} include::{generated}/api/version-notes/CL_KERNEL_ARG_ADDRESS_QUALIFIER.asciidoc[] | {cl_kernel_arg_address_qualifier_TYPE} | Returns the address qualifier spec",
+   "types": [
+    "cl_kernel_arg_address_qualifier"
+   ],
+   "functions": [
+    "clGetKernelArgInfo"
+   ],
+   "heading": [
+    "{CL_MAP_READ}).",
+    "Kernel Objects",
+    "Kernel Object Queries"
+   ]
+  }
+ ],
+ "CL_KERNEL_ARG_ACCESS_NONE": [
+  {
+   "file": "api/opencl_runtime_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported param_names by {clGetKernelArgInfo}",
+   "row": "{CL_KERNEL_ARG_ACCESS_QUALIFIER_anchor} include::{generated}/api/version-notes/CL_KERNEL_ARG_ACCESS_QUALIFIER.asciidoc[] | {cl_kernel_arg_access_qualifier_TYPE} | Returns the access qualifier specifie",
+   "types": [
+    "cl_kernel_arg_access_qualifier"
+   ],
+   "functions": [
+    "clGetKernelArgInfo"
+   ],
+   "heading": [
+    "{CL_MAP_READ}).",
+    "Kernel Objects",
+    "Kernel Object Queries"
+   ]
+  }
+ ],
+ "CL_KERNEL_ARG_TYPE_CONST": [
+  {
+   "file": "api/opencl_runtime_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported param_names by {clGetKernelArgInfo}",
+   "row": "{CL_KERNEL_ARG_TYPE_QUALIFIER_anchor} include::{generated}/api/version-notes/CL_KERNEL_ARG_TYPE_QUALIFIER.asciidoc[] | {cl_kernel_arg_type_qualifier_TYPE} | Returns a bitfield describing one or more t",
+   "types": [
+    "cl_kernel_arg_type_qualifier"
+   ],
+   "functions": [
+    "clGetKernelArgInfo"
+   ],
+   "heading": [
+    "{CL_MAP_READ}).",
+    "Kernel Objects",
+    "Kernel Object Queries"
+   ]
+  }
+ ],
+ "CL_KERNEL_ARG_TYPE_NONE": [
+  {
+   "file": "api/opencl_runtime_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported param_names by {clGetKernelArgInfo}",
+   "row": "{CL_KERNEL_ARG_TYPE_QUALIFIER_anchor} include::{generated}/api/version-notes/CL_KERNEL_ARG_TYPE_QUALIFIER.asciidoc[] | {cl_kernel_arg_type_qualifier_TYPE} | Returns a bitfield describing one or more t",
+   "types": [
+    "cl_kernel_arg_type_qualifier"
+   ],
+   "functions": [
+    "clGetKernelArgInfo"
+   ],
+   "heading": [
+    "{CL_MAP_READ}).",
+    "Kernel Objects",
+    "Kernel Object Queries"
+   ]
+  }
+ ],
+ "CL_KERNEL_ARG_TYPE_QUALIFIER": [
+  {
+   "file": "api/opencl_runtime_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported param_names by {clGetKernelArgInfo}",
+   "row": "{CL_KERNEL_ARG_TYPE_QUALIFIER_anchor} include::{generated}/api/version-notes/CL_KERNEL_ARG_TYPE_QUALIFIER.asciidoc[] | {cl_kernel_arg_type_qualifier_TYPE} | Returns a bitfield describing one or more t",
+   "types": [
+    "cl_kernel_arg_type_qualifier"
+   ],
+   "functions": [
+    "clGetKernelArgInfo"
+   ],
+   "heading": [
+    "{CL_MAP_READ}).",
+    "Kernel Objects",
+    "Kernel Object Queries"
+   ]
+  }
+ ],
+ "CL_KERNEL_ARG_TYPE_RESTRICT": [
+  {
+   "file": "api/opencl_runtime_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported param_names by {clGetKernelArgInfo}",
+   "row": "{CL_KERNEL_ARG_TYPE_QUALIFIER_anchor} include::{generated}/api/version-notes/CL_KERNEL_ARG_TYPE_QUALIFIER.asciidoc[] | {cl_kernel_arg_type_qualifier_TYPE} | Returns a bitfield describing one or more t",
+   "types": [
+    "cl_kernel_arg_type_qualifier"
+   ],
+   "functions": [
+    "clGetKernelArgInfo"
+   ],
+   "heading": [
+    "{CL_MAP_READ}).",
+    "Kernel Objects",
+    "Kernel Object Queries"
+   ]
+  }
+ ],
+ "CL_KERNEL_ARG_TYPE_VOLATILE": [
+  {
+   "file": "api/opencl_runtime_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported param_names by {clGetKernelArgInfo}",
+   "row": "{CL_KERNEL_ARG_TYPE_QUALIFIER_anchor} include::{generated}/api/version-notes/CL_KERNEL_ARG_TYPE_QUALIFIER.asciidoc[] | {cl_kernel_arg_type_qualifier_TYPE} | Returns a bitfield describing one or more t",
+   "types": [
+    "cl_kernel_arg_type_qualifier"
+   ],
+   "functions": [
+    "clGetKernelArgInfo"
+   ],
+   "heading": [
+    "{CL_MAP_READ}).",
+    "Kernel Objects",
+    "Kernel Object Queries"
+   ]
+  }
+ ],
+ "CL_SEMAPHORE_TYPE_KHR": [
+  {
+   "file": "api/opencl_runtime_layer.asciidoc",
+   "kind": "table",
+   "label": "List of parameter names supported by {clGetSemaphoreInfoKHR}",
+   "row": "{CL_SEMAPHORE_TYPE_KHR_anchor} | {cl_semaphore_type_khr_TYPE} | Returns the semaphore type.",
+   "types": [
+    "cl_semaphore_type_khr"
+   ],
+   "functions": [
+    "clGetSemaphoreInfoKHR"
+   ],
+   "heading": [
+    "{CL_MAP_READ}).",
+    "Semaphores",
+    "Semaphore Queries"
+   ]
+  },
+  {
+   "file": "api/opencl_runtime_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported semaphore creation properties by {clCreateSemaphoreWithPropertiesKHR}",
+   "row": "{CL_SEMAPHORE_TYPE_KHR_anchor} | {cl_semaphore_type_khr_TYPE} | Specifies the type of semaphore to create. This property is always required.",
+   "types": [
+    "cl_semaphore_type_khr"
+   ],
+   "functions": [
+    "clCreateSemaphoreWithPropertiesKHR"
+   ],
+   "heading": [
+    "{CL_MAP_READ}).",
+    "Semaphores",
+    "Creating Semaphores"
+   ]
+  }
+ ],
+ "CL_SEMAPHORE_DEVICE_HANDLE_LIST_KHR": [
+  {
+   "file": "api/opencl_runtime_layer.asciidoc",
+   "kind": "table",
+   "label": "List of parameter names supported by {clGetSemaphoreInfoKHR}",
+   "row": "{CL_SEMAPHORE_DEVICE_HANDLE_LIST_KHR_anchor} | {cl_device_id_TYPE}[] | Returns the list of OpenCL devices the semaphore is associated with. ifdef::cl_khr_external_semaphore[]",
+   "types": [
+    "cl_device_id"
+   ],
+   "functions": [
+    "clGetSemaphoreInfoKHR"
+   ],
+   "heading": [
+    "{CL_MAP_READ}).",
+    "Semaphores",
+    "Semaphore Queries"
+   ]
+  },
+  {
+   "file": "api/opencl_runtime_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported semaphore creation properties by {clCreateSemaphoreWithPropertiesKHR}",
+   "row": "{CL_SEMAPHORE_DEVICE_HANDLE_LIST_KHR_anchor} | {cl_device_id_TYPE}[] | Specifies the list of OpenCL devices (terminated with {CL_SEMAPHORE_DEVICE_HANDLE_LIST_END_KHR_anchor}) to associate with the sem",
+   "types": [
+    "cl_device_id"
+   ],
+   "functions": [
+    "clCreateSemaphoreWithPropertiesKHR"
+   ],
+   "heading": [
+    "{CL_MAP_READ}).",
+    "Semaphores",
+    "Creating Semaphores"
+   ]
+  }
+ ],
+ "CL_SEMAPHORE_CONTEXT_KHR": [
+  {
+   "file": "api/opencl_runtime_layer.asciidoc",
+   "kind": "table",
+   "label": "List of parameter names supported by {clGetSemaphoreInfoKHR}",
+   "row": "{CL_SEMAPHORE_CONTEXT_KHR_anchor} | {cl_context_TYPE} | Returns the context specified when the semaphore is created.",
+   "types": [
+    "cl_context"
+   ],
+   "functions": [
+    "clGetSemaphoreInfoKHR"
+   ],
+   "heading": [
+    "{CL_MAP_READ}).",
+    "Semaphores",
+    "Semaphore Queries"
+   ]
+  }
+ ],
+ "CL_SEMAPHORE_PROPERTIES_KHR": [
+  {
+   "file": "api/opencl_runtime_layer.asciidoc",
+   "kind": "table",
+   "label": "List of parameter names supported by {clGetSemaphoreInfoKHR}",
+   "row": "{CL_SEMAPHORE_PROPERTIES_KHR_anchor} | {cl_semaphore_properties_khr_TYPE}[] | Return the properties argument specified in {clCreateSemaphoreWithPropertiesKHR}. The implementation must return the value",
+   "types": [
+    "cl_semaphore_properties_khr"
+   ],
+   "functions": [
+    "clGetSemaphoreInfoKHR"
+   ],
+   "heading": [
+    "{CL_MAP_READ}).",
+    "Semaphores",
+    "Semaphore Queries"
+   ]
+  }
+ ],
+ "CL_SEMAPHORE_PAYLOAD_KHR": [
+  {
+   "file": "api/opencl_runtime_layer.asciidoc",
+   "kind": "table",
+   "label": "List of parameter names supported by {clGetSemaphoreInfoKHR}",
+   "row": "{CL_SEMAPHORE_PAYLOAD_KHR_anchor} | {cl_semaphore_payload_khr_TYPE} | Returns the semaphore payload value. For semaphores of type {CL_SEMAPHORE_TYPE_BINARY_KHR} the payload value returned will be `0` ",
+   "types": [
+    "cl_semaphore_payload_khr"
+   ],
+   "functions": [
+    "clGetSemaphoreInfoKHR"
+   ],
+   "heading": [
+    "{CL_MAP_READ}).",
+    "Semaphores",
+    "Semaphore Queries"
+   ]
+  }
+ ],
+ "CL_SEMAPHORE_EXPORT_HANDLE_TYPES_KHR": [
+  {
+   "file": "api/opencl_runtime_layer.asciidoc",
+   "kind": "table",
+   "label": "List of parameter names supported by {clGetSemaphoreInfoKHR}",
+   "row": "{CL_SEMAPHORE_EXPORT_HANDLE_TYPES_KHR_anchor} | {cl_external_semaphore_handle_type_khr_TYPE}[] | Returns the list of external semaphore handle types that may be used for exporting. The size of this qu",
+   "types": [
+    "cl_external_semaphore_handle_type_khr"
+   ],
+   "functions": [
+    "clGetSemaphoreInfoKHR"
+   ],
+   "heading": [
+    "{CL_MAP_READ}).",
+    "Semaphores",
+    "Semaphore Queries"
+   ]
+  }
+ ],
+ "CL_SEMAPHORE_EXPORTABLE_KHR": [
+  {
+   "file": "api/opencl_runtime_layer.asciidoc",
+   "kind": "table",
+   "label": "List of parameter names supported by {clGetSemaphoreInfoKHR}",
+   "row": "{CL_SEMAPHORE_EXPORTABLE_KHR_anchor} | {cl_bool_TYPE}[] | Returns {CL_TRUE} if the semaphore is exportable and {CL_FALSE} otherwise. endif::cl_khr_external_semaphore[]",
+   "types": [
+    "cl_bool"
+   ],
+   "functions": [
+    "clGetSemaphoreInfoKHR"
+   ],
+   "heading": [
+    "{CL_MAP_READ}).",
+    "Semaphores",
+    "Semaphore Queries"
+   ]
+  }
+ ],
+ "CL_COMMAND_BUFFER_CAPABILITY_SIMULTANEOUS_USE_KHR": [
+  {
+   "file": "api/opencl_platform_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported param_names by {clGetDeviceInfo}",
+   "row": "{CL_DEVICE_COMMAND_BUFFER_CAPABILITIES_KHR_anchor} include::{generated}/api/version-notes/CL_DEVICE_COMMAND_BUFFER_CAPABILITIES_KHR.asciidoc[] | {cl_device_command_buffer_capabilities_khr_TYPE} | Desc",
+   "types": [
+    "cl_device_command_buffer_capabilities_khr"
+   ],
+   "functions": [
+    "clGetDeviceInfo"
+   ],
+   "heading": [
+    "The OpenCL Platform Layer",
+    "Querying Devices"
+   ]
+  },
+  {
+   "file": "api/opencl_runtime_layer.asciidoc",
+   "kind": "table",
+   "label": "{clCreateCommandBufferKHR} properties",
+   "row": "{CL_COMMAND_BUFFER_FLAGS_KHR_anchor} include::{generated}/api/version-notes/CL_COMMAND_BUFFER_FLAGS_KHR.asciidoc[] | {cl_command_buffer_flags_khr_TYPE} | This is a bitfield and can be set to a combina",
+   "types": [
+    "cl_command_buffer_flags_khr"
+   ],
+   "functions": [
+    "clCreateCommandBufferKHR"
+   ],
+   "heading": [
+    "{CL_MAP_READ}).",
+    "Command-Buffers",
+    "Creating Command-Buffer Objects"
+   ]
+  }
+ ],
+ "CL_COMMAND_BUFFER_DEVICE_SIDE_SYNC_KHR": [
+  {
+   "file": "api/opencl_runtime_layer.asciidoc",
+   "kind": "table",
+   "label": "{clCreateCommandBufferKHR} properties",
+   "row": "{CL_COMMAND_BUFFER_FLAGS_KHR_anchor} include::{generated}/api/version-notes/CL_COMMAND_BUFFER_FLAGS_KHR.asciidoc[] | {cl_command_buffer_flags_khr_TYPE} | This is a bitfield and can be set to a combina",
+   "types": [
+    "cl_command_buffer_flags_khr"
+   ],
+   "functions": [
+    "clCreateCommandBufferKHR"
+   ],
+   "heading": [
+    "{CL_MAP_READ}).",
+    "Command-Buffers",
+    "Creating Command-Buffer Objects"
+   ]
+  }
+ ],
+ "CL_COMMAND_BUFFER_MUTABLE_KHR": [
+  {
+   "file": "api/opencl_runtime_layer.asciidoc",
+   "kind": "table",
+   "label": "{clCreateCommandBufferKHR} properties",
+   "row": "{CL_COMMAND_BUFFER_FLAGS_KHR_anchor} include::{generated}/api/version-notes/CL_COMMAND_BUFFER_FLAGS_KHR.asciidoc[] | {cl_command_buffer_flags_khr_TYPE} | This is a bitfield and can be set to a combina",
+   "types": [
+    "cl_command_buffer_flags_khr"
+   ],
+   "functions": [
+    "clCreateCommandBufferKHR"
+   ],
+   "heading": [
+    "{CL_MAP_READ}).",
+    "Command-Buffers",
+    "Creating Command-Buffer Objects"
+   ]
+  }
+ ],
+ "CL_COMMAND_BUFFER_SIMULTANEOUS_USE_KHR": [
+  {
+   "file": "api/opencl_runtime_layer.asciidoc",
+   "kind": "table",
+   "label": "{clCreateCommandBufferKHR} properties",
+   "row": "{CL_COMMAND_BUFFER_FLAGS_KHR_anchor} include::{generated}/api/version-notes/CL_COMMAND_BUFFER_FLAGS_KHR.asciidoc[] | {cl_command_buffer_flags_khr_TYPE} | This is a bitfield and can be set to a combina",
+   "types": [
+    "cl_command_buffer_flags_khr"
+   ],
+   "functions": [
+    "clCreateCommandBufferKHR"
+   ],
+   "heading": [
+    "{CL_MAP_READ}).",
+    "Command-Buffers",
+    "Creating Command-Buffer Objects"
+   ]
+  }
+ ],
+ "CL_DEVICE_COMMAND_BUFFER_SYNC_DEVICES_KHR": [
+  {
+   "file": "api/opencl_runtime_layer.asciidoc",
+   "kind": "table",
+   "label": "{clCreateCommandBufferKHR} properties",
+   "row": "{CL_COMMAND_BUFFER_FLAGS_KHR_anchor} include::{generated}/api/version-notes/CL_COMMAND_BUFFER_FLAGS_KHR.asciidoc[] | {cl_command_buffer_flags_khr_TYPE} | This is a bitfield and can be set to a combina",
+   "types": [
+    "cl_command_buffer_flags_khr"
+   ],
+   "functions": [
+    "clCreateCommandBufferKHR"
+   ],
+   "heading": [
+    "{CL_MAP_READ}).",
+    "Command-Buffers",
+    "Creating Command-Buffer Objects"
+   ]
+  }
+ ],
+ "CL_MUTABLE_DISPATCH_ASSERT_NO_ADDITIONAL_WORK_GROUPS_KHR": [
+  {
+   "file": "api/opencl_runtime_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported properties by {clCommandNDRangeKernelKHR}",
+   "row": "{CL_MUTABLE_DISPATCH_ASSERTS_KHR_anchor} include::{generated}/api/version-notes/CL_MUTABLE_DISPATCH_ASSERTS_KHR.asciidoc[] | {cl_mutable_dispatch_asserts_khr_TYPE} | This is a bitfield and can be set ",
+   "types": [
+    "cl_mutable_dispatch_asserts_khr"
+   ],
+   "functions": [
+    "clCommandNDRangeKernelKHR"
+   ],
+   "heading": [
+    "{CL_MAP_READ}).",
+    "Command-Buffers",
+    "Recording Commands to a Command-Buffer"
+   ]
+  },
+  {
+   "file": "api/opencl_runtime_layer.asciidoc",
+   "kind": "table",
+   "label": "{clCreateCommandBufferKHR} properties",
+   "row": "{CL_COMMAND_BUFFER_MUTABLE_DISPATCH_ASSERTS_KHR_anchor} include::{generated}/api/version-notes/CL_COMMAND_BUFFER_MUTABLE_DISPATCH_ASSERTS_KHR.asciidoc[] | {cl_mutable_dispatch_asserts_khr_TYPE} | This",
+   "types": [
+    "cl_mutable_dispatch_asserts_khr"
+   ],
+   "functions": [
+    "clCreateCommandBufferKHR"
+   ],
+   "heading": [
+    "{CL_MAP_READ}).",
+    "Command-Buffers",
+    "Creating Command-Buffer Objects"
+   ]
+  }
+ ],
+ "CL_DEVICE_MUTABLE_DISPATCH_CAPABILITIES_KHR": [
+  {
+   "file": "api/opencl_runtime_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported properties by {clCommandNDRangeKernelKHR}",
+   "row": "{CL_MUTABLE_DISPATCH_UPDATABLE_FIELDS_KHR_anchor} include::{generated}/api/version-notes/CL_MUTABLE_DISPATCH_UPDATABLE_FIELDS_KHR.asciidoc[] | {cl_mutable_dispatch_fields_khr_TYPE} | This is a bitfiel",
+   "types": [
+    "cl_mutable_dispatch_config_khr",
+    "cl_mutable_dispatch_fields_khr"
+   ],
+   "functions": [
+    "clCommandNDRangeKernelKHR"
+   ],
+   "heading": [
+    "{CL_MAP_READ}).",
+    "Command-Buffers",
+    "Recording Commands to a Command-Buffer"
+   ]
+  }
+ ],
+ "CL_MUTABLE_DISPATCH_ARGUMENTS_KHR": [
+  {
+   "file": "api/opencl_platform_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported param_names by {clGetDeviceInfo}",
+   "row": "{CL_DEVICE_MUTABLE_DISPATCH_CAPABILITIES_KHR_anchor} include::{generated}/api/version-notes/CL_DEVICE_MUTABLE_DISPATCH_CAPABILITIES_KHR.asciidoc[] | {cl_mutable_dispatch_fields_khr_TYPE} | Describes d",
+   "types": [
+    "cl_mutable_dispatch_fields_khr"
+   ],
+   "functions": [
+    "clGetDeviceInfo"
+   ],
+   "heading": [
+    "The OpenCL Platform Layer",
+    "Querying Devices"
+   ]
+  },
+  {
+   "file": "api/opencl_runtime_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported properties by {clCommandNDRangeKernelKHR}",
+   "row": "{CL_MUTABLE_DISPATCH_UPDATABLE_FIELDS_KHR_anchor} include::{generated}/api/version-notes/CL_MUTABLE_DISPATCH_UPDATABLE_FIELDS_KHR.asciidoc[] | {cl_mutable_dispatch_fields_khr_TYPE} | This is a bitfiel",
+   "types": [
+    "cl_mutable_dispatch_config_khr",
+    "cl_mutable_dispatch_fields_khr"
+   ],
+   "functions": [
+    "clCommandNDRangeKernelKHR"
+   ],
+   "heading": [
+    "{CL_MAP_READ}).",
+    "Command-Buffers",
+    "Recording Commands to a Command-Buffer"
+   ]
+  }
+ ],
+ "CL_MUTABLE_DISPATCH_EXEC_INFO_KHR": [
+  {
+   "file": "api/opencl_platform_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported param_names by {clGetDeviceInfo}",
+   "row": "{CL_DEVICE_MUTABLE_DISPATCH_CAPABILITIES_KHR_anchor} include::{generated}/api/version-notes/CL_DEVICE_MUTABLE_DISPATCH_CAPABILITIES_KHR.asciidoc[] | {cl_mutable_dispatch_fields_khr_TYPE} | Describes d",
+   "types": [
+    "cl_mutable_dispatch_fields_khr"
+   ],
+   "functions": [
+    "clGetDeviceInfo"
+   ],
+   "heading": [
+    "The OpenCL Platform Layer",
+    "Querying Devices"
+   ]
+  },
+  {
+   "file": "api/opencl_runtime_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported properties by {clCommandNDRangeKernelKHR}",
+   "row": "{CL_MUTABLE_DISPATCH_UPDATABLE_FIELDS_KHR_anchor} include::{generated}/api/version-notes/CL_MUTABLE_DISPATCH_UPDATABLE_FIELDS_KHR.asciidoc[] | {cl_mutable_dispatch_fields_khr_TYPE} | This is a bitfiel",
+   "types": [
+    "cl_mutable_dispatch_config_khr",
+    "cl_mutable_dispatch_fields_khr"
+   ],
+   "functions": [
+    "clCommandNDRangeKernelKHR"
+   ],
+   "heading": [
+    "{CL_MAP_READ}).",
+    "Command-Buffers",
+    "Recording Commands to a Command-Buffer"
+   ]
+  }
+ ],
+ "CL_MUTABLE_DISPATCH_GLOBAL_OFFSET_KHR": [
+  {
+   "file": "api/opencl_platform_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported param_names by {clGetDeviceInfo}",
+   "row": "{CL_DEVICE_MUTABLE_DISPATCH_CAPABILITIES_KHR_anchor} include::{generated}/api/version-notes/CL_DEVICE_MUTABLE_DISPATCH_CAPABILITIES_KHR.asciidoc[] | {cl_mutable_dispatch_fields_khr_TYPE} | Describes d",
+   "types": [
+    "cl_mutable_dispatch_fields_khr"
+   ],
+   "functions": [
+    "clGetDeviceInfo"
+   ],
+   "heading": [
+    "The OpenCL Platform Layer",
+    "Querying Devices"
+   ]
+  },
+  {
+   "file": "api/opencl_runtime_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported properties by {clCommandNDRangeKernelKHR}",
+   "row": "{CL_MUTABLE_DISPATCH_UPDATABLE_FIELDS_KHR_anchor} include::{generated}/api/version-notes/CL_MUTABLE_DISPATCH_UPDATABLE_FIELDS_KHR.asciidoc[] | {cl_mutable_dispatch_fields_khr_TYPE} | This is a bitfiel",
+   "types": [
+    "cl_mutable_dispatch_config_khr",
+    "cl_mutable_dispatch_fields_khr"
+   ],
+   "functions": [
+    "clCommandNDRangeKernelKHR"
+   ],
+   "heading": [
+    "{CL_MAP_READ}).",
+    "Command-Buffers",
+    "Recording Commands to a Command-Buffer"
+   ]
+  }
+ ],
+ "CL_MUTABLE_DISPATCH_GLOBAL_SIZE_KHR": [
+  {
+   "file": "api/opencl_platform_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported param_names by {clGetDeviceInfo}",
+   "row": "{CL_DEVICE_MUTABLE_DISPATCH_CAPABILITIES_KHR_anchor} include::{generated}/api/version-notes/CL_DEVICE_MUTABLE_DISPATCH_CAPABILITIES_KHR.asciidoc[] | {cl_mutable_dispatch_fields_khr_TYPE} | Describes d",
+   "types": [
+    "cl_mutable_dispatch_fields_khr"
+   ],
+   "functions": [
+    "clGetDeviceInfo"
+   ],
+   "heading": [
+    "The OpenCL Platform Layer",
+    "Querying Devices"
+   ]
+  },
+  {
+   "file": "api/opencl_runtime_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported properties by {clCommandNDRangeKernelKHR}",
+   "row": "{CL_MUTABLE_DISPATCH_UPDATABLE_FIELDS_KHR_anchor} include::{generated}/api/version-notes/CL_MUTABLE_DISPATCH_UPDATABLE_FIELDS_KHR.asciidoc[] | {cl_mutable_dispatch_fields_khr_TYPE} | This is a bitfiel",
+   "types": [
+    "cl_mutable_dispatch_config_khr",
+    "cl_mutable_dispatch_fields_khr"
+   ],
+   "functions": [
+    "clCommandNDRangeKernelKHR"
+   ],
+   "heading": [
+    "{CL_MAP_READ}).",
+    "Command-Buffers",
+    "Recording Commands to a Command-Buffer"
+   ]
+  }
+ ],
+ "CL_MUTABLE_DISPATCH_LOCAL_SIZE_KHR": [
+  {
+   "file": "api/opencl_platform_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported param_names by {clGetDeviceInfo}",
+   "row": "{CL_DEVICE_MUTABLE_DISPATCH_CAPABILITIES_KHR_anchor} include::{generated}/api/version-notes/CL_DEVICE_MUTABLE_DISPATCH_CAPABILITIES_KHR.asciidoc[] | {cl_mutable_dispatch_fields_khr_TYPE} | Describes d",
+   "types": [
+    "cl_mutable_dispatch_fields_khr"
+   ],
+   "functions": [
+    "clGetDeviceInfo"
+   ],
+   "heading": [
+    "The OpenCL Platform Layer",
+    "Querying Devices"
+   ]
+  },
+  {
+   "file": "api/opencl_runtime_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported properties by {clCommandNDRangeKernelKHR}",
+   "row": "{CL_MUTABLE_DISPATCH_UPDATABLE_FIELDS_KHR_anchor} include::{generated}/api/version-notes/CL_MUTABLE_DISPATCH_UPDATABLE_FIELDS_KHR.asciidoc[] | {cl_mutable_dispatch_fields_khr_TYPE} | This is a bitfiel",
+   "types": [
+    "cl_mutable_dispatch_config_khr",
+    "cl_mutable_dispatch_fields_khr"
+   ],
+   "functions": [
+    "clCommandNDRangeKernelKHR"
+   ],
+   "heading": [
+    "{CL_MAP_READ}).",
+    "Command-Buffers",
+    "Recording Commands to a Command-Buffer"
+   ]
+  }
+ ],
+ "CL_STRUCTURE_TYPE_MUTABLE_DISPATCH_CONFIG_KHR": [
+  {
+   "file": "api/opencl_runtime_layer.asciidoc",
+   "kind": "table",
+   "label": null,
+   "row": "{CL_STRUCTURE_TYPE_MUTABLE_DISPATCH_CONFIG_KHR_anchor}",
+   "types": [],
+   "functions": [
+    "clUpdateMutableCommandsKHR"
+   ],
+   "heading": [
+    "{CL_MAP_READ}).",
+    "Command-Buffers",
+    "Mutable Commands",
+    "Mutable Command Update Structs"
+   ]
+  }
+ ],
+ "CL_COMMAND_BUFFER_PLATFORM_AUTOMATIC_REMAP_KHR": [
+  {
+   "file": "api/opencl_platform_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported param_names by {clGetPlatformInfo}",
+   "row": "{CL_PLATFORM_COMMAND_BUFFER_CAPABILITIES_KHR_anchor} include::{generated}/api/version-notes/CL_PLATFORM_COMMAND_BUFFER_CAPABILITIES_KHR.asciidoc[] | {cl_platform_command_buffer_capabilities_khr_TYPE} ",
+   "types": [
+    "cl_platform_command_buffer_capabilities_khr"
+   ],
+   "functions": [
+    "clGetPlatformInfo"
+   ],
+   "heading": [
+    "The OpenCL Platform Layer",
+    "Querying Platform Info"
+   ]
+  }
+ ],
+ "CL_COMMAND_BUFFER_PLATFORM_REMAP_QUEUES_KHR": [
+  {
+   "file": "api/opencl_platform_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported param_names by {clGetPlatformInfo}",
+   "row": "{CL_PLATFORM_COMMAND_BUFFER_CAPABILITIES_KHR_anchor} include::{generated}/api/version-notes/CL_PLATFORM_COMMAND_BUFFER_CAPABILITIES_KHR.asciidoc[] | {cl_platform_command_buffer_capabilities_khr_TYPE} ",
+   "types": [
+    "cl_platform_command_buffer_capabilities_khr"
+   ],
+   "functions": [
+    "clGetPlatformInfo"
+   ],
+   "heading": [
+    "The OpenCL Platform Layer",
+    "Querying Platform Info"
+   ]
+  }
+ ],
+ "CL_COMMAND_BUFFER_PLATFORM_UNIVERSAL_SYNC_KHR": [
+  {
+   "file": "api/opencl_platform_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported param_names by {clGetPlatformInfo}",
+   "row": "{CL_PLATFORM_COMMAND_BUFFER_CAPABILITIES_KHR_anchor} include::{generated}/api/version-notes/CL_PLATFORM_COMMAND_BUFFER_CAPABILITIES_KHR.asciidoc[] | {cl_platform_command_buffer_capabilities_khr_TYPE} ",
+   "types": [
+    "cl_platform_command_buffer_capabilities_khr"
+   ],
+   "functions": [
+    "clGetPlatformInfo"
+   ],
+   "heading": [
+    "The OpenCL Platform Layer",
+    "Querying Platform Info"
+   ]
+  }
+ ],
+ "CL_FP_INF_NAN": [
+  {
+   "file": "api/opencl_platform_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported param_names by {clGetDeviceInfo}",
+   "row": "{CL_DEVICE_SINGLE_FP_CONFIG_anchor} footnote:native-rounding-modes[{fn-native-rounding-modes}] include::{generated}/api/version-notes/CL_DEVICE_SINGLE_FP_CONFIG.asciidoc[] | {cl_device_fp_config_TYPE}",
+   "types": [
+    "cl_device_fp_config"
+   ],
+   "functions": [
+    "clGetDeviceInfo"
+   ],
+   "heading": [
+    "The OpenCL Platform Layer",
+    "Querying Devices"
+   ]
+  }
+ ],
+ "CL_FP_ROUND_TO_NEAREST": [
+  {
+   "file": "api/opencl_platform_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported param_names by {clGetDeviceInfo}",
+   "row": "{CL_DEVICE_SINGLE_FP_CONFIG_anchor} footnote:native-rounding-modes[{fn-native-rounding-modes}] include::{generated}/api/version-notes/CL_DEVICE_SINGLE_FP_CONFIG.asciidoc[] | {cl_device_fp_config_TYPE}",
+   "types": [
+    "cl_device_fp_config"
+   ],
+   "functions": [
+    "clGetDeviceInfo"
+   ],
+   "heading": [
+    "The OpenCL Platform Layer",
+    "Querying Devices"
+   ]
+  }
+ ],
+ "CL_FP_DENORM": [
+  {
+   "file": "api/opencl_platform_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported param_names by {clGetDeviceInfo}",
+   "row": "{CL_DEVICE_DOUBLE_FP_CONFIG_anchor} footnote:native-rounding-modes[] include::{generated}/api/version-notes/CL_DEVICE_DOUBLE_FP_CONFIG.asciidoc[] Also see {cl_khr_fp64_EXT}. | {cl_device_fp_config_TYP",
+   "types": [
+    "cl_device_fp_config"
+   ],
+   "functions": [
+    "clGetDeviceInfo"
+   ],
+   "heading": [
+    "The OpenCL Platform Layer",
+    "Querying Devices"
+   ]
+  }
+ ],
+ "CL_FP_FMA": [
+  {
+   "file": "api/opencl_platform_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported param_names by {clGetDeviceInfo}",
+   "row": "{CL_DEVICE_DOUBLE_FP_CONFIG_anchor} footnote:native-rounding-modes[] include::{generated}/api/version-notes/CL_DEVICE_DOUBLE_FP_CONFIG.asciidoc[] Also see {cl_khr_fp64_EXT}. | {cl_device_fp_config_TYP",
+   "types": [
+    "cl_device_fp_config"
+   ],
+   "functions": [
+    "clGetDeviceInfo"
+   ],
+   "heading": [
+    "The OpenCL Platform Layer",
+    "Querying Devices"
+   ]
+  }
+ ],
+ "CL_FP_ROUND_TO_INF": [
+  {
+   "file": "api/opencl_platform_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported param_names by {clGetDeviceInfo}",
+   "row": "{CL_DEVICE_DOUBLE_FP_CONFIG_anchor} footnote:native-rounding-modes[] include::{generated}/api/version-notes/CL_DEVICE_DOUBLE_FP_CONFIG.asciidoc[] Also see {cl_khr_fp64_EXT}. | {cl_device_fp_config_TYP",
+   "types": [
+    "cl_device_fp_config"
+   ],
+   "functions": [
+    "clGetDeviceInfo"
+   ],
+   "heading": [
+    "The OpenCL Platform Layer",
+    "Querying Devices"
+   ]
+  }
+ ],
+ "CL_FP_ROUND_TO_ZERO": [
+  {
+   "file": "api/opencl_platform_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported param_names by {clGetDeviceInfo}",
+   "row": "{CL_DEVICE_DOUBLE_FP_CONFIG_anchor} footnote:native-rounding-modes[] include::{generated}/api/version-notes/CL_DEVICE_DOUBLE_FP_CONFIG.asciidoc[] Also see {cl_khr_fp64_EXT}. | {cl_device_fp_config_TYP",
+   "types": [
+    "cl_device_fp_config"
+   ],
+   "functions": [
+    "clGetDeviceInfo"
+   ],
+   "heading": [
+    "The OpenCL Platform Layer",
+    "Querying Devices"
+   ]
+  }
+ ],
+ "CL_FP_SOFT_FLOAT": [
+  {
+   "file": "api/opencl_platform_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported param_names by {clGetDeviceInfo}",
+   "row": "{CL_DEVICE_DOUBLE_FP_CONFIG_anchor} footnote:native-rounding-modes[] include::{generated}/api/version-notes/CL_DEVICE_DOUBLE_FP_CONFIG.asciidoc[] Also see {cl_khr_fp64_EXT}. | {cl_device_fp_config_TYP",
+   "types": [
+    "cl_device_fp_config"
+   ],
+   "functions": [
+    "clGetDeviceInfo"
+   ],
+   "heading": [
+    "The OpenCL Platform Layer",
+    "Querying Devices"
+   ]
+  }
+ ],
+ "CL_EXEC_KERNEL": [
+  {
+   "file": "api/opencl_platform_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported param_names by {clGetDeviceInfo}",
+   "row": "{CL_DEVICE_EXECUTION_CAPABILITIES_anchor} include::{generated}/api/version-notes/CL_DEVICE_EXECUTION_CAPABILITIES.asciidoc[] | {cl_device_exec_capabilities_TYPE} | Describes the execution capabilities",
+   "types": [
+    "cl_device_exec_capabilities"
+   ],
+   "functions": [
+    "clGetDeviceInfo"
+   ],
+   "heading": [
+    "The OpenCL Platform Layer",
+    "Querying Devices"
+   ]
+  }
+ ],
+ "CL_DEVICE_PARTITION_BY_AFFINITY_DOMAIN": [
+  {
+   "file": "api/opencl_platform_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported param_names by {clGetDeviceInfo}",
+   "row": "{CL_DEVICE_PARTITION_AFFINITY_DOMAIN_anchor} include::{generated}/api/version-notes/CL_DEVICE_PARTITION_AFFINITY_DOMAIN.asciidoc[] | {cl_device_affinity_domain_TYPE} | Returns the list of supported af",
+   "types": [
+    "cl_device_affinity_domain"
+   ],
+   "functions": [
+    "clGetDeviceInfo"
+   ],
+   "heading": [
+    "The OpenCL Platform Layer",
+    "Querying Devices"
+   ]
+  },
+  {
+   "file": "api/opencl_platform_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported param_names by {clGetDeviceInfo}",
+   "row": "{CL_DEVICE_PARTITION_TYPE_anchor} include::{generated}/api/version-notes/CL_DEVICE_PARTITION_TYPE.asciidoc[] | {cl_device_partition_property_TYPE}[] | Returns the properties argument specified in {clC",
+   "types": [
+    "cl_device_partition_property"
+   ],
+   "functions": [
+    "clGetDeviceInfo"
+   ],
+   "heading": [
+    "The OpenCL Platform Layer",
+    "Querying Devices"
+   ]
+  }
+ ],
+ "CL_DEVICE_AFFINITY_DOMAIN_L1_CACHE": [
+  {
+   "file": "api/opencl_platform_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported param_names by {clGetDeviceInfo}",
+   "row": "{CL_DEVICE_PARTITION_TYPE_anchor} include::{generated}/api/version-notes/CL_DEVICE_PARTITION_TYPE.asciidoc[] | {cl_device_partition_property_TYPE}[] | Returns the properties argument specified in {clC",
+   "types": [
+    "cl_device_partition_property"
+   ],
+   "functions": [
+    "clGetDeviceInfo"
+   ],
+   "heading": [
+    "The OpenCL Platform Layer",
+    "Querying Devices"
+   ]
+  }
+ ],
+ "CL_DEVICE_AFFINITY_DOMAIN_L2_CACHE": [
+  {
+   "file": "api/opencl_platform_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported param_names by {clGetDeviceInfo}",
+   "row": "{CL_DEVICE_PARTITION_TYPE_anchor} include::{generated}/api/version-notes/CL_DEVICE_PARTITION_TYPE.asciidoc[] | {cl_device_partition_property_TYPE}[] | Returns the properties argument specified in {clC",
+   "types": [
+    "cl_device_partition_property"
+   ],
+   "functions": [
+    "clGetDeviceInfo"
+   ],
+   "heading": [
+    "The OpenCL Platform Layer",
+    "Querying Devices"
+   ]
+  }
+ ],
+ "CL_DEVICE_AFFINITY_DOMAIN_L3_CACHE": [
+  {
+   "file": "api/opencl_platform_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported param_names by {clGetDeviceInfo}",
+   "row": "{CL_DEVICE_PARTITION_TYPE_anchor} include::{generated}/api/version-notes/CL_DEVICE_PARTITION_TYPE.asciidoc[] | {cl_device_partition_property_TYPE}[] | Returns the properties argument specified in {clC",
+   "types": [
+    "cl_device_partition_property"
+   ],
+   "functions": [
+    "clGetDeviceInfo"
+   ],
+   "heading": [
+    "The OpenCL Platform Layer",
+    "Querying Devices"
+   ]
+  }
+ ],
+ "CL_DEVICE_AFFINITY_DOMAIN_L4_CACHE": [
+  {
+   "file": "api/opencl_platform_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported param_names by {clGetDeviceInfo}",
+   "row": "{CL_DEVICE_PARTITION_TYPE_anchor} include::{generated}/api/version-notes/CL_DEVICE_PARTITION_TYPE.asciidoc[] | {cl_device_partition_property_TYPE}[] | Returns the properties argument specified in {clC",
+   "types": [
+    "cl_device_partition_property"
+   ],
+   "functions": [
+    "clGetDeviceInfo"
+   ],
+   "heading": [
+    "The OpenCL Platform Layer",
+    "Querying Devices"
+   ]
+  }
+ ],
+ "CL_DEVICE_AFFINITY_DOMAIN_NEXT_PARTITIONABLE": [
+  {
+   "file": "api/opencl_platform_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported param_names by {clGetDeviceInfo}",
+   "row": "{CL_DEVICE_PARTITION_TYPE_anchor} include::{generated}/api/version-notes/CL_DEVICE_PARTITION_TYPE.asciidoc[] | {cl_device_partition_property_TYPE}[] | Returns the properties argument specified in {clC",
+   "types": [
+    "cl_device_partition_property"
+   ],
+   "functions": [
+    "clGetDeviceInfo"
+   ],
+   "heading": [
+    "The OpenCL Platform Layer",
+    "Querying Devices"
+   ]
+  }
+ ],
+ "CL_DEVICE_AFFINITY_DOMAIN_NUMA": [
+  {
+   "file": "api/opencl_platform_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported param_names by {clGetDeviceInfo}",
+   "row": "{CL_DEVICE_PARTITION_TYPE_anchor} include::{generated}/api/version-notes/CL_DEVICE_PARTITION_TYPE.asciidoc[] | {cl_device_partition_property_TYPE}[] | Returns the properties argument specified in {clC",
+   "types": [
+    "cl_device_partition_property"
+   ],
+   "functions": [
+    "clGetDeviceInfo"
+   ],
+   "heading": [
+    "The OpenCL Platform Layer",
+    "Querying Devices"
+   ]
+  }
+ ],
+ "CL_DEVICE_SVM_COARSE_GRAIN_BUFFER": [
+  {
+   "file": "api/opencl_platform_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported param_names by {clGetDeviceInfo}",
+   "row": "{CL_DEVICE_SVM_CAPABILITIES_anchor} include::{generated}/api/version-notes/CL_DEVICE_SVM_CAPABILITIES.asciidoc[] | {cl_device_svm_capabilities_TYPE} | Describes the various shared virtual memory (SVM)",
+   "types": [
+    "cl_device_svm_capabilities"
+   ],
+   "functions": [
+    "clGetDeviceInfo"
+   ],
+   "heading": [
+    "The OpenCL Platform Layer",
+    "Querying Devices"
+   ]
+  }
+ ],
+ "CL_DEVICE_ATOMIC_ORDER_RELAXED": [
+  {
+   "file": "api/opencl_platform_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported param_names by {clGetDeviceInfo}",
+   "row": "{CL_DEVICE_ATOMIC_MEMORY_CAPABILITIES_anchor} include::{generated}/api/version-notes/CL_DEVICE_ATOMIC_MEMORY_CAPABILITIES.asciidoc[] | {cl_device_atomic_capabilities_TYPE} | Describes the various memo",
+   "types": [
+    "cl_device_atomic_capabilities"
+   ],
+   "functions": [
+    "clGetDeviceInfo"
+   ],
+   "heading": [
+    "The OpenCL Platform Layer",
+    "Querying Devices"
+   ]
+  }
+ ],
+ "CL_DEVICE_ATOMIC_SCOPE_ALL_DEVICES": [
+  {
+   "file": "api/opencl_platform_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported param_names by {clGetDeviceInfo}",
+   "row": "{CL_DEVICE_ATOMIC_MEMORY_CAPABILITIES_anchor} include::{generated}/api/version-notes/CL_DEVICE_ATOMIC_MEMORY_CAPABILITIES.asciidoc[] | {cl_device_atomic_capabilities_TYPE} | Describes the various memo",
+   "types": [
+    "cl_device_atomic_capabilities"
+   ],
+   "functions": [
+    "clGetDeviceInfo"
+   ],
+   "heading": [
+    "The OpenCL Platform Layer",
+    "Querying Devices"
+   ]
+  }
+ ],
+ "CL_DEVICE_ATOMIC_SCOPE_WORK_GROUP": [
+  {
+   "file": "api/opencl_platform_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported param_names by {clGetDeviceInfo}",
+   "row": "{CL_DEVICE_ATOMIC_MEMORY_CAPABILITIES_anchor} include::{generated}/api/version-notes/CL_DEVICE_ATOMIC_MEMORY_CAPABILITIES.asciidoc[] | {cl_device_atomic_capabilities_TYPE} | Describes the various memo",
+   "types": [
+    "cl_device_atomic_capabilities"
+   ],
+   "functions": [
+    "clGetDeviceInfo"
+   ],
+   "heading": [
+    "The OpenCL Platform Layer",
+    "Querying Devices"
+   ]
+  }
+ ],
+ "CL_DEVICE_SVM_ATOMICS": [
+  {
+   "file": "api/opencl_platform_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported param_names by {clGetDeviceInfo}",
+   "row": "{CL_DEVICE_ATOMIC_MEMORY_CAPABILITIES_anchor} include::{generated}/api/version-notes/CL_DEVICE_ATOMIC_MEMORY_CAPABILITIES.asciidoc[] | {cl_device_atomic_capabilities_TYPE} | Describes the various memo",
+   "types": [
+    "cl_device_atomic_capabilities"
+   ],
+   "functions": [
+    "clGetDeviceInfo"
+   ],
+   "heading": [
+    "The OpenCL Platform Layer",
+    "Querying Devices"
+   ]
+  }
+ ],
+ "CL_DEVICE_ATOMIC_MEMORY_CAPABILITIES": [
+  {
+   "file": "api/opencl_platform_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported param_names by {clGetDeviceInfo}",
+   "row": "{CL_DEVICE_ATOMIC_FENCE_CAPABILITIES_anchor} include::{generated}/api/version-notes/CL_DEVICE_ATOMIC_FENCE_CAPABILITIES.asciidoc[] | {cl_device_atomic_capabilities_TYPE} | Describes the various memory",
+   "types": [
+    "cl_device_atomic_capabilities"
+   ],
+   "functions": [
+    "clGetDeviceInfo"
+   ],
+   "heading": [
+    "The OpenCL Platform Layer",
+    "Querying Devices"
+   ]
+  }
+ ],
+ "CL_DEVICE_ATOMIC_ORDER_ACQ_REL": [
+  {
+   "file": "api/opencl_platform_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported param_names by {clGetDeviceInfo}",
+   "row": "{CL_DEVICE_ATOMIC_FENCE_CAPABILITIES_anchor} include::{generated}/api/version-notes/CL_DEVICE_ATOMIC_FENCE_CAPABILITIES.asciidoc[] | {cl_device_atomic_capabilities_TYPE} | Describes the various memory",
+   "types": [
+    "cl_device_atomic_capabilities"
+   ],
+   "functions": [
+    "clGetDeviceInfo"
+   ],
+   "heading": [
+    "The OpenCL Platform Layer",
+    "Querying Devices"
+   ]
+  }
+ ],
+ "CL_DEVICE_DEVICE_ENQUEUE_CAPABILITIES": [
+  {
+   "file": "api/opencl_platform_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported param_names by {clGetDeviceInfo}",
+   "row": "{CL_DEVICE_DEVICE_ENQUEUE_CAPABILITIES_anchor} include::{generated}/api/version-notes/CL_DEVICE_DEVICE_ENQUEUE_CAPABILITIES.asciidoc[] | {cl_device_device_enqueue_capabilities_TYPE} | Describes device",
+   "types": [
+    "cl_device_device_enqueue_capabilities"
+   ],
+   "functions": [
+    "clGetDeviceInfo"
+   ],
+   "heading": [
+    "The OpenCL Platform Layer",
+    "Querying Devices"
+   ]
+  }
+ ],
+ "CL_DEVICE_GENERIC_ADDRESS_SPACE_SUPPORT": [
+  {
+   "file": "api/opencl_platform_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported param_names by {clGetDeviceInfo}",
+   "row": "{CL_DEVICE_DEVICE_ENQUEUE_CAPABILITIES_anchor} include::{generated}/api/version-notes/CL_DEVICE_DEVICE_ENQUEUE_CAPABILITIES.asciidoc[] | {cl_device_device_enqueue_capabilities_TYPE} | Describes device",
+   "types": [
+    "cl_device_device_enqueue_capabilities"
+   ],
+   "functions": [
+    "clGetDeviceInfo"
+   ],
+   "heading": [
+    "The OpenCL Platform Layer",
+    "Querying Devices"
+   ]
+  }
+ ],
+ "CL_DEVICE_QUEUE_REPLACEABLE_DEFAULT": [
+  {
+   "file": "api/opencl_platform_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported param_names by {clGetDeviceInfo}",
+   "row": "{CL_DEVICE_DEVICE_ENQUEUE_CAPABILITIES_anchor} include::{generated}/api/version-notes/CL_DEVICE_DEVICE_ENQUEUE_CAPABILITIES.asciidoc[] | {cl_device_device_enqueue_capabilities_TYPE} | Describes device",
+   "types": [
+    "cl_device_device_enqueue_capabilities"
+   ],
+   "functions": [
+    "clGetDeviceInfo"
+   ],
+   "heading": [
+    "The OpenCL Platform Layer",
+    "Querying Devices"
+   ]
+  }
+ ],
+ "CL_DEVICE_QUEUE_SUPPORTED": [
+  {
+   "file": "api/opencl_platform_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported param_names by {clGetDeviceInfo}",
+   "row": "{CL_DEVICE_DEVICE_ENQUEUE_CAPABILITIES_anchor} include::{generated}/api/version-notes/CL_DEVICE_DEVICE_ENQUEUE_CAPABILITIES.asciidoc[] | {cl_device_device_enqueue_capabilities_TYPE} | Describes device",
+   "types": [
+    "cl_device_device_enqueue_capabilities"
+   ],
+   "functions": [
+    "clGetDeviceInfo"
+   ],
+   "heading": [
+    "The OpenCL Platform Layer",
+    "Querying Devices"
+   ]
+  }
+ ],
+ "CL_COMMAND_BUFFER_CAPABILITY_DEVICE_SIDE_ENQUEUE_KHR": [
+  {
+   "file": "api/opencl_platform_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported param_names by {clGetDeviceInfo}",
+   "row": "{CL_DEVICE_COMMAND_BUFFER_CAPABILITIES_KHR_anchor} include::{generated}/api/version-notes/CL_DEVICE_COMMAND_BUFFER_CAPABILITIES_KHR.asciidoc[] | {cl_device_command_buffer_capabilities_khr_TYPE} | Desc",
+   "types": [
+    "cl_device_command_buffer_capabilities_khr"
+   ],
+   "functions": [
+    "clGetDeviceInfo"
+   ],
+   "heading": [
+    "The OpenCL Platform Layer",
+    "Querying Devices"
+   ]
+  }
+ ],
+ "CL_COMMAND_BUFFER_CAPABILITY_KERNEL_PRINTF_KHR": [
+  {
+   "file": "api/opencl_platform_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported param_names by {clGetDeviceInfo}",
+   "row": "{CL_DEVICE_COMMAND_BUFFER_CAPABILITIES_KHR_anchor} include::{generated}/api/version-notes/CL_DEVICE_COMMAND_BUFFER_CAPABILITIES_KHR.asciidoc[] | {cl_device_command_buffer_capabilities_khr_TYPE} | Desc",
+   "types": [
+    "cl_device_command_buffer_capabilities_khr"
+   ],
+   "functions": [
+    "clGetDeviceInfo"
+   ],
+   "heading": [
+    "The OpenCL Platform Layer",
+    "Querying Devices"
+   ]
+  }
+ ],
+ "CL_COMMAND_BUFFER_CAPABILITY_MULTIPLE_QUEUE_KHR": [
+  {
+   "file": "api/opencl_platform_layer.asciidoc",
+   "kind": "table",
+   "label": "List of supported param_names by {clGetDeviceInfo}",
+   "row": "{CL_DEVICE_COMMAND_BUFFER_CAPABILITIES_KHR_anchor} include::{generated}/api/version-notes/CL_DEVICE_COMMAND_BUFFER_CAPABILITIES_KHR.asciidoc[] | {cl_device_command_buffer_capabilities_khr_TYPE} | Desc",
+   "types": [
+    "cl_device_command_buffer_capabilities_khr"
+   ],
+   "functions": [
+    "clGetDeviceInfo"
+   ],
+   "heading": [
+    "The OpenCL Platform Layer",
+    "Querying Devices"
+   ]
+  }
+ ],
+ "CL_DEVICE_KERNEL_CLOCK_SCOPE_DEVICE_KHR": [
+  {
+   "file": "api/opencl_platform_layer.asciidoc",
+   "kind": "table",
+   "label": null,
+   "row": "{CL_DEVICE_KERNEL_CLOCK_SCOPE_DEVICE_KHR} | {opencl_c_kernel_clock_scope_device}",
+   "types": [],
+   "functions": [
+    "clGetDeviceInfo"
+   ],
+   "heading": [
+    "The OpenCL Platform Layer",
+    "Querying Devices"
+   ]
+  }
+ ],
+ "CL_DEVICE_KERNEL_CLOCK_SCOPE_WORK_GROUP_KHR": [
+  {
+   "file": "api/opencl_platform_layer.asciidoc",
+   "kind": "table",
+   "label": null,
+   "row": "{CL_DEVICE_KERNEL_CLOCK_SCOPE_WORK_GROUP_KHR} | {opencl_c_kernel_clock_scope_work_group}",
+   "types": [],
+   "functions": [
+    "clGetDeviceInfo"
+   ],
+   "heading": [
+    "The OpenCL Platform Layer",
+    "Querying Devices"
+   ]
+  }
+ ],
+ "CL_DEVICE_KERNEL_CLOCK_SCOPE_SUB_GROUP_KHR": [
+  {
+   "file": "api/opencl_platform_layer.asciidoc",
+   "kind": "table",
+   "label": null,
+   "row": "{CL_DEVICE_KERNEL_CLOCK_SCOPE_SUB_GROUP_KHR} | {opencl_c_kernel_clock_scope_sub_group}",
+   "types": [],
+   "functions": [
+    "clGetDeviceInfo"
+   ],
+   "heading": [
+    "The OpenCL Platform Layer",
+    "Querying Devices"
+   ]
+  }
+ ],
+ "CL_DEVICE_BUILT_IN_KERNELS_WITH_VERSION_KHR": [
+  {
+   "file": "api/cl_khr_extended_versioning.asciidoc",
+   "kind": "inline",
+   "label": null,
+   "row": "  list of individual kernels without parsing a string is desirable.",
+   "types": [],
+   "functions": [],
+   "heading": [
+    "Issues"
+   ]
+  }
+ ]
+}
