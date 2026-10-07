@@ -61,6 +61,8 @@ cl_context properties cl_name_version
 # label phrase -> canonical value-set name (when the label names no C type)
 LABEL_MAP = [
     (r"list of supported event command types", "cl_command_type"),
+    (r"image channel order", "cl_channel_order"),
+    (r"image channel data type", "cl_channel_type"),
     (r"list of supported memory flag values", "cl_mem_flags"),
     (r"list of supported map flag values", "cl_map_flags"),
     (r"list of supported migration flags", "cl_mem_migration_flags"),
@@ -90,8 +92,6 @@ def resolve_label(label, fn_paramtype):
     bm = re.search(r"`(cl_[a-z0-9_]+)`", lab)
     if bm and canonical(bm.group(1)) != "properties":
         cand = bm.group(1)
-        if canonical(cand) + "s" != canonical(cand):
-            pass
         # accept if the C name or +s is a known type
         if cand in GLOBALS.vsets or cand + "s" in GLOBALS.vsets:
             return cand if cand in GLOBALS.vsets else cand + "s"
@@ -99,9 +99,10 @@ def resolve_label(label, fn_paramtype):
     if pm and pm.group(1) in GLOBALS.vsets:
         return pm.group(1)
     for pat, name in LABEL_MAP:
-        if re.search(pat, lab):
+        if re.search(pat, lab) and name in GLOBALS.vsets:
             return name
-    fm = re.search(r"param_names by\s+\{?(clGet[A-Za-z0-9_]+)", lab)
+    # function-name resolution must run on the ORIGINAL-CASE label
+    fm = re.search(r"param_names by\s*[\{*<]*(clGet[A-Za-z0-9_]+)", label)
     if fm and fm.group(1) in fn_paramtype:
         return fn_paramtype[fm.group(1)]
     return None
@@ -161,6 +162,12 @@ def mine():
     for f in sorted(os.listdir(api)):
         if re.match(r"^(opencl_(runtime|platform)_layer|cl_(khr|ext)_[a-z0-9_]+)\.asciidoc$", f):
             files.append("api/" + f)
+    # the environment spec (image channel orders, addressing modes, image formats)
+    envd = os.path.join(BASE, "env")
+    if os.path.isdir(envd):
+        for f in sorted(os.listdir(envd)):
+            if f.endswith(".asciidoc"):
+                files.append("env/" + f)
     ext = os.path.join(BASE, "extensions")
     if os.path.isdir(ext):
         for f in sorted(os.listdir(ext)):
@@ -217,6 +224,11 @@ def mine():
                     if set(t2) <= {"=", "|"} and len(t2) >= 5:
                         i += 1
                         break
+                    # metadata lines are not cell content — skipping them
+                    # keeps "{CL_X_anchor}" cells clean for the clean-cell test
+                    if t2.startswith("include::") or t2.startswith("ifdef::") or t2.startswith("endif::"):
+                        i += 1
+                        continue
                     if r2.startswith("|"):
                         if row is not None:
                             rows.append(row)
@@ -230,29 +242,35 @@ def mine():
                     rows.append(row)
 
                 grp = resolve_label(label, fn_paramtype)
-                # header row: first row containing 'Value'|'Value Type' etc — skip
-                for row in rows:
-                    cells = row
-                    if not cells:
-                        continue
-                    first = cells[0]
-                    fm2 = re.match(r"^\{?(CL_[A-Z0-9_]+?)(?:_anchor)?\}?$", first.strip().replace(" ", ""))
-                    if not fm2:
-                        continue
-                    tok = fm2.group(1)
-                    if tok not in names:
-                        continue
-                    if grp:
-                        ev[tok].append(G(grp, "G2 table label", rel))
-                    # value-column enumeration of bitfield/flag members
-                    if len(cells) >= 2:
-                        desc = cells[-1]
-                        if re.search(r"combination of|one of the following|following values|bit.?field|bit.?mask|values? (?:are|include|specified|valid)|list of supported", desc, re.I):
-                            for mt in TOKEN_RE.findall(desc):
-                                if mt in names and mt not in ("CL_TRUE", "CL_FALSE"):
-                                    ev[mt].append(G(grp, "G2 value-column member list", rel))
-                label = re.match(r"^\.\s*(.*)", lines[i - 1]).group(1) if lines and re.match(r"^\.\s", lines[i - 1]) else None
-                # (label reset: the label applies to THIS table; after consumption it clears)
+                if grp:
+                    # A row contributes a token only from a CLEAN value cell —
+                    # a cell whose entire content is a single {CL_X} (optionally
+                    # with a footnote link).  Scanning cells (not just column
+                    # 0) catches "List of supported event command types" tables
+                    # (function in col 0, token in col 1), while ignoring
+                    # description cells that merely mention other values in
+                    # prose (the CL_FALSE-in-10-sets contamination class).
+                    CLEAN_CELL_RE = re.compile(
+                        r"^\{?CL_[A-Z0-9_]+(?:_anchor)?\}?\s*(?:footnote:\[[^\]]*\])?$")
+                    for row in rows:
+                        for cell in row:
+                            mcell = CLEAN_CELL_RE.match(cell.strip())
+                            if not mcell:
+                                continue
+                            # Extract the bare token: strip whitespace, an
+                            # optional leading "{", the "_anchor" suffix, a
+                            # trailing "}", and any footnote link.  The
+                            # char-class match earlier greedly swallowed the
+                            # "_anchor" suffix (underscore is in the class),
+                            # so strip it explicitly by suffix.
+                            c = mcell.group(0).strip()
+                            c = re.sub(r"footnote:\[[^\]]*\]", "", c).strip()
+                            c = c.lstrip("{").rstrip("}")
+                            if c.endswith("_anchor"):
+                                c = c[: -len("_anchor")]
+                            if c.startswith("CL_") and c in names:
+                                ev[c].append(
+                                    G(grp, "table value cell (" + (label or "")[:50] + ")", rel))
                 label = None
                 continue
 
@@ -365,12 +383,24 @@ SELF_TESTS = {
     "CL_COMMAND_TASK": {"cl_command_type"},
     "CL_COMMAND_COPY_BUFFER": {"cl_command_type"},
     "CL_QUEUE_OUT_OF_ORDER_EXEC_MODE_ENABLE": {"cl_command_queue_properties"},
-    "CL_DEVICE_TYPE": {"cl_device_type"},
+    # CL_DEVICE_TYPE (0x1003) is a clGetDeviceInfo QUERY KEY (param_name),
+    # not a member of the cl_device_type value set — mirrors gl.xml where
+    # GL_MAX_TEXTURE_SIZE groups as a GetPName, not as a TextureTarget.
+    "CL_DEVICE_TYPE": {"cl_device_info"},
+    "CL_DEVICE_TYPE_CPU": {"cl_device_type"},
     "CL_DEVICE_AFFINITY_DOMAIN_NUMA": {"cl_device_affinity_domain"},
     "CL_QUEUE_PRIORITY_HIGH_KHR": {"cl_queue_priority_khr"},
     "CL_D3D10_DEVICE_KHR": None,      # may be ungrouped (opaque handle-ish)
     "CL_CHAR_BIT": None,              # may be ungrouped (platform constant)
     "CL_NV21": None,                  # image format — check manually
+}
+
+# negative containment: these tokens must NOT appear in these sets
+# (regression guard for the description-cell contamination class)
+NEGATIVE_TESTS = {
+    "CL_FALSE": {"cl_mem_flags", "cl_map_flags", "cl_kernel_exec_info", "cl_svm_capabilities_khr"},
+    "CL_TRUE":  {"cl_mem_flags", "cl_map_flags", "cl_kernel_exec_info", "cl_svm_capabilities_khr"},
+    "CL_NONE":  {"cl_mem_flags", "cl_map_flags"},
 }
 
 
@@ -396,7 +426,7 @@ def main():
     ev = mine()
     out = attribute(ev)
 
-    # self tests
+    # self tests (positive subset)
     fails = []
     for tok, expected in SELF_TESTS.items():
         got = set(out[tok]["groups"])
@@ -405,6 +435,11 @@ def main():
         missing = expected - got
         if missing:
             fails.append((tok, missing, got))
+    # self tests (negative containment — contamination guard)
+    for tok, forbidden in NEGATIVE_TESTS.items():
+        extra = forbidden & set(out[tok]["groups"])
+        if extra:
+            fails.append((tok, "MUST NOT be in " + str(forbidden), extra))
     if fails:
         print("SELF-TEST FAILURES:")
         for t2, miss, got in fails:

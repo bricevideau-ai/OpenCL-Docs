@@ -1,4 +1,4 @@
-# Enum `group` attribution for cl.xml — WIP
+# Enum `group` attribution for cl.xml
 
 Goal: add a `group` attribute to every `<enum>` entry in `xml/cl.xml` where one
 is safely determinable, mirroring the OpenGL registry convention
@@ -10,10 +10,11 @@ multi-membership is comma-separated, e.g. `GL_DEPTH_BUFFER_BIT` →
 
 | File | What it is | Status |
 |---|---|---|
-| `attribute_v4.py` | Current authoritative attribution engine (extracts spec evidence per token, self-tests, writes outputs, applies to cl.xml) | active |
+| `attribute_final.py` | Attribution engine: per-token spec evidence, self-tests, writes the JSON/MD outputs | active |
+| `apply_groups.py` | Surgical applier: inserts ` group="A,B"` after `name="..."` on **definition** `<enum>` lines only (those carrying `value=`/`bitpos=`); require-reference lines untouched. Idempotent, self-verifying | active |
 | `attribution-final.json` | Per-token result: container, value, groups, evidence trail | generated |
 | `attribution-table.md` | Human review table (coverage, rules, multi-membership, full table) | generated |
-| `attribute_final.py`, `attribute_v2.py`, `attribute_v3.py` | Earlier iterations kept as the audit trail of how the rules evolved | superseded |
+| `attribute_v2.py`, `attribute_v3.py` | Earlier iterations kept as the audit trail of how the rules evolved | superseded |
 | `value_lists.py`, `value-lists.json`, `enum-contexts.json`, `extract_contexts.py`, `attribute.py` | First-generation spec mining (grid-table parser) — kept for reference | superseded |
 
 ## Ground-truth references used
@@ -60,10 +61,28 @@ attempts (cross-contamination like `CL_FALSE` landing in 10 sets).
 
 ## Self-tests
 
-`attribute_v4.py` asserts a positive set (token → expected group, subset check)
+`attribute_final.py`'s self-tests assert a positive set (token → expected group, subset check)
 including the hard ones — `CL_COMMAND_NDRANGE_KERNEL` → `cl_command_type`,
 `CL_EVENT_REFERENCE_COUNT` → `cl_event_info`, `CL_DEVICE_TYPE` →
 `cl_device_info` (it is a query key, *not* the `cl_device_type` value set),
 `CL_CONTEXT_PLATFORM` → `cl_context_properties` — plus negative assertions to
 catch regressions (`CL_TRUE ⊆ {cl_bool}`, ...). Failures abort before any
 write.
+
+## Verification (run on the landed state)
+
+- `git diff` shows only the intended insertion: one ` group="..."` attribute per
+  assigned definition line, no other byte changed.
+- All 27 self-tests pass.
+- Schema: `rnc2rng xml/registry.rnc` + `lxml RelaxNG` — cl.xml **valid** against
+  the extended `registry.rnc` (`attribute group { text } ?` added to `Enum`).
+- Registry loader: `scripts/reg.py -registry cl.xml -validate` — exit 0.
+- Header generation: `scripts/gencl.py -registry cl.xml cl.h` produces a
+  **byte-identical** `cl.h` versus unmodified main (the attribute is
+  generator-invisible, as in OpenGL).
+- Scope: only definition `<enum>` lines (those with `value=`/`bitpos=`) receive
+  the attribute; the 1,313 bare `<enum name="X"/>` require-reference lines are
+  untouched — matching gl.xml, where groups live on definitions.
+- `make -C xml validate` (CI entrypoint) runs `jing -c registry.rnc cl.xml`;
+  the jing binary is not present in this environment, so the equivalent
+  rnc2rng + RelaxNG validation above is the local stand-in.
