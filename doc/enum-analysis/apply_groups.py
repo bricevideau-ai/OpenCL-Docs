@@ -60,7 +60,7 @@ def main(apply=True):
                     stack.append(tname)
         enc_of[idx] = stack[-1] if stack else None
 
-    touched, already, skipped, total = 0, 0, 0, 0
+    touched, replaced, unchanged, skipped, total = 0, 0, 0, 0, 0
     new_lines = []
     matched = set()
     for idx, ln in enumerate(lines):
@@ -69,25 +69,33 @@ def main(apply=True):
             total += 1
             name = m.group(2)
             head, close = m.group(1), m.group(3)
-            if GROUP_ATTR.search(head):
-                already += 1
-                new_lines.append(ln)
-                continue
+            gm = GROUP_ATTR.search(head)
             # only touch DEFINITION enums — lines that carry a numeric
             # `value=` or `bitpos=` attribute (the actual <enums> definitions).
             # 951 of the assigned names ALSO appear as bare `<enum name="X"/>`
             # reference lines inside feature/extension <require> blocks; those
             # share the name but must NOT gain a group (gl.xml precedent: group
             # only appears on value-carrying definitions).
-            if not (re.search(r'\bvalue="', ln) or re.search(r'\bbitpos="', ln)):
-                new_lines.append(ln)
-                skipped += 1
-                continue
             if name in assigned:
+                if not (re.search(r'\bvalue="', ln) or re.search(r'\bbitpos="', ln)):
+                    new_lines.append(ln)
+                    skipped += 1
+                    continue
                 g = ",".join(assigned[name])
-                head2 = re.sub(r'(name="%s")' % re.escape(name), r'\1 group="%s"' % g, head, count=1)
-                new_lines.append(head2 + close)
-                touched += 1
+                if gm:
+                    if gm.group(0) == "group=\"%s\"" % g:
+                        unchanged += 1
+                        new_lines.append(ln)
+                    else:
+                        # the attribution data changed (a later engine pass
+                        # corrected this name).  Replace the stale attribute.
+                        head2 = re.sub(r'\bgroup="[^"]*"', 'group="%s"' % g, head, count=1)
+                        new_lines.append(head2 + close)
+                        replaced += 1
+                else:
+                    head2 = re.sub(r'(name="%s")' % re.escape(name), r'\1 group="%s"' % g, head, count=1)
+                    new_lines.append(head2 + close)
+                    touched += 1
                 matched.add(name)
             else:
                 new_lines.append(head + close)
@@ -96,8 +104,9 @@ def main(apply=True):
             new_lines.append(ln)
 
     print("enum definitions scanned (in <enums>): %d" % total)
-    print("  assigned groups:     %d" % touched)
-    print("  already had group:   %d" % already)
+    print("  inserted new groups: %d" % touched)
+    print("  replaced stale:      %d" % replaced)
+    print("  already correct:     %d" % unchanged)
     print("  left ungrouped:      %d" % skipped)
     print("  expected assigned:   %d (from attribution-final.json)" % len(assigned))
     print("  matched in xml:      %d" % len(matched))

@@ -10,10 +10,11 @@ multi-membership is comma-separated, e.g. `GL_DEPTH_BUFFER_BIT` →
 
 | File | What it is | Status |
 |---|---|---|
-| `attribute_final.py` | Attribution engine: per-token spec evidence, self-tests, writes the JSON/MD outputs | active |
-| `apply_groups.py` | Surgical applier: inserts ` group="A,B"` after `name="..."` on **definition** `<enum>` lines only (those carrying `value=`/`bitpos=`); require-reference lines untouched. Idempotent, self-verifying | active |
-| `attribution-final.json` | Per-token result: container, value, groups, evidence trail | generated |
+| `attribute_final.py` | Attribution engine (v5): per-token spec evidence, 51 positive + negative self-tests, writes the JSON/MD outputs | active |
+| `apply_groups.py` | Surgical applier: inserts ` group="A,B"` after `name="..."` on **definition** `<enum>` lines only (those carrying `value=`/`bitpos=`); require-reference lines untouched. Re-places stale groups when the attribution data changes. Self-verifying | active |
+| `attribution-final.json` | Per-token result: container, value, groups, evidence trail (1,028 assigned of 1,334) | generated |
 | `attribution-table.md` | Human review table (coverage, rules, multi-membership, full table) | generated |
+| `spec_check.py`, `spec-check.md` | Manual-adjudication helper: dumps the spec context around every *still-unassigned* token so each can be decided by hand | tool |
 | `attribute_v2.py`, `attribute_v3.py` | Earlier iterations kept as the audit trail of how the rules evolved | superseded |
 | `value_lists.py`, `value-lists.json`, `enum-contexts.json`, `extract_contexts.py`, `attribute.py` | First-generation spec mining (grid-table parser) — kept for reference | superseded |
 
@@ -44,7 +45,18 @@ multi-membership is comma-separated, e.g. `GL_DEPTH_BUFFER_BIT` →
         `{cl_X_TYPE}` bullet → `cl_X`
   - R2d extension sentence `Accepted value for the _param_name_ parameter to
         *clGetDeviceInfo*` + following `#define` list → `cl_device_info`
+        (bit members `(1 << N)` are exempt from this sentence-anchor rule —
+        they belong to their `cl_bitfield` capacity set, not to the
+        capabilities QUERY token's param set; the ARM
+        `CL_DEVICE_CONTROLLED_TERMINATION_*_ARM` trio is the worked example)
   - R2e `typedef cl_bitfield cl_X;` + following `#define` bit list → `cl_X`
+- **R2f Inline value-set members**: a param-name row whose *type cell* is the
+  set's C typedef (e.g. `{cl_filter_mode_TYPE}`) and whose description carries
+  an explicit enumerator ("Valid values are: …" / "one of the following") —
+  each `{CL_TOKEN}` in that cell is a member of that value set.  This is the
+  "manual" class you flagged: `CL_ADDRESS_CLAMP` → `cl_addressing_mode`,
+  `CL_FILTER_NEAREST` → `cl_filter_mode`, the `CL_KERNEL_ARG_ADDRESS_*` /
+  `CL_KERNEL_ARG_ACCESS_*` / `CL_KERNEL_ARG_TYPE_*` qualifier families.
 - **R3** cl.xml `ErrorCodes.*` containers → `group="ErrorCode"` (direct GL
   precedent: `GL_NO_ERROR` → `group=...ErrorCode`; cl.xml itself notes the
   values are "the same set of error codes returned from the API calls").
@@ -65,8 +77,17 @@ attempts (cross-contamination like `CL_FALSE` landing in 10 sets).
 including the hard ones — `CL_COMMAND_NDRANGE_KERNEL` → `cl_command_type`,
 `CL_EVENT_REFERENCE_COUNT` → `cl_event_info`, `CL_DEVICE_TYPE` →
 `cl_device_info` (it is a query key, *not* the `cl_device_type` value set),
-`CL_CONTEXT_PLATFORM` → `cl_context_properties` — plus negative assertions to
-catch regressions (`CL_TRUE ⊆ {cl_bool}`, ...). Failures abort before any
+`CL_CONTEXT_PLATFORM` → `cl_context_properties`, `CL_ADDRESS_CLAMP` →
+`cl_addressing_mode` (a value-set *member*, not a param name), the
+`CL_DEVICE_NATIVE_VECTOR_WIDTH_*` + `CL_DEVICE_PREFERRED_VECTOR_WIDTH_*`
+families → `cl_device_info` — plus negative assertions to catch regressions
+(`CL_FALSE ⊆ {cl_bool, cl_context_properties, cl_image_properties, ...}`,
++ bit-member contamination guards —
+e.g. `CL_QUEUE_FAMILY_INTEL ⊆ {cl_command_queue_info,
+cl_command_queue_properties}`, the ARM
+`CL_DEVICE_CONTROLLED_TERMINATION_*` trio single-group, the
+`CL_QUEUE_PRIORITY_KHR`/`CL_QUEUE_THROTTLE_KHR` value sets ...). Failures
+abort before any
 write.
 
 ## Verification (run on the landed state)

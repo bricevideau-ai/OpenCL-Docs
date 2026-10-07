@@ -75,7 +75,7 @@ LABEL_MAP = [
     (r"list of supported context creation properties by", "cl_context_properties"),
     (r"list of supported sampler creation properties by", "cl_sampler_properties"),
     (r"list of supported image creation properties", "cl_image_properties"),
-    (r"list of supported (?:queue |command-)?command-?queue (?:creation )?properties by", "cl_command_queue_properties"),
+    (r"list of supported (?:command[\s\-]+)?queue (?:creation )?properties by", "cl_command_queue_properties"),
     (r"list of supported partition schemes by", "cl_device_partition_property"),
 ]
 
@@ -224,15 +224,69 @@ def mine():
                     if set(t2) <= {"=", "|"} and len(t2) >= 5:
                         i += 1
                         break
+                    # conditional blocks (ifdef/ifndef/endif): two forms in
+                    # spec tables —
+                    #  (a) ROW-GATED: the first content line starts a new '|'
+                    #      row; the block holds self-contained rows (e.g. the
+                    #      clEnqueueAcquireGLObjects /
+                    #      {CL_COMMAND_ACQUIRE_GL_OBJECTS} pair under
+                    #      cl_khr_gl_sharing).  Parse normally.
+                    #  (b) CELL-CONTINUATION: the content is prose/anchor
+                    #      alternatives that merge into the open cell (e.g.
+                    #      "{CL_DEVICE_UUID_anchor}" / ifdef::
+                    #      "or" / {CL_DEVICE_UUID_KHR_anchor} / endif::) —
+                    #      that corrupts the clean-cell test, so skip the
+                    #      whole block, tag-matched and depth-counted.
+                    cm2 = re.match(r"^(ifdef|ifndef)::([a-zA-Z0-9_]+)\[\]$", t2)
+                    if cm2:
+                        cond_tag = cm2.group(2)
+                        # find the matching endif (depth-counted)
+                        end_i = i
+                        depth = 1
+                        k = i
+                        while k < n - 1 and depth > 0:
+                            k += 1
+                            c2 = lines[k].strip()
+                            mm = re.match(r"^(ifdef|ifndef)::([a-zA-Z0-9_]+)\[\]$", c2)
+                            if mm and mm.group(2) == cond_tag:
+                                depth += 1
+                            elif re.match(r"^endif::" + re.escape(cond_tag) + r"\[\]$", c2):
+                                depth -= 1
+                        end_i = k
+                        # first meaningful content line in the block
+                        first_content = None
+                        for k2 in range(i + 1, end_i + 1):
+                            c3 = lines[k2].strip()
+                            if c3 and not c3.startswith(("//", "include::",
+                                                       "ifdef::", "ifndef::",
+                                                       "endif::")):
+                                first_content = c3
+                                break
+                        if first_content is not None and first_content.startswith("|"):
+                            i += 1        # (a): parse the block's rows normally
+                            continue
+                        i = end_i + 1      # (b): drop the continued content
+                        continue
+                    if re.match(r"^endif::[a-zA-Z0-9_]+\[\]$", t2):
+                        i += 1
+                        continue
                     # metadata lines are not cell content — skipping them
                     # keeps "{CL_X_anchor}" cells clean for the clean-cell test
                     if t2.startswith("include::") or t2.startswith("ifdef::") or t2.startswith("endif::"):
                         i += 1
                         continue
+                    # asciidoc line comments: per the AsciiDoc spec (comments
+                    # doc) the processor removes line comments before
+                    # processing table cell content, so a rendered value-cell
+                    # chain like "{CL_A} + {CL_B}" never includes a "// note".
+                    # (/// and anything else are left alone.)
+                    if t2.startswith("//") and not t2.startswith("///"):
+                        i += 1
+                        continue
                     if r2.startswith("|"):
                         if row is not None:
                             rows.append(row)
-                        row = [c.strip() for c in r2[1:].split("|")]
+                        row = [c.strip().strip('`') for c in r2[1:].split("|")]
                     elif re.match(r"^\s+\|", r2) and row is not None:
                         row.append(r2.lstrip()[1:].strip())
                     elif row is not None and t2:
@@ -243,6 +297,59 @@ def mine():
 
                 grp = resolve_label(label, fn_paramtype)
                 if grp:
+                    # ---- inline value-set members (spec-derived) ----
+                    # Some rows in a param_names table document a VALUE SET
+                    # inline: the row's type cell is the set's C typedef
+                    # ({cl_filter_mode_TYPE} for the CL_SAMPLER_FILTER_MODE
+                    # row) and its description cell enumerates the members
+                    # ("Valid values are: {CL_FILTER_NEAREST} - ...").
+                    # Evidence rule (opencl_runtime_layer.asciidoc, sampler
+                    # creation properties; clGetKernelArgInfo table):
+                    #   (1) type cell == {cl_X_TYPE} and X is neither a
+                    #       primitive type nor an opaque handle type;
+                    #   (2) description cell carries an explicit enumeration
+                    #       introducer ("Valid values are:" / "Accepted
+                    #       values are:" / "one of the following");
+                    #   (3) each {CL_TOKEN} in that cell that is a real
+                    #       cl.xml name is a member of the cl_X value set.
+                    # Tokens absent from cl.xml (stale spec prose such as
+                    # CL_ADDRESS_REPEAT) are skipped via the names check.
+                    INLINE_INTRO_RE = re.compile(
+                        r"(?:valid|accepted)\s+values\s+are\s*:?"
+                        r"|one\s+of\s+the\s+following\s*:?"
+                        r"|following\s+values\s+are\s*:?",
+                        re.I)
+                    INLINE_NOT_SET = frozenset({
+                        "cl_uint", "cl_int", "cl_char", "cl_uchar", "cl_schar",
+                        "cl_short", "cl_ushort", "cl_long", "cl_ulong",
+                        "cl_longlong", "cl_ulonglong", "cl_float", "cl_double",
+                        "cl_bool", "cl_size_t", "cl_platform", "cl_context",
+                        "cl_command_queue", "cl_mem", "cl_device",
+                        "cl_program", "cl_kernel", "cl_event", "cl_sampler",
+                        "cl_image", "cl_accelerator",
+                    })
+                    INLINE_TOKEN_RE = re.compile(r"CL_[A-Z0-9]+(?:_[A-Z0-9]+)*")
+                    for row in rows:
+                        if len(row) < 3:
+                            continue
+                        tm = re.match(r"^\{?cl_([a-z0-9_]+)_TYPE\}?$",
+                                     row[1].strip())
+                        if not tm:
+                            continue
+                        setname = "cl_" + tm.group(1)
+                        if setname in INLINE_NOT_SET:
+                            continue
+                        dcell = " ".join(c.strip() for c in row[2:])
+                        if not INLINE_INTRO_RE.search(dcell):
+                            continue
+                        for tm2 in INLINE_TOKEN_RE.finditer(dcell):
+                            tok = tm2.group(0)
+                            if tok not in names:
+                                continue
+                            ev[tok].append(G(setname,
+                                "inline value-set of %s (row %s)"
+                                % (setname, row[0].strip()[:40]),
+                                rel))
                     # A row contributes a token only from a CLEAN value cell —
                     # a cell whose entire content is a single {CL_X} (optionally
                     # with a footnote link).  Scanning cells (not just column
@@ -251,26 +358,135 @@ def mine():
                     # description cells that merely mention other values in
                     # prose (the CL_FALSE-in-10-sets contamination class).
                     CLEAN_CELL_RE = re.compile(
-                        r"^\{?CL_[A-Z0-9_]+(?:_anchor)?\}?\s*(?:footnote:\[[^\]]*\])?$")
+                        r"^\{?CL_[A-Z0-9]+(?:_[A-Z0-9]+)*(?:_anchor)?\}?\s*(?:footnote:\[[^\]]*\])?$")
+                    # A "+"-CONTINUED value cell: an asciidoc grid row written
+                    # as one token per line with "+" line continuations, e.g.
+                    #   | {CL_DEVICE_NATIVE_VECTOR_WIDTH_CHAR_anchor}   +
+                    #     {CL_DEVICE_NATIVE_VECTOR_WIDTH_SHORT_anchor}  +
+                    #     ...
+                    # The cell, after my line accumulator merges it, is:
+                    #   "{CL_A_anchor}   + {CL_B_anchor}  + {CL_C_anchor}"
+                    # Attribute every token in such a chain (column 0 only) to
+                    # the resolved group, but ONLY if the whole cell is a chain
+                    # of known CL_ tokens with nothing else in it — this
+                    # prevents description prose from ever being harvested.
+                    # Tokens known to be value-set members (not param_names):
+                    # exclude (they appear mixed in as return-value examples and
+                    # would contaminate the group with an unrelated C set).
+                    # token = CL_ followed by underscore-separated runs of
+                    # UPPERCASE alphanumerics.  This matches a real enum name
+                    # (CL_DEVICE_UUID, CL_R) and a {CL_X_anchor} cell entry
+                    # but STOPS before the lowercase "anchor" suffix and
+                    # before any prose — so a token match always yields the
+                    # bare cl.xml name with NO suffix stripping needed.
+                    # (A naive CL_[A-Z0-9_]+ greedily eats the underscore of
+                    # the _anchor suffix and leaves "anchor" as residue.)
+                    TOKEN = r"CL_[A-Z0-9]+(?:_[A-Z0-9]+)*"
+                    KNOWN_FALSE_POSITIVE = frozenset({
+                        "CL_TRUE", "CL_FALSE", "CL_NONE",
+                        "CL_READ_ONLY", "CL_WRITE_ONLY", "CL_READ_WRITE",
+                        "CL_MEM_READ_WRITE", "CL_MEM_WRITE_ONLY",
+                        "CL_MEM_READ_ONLY", "CL_MEM_USE_HOST_PTR",
+                        "CL_MEM_COPY_HOST_PTR", "CL_MEM_ALLOC_HOST_PTR",
+                    })
+
+                    def extract_chain(cell):
+                        """Return the LEADING run of `+`-separated CL_ tokens in
+                        cell (>=2, all real cl.xml names), ignoring anything
+                        that follows the chain.  A cell that starts with prose,
+                        or whose first run has <2 valid tokens, returns None.
+
+                        Leading-run (rather than whole-cell) is intentional:
+                        some value cells carry a trailing version-note
+                        paragraph in the source, so the chain must be the
+                        prefix, not the entire cell.  Because this only ever
+                        runs on column 0 (the name column), a description cell
+                        like "Is {CL_TRUE} if ... {CL_FALSE} otherwise" can
+                        never be harvested — its first run is a single token
+                        before prose, so it fails the >=2 test.
+                        """
+                        if "+" not in cell:
+                            return None
+                        rest = cell.strip()
+                        chain = []
+                        tok_re = re.compile(r"^\{?\s*(" + TOKEN + r")(_anchor)?\}?\s*(\+\s*)?")
+                        while True:
+                            m = tok_re.match(rest)
+                            if not m:
+                                break
+                            chain.append(m.group(1))
+                            had_plus = m.group(3) is not None
+                            rest = rest[m.end():]
+                            if not had_plus:  # chain ends at first non-`+`
+                                break
+                        if len(chain) < 2:
+                            return None
+                        if not all(t in names for t in chain):
+                            return None
+                        # value-set members that appear only as RETURN-VALUE
+                        # examples in this family of tables: exclude them so a
+                        # mixed cell can never drag CL_TRUE/CL_FALSE/cl_mem
+                        # flags into an unrelated group.
+                        if set(chain) & KNOWN_FALSE_POSITIVE:
+                            return None
+                        return chain
+
                     for row in rows:
-                        for cell in row:
+                        # column 0 rules (the value/names column):
+                        #  (a) +chain of tokens (>=2)             -> every token
+                        #  (b) a single leading CL_ enum name, optionally
+                        #      followed by a trailing note          -> that token
+                        #  (c) a whole-cell single clean token      -> that token
+                        # Columns 1+ (return-type / description) are scanned
+                        # ONLY for a whole-cell clean token, never for a
+                        # leading-lead — description prose that happens to
+                        # start with a CL_ token is never harvested.
+                        if row:
+                            ch = extract_chain(row[0])
+                            if ch:
+                                for tc in ch:
+                                    ev[tc].append(G(grp,
+                                        "value chain col0 (" + (label or "")[:50] + ")", rel))
+                                continue
+                            mcell = CLEAN_CELL_RE.match(row[0].strip())
+                            c = ""
+                            if mcell:
+                                c = re.sub(r"footnote:\[[^\]]*\]", "",
+                                           mcell.group(0).strip()).strip()
+                                c = c.lstrip("{").rstrip("}")
+                                if c.endswith("_anchor"):
+                                    c = c[:-len("_anchor")]
+                            if not c:
+                                sm = re.match(r"^\s*\{?\s*(" + TOKEN + r")(?:_anchor)?\}?", row[0])
+                                c = sm.group(1) if sm else ""
+                            if c in names:
+                                ev[c].append(G(grp,
+                                    "value cell col0 (" + (label or "")[:50] + ")", rel))
+                                continue
+                            # (d) "function-in-col0, token-in-col1" tables
+                            #     (e.g. "List of supported event command
+                            #     types"): col1 may carry a trailing note
+                            #     ("Prior to OpenCL 3.0 ..."), so only a
+                            #     whole-cell clean token would be caught
+                            #     above.  A single leading CL_ token in col1
+                            #     is the event command type for that command.
+                            if len(row) >= 2 and re.match(r"^\s*\{?\s*cl(?:Get|Set|Create|Enqueue|Wait)", row[0], re.I):
+                                lt = re.match(r"^\s*\{?\s*(CL_[A-Z0-9]+(?:_[A-Z0-9]+)*)", row[1])
+                                if lt and lt.group(1) in names:
+                                    ev[lt.group(1)].append(G(grp,
+                                        "event-type col1-of-fn (" + (label or "")[:50] + ")", rel))
+                        for cell in row[1:]:
                             mcell = CLEAN_CELL_RE.match(cell.strip())
                             if not mcell:
                                 continue
-                            # Extract the bare token: strip whitespace, an
-                            # optional leading "{", the "_anchor" suffix, a
-                            # trailing "}", and any footnote link.  The
-                            # char-class match earlier greedly swallowed the
-                            # "_anchor" suffix (underscore is in the class),
-                            # so strip it explicitly by suffix.
-                            c = mcell.group(0).strip()
-                            c = re.sub(r"footnote:\[[^\]]*\]", "", c).strip()
+                            c = re.sub(r"footnote:\[[^\]]*\]", "",
+                                       mcell.group(0).strip()).strip()
                             c = c.lstrip("{").rstrip("}")
                             if c.endswith("_anchor"):
-                                c = c[: -len("_anchor")]
+                                c = c[:-len("_anchor")]
                             if c.startswith("CL_") and c in names:
-                                ev[c].append(
-                                    G(grp, "table value cell (" + (label or "")[:50] + ")", rel))
+                                ev[c].append(G(grp,
+                                    "clean cell col1+ (" + (label or "")[:50] + ")", rel))
                 label = None
                 continue
 
@@ -291,12 +507,48 @@ def mine():
                 continue
 
             # ---- G4/G5: #define lines ----
+            # Anchor priority for a bit / constant #define:
+            #   (1) bit member: nearest `typedef cl_bitfield cl_X;` above the
+            #       line + `(1 << N)` form => that C typedef (the cl.xml
+            #       bitpos layout agrees -- bit members live in their C
+            #       container, not in a neighbouring sentence's param set).
+            #   (2) sentence: nearest "Accepted value for the _param_name_
+            #       parameter to *<fn>*" within the 14-line window.
+            #   (3) typedef container (cl_bits / cl_bitfield) named within
+            #       the 14-line window.
+            #   (4) `_TYPE` row cell within the 14-line window (table rows
+            #       whose return-type declares the set).
+            # Anything weaker is skipped rather than guessed.
             dm = re.match(r"#define\s+(CL_[A-Z0-9_]+)", s)
             if dm and dm.group(1) in names:
                 ctx = "\n".join(lines[max(0, i - 14):i])
-                tm2 = re.search(r"param_name_\s*parameter\s*to\s*\*?([^*\n{]+)", ctx)
-                if tm2:
-                    fn = tm2.group(1).strip()
+                # BIT MEMBER (1 << N): these are members of a cl_bitfield.
+                # If a `typedef cl_bitfield cl_X;` is in the window, bind to
+                # it.  If not (e.g. the cl_arm_controlled_kernel_termination
+                # extension never restates the typedef — its New-API-Enums
+                # block only mentions the capabilities set in prose), do NOT
+                # bind to the nearest "param_name parameter to *clGet...*"
+                # sentence: that sentence anchors the CAPABILITIES QUERY token
+                # (CL_..._CAPABILITIES... 0x41EE), not the bit members that
+                # follow it in the same C block.  The R1 container rule
+                # (bitpos layout in cl.xml) owns those; a sentence
+                # attribution here is noise (it produced spurious
+                # cl_device_info / cl_event_info memberships on the ARM
+                # trio).
+                if re.search(r"1\s*<<\s*\d+", s):
+                    btm = re.search(r"typedef\s+cl_bitfield\s+(cl_[a-z0-9_]+)\s*;", ctx)
+                    if btm and btm.group(1) in vsets and btm.group(1) in containers:
+                        ev[dm.group(1)].append(G(btm.group(1),
+                            "bit member of cl_bitfield (define)", rel))
+                        i += 1
+                        continue
+                    i += 1
+                    continue
+                # Anchor on the NEAREST preceding "param_name  parameter  to
+                # <fn>" sentence (last occurrence in the window).
+                tm2_list = re.findall(r"param_name_\s*parameter\s*to\s*\*?([^*\n{]+)", ctx)
+                if tm2_list:
+                    fn = tm2_list[-1].strip()
                     if fn in fn_paramtype and fn_paramtype[fn]:
                         ev[dm.group(1)].append(G(fn_paramtype[fn], "G4 sentence+define", rel))
                         i += 1
@@ -308,9 +560,25 @@ def mine():
                     continue
                 tm4 = re.search(r"(cl_[a-z0-9_]+)_TYPE", ctx)
                 if tm4 and tm4.group(1) in vsets:
-                    ev[dm.group(1)].append(G(tm4.group(1), "G4 sentence-type+define", rel))
-                    i += 1
-                    continue
+                    # Only trust a `_TYPE` reference when it sits on a table
+                    # ROW (the row's return-type cell: "| X | cl_Y_TYPE" or
+                    # "| cl_Y_TYPE").  A bare "_TYPE" appearing in loose
+                    # PROSE within the 14-line window is unreliable: e.g. the
+                    # cl_arm_controlled_kernel_termination extension lists its
+                    # bit members in the *cl_device_info* table's row text
+                    # ("...supported.") while a later *cl_event_info* table
+                    # block mentions {CL_COMMAND_TERMINATED_ITSELF_WITH_FAILURE_ARM}
+                    # under {CL_EVENT_COMMAND_EXECUTION_STATUS}, whose type
+                    # {cl_int_TYPE} is unrelated -- window-based matching leaks
+                    # the event table into the bit members.  Require a row
+                    # cell to anchor the typedef.
+                    tm4_row = re.search(
+                        r"^\|\s*\S.*\|\s*\{?(?:cl_)?[a-z0-9_]+_TYPE\}?\s*$",
+                        ctx, re.M)
+                    if tm4_row:
+                        ev[dm.group(1)].append(G(tm4.group(1), "G4 sentence-type+define", rel))
+                        i += 1
+                        continue
             i += 1
     return ev
 
@@ -390,6 +658,47 @@ SELF_TESTS = {
     "CL_DEVICE_TYPE_CPU": {"cl_device_type"},
     "CL_DEVICE_AFFINITY_DOMAIN_NUMA": {"cl_device_affinity_domain"},
     "CL_QUEUE_PRIORITY_HIGH_KHR": {"cl_queue_priority_khr"},
+    "CL_QUEUE_PRIORITY_MED_KHR":  {"cl_queue_priority_khr"},
+    "CL_QUEUE_PRIORITY_LOW_KHR":  {"cl_queue_priority_khr"},
+    # queue-hint *names* (New Enums bullets of cl_khr_priority_hints /
+    # cl_khr_throttle_hints under cl_queue_properties_TYPE) + the core
+    # cl_command_queue_properties table row
+    "CL_QUEUE_PRIORITY_KHR": {"cl_queue_properties", "cl_command_queue_properties"},
+    "CL_QUEUE_THROTTLE_KHR": {"cl_queue_properties", "cl_command_queue_properties"},
+    # Intel USM: CL_MEM_ALLOC_FLAGS_INTEL appears as a property
+    # (cl_mem_properties_intel table) and a query (cl_mem_alloc_info table)
+    "CL_MEM_ALLOC_FLAGS_INTEL": {"cl_mem_properties_intel"},
+    # CL_QUEUE_FAMILY_INTEL / CL_QUEUE_INDEX_INTEL: property + query token
+    "CL_QUEUE_FAMILY_INTEL": {"cl_command_queue_properties", "cl_command_queue_info"},
+    "CL_QUEUE_INDEX_INTEL":  {"cl_command_queue_properties", "cl_command_queue_info"},
+    # bit-members live in their cl_bitfield capacity set ONLY.
+    # (Positive membership asserted here; the NEGATIVE_TESTS above forbid
+    # the cl_device_info / cl_event_info sentence-anchor contamination.)
+    "CL_DEVICE_CONTROLLED_TERMINATION_SUCCESS_ARM": {"cl_device_controlled_termination_capabilities_arm"},
+    "CL_DEVICE_CONTROLLED_TERMINATION_FAILURE_ARM": {"cl_device_controlled_termination_capabilities_arm"},
+    "CL_DEVICE_CONTROLLED_TERMINATION_QUERY_ARM":   {"cl_device_controlled_termination_capabilities_arm"},
+    # "+continued value-cell" family (Brice-flagged 2026-10-07): each of these
+    # is a param_name for clGetDeviceInfo, documented as a one-token-per-line
+    # chain in the Device Queries table (opencl_platform_layer.asciidoc).
+    "CL_DEVICE_NATIVE_VECTOR_WIDTH_CHAR": {"cl_device_info"},
+    "CL_DEVICE_NATIVE_VECTOR_WIDTH_HALF": {"cl_device_info"},
+    "CL_DEVICE_PREFERRED_VECTOR_WIDTH_CHAR": {"cl_device_info"},
+    "CL_DEVICE_PREFERRED_VECTOR_WIDTH_DOUBLE": {"cl_device_info"},
+    "CL_DEVICE_UUID": {"cl_device_info"},
+    "CL_DEVICE_SPIRV_CAPABILITIES": {"cl_device_info"},
+    "CL_DEVICE_IMAGE_PITCH_ALIGNMENT": {"cl_device_info"},
+    "CL_KERNEL_ARG_ADDRESS_GLOBAL": {"cl_kernel_arg_info"},
+    "CL_KERNEL_ARG_ACCESS_READ_ONLY": {"cl_kernel_arg_info"},
+    "CL_KERNEL_MAX_SUB_GROUP_SIZE_FOR_NDRANGE": {"cl_kernel_sub_group_info"},
+    # value-set members documented inline in a param_name row's description
+    # (return-type cell = the set's C typedef).  These are the "brute-force"
+    # cases that need the inline-value rule, not a table-value rule.
+    "CL_ADDRESS_CLAMP": {"cl_addressing_mode"},
+    "CL_FILTER_NEAREST": {"cl_filter_mode"},
+    "CL_KERNEL_ARG_ADDRESS_GLOBAL": {"cl_kernel_arg_address_qualifier"},
+    "CL_KERNEL_ARG_ACCESS_READ_ONLY": {"cl_kernel_arg_access_qualifier"},
+    "CL_PROGRAM_IL": {"cl_program_info"},
+    "CL_COMMAND_SVM_MIGRATE_MEM": {"cl_command_type"},
     "CL_D3D10_DEVICE_KHR": None,      # may be ungrouped (opaque handle-ish)
     "CL_CHAR_BIT": None,              # may be ungrouped (platform constant)
     "CL_NV21": None,                  # image format — check manually
@@ -398,9 +707,26 @@ SELF_TESTS = {
 # negative containment: these tokens must NOT appear in these sets
 # (regression guard for the description-cell contamination class)
 NEGATIVE_TESTS = {
-    "CL_FALSE": {"cl_mem_flags", "cl_map_flags", "cl_kernel_exec_info", "cl_svm_capabilities_khr"},
-    "CL_TRUE":  {"cl_mem_flags", "cl_map_flags", "cl_kernel_exec_info", "cl_svm_capabilities_khr"},
-    "CL_NONE":  {"cl_mem_flags", "cl_map_flags"},
+    "CL_FALSE": {"cl_mem_flags", "cl_map_flags", "cl_kernel_exec_info", "cl_svm_capabilities_khr",
+                 "cl_device_info", "cl_sampler_properties", "cl_kernel_arg_info",
+                 "cl_kernel_sub_group_info", "cl_command_type", "cl_program_info"},
+    "CL_TRUE":  {"cl_mem_flags", "cl_map_flags", "cl_kernel_exec_info", "cl_svm_capabilities_khr",
+                 "cl_device_info", "cl_sampler_properties", "cl_kernel_arg_info",
+                 "cl_kernel_sub_group_info", "cl_command_type", "cl_program_info"},
+    "CL_NONE":  {"cl_mem_flags", "cl_map_flags", "cl_device_info", "cl_kernel_arg_info"},
+    # chain-rule guard: mem-flag tokens must not land in a param_name group
+    "CL_MEM_WRITE_ONLY": {"cl_device_info", "cl_kernel_arg_info", "cl_sampler_properties"},
+    "CL_MEM_USE_HOST_PTR": {"cl_device_info", "cl_kernel_arg_info"},
+    # bit-member guard: the ARM cl_device_controlled_termination_capabilities_arm
+    # bit members must NOT inherit the capabilities-query sentence's param set
+    # (cl_device_info) or a neighbouring table's set (cl_event_info).
+    "CL_DEVICE_CONTROLLED_TERMINATION_SUCCESS_ARM": {"cl_device_info", "cl_event_info"},
+    "CL_DEVICE_CONTROLLED_TERMINATION_FAILURE_ARM": {"cl_device_info", "cl_event_info"},
+    "CL_DEVICE_CONTROLLED_TERMINATION_QUERY_ARM":   {"cl_device_info", "cl_event_info"},
+    # value-set guard: the queue-hint *names* are cl_queue_properties /
+    # cl_command_queue_properties members, not cl_device_info queries
+    "CL_QUEUE_PRIORITY_KHR": {"cl_device_info"},
+    "CL_QUEUE_THROTTLE_KHR": {"cl_device_info"},
 }
 
 

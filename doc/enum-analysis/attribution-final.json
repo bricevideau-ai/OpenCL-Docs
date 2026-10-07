@@ -5,7 +5,7 @@
    "cl_channel_order"
   ],
   "notes": [
-   "spec evidence [cl_channel_order] table value cell (Image Channel Order mapping)"
+   "spec evidence [cl_channel_order] value cell col0 (Image Channel Order mapping)"
   ],
   "value": "0x10B1"
  },
@@ -15,7 +15,7 @@
    "cl_channel_order"
   ],
   "notes": [
-   "spec evidence [cl_channel_order] table value cell (Image Channel Order mapping)"
+   "spec evidence [cl_channel_order] value cell col0 (Image Channel Order mapping)"
   ],
   "value": "0x10C3"
  },
@@ -95,41 +95,51 @@
  },
  "CL_ADDRESS_CLAMP": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_addressing_mode"
+  ],
   "notes": [
-   "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
+   "spec evidence [cl_addressing_mode] inline value-set of cl_addressing_mode (row {CL_SAMPLER_ADDRESSING_MODE_anchor})"
   ],
   "value": "0x1132"
  },
  "CL_ADDRESS_CLAMP_TO_EDGE": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_addressing_mode"
+  ],
   "notes": [
-   "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
+   "spec evidence [cl_addressing_mode] inline value-set of cl_addressing_mode (row {CL_SAMPLER_ADDRESSING_MODE_anchor})"
   ],
   "value": "0x1131"
  },
  "CL_ADDRESS_MIRRORED_REPEAT": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_addressing_mode"
+  ],
   "notes": [
-   "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
+   "spec evidence [cl_addressing_mode] inline value-set of cl_addressing_mode (row {CL_SAMPLER_ADDRESSING_MODE_anchor})"
   ],
   "value": "0x1134"
  },
  "CL_ADDRESS_NONE": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_addressing_mode"
+  ],
   "notes": [
-   "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
+   "spec evidence [cl_addressing_mode] inline value-set of cl_addressing_mode (row {CL_SAMPLER_ADDRESSING_MODE_anchor})"
   ],
   "value": "0x1130"
  },
  "CL_ADDRESS_REPEAT": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_addressing_mode"
+  ],
   "notes": [
-   "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
+   "spec evidence [cl_addressing_mode] inline value-set of cl_addressing_mode (row {CL_SAMPLER_ADDRESSING_MODE_anchor})"
   ],
   "value": "0x1133"
  },
@@ -241,7 +251,7 @@
    "cl_channel_order"
   ],
   "notes": [
-   "spec evidence [cl_channel_order] table value cell (Image Channel Order mapping)"
+   "spec evidence [cl_channel_order] value cell col0 (Image Channel Order mapping)"
   ],
   "value": "0x10B7"
  },
@@ -1261,7 +1271,7 @@
    "cl_channel_order"
   ],
   "notes": [
-   "spec evidence [cl_channel_order] table value cell (Compatible Image Channel Orders)"
+   "spec evidence [cl_channel_order] clean cell col1+ (Compatible Image Channel Orders)"
   ],
   "value": "0x10B6"
  },
@@ -1281,7 +1291,7 @@
    "cl_buffer_create_type"
   ],
   "notes": [
-   "spec evidence [cl_buffer_create_type] table value cell (List of supported buffer creation types by {clCrea)"
+   "spec evidence [cl_buffer_create_type] value cell col0 (List of supported buffer creation types by {clCrea)"
   ],
   "value": "0x1220"
  },
@@ -1291,7 +1301,7 @@
    "cl_build_status"
   ],
   "notes": [
-   "R1 C typedef container cl_build_status (container-declared)"
+   "R1 C typedef container cl_build_status (spec-listed)"
   ],
   "value": "-2"
  },
@@ -1301,7 +1311,7 @@
    "cl_build_status"
   ],
   "notes": [
-   "R1 C typedef container cl_build_status (container-declared)"
+   "R1 C typedef container cl_build_status (spec-listed)"
   ],
   "value": "-3"
  },
@@ -1311,7 +1321,7 @@
    "cl_build_status"
   ],
   "notes": [
-   "R1 C typedef container cl_build_status (container-declared)"
+   "R1 C typedef container cl_build_status (spec-listed)"
   ],
   "value": "-1"
  },
@@ -1331,7 +1341,7 @@
    "cl_build_status"
   ],
   "notes": [
-   "R1 C typedef container cl_build_status (container-declared)"
+   "R1 C typedef container cl_build_status (spec-listed)"
   ],
   "value": "0"
  },
@@ -1431,7 +1441,7 @@
    "cl_command_type"
   ],
   "notes": [
-   "spec evidence [cl_command_type] table value cell (List of supported event command types)"
+   "spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types)"
   ],
   "value": "0x2047"
  },
@@ -1441,7 +1451,7 @@
    "cl_command_type"
   ],
   "notes": [
-   "spec evidence [cl_command_type] table value cell (List of supported event command types)"
+   "spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types)"
   ],
   "value": "0x11FF"
  },
@@ -1463,7 +1473,7 @@
    "cl_command_type"
   ],
   "notes": [
-   "spec evidence [cl_command_type] table value cell (List of supported event command types)"
+   "spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types)"
   ],
   "value": "0x1205"
  },
@@ -1693,7 +1703,7 @@
    "cl_command_type"
   ],
   "notes": [
-   "spec evidence [cl_command_type] table value cell (List of supported event command types)"
+   "spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types)"
   ],
   "value": "0x11F5"
  },
@@ -1703,7 +1713,7 @@
    "cl_command_type"
   ],
   "notes": [
-   "spec evidence [cl_command_type] table value cell (List of supported event command types)"
+   "spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types)"
   ],
   "value": "0x1203"
  },
@@ -1713,7 +1723,7 @@
    "cl_command_type"
   ],
   "notes": [
-   "spec evidence [cl_command_type] table value cell (List of supported event command types)"
+   "spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types)"
   ],
   "value": "0x11FA"
  },
@@ -1723,7 +1733,7 @@
    "cl_command_type"
   ],
   "notes": [
-   "spec evidence [cl_command_type] table value cell (List of supported event command types)"
+   "spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types)"
   ],
   "value": "0x11F8"
  },
@@ -1733,7 +1743,7 @@
    "cl_command_type"
   ],
   "notes": [
-   "spec evidence [cl_command_type] table value cell (List of supported event command types)"
+   "spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types)"
   ],
   "value": "0x11F9"
  },
@@ -1753,7 +1763,7 @@
    "cl_command_type"
   ],
   "notes": [
-   "spec evidence [cl_command_type] table value cell (List of supported event command types)"
+   "spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types)"
   ],
   "value": "0x1207"
  },
@@ -1763,7 +1773,7 @@
    "cl_command_type"
   ],
   "notes": [
-   "spec evidence [cl_command_type] table value cell (List of supported event command types)"
+   "spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types)"
   ],
   "value": "0x1208"
  },
@@ -1789,7 +1799,7 @@
    "cl_command_type"
   ],
   "notes": [
-   "spec evidence [cl_command_type] table value cell (List of supported event command types)"
+   "spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types)"
   ],
   "value": "0x11FB"
  },
@@ -1799,7 +1809,7 @@
    "cl_command_type"
   ],
   "notes": [
-   "spec evidence [cl_command_type] table value cell (List of supported event command types)"
+   "spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types)"
   ],
   "value": "0x11FC"
  },
@@ -1809,7 +1819,7 @@
    "cl_command_type"
   ],
   "notes": [
-   "spec evidence [cl_command_type] table value cell (List of supported event command types)"
+   "spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types)"
   ],
   "value": "0x11FE"
  },
@@ -1859,7 +1869,7 @@
    "cl_command_type"
   ],
   "notes": [
-   "spec evidence [cl_command_type] table value cell (List of supported event command types)"
+   "spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types)"
   ],
   "value": "0x1206"
  },
@@ -1875,7 +1885,7 @@
    "cl_command_type"
   ],
   "notes": [
-   "spec evidence [cl_command_type] table value cell (List of supported event command types)"
+   "spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types)"
   ],
   "value": "0x11F2"
  },
@@ -1885,7 +1895,7 @@
    "cl_command_type"
   ],
   "notes": [
-   "spec evidence [cl_command_type] table value cell (List of supported event command types)"
+   "spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types)"
   ],
   "value": "0x11F0"
  },
@@ -1949,7 +1959,7 @@
    "cl_command_type"
   ],
   "notes": [
-   "spec evidence [cl_command_type] table value cell (List of supported event command types)"
+   "spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types)"
   ],
   "value": "0x11F3"
  },
@@ -1959,7 +1969,7 @@
    "cl_command_type"
   ],
   "notes": [
-   "spec evidence [cl_command_type] table value cell (List of supported event command types)"
+   "spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types)"
   ],
   "value": "0x1201"
  },
@@ -1975,7 +1985,7 @@
    "cl_command_type"
   ],
   "notes": [
-   "spec evidence [cl_command_type] table value cell (List of supported event command types)"
+   "spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types)"
   ],
   "value": "0x11F6"
  },
@@ -2037,7 +2047,7 @@
    "cl_command_type"
   ],
   "notes": [
-   "spec evidence [cl_command_type] table value cell (List of supported event command types)"
+   "spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types)"
   ],
   "value": "0x2048"
  },
@@ -2047,7 +2057,7 @@
    "cl_command_type"
   ],
   "notes": [
-   "spec evidence [cl_command_type] table value cell (List of supported event command types)"
+   "spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types)"
   ],
   "value": "0x1200"
  },
@@ -2089,7 +2099,7 @@
    "cl_command_type"
   ],
   "notes": [
-   "spec evidence [cl_command_type] table value cell (List of supported event command types)"
+   "spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types)"
   ],
   "value": "0x1209"
  },
@@ -2105,7 +2115,7 @@
    "cl_command_type"
   ],
   "notes": [
-   "spec evidence [cl_command_type] table value cell (List of supported event command types)"
+   "spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types)"
   ],
   "value": "0x120C"
  },
@@ -2121,7 +2131,7 @@
    "cl_command_type"
   ],
   "notes": [
-   "spec evidence [cl_command_type] table value cell (List of supported event command types)"
+   "spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types)"
   ],
   "value": "0x120A"
  },
@@ -2137,7 +2147,7 @@
    "cl_command_type"
   ],
   "notes": [
-   "spec evidence [cl_command_type] table value cell (List of supported event command types)"
+   "spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types)"
   ],
   "value": "0x120B"
  },
@@ -2149,9 +2159,11 @@
  },
  "CL_COMMAND_SVM_MIGRATE_MEM": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_command_type"
+  ],
   "notes": [
-   "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
+   "spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types)"
   ],
   "value": "0x120E"
  },
@@ -2161,7 +2173,7 @@
    "cl_command_type"
   ],
   "notes": [
-   "spec evidence [cl_command_type] table value cell (List of supported event command types)"
+   "spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types)"
   ],
   "value": "0x120D"
  },
@@ -2177,7 +2189,7 @@
    "cl_command_type"
   ],
   "notes": [
-   "spec evidence [cl_command_type] table value cell (List of supported event command types)"
+   "spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types)"
   ],
   "value": "0x11F1"
  },
@@ -2237,7 +2249,7 @@
    "cl_command_type"
   ],
   "notes": [
-   "spec evidence [cl_command_type] table value cell (List of supported event command types)"
+   "spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types)"
   ],
   "value": "0x11FD"
  },
@@ -2247,7 +2259,7 @@
    "cl_command_type"
   ],
   "notes": [
-   "spec evidence [cl_command_type] table value cell (List of supported event command types)"
+   "spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types)"
   ],
   "value": "0x1204"
  },
@@ -2257,7 +2269,7 @@
    "cl_command_type"
   ],
   "notes": [
-   "spec evidence [cl_command_type] table value cell (List of supported event command types)"
+   "spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types)"
   ],
   "value": "0x11F4"
  },
@@ -2267,7 +2279,7 @@
    "cl_command_type"
   ],
   "notes": [
-   "spec evidence [cl_command_type] table value cell (List of supported event command types)"
+   "spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types)"
   ],
   "value": "0x1202"
  },
@@ -2283,7 +2295,7 @@
    "cl_command_type"
   ],
   "notes": [
-   "spec evidence [cl_command_type] table value cell (List of supported event command types)"
+   "spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types)"
   ],
   "value": "0x11F7"
  },
@@ -2321,7 +2333,7 @@
   ],
   "notes": [
    "spec evidence [cl_context_info] G3 new-enums list",
-   "spec evidence [cl_context_properties] table value cell (List of supported context creation properties by {)"
+   "spec evidence [cl_context_properties] value cell col0 (List of supported context creation properties by {)"
   ],
   "value": "0x2026"
  },
@@ -2333,7 +2345,7 @@
   ],
   "notes": [
    "spec evidence [cl_context_info] G3 new-enums list",
-   "spec evidence [cl_context_properties] table value cell (List of supported context creation properties by {)"
+   "spec evidence [cl_context_properties] value cell col0 (List of supported context creation properties by {)"
   ],
   "value": "0x2025"
  },
@@ -2345,7 +2357,7 @@
   ],
   "notes": [
    "spec evidence [cl_context_info] G3 new-enums list",
-   "spec evidence [cl_context_properties] table value cell (List of supported context creation properties by {)"
+   "spec evidence [cl_context_properties] value cell col0 (List of supported context creation properties by {)"
   ],
   "value": "0x2027"
  },
@@ -2407,7 +2419,7 @@
    "cl_context_info"
   ],
   "notes": [
-   "spec evidence [cl_context_info] table value cell (List of supported param_names by {clGetContextInfo)"
+   "spec evidence [cl_context_info] value cell col0 (List of supported param_names by {clGetContextInfo)"
   ],
   "value": "0x1081"
  },
@@ -2473,7 +2485,7 @@
    "cl_context_properties"
   ],
   "notes": [
-   "spec evidence [cl_context_properties] table value cell (List of supported context creation properties by {)"
+   "spec evidence [cl_context_properties] value cell col0 (List of supported context creation properties by {)"
   ],
   "value": "0x1085"
  },
@@ -2513,7 +2525,7 @@
    "cl_context_info"
   ],
   "notes": [
-   "spec evidence [cl_context_info] table value cell (List of supported param_names by {clGetContextInfo)"
+   "spec evidence [cl_context_info] value cell col0 (List of supported param_names by {clGetContextInfo)"
   ],
   "value": "0x1083"
  },
@@ -2533,7 +2545,7 @@
    "cl_context_properties"
   ],
   "notes": [
-   "spec evidence [cl_context_properties] table value cell (List of supported context creation properties by {)"
+   "spec evidence [cl_context_properties] value cell col0 (List of supported context creation properties by {)"
   ],
   "value": "0x1084"
  },
@@ -2543,7 +2555,7 @@
    "cl_context_info"
   ],
   "notes": [
-   "spec evidence [cl_context_info] table value cell (List of supported param_names by {clGetContextInfo)"
+   "spec evidence [cl_context_info] value cell col0 (List of supported param_names by {clGetContextInfo)"
   ],
   "value": "0x1082"
  },
@@ -2553,7 +2565,7 @@
    "cl_context_info"
   ],
   "notes": [
-   "spec evidence [cl_context_info] table value cell (List of supported param_names by {clGetContextInfo)"
+   "spec evidence [cl_context_info] value cell col0 (List of supported param_names by {clGetContextInfo)"
   ],
   "value": "0x1080"
  },
@@ -2782,7 +2794,7 @@
    "cl_channel_order"
   ],
   "notes": [
-   "spec evidence [cl_channel_order] table value cell (Compatible Image Channel Orders)"
+   "spec evidence [cl_channel_order] value cell col0 (List of supported Image Channel Order Values)"
   ],
   "value": "0x10BD"
  },
@@ -2812,7 +2824,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x100D"
  },
@@ -2888,7 +2900,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1064"
  },
@@ -2898,7 +2910,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1063"
  },
@@ -2978,7 +2990,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1027"
  },
@@ -3018,15 +3030,17 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x103F"
  },
  "CL_DEVICE_BUILT_IN_KERNELS_WITH_VERSION": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_device_info"
+  ],
   "notes": [
-   "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1062"
  },
@@ -3096,7 +3110,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1028"
  },
@@ -3127,36 +3141,30 @@
  "CL_DEVICE_CONTROLLED_TERMINATION_FAILURE_ARM": {
   "container": "cl_device_controlled_termination_capabilities_arm",
   "groups": [
-   "cl_device_controlled_termination_capabilities_arm",
-   "cl_event_info"
+   "cl_device_controlled_termination_capabilities_arm"
   ],
   "notes": [
-   "R1 C typedef container cl_device_controlled_termination_capabilities_arm (container-declared)",
-   "spec evidence [cl_event_info] G4 sentence+define"
+   "R1 C typedef container cl_device_controlled_termination_capabilities_arm (container-declared)"
   ],
   "value": null
  },
  "CL_DEVICE_CONTROLLED_TERMINATION_QUERY_ARM": {
   "container": "cl_device_controlled_termination_capabilities_arm",
   "groups": [
-   "cl_device_controlled_termination_capabilities_arm",
-   "cl_device_info"
+   "cl_device_controlled_termination_capabilities_arm"
   ],
   "notes": [
-   "R1 C typedef container cl_device_controlled_termination_capabilities_arm (container-declared)",
-   "spec evidence [cl_device_info] G4 sentence+define"
+   "R1 C typedef container cl_device_controlled_termination_capabilities_arm (container-declared)"
   ],
   "value": null
  },
  "CL_DEVICE_CONTROLLED_TERMINATION_SUCCESS_ARM": {
   "container": "cl_device_controlled_termination_capabilities_arm",
   "groups": [
-   "cl_device_controlled_termination_capabilities_arm",
-   "cl_event_info"
+   "cl_device_controlled_termination_capabilities_arm"
   ],
   "notes": [
-   "R1 C typedef container cl_device_controlled_termination_capabilities_arm (container-declared)",
-   "spec evidence [cl_event_info] G4 sentence+define"
+   "R1 C typedef container cl_device_controlled_termination_capabilities_arm (container-declared)"
   ],
   "value": null
  },
@@ -3176,7 +3184,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x4230"
  },
@@ -3186,7 +3194,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1070"
  },
@@ -3226,7 +3234,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1026"
  },
@@ -3236,7 +3244,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1024"
  },
@@ -3246,7 +3254,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1029"
  },
@@ -3256,15 +3264,17 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1030"
  },
  "CL_DEVICE_EXTENSIONS_WITH_VERSION": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_device_info"
+  ],
   "notes": [
-   "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1060"
  },
@@ -3310,7 +3320,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by clGetDeviceInfo)"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by clGetDeviceInfo)"
   ],
   "value": "0x4256"
  },
@@ -3320,7 +3330,7 @@
    "cl_device_feature_capabilities_intel"
   ],
   "notes": [
-   "R1 C typedef container cl_device_feature_capabilities_intel (spec-listed)"
+   "R1 C typedef container cl_device_feature_capabilities_intel (container-declared)"
   ],
   "value": null
  },
@@ -3330,7 +3340,7 @@
    "cl_device_feature_capabilities_intel"
   ],
   "notes": [
-   "R1 C typedef container cl_device_feature_capabilities_intel (spec-listed)"
+   "R1 C typedef container cl_device_feature_capabilities_intel (container-declared)"
   ],
   "value": null
  },
@@ -3340,7 +3350,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1069"
  },
@@ -3362,7 +3372,7 @@
    "cl_device_fp_atomic_capabilities_ext"
   ],
   "notes": [
-   "R1 C typedef container cl_device_fp_atomic_capabilities_ext (spec-listed)"
+   "R1 C typedef container cl_device_fp_atomic_capabilities_ext (container-declared)"
   ],
   "value": null
  },
@@ -3372,7 +3382,7 @@
    "cl_device_fp_atomic_capabilities_ext"
   ],
   "notes": [
-   "R1 C typedef container cl_device_fp_atomic_capabilities_ext (spec-listed)"
+   "R1 C typedef container cl_device_fp_atomic_capabilities_ext (container-declared)"
   ],
   "value": null
  },
@@ -3382,7 +3392,7 @@
    "cl_device_fp_atomic_capabilities_ext"
   ],
   "notes": [
-   "R1 C typedef container cl_device_fp_atomic_capabilities_ext (spec-listed)"
+   "R1 C typedef container cl_device_fp_atomic_capabilities_ext (container-declared)"
   ],
   "value": null
  },
@@ -3398,7 +3408,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x101D"
  },
@@ -3408,7 +3418,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x101E"
  },
@@ -3418,7 +3428,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x101C"
  },
@@ -3446,7 +3456,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x101F"
  },
@@ -3456,7 +3466,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1054"
  },
@@ -3502,7 +3512,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1035"
  },
@@ -3512,15 +3522,17 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by clGetDeviceInfo)"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by clGetDeviceInfo)"
   ],
   "value": "0x4251"
  },
  "CL_DEVICE_ILS_WITH_VERSION": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_device_info"
+  ],
   "notes": [
-   "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1061"
  },
@@ -3536,9 +3548,11 @@
  },
  "CL_DEVICE_IL_VERSION": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_device_info"
+  ],
   "notes": [
-   "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x105B"
  },
@@ -3558,7 +3572,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1012"
  },
@@ -3568,7 +3582,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1011"
  },
@@ -3578,7 +3592,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1015"
  },
@@ -3588,7 +3602,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1014"
  },
@@ -3598,15 +3612,17 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1013"
  },
  "CL_DEVICE_IMAGE_BASE_ADDRESS_ALIGNMENT": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_device_info"
+  ],
   "notes": [
-   "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x104B"
  },
@@ -3624,7 +3640,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1041"
  },
@@ -3634,15 +3650,17 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1040"
  },
  "CL_DEVICE_IMAGE_PITCH_ALIGNMENT": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_device_info"
+  ],
   "notes": [
-   "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x104A"
  },
@@ -3660,7 +3678,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1016"
  },
@@ -3682,9 +3700,11 @@
  },
  "CL_DEVICE_INTEGER_DOT_PRODUCT_ACCELERATION_PROPERTIES_8BIT": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_device_info"
+  ],
   "notes": [
-   "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1074"
  },
@@ -3700,9 +3720,11 @@
  },
  "CL_DEVICE_INTEGER_DOT_PRODUCT_CAPABILITIES": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_device_info"
+  ],
   "notes": [
-   "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1073"
  },
@@ -3768,7 +3790,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by clGetDeviceInfo)"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by clGetDeviceInfo)"
   ],
   "value": "0x4250"
  },
@@ -3830,7 +3852,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1072"
  },
@@ -3840,7 +3862,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x103E"
  },
@@ -3850,7 +3872,7 @@
    "cl_device_fp_atomic_capabilities_ext"
   ],
   "notes": [
-   "R1 C typedef container cl_device_fp_atomic_capabilities_ext (spec-listed)"
+   "R1 C typedef container cl_device_fp_atomic_capabilities_ext (container-declared)"
   ],
   "value": null
  },
@@ -3860,7 +3882,7 @@
    "cl_device_fp_atomic_capabilities_ext"
   ],
   "notes": [
-   "R1 C typedef container cl_device_fp_atomic_capabilities_ext (spec-listed)"
+   "R1 C typedef container cl_device_fp_atomic_capabilities_ext (container-declared)"
   ],
   "value": null
  },
@@ -3870,7 +3892,7 @@
    "cl_device_fp_atomic_capabilities_ext"
   ],
   "notes": [
-   "R1 C typedef container cl_device_fp_atomic_capabilities_ext (spec-listed)"
+   "R1 C typedef container cl_device_fp_atomic_capabilities_ext (container-declared)"
   ],
   "value": null
  },
@@ -3886,7 +3908,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1023"
  },
@@ -3902,15 +3924,17 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1022"
  },
  "CL_DEVICE_LUID": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_device_info"
+  ],
   "notes": [
-   "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x106D"
  },
@@ -3926,9 +3950,11 @@
  },
  "CL_DEVICE_LUID_VALID": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_device_info"
+  ],
   "notes": [
-   "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x106C"
  },
@@ -3948,7 +3974,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x100C"
  },
@@ -3958,7 +3984,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1002"
  },
@@ -3968,7 +3994,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1021"
  },
@@ -3978,7 +4004,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1020"
  },
@@ -3988,7 +4014,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x104D"
  },
@@ -4010,7 +4036,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1010"
  },
@@ -4026,9 +4052,11 @@
  },
  "CL_DEVICE_MAX_NUM_SUB_GROUPS": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_device_info"
+  ],
   "notes": [
-   "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x105C"
  },
@@ -4038,7 +4066,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1052"
  },
@@ -4048,7 +4076,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1051"
  },
@@ -4058,7 +4086,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1017"
  },
@@ -4068,7 +4096,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1055"
  },
@@ -4078,7 +4106,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x100E"
  },
@@ -4088,7 +4116,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x104C"
  },
@@ -4098,7 +4126,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1018"
  },
@@ -4114,7 +4142,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1004"
  },
@@ -4124,7 +4152,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1005"
  },
@@ -4140,7 +4168,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1003"
  },
@@ -4150,7 +4178,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1005"
  },
@@ -4160,7 +4188,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x100F"
  },
@@ -4176,7 +4204,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1019"
  },
@@ -4192,7 +4220,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x101A"
  },
@@ -4212,71 +4240,87 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x102B"
  },
  "CL_DEVICE_NATIVE_VECTOR_WIDTH_CHAR": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_device_info"
+  ],
   "notes": [
-   "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
+   "spec evidence [cl_device_info] value chain col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1036"
  },
  "CL_DEVICE_NATIVE_VECTOR_WIDTH_DOUBLE": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_device_info"
+  ],
   "notes": [
-   "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
+   "spec evidence [cl_device_info] value chain col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x103B"
  },
  "CL_DEVICE_NATIVE_VECTOR_WIDTH_FLOAT": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_device_info"
+  ],
   "notes": [
-   "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
+   "spec evidence [cl_device_info] value chain col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x103A"
  },
  "CL_DEVICE_NATIVE_VECTOR_WIDTH_HALF": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_device_info"
+  ],
   "notes": [
-   "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
+   "spec evidence [cl_device_info] value chain col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x103C"
  },
  "CL_DEVICE_NATIVE_VECTOR_WIDTH_INT": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_device_info"
+  ],
   "notes": [
-   "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
+   "spec evidence [cl_device_info] value chain col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1038"
  },
  "CL_DEVICE_NATIVE_VECTOR_WIDTH_LONG": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_device_info"
+  ],
   "notes": [
-   "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
+   "spec evidence [cl_device_info] value chain col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1039"
  },
  "CL_DEVICE_NATIVE_VECTOR_WIDTH_SHORT": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_device_info"
+  ],
   "notes": [
-   "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
+   "spec evidence [cl_device_info] value chain col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1037"
  },
  "CL_DEVICE_NODE_MASK": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_device_info"
+  ],
   "notes": [
-   "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x106E"
  },
@@ -4296,7 +4340,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1065"
  },
@@ -4322,9 +4366,11 @@
  },
  "CL_DEVICE_NUMERIC_VERSION": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_device_info"
+  ],
   "notes": [
-   "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x105E"
  },
@@ -4344,7 +4390,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by clGetDeviceInfo)"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by clGetDeviceInfo)"
   ],
   "value": "0x4254"
  },
@@ -4360,7 +4406,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by clGetDeviceInfo)"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by clGetDeviceInfo)"
   ],
   "value": "0x4252"
  },
@@ -4370,7 +4416,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by clGetDeviceInfo)"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by clGetDeviceInfo)"
   ],
   "value": "0x4253"
  },
@@ -4380,7 +4426,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by clGetDeviceInfo)"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by clGetDeviceInfo)"
   ],
   "value": "0x4255"
  },
@@ -4390,7 +4436,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1066"
  },
@@ -4400,7 +4446,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x106F"
  },
@@ -4420,7 +4466,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x103D"
  },
@@ -4436,7 +4482,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1042"
  },
@@ -4452,7 +4498,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1045"
  },
@@ -4462,7 +4508,7 @@
    "cl_device_partition_property"
   ],
   "notes": [
-   "spec evidence [cl_device_partition_property] table value cell (List of supported partition schemes by {clCreateSu)"
+   "spec evidence [cl_device_partition_property] value cell col0 (List of supported partition schemes by {clCreateSu)"
   ],
   "value": "0x1088"
  },
@@ -4478,7 +4524,7 @@
    "cl_device_partition_property"
   ],
   "notes": [
-   "spec evidence [cl_device_partition_property] table value cell (List of supported partition schemes by {clCreateSu)"
+   "spec evidence [cl_device_partition_property] value cell col0 (List of supported partition schemes by {clCreateSu)"
   ],
   "value": "0x1087"
  },
@@ -4512,7 +4558,7 @@
    "cl_device_partition_property"
   ],
   "notes": [
-   "spec evidence [cl_device_partition_property] table value cell (List of supported partition schemes by {clCreateSu)"
+   "spec evidence [cl_device_partition_property] value cell col0 (List of supported partition schemes by {clCreateSu)"
   ],
   "value": "0x1086"
  },
@@ -4548,7 +4594,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1043"
  },
@@ -4558,7 +4604,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1044"
  },
@@ -4574,7 +4620,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1046"
  },
@@ -4606,7 +4652,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1056"
  },
@@ -4616,7 +4662,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1057"
  },
@@ -4626,7 +4672,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1071"
  },
@@ -4656,7 +4702,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1031"
  },
@@ -4672,7 +4718,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1059"
  },
@@ -4682,7 +4728,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1048"
  },
@@ -4692,7 +4738,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x105A"
  },
@@ -4702,63 +4748,77 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1058"
  },
  "CL_DEVICE_PREFERRED_VECTOR_WIDTH_CHAR": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_device_info"
+  ],
   "notes": [
-   "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
+   "spec evidence [cl_device_info] value chain col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1006"
  },
  "CL_DEVICE_PREFERRED_VECTOR_WIDTH_DOUBLE": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_device_info"
+  ],
   "notes": [
-   "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
+   "spec evidence [cl_device_info] value chain col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x100B"
  },
  "CL_DEVICE_PREFERRED_VECTOR_WIDTH_FLOAT": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_device_info"
+  ],
   "notes": [
-   "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
+   "spec evidence [cl_device_info] value chain col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x100A"
  },
  "CL_DEVICE_PREFERRED_VECTOR_WIDTH_HALF": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_device_info"
+  ],
   "notes": [
-   "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
+   "spec evidence [cl_device_info] value chain col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1034"
  },
  "CL_DEVICE_PREFERRED_VECTOR_WIDTH_INT": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_device_info"
+  ],
   "notes": [
-   "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
+   "spec evidence [cl_device_info] value chain col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1008"
  },
  "CL_DEVICE_PREFERRED_VECTOR_WIDTH_LONG": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_device_info"
+  ],
   "notes": [
-   "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
+   "spec evidence [cl_device_info] value chain col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1009"
  },
  "CL_DEVICE_PREFERRED_VECTOR_WIDTH_SHORT": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_device_info"
+  ],
   "notes": [
-   "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
+   "spec evidence [cl_device_info] value chain col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1007"
  },
@@ -4774,7 +4834,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1067"
  },
@@ -4784,7 +4844,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1049"
  },
@@ -4794,7 +4854,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x102E"
  },
@@ -4810,7 +4870,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1025"
  },
@@ -4830,7 +4890,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1050"
  },
@@ -4840,7 +4900,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x104F"
  },
@@ -4850,7 +4910,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x104E"
  },
@@ -4860,7 +4920,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x102A"
  },
@@ -4870,7 +4930,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x102A"
  },
@@ -4900,7 +4960,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1047"
  },
@@ -5100,17 +5160,21 @@
  },
  "CL_DEVICE_SINGLE_FP_CONFIG": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_device_info"
+  ],
   "notes": [
-   "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x101B"
  },
  "CL_DEVICE_SPIRV_CAPABILITIES": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_device_info"
+  ],
   "notes": [
-   "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x12BB"
  },
@@ -5126,9 +5190,11 @@
  },
  "CL_DEVICE_SPIRV_EXTENDED_INSTRUCTION_SETS": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_device_info"
+  ],
   "notes": [
-   "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x12B9"
  },
@@ -5144,9 +5210,11 @@
  },
  "CL_DEVICE_SPIRV_EXTENSIONS": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_device_info"
+  ],
   "notes": [
-   "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x12BA"
  },
@@ -5172,9 +5240,11 @@
  },
  "CL_DEVICE_SUB_GROUP_INDEPENDENT_FORWARD_PROGRESS": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_device_info"
+  ],
   "notes": [
-   "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x105D"
  },
@@ -5216,7 +5286,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1053"
  },
@@ -5332,7 +5402,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1000"
  },
@@ -5408,9 +5478,11 @@
  },
  "CL_DEVICE_UUID": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_device_info"
+  ],
   "notes": [
-   "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x106A"
  },
@@ -5430,7 +5502,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x102C"
  },
@@ -5440,7 +5512,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1001"
  },
@@ -5450,7 +5522,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x102F"
  },
@@ -5504,7 +5576,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x1068"
  },
@@ -5560,9 +5632,11 @@
  },
  "CL_DRIVER_UUID": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_device_info"
+  ],
   "notes": [
-   "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x106B"
  },
@@ -5582,7 +5656,7 @@
    "cl_device_info"
   ],
   "notes": [
-   "spec evidence [cl_device_info] table value cell (List of supported param_names by {clGetDeviceInfo})"
+   "spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo})"
   ],
   "value": "0x102D"
  },
@@ -5723,7 +5797,7 @@
    "cl_event_info"
   ],
   "notes": [
-   "spec evidence [cl_event_info] table value cell (List of supported param_names by {clGetEventInfo})"
+   "spec evidence [cl_event_info] value cell col0 (List of supported param_names by {clGetEventInfo})"
   ],
   "value": "0x11D3"
  },
@@ -5733,7 +5807,7 @@
    "cl_event_info"
   ],
   "notes": [
-   "spec evidence [cl_event_info] table value cell (List of supported param_names by {clGetEventInfo})"
+   "spec evidence [cl_event_info] value cell col0 (List of supported param_names by {clGetEventInfo})"
   ],
   "value": "0x11D0"
  },
@@ -5749,7 +5823,7 @@
    "cl_event_info"
   ],
   "notes": [
-   "spec evidence [cl_event_info] table value cell (List of supported param_names by {clGetEventInfo})"
+   "spec evidence [cl_event_info] value cell col0 (List of supported param_names by {clGetEventInfo})"
   ],
   "value": "0x11D1"
  },
@@ -5759,7 +5833,7 @@
    "cl_event_info"
   ],
   "notes": [
-   "spec evidence [cl_event_info] table value cell (List of supported param_names by {clGetEventInfo})"
+   "spec evidence [cl_event_info] value cell col0 (List of supported param_names by {clGetEventInfo})"
   ],
   "value": "0x11D4"
  },
@@ -5769,7 +5843,7 @@
    "cl_event_info"
   ],
   "notes": [
-   "spec evidence [cl_event_info] table value cell (List of supported param_names by {clGetEventInfo})"
+   "spec evidence [cl_event_info] value cell col0 (List of supported param_names by {clGetEventInfo})"
   ],
   "value": "0x11D2"
  },
@@ -5875,17 +5949,21 @@
  },
  "CL_FILTER_LINEAR": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_filter_mode"
+  ],
   "notes": [
-   "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
+   "spec evidence [cl_filter_mode] inline value-set of cl_filter_mode (row {CL_SAMPLER_FILTER_MODE_anchor})"
   ],
   "value": "0x1141"
  },
  "CL_FILTER_NEAREST": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_filter_mode"
+  ],
   "notes": [
-   "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
+   "spec evidence [cl_filter_mode] inline value-set of cl_filter_mode (row {CL_SAMPLER_FILTER_MODE_anchor})"
   ],
   "value": "0x1140"
  },
@@ -5895,7 +5973,7 @@
    "cl_channel_type"
   ],
   "notes": [
-   "spec evidence [cl_channel_type] table value cell (Image Channel Data Type mapping)"
+   "spec evidence [cl_channel_type] value cell col0 (List of supported Image Channel Data Types)"
   ],
   "value": "0x10DE"
  },
@@ -6213,7 +6291,7 @@
    "cl_channel_type"
   ],
   "notes": [
-   "spec evidence [cl_channel_type] table value cell (List of supported Image Channel Data Types)"
+   "spec evidence [cl_channel_type] value cell col0 (List of supported Image Channel Data Types)"
   ],
   "value": "0x10DD"
  },
@@ -6323,7 +6401,7 @@
    "cl_image_info"
   ],
   "notes": [
-   "spec evidence [cl_image_info] table value cell (List of supported param_names by {clGetImageInfo})"
+   "spec evidence [cl_image_info] value cell col0 (List of supported param_names by {clGetImageInfo})"
   ],
   "value": "0x1117"
  },
@@ -6333,7 +6411,7 @@
    "cl_image_info"
   ],
   "notes": [
-   "spec evidence [cl_image_info] table value cell (List of supported param_names by {clGetImageInfo})"
+   "spec evidence [cl_image_info] value cell col0 (List of supported param_names by {clGetImageInfo})"
   ],
   "value": "0x1118"
  },
@@ -6363,7 +6441,7 @@
    "cl_image_info"
   ],
   "notes": [
-   "spec evidence [cl_image_info] table value cell (List of supported param_names by {clGetImageInfo})"
+   "spec evidence [cl_image_info] value cell col0 (List of supported param_names by {clGetImageInfo})"
   ],
   "value": "0x1116"
  },
@@ -6389,7 +6467,7 @@
    "cl_image_info"
   ],
   "notes": [
-   "spec evidence [cl_image_info] table value cell (List of supported param_names by {clGetImageInfo})"
+   "spec evidence [cl_image_info] value cell col0 (List of supported param_names by {clGetImageInfo})"
   ],
   "value": "0x1111"
  },
@@ -6399,7 +6477,7 @@
    "cl_image_info"
   ],
   "notes": [
-   "spec evidence [cl_image_info] table value cell (List of supported param_names by {clGetImageInfo})"
+   "spec evidence [cl_image_info] value cell col0 (List of supported param_names by {clGetImageInfo})"
   ],
   "value": "0x1110"
  },
@@ -6429,7 +6507,7 @@
    "cl_image_info"
   ],
   "notes": [
-   "spec evidence [cl_image_info] table value cell (List of supported param_names by {clGetImageInfo})"
+   "spec evidence [cl_image_info] value cell col0 (List of supported param_names by {clGetImageInfo})"
   ],
   "value": "0x1115"
  },
@@ -6439,7 +6517,7 @@
    "cl_image_info"
   ],
   "notes": [
-   "spec evidence [cl_image_info] table value cell (List of supported param_names by {clGetImageInfo})"
+   "spec evidence [cl_image_info] value cell col0 (List of supported param_names by {clGetImageInfo})"
   ],
   "value": "0x1119"
  },
@@ -6449,7 +6527,7 @@
    "cl_image_info"
   ],
   "notes": [
-   "spec evidence [cl_image_info] table value cell (List of supported param_names by {clGetImageInfo})"
+   "spec evidence [cl_image_info] value cell col0 (List of supported param_names by {clGetImageInfo})"
   ],
   "value": "0x111A"
  },
@@ -6459,7 +6537,7 @@
    "cl_image_requirements_info_ext"
   ],
   "notes": [
-   "spec evidence [cl_image_requirements_info_ext] table value cell (List of supported param_names by {clGetImageRequir)"
+   "spec evidence [cl_image_requirements_info_ext] value cell col0 (List of supported param_names by {clGetImageRequir)"
   ],
   "value": "0x1292"
  },
@@ -6469,7 +6547,7 @@
    "cl_image_requirements_info_ext"
   ],
   "notes": [
-   "spec evidence [cl_image_requirements_info_ext] table value cell (List of supported param_names by {clGetImageRequir)"
+   "spec evidence [cl_image_requirements_info_ext] value cell col0 (List of supported param_names by {clGetImageRequir)"
   ],
   "value": "0x12B6"
  },
@@ -6479,7 +6557,7 @@
    "cl_image_requirements_info_ext"
   ],
   "notes": [
-   "spec evidence [cl_image_requirements_info_ext] table value cell (List of supported param_names by {clGetImageRequir)"
+   "spec evidence [cl_image_requirements_info_ext] value cell col0 (List of supported param_names by {clGetImageRequir)"
   ],
   "value": "0x12B5"
  },
@@ -6489,7 +6567,7 @@
    "cl_image_requirements_info_ext"
   ],
   "notes": [
-   "spec evidence [cl_image_requirements_info_ext] table value cell (List of supported param_names by {clGetImageRequir)"
+   "spec evidence [cl_image_requirements_info_ext] value cell col0 (List of supported param_names by {clGetImageRequir)"
   ],
   "value": "0x12B4"
  },
@@ -6499,7 +6577,7 @@
    "cl_image_requirements_info_ext"
   ],
   "notes": [
-   "spec evidence [cl_image_requirements_info_ext] table value cell (List of supported param_names by {clGetImageRequir)"
+   "spec evidence [cl_image_requirements_info_ext] value cell col0 (List of supported param_names by {clGetImageRequir)"
   ],
   "value": "0x12B3"
  },
@@ -6509,7 +6587,7 @@
    "cl_image_requirements_info_ext"
   ],
   "notes": [
-   "spec evidence [cl_image_requirements_info_ext] table value cell (List of supported param_names by {clGetImageRequir)"
+   "spec evidence [cl_image_requirements_info_ext] value cell col0 (List of supported param_names by {clGetImageRequir)"
   ],
   "value": "0x1290"
  },
@@ -6519,7 +6597,7 @@
    "cl_image_requirements_info_ext"
   ],
   "notes": [
-   "spec evidence [cl_image_requirements_info_ext] table value cell (List of supported param_names by {clGetImageRequir)"
+   "spec evidence [cl_image_requirements_info_ext] value cell col0 (List of supported param_names by {clGetImageRequir)"
   ],
   "value": "0x12B2"
  },
@@ -6529,7 +6607,7 @@
    "cl_image_requirements_info_ext"
   ],
   "notes": [
-   "spec evidence [cl_image_requirements_info_ext] table value cell (List of supported param_names by {clGetImageRequir)"
+   "spec evidence [cl_image_requirements_info_ext] value cell col0 (List of supported param_names by {clGetImageRequir)"
   ],
   "value": "0x1291"
  },
@@ -6545,7 +6623,7 @@
    "cl_image_info"
   ],
   "notes": [
-   "spec evidence [cl_image_info] table value cell (List of supported param_names by {clGetImageInfo})"
+   "spec evidence [cl_image_info] value cell col0 (List of supported param_names by {clGetImageInfo})"
   ],
   "value": "0x1112"
  },
@@ -6561,7 +6639,7 @@
    "cl_image_info"
   ],
   "notes": [
-   "spec evidence [cl_image_info] table value cell (List of supported param_names by {clGetImageInfo})"
+   "spec evidence [cl_image_info] value cell col0 (List of supported param_names by {clGetImageInfo})"
   ],
   "value": "0x1113"
  },
@@ -6577,7 +6655,7 @@
    "cl_image_info"
   ],
   "notes": [
-   "spec evidence [cl_image_info] table value cell (List of supported param_names by {clGetImageInfo})"
+   "spec evidence [cl_image_info] value cell col0 (List of supported param_names by {clGetImageInfo})"
   ],
   "value": "0x1114"
  },
@@ -6658,7 +6736,7 @@
    "cl_channel_order"
   ],
   "notes": [
-   "spec evidence [cl_channel_order] table value cell (Image Channel Order mapping)"
+   "spec evidence [cl_channel_order] value cell col0 (List of supported Image Channel Order Values)"
   ],
   "value": "0x10B8"
  },
@@ -7334,9 +7412,11 @@
  },
  "CL_KERNEL_ARG_ACCESS_NONE": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_kernel_arg_access_qualifier"
+  ],
   "notes": [
-   "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
+   "spec evidence [cl_kernel_arg_access_qualifier] inline value-set of cl_kernel_arg_access_qualifier (row {CL_KERNEL_ARG_ACCESS_QUALIFIER_anchor})"
   ],
   "value": "0x11A3"
  },
@@ -7346,63 +7426,77 @@
    "cl_kernel_arg_info"
   ],
   "notes": [
-   "spec evidence [cl_kernel_arg_info] table value cell (List of supported param_names by {clGetKernelArgIn)"
+   "spec evidence [cl_kernel_arg_info] value cell col0 (List of supported param_names by {clGetKernelArgIn)"
   ],
   "value": "0x1197"
  },
  "CL_KERNEL_ARG_ACCESS_READ_ONLY": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_kernel_arg_access_qualifier"
+  ],
   "notes": [
-   "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
+   "spec evidence [cl_kernel_arg_access_qualifier] inline value-set of cl_kernel_arg_access_qualifier (row {CL_KERNEL_ARG_ACCESS_QUALIFIER_anchor})"
   ],
   "value": "0x11A0"
  },
  "CL_KERNEL_ARG_ACCESS_READ_WRITE": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_kernel_arg_access_qualifier"
+  ],
   "notes": [
-   "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
+   "spec evidence [cl_kernel_arg_access_qualifier] inline value-set of cl_kernel_arg_access_qualifier (row {CL_KERNEL_ARG_ACCESS_QUALIFIER_anchor})"
   ],
   "value": "0x11A2"
  },
  "CL_KERNEL_ARG_ACCESS_WRITE_ONLY": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_kernel_arg_access_qualifier"
+  ],
   "notes": [
-   "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
+   "spec evidence [cl_kernel_arg_access_qualifier] inline value-set of cl_kernel_arg_access_qualifier (row {CL_KERNEL_ARG_ACCESS_QUALIFIER_anchor})"
   ],
   "value": "0x11A1"
  },
  "CL_KERNEL_ARG_ADDRESS_CONSTANT": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_kernel_arg_address_qualifier"
+  ],
   "notes": [
-   "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
+   "spec evidence [cl_kernel_arg_address_qualifier] inline value-set of cl_kernel_arg_address_qualifier (row {CL_KERNEL_ARG_ADDRESS_QUALIFIER_anchor})"
   ],
   "value": "0x119D"
  },
  "CL_KERNEL_ARG_ADDRESS_GLOBAL": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_kernel_arg_address_qualifier"
+  ],
   "notes": [
-   "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
+   "spec evidence [cl_kernel_arg_address_qualifier] inline value-set of cl_kernel_arg_address_qualifier (row {CL_KERNEL_ARG_ADDRESS_QUALIFIER_anchor})"
   ],
   "value": "0x119B"
  },
  "CL_KERNEL_ARG_ADDRESS_LOCAL": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_kernel_arg_address_qualifier"
+  ],
   "notes": [
-   "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
+   "spec evidence [cl_kernel_arg_address_qualifier] inline value-set of cl_kernel_arg_address_qualifier (row {CL_KERNEL_ARG_ADDRESS_QUALIFIER_anchor})"
   ],
   "value": "0x119C"
  },
  "CL_KERNEL_ARG_ADDRESS_PRIVATE": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_kernel_arg_address_qualifier"
+  ],
   "notes": [
-   "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
+   "spec evidence [cl_kernel_arg_address_qualifier] inline value-set of cl_kernel_arg_address_qualifier (row {CL_KERNEL_ARG_ADDRESS_QUALIFIER_anchor})"
   ],
   "value": "0x119E"
  },
@@ -7412,7 +7506,7 @@
    "cl_kernel_arg_info"
   ],
   "notes": [
-   "spec evidence [cl_kernel_arg_info] table value cell (List of supported param_names by {clGetKernelArgIn)"
+   "spec evidence [cl_kernel_arg_info] value cell col0 (List of supported param_names by {clGetKernelArgIn)"
   ],
   "value": "0x1196"
  },
@@ -7438,7 +7532,7 @@
    "cl_kernel_arg_info"
   ],
   "notes": [
-   "spec evidence [cl_kernel_arg_info] table value cell (List of supported param_names by {clGetKernelArgIn)"
+   "spec evidence [cl_kernel_arg_info] value cell col0 (List of supported param_names by {clGetKernelArgIn)"
   ],
   "value": "0x119A"
  },
@@ -7458,7 +7552,7 @@
    "cl_kernel_arg_info"
   ],
   "notes": [
-   "spec evidence [cl_kernel_arg_info] table value cell (List of supported param_names by {clGetKernelArgIn)"
+   "spec evidence [cl_kernel_arg_info] value cell col0 (List of supported param_names by {clGetKernelArgIn)"
   ],
   "value": "0x1198"
  },
@@ -7488,7 +7582,7 @@
    "cl_kernel_arg_info"
   ],
   "notes": [
-   "spec evidence [cl_kernel_arg_info] table value cell (List of supported param_names by {clGetKernelArgIn)"
+   "spec evidence [cl_kernel_arg_info] value cell col0 (List of supported param_names by {clGetKernelArgIn)"
   ],
   "value": "0x1199"
  },
@@ -7518,15 +7612,17 @@
    "cl_kernel_info"
   ],
   "notes": [
-   "spec evidence [cl_kernel_info] table value cell (List of supported param_names by {clGetKernelInfo})"
+   "spec evidence [cl_kernel_info] value cell col0 (List of supported param_names by {clGetKernelInfo})"
   ],
   "value": "0x1195"
  },
  "CL_KERNEL_COMPILE_NUM_SUB_GROUPS": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_kernel_sub_group_info"
+  ],
   "notes": [
-   "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
+   "spec evidence [cl_kernel_sub_group_info] value cell col0 (List of supported param_names by {clGetKernelSubGr)"
   ],
   "value": "0x11BA"
  },
@@ -7542,7 +7638,7 @@
    "cl_kernel_work_group_info"
   ],
   "notes": [
-   "spec evidence [cl_kernel_work_group_info] table value cell (List of supported param_names by {clGetKernelWorkG)"
+   "spec evidence [cl_kernel_work_group_info] value cell col0 (List of supported param_names by {clGetKernelWorkG)"
   ],
   "value": "0x11B1"
  },
@@ -7552,7 +7648,7 @@
    "cl_kernel_info"
   ],
   "notes": [
-   "spec evidence [cl_kernel_info] table value cell (List of supported param_names by {clGetKernelInfo})"
+   "spec evidence [cl_kernel_info] value cell col0 (List of supported param_names by {clGetKernelInfo})"
   ],
   "value": "0x1193"
  },
@@ -7668,7 +7764,7 @@
    "cl_kernel_info"
   ],
   "notes": [
-   "spec evidence [cl_kernel_info] table value cell (List of supported param_names by {clGetKernelInfo})"
+   "spec evidence [cl_kernel_info] value cell col0 (List of supported param_names by {clGetKernelInfo})"
   ],
   "value": "0x1190"
  },
@@ -7678,7 +7774,7 @@
    "cl_kernel_work_group_info"
   ],
   "notes": [
-   "spec evidence [cl_kernel_work_group_info] table value cell (List of supported param_names by {clGetKernelWorkG)"
+   "spec evidence [cl_kernel_work_group_info] value cell col0 (List of supported param_names by {clGetKernelWorkG)"
   ],
   "value": "0x11B5"
  },
@@ -7688,30 +7784,38 @@
    "cl_kernel_work_group_info"
   ],
   "notes": [
-   "spec evidence [cl_kernel_work_group_info] table value cell (List of supported param_names by {clGetKernelWorkG)"
+   "spec evidence [cl_kernel_work_group_info] value cell col0 (List of supported param_names by {clGetKernelWorkG)"
   ],
   "value": "0x11B2"
  },
  "CL_KERNEL_LOCAL_SIZE_FOR_SUB_GROUP_COUNT": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_kernel_sub_group_info"
+  ],
   "notes": [
-   "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
+   "spec evidence [cl_kernel_sub_group_info] value cell col0 (List of supported param_names by {clGetKernelSubGr)"
   ],
   "value": "0x11B8"
  },
  "CL_KERNEL_MAX_NUM_SUB_GROUPS": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_kernel_sub_group_info"
+  ],
   "notes": [
-   "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
+   "spec evidence [cl_kernel_sub_group_info] value cell col0 (List of supported param_names by {clGetKernelSubGr)"
   ],
   "value": "0x11B9"
  },
  "CL_KERNEL_MAX_SUB_GROUP_SIZE_FOR_NDRANGE": {
   "container": "enums.2000",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_kernel_sub_group_info"
+  ],
+  "notes": [
+   "spec evidence [cl_kernel_sub_group_info] value cell col0 (List of supported param_names by {clGetKernelSubGr)"
+  ],
   "value": "0x2033"
  },
  "CL_KERNEL_MAX_SUB_GROUP_SIZE_FOR_NDRANGE_KHR": {
@@ -7736,7 +7840,7 @@
    "cl_kernel_info"
   ],
   "notes": [
-   "spec evidence [cl_kernel_info] table value cell (List of supported param_names by {clGetKernelInfo})"
+   "spec evidence [cl_kernel_info] value cell col0 (List of supported param_names by {clGetKernelInfo})"
   ],
   "value": "0x1191"
  },
@@ -7746,7 +7850,7 @@
    "cl_kernel_work_group_info"
   ],
   "notes": [
-   "spec evidence [cl_kernel_work_group_info] table value cell (List of supported param_names by {clGetKernelWorkG)"
+   "spec evidence [cl_kernel_work_group_info] value cell col0 (List of supported param_names by {clGetKernelWorkG)"
   ],
   "value": "0x11B3"
  },
@@ -7756,7 +7860,7 @@
    "cl_kernel_work_group_info"
   ],
   "notes": [
-   "spec evidence [cl_kernel_work_group_info] table value cell (List of supported param_names by {clGetKernelWorkG)"
+   "spec evidence [cl_kernel_work_group_info] value cell col0 (List of supported param_names by {clGetKernelWorkG)"
   ],
   "value": "0x11B4"
  },
@@ -7766,7 +7870,7 @@
    "cl_kernel_info"
   ],
   "notes": [
-   "spec evidence [cl_kernel_info] table value cell (List of supported param_names by {clGetKernelInfo})"
+   "spec evidence [cl_kernel_info] value cell col0 (List of supported param_names by {clGetKernelInfo})"
   ],
   "value": "0x1194"
  },
@@ -7776,7 +7880,7 @@
    "cl_kernel_info"
   ],
   "notes": [
-   "spec evidence [cl_kernel_info] table value cell (List of supported param_names by {clGetKernelInfo})"
+   "spec evidence [cl_kernel_info] value cell col0 (List of supported param_names by {clGetKernelInfo})"
   ],
   "value": "0x1192"
  },
@@ -7788,8 +7892,12 @@
  },
  "CL_KERNEL_SUB_GROUP_COUNT_FOR_NDRANGE": {
   "container": "enums.2000",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_kernel_sub_group_info"
+  ],
+  "notes": [
+   "spec evidence [cl_kernel_sub_group_info] value cell col0 (List of supported param_names by {clGetKernelSubGr)"
+  ],
   "value": "0x2034"
  },
  "CL_KERNEL_SUB_GROUP_COUNT_FOR_NDRANGE_KHR": {
@@ -7808,7 +7916,7 @@
    "cl_kernel_work_group_info"
   ],
   "notes": [
-   "spec evidence [cl_kernel_work_group_info] table value cell (List of supported param_names by {clGetKernelWorkG)"
+   "spec evidence [cl_kernel_work_group_info] value cell col0 (List of supported param_names by {clGetKernelWorkG)"
   ],
   "value": "0x11B0"
  },
@@ -7924,7 +8032,7 @@
    "cl_channel_order"
   ],
   "notes": [
-   "spec evidence [cl_channel_order] table value cell (List of supported Image Channel Order Values)"
+   "spec evidence [cl_channel_order] value cell col0 (List of supported Image Channel Order Values)"
   ],
   "value": "0x10B9"
  },
@@ -7990,7 +8098,7 @@
    "cl_mem_flags"
   ],
   "notes": [
-   "R1 C typedef container cl_mem_flags (container-declared)"
+   "R1 C typedef container cl_mem_flags (spec-listed)"
   ],
   "value": null
  },
@@ -8006,8 +8114,12 @@
  },
  "CL_MEM_ALLOC_BUFFER_LOCATION_INTEL": {
   "container": "enums.4190",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_mem_info_intel"
+  ],
+  "notes": [
+   "spec evidence [cl_mem_info_intel] value cell col0 (List of supported param_names by clGetMemAllocInfo)"
+  ],
   "value": "0x419E"
  },
  "CL_MEM_ALLOC_CPU_LOCAL_IMG": {
@@ -8043,9 +8155,11 @@
  "CL_MEM_ALLOC_FLAGS_INTEL": {
   "container": "enums.4190",
   "groups": [
+   "cl_mem_info_intel",
    "cl_mem_properties_intel"
   ],
   "notes": [
+   "spec evidence [cl_mem_info_intel] value cell col0 (List of supported param_names by clGetMemAllocInfo)",
    "spec evidence [cl_mem_properties_intel] G4 typedef+define"
   ],
   "value": "0x4195"
@@ -8106,7 +8220,7 @@
    "cl_mem_alloc_flags_intel"
   ],
   "notes": [
-   "R1 C typedef container cl_mem_alloc_flags_intel (spec-listed)"
+   "R1 C typedef container cl_mem_alloc_flags_intel (container-declared)"
   ],
   "value": null
  },
@@ -8116,7 +8230,7 @@
    "cl_mem_alloc_flags_intel"
   ],
   "notes": [
-   "R1 C typedef container cl_mem_alloc_flags_intel (spec-listed)"
+   "R1 C typedef container cl_mem_alloc_flags_intel (container-declared)"
   ],
   "value": null
  },
@@ -8156,7 +8270,7 @@
    "cl_mem_alloc_flags_intel"
   ],
   "notes": [
-   "R1 C typedef container cl_mem_alloc_flags_intel (spec-listed)"
+   "R1 C typedef container cl_mem_alloc_flags_intel (container-declared)"
   ],
   "value": null
  },
@@ -8172,7 +8286,7 @@
    "cl_mem_info"
   ],
   "notes": [
-   "spec evidence [cl_mem_info] table value cell (List of supported param_names by {clGetMemObjectIn)"
+   "spec evidence [cl_mem_info] value cell col0 (List of supported param_names by {clGetMemObjectIn)"
   ],
   "value": "0x1107"
  },
@@ -8188,7 +8302,7 @@
    "cl_mem_info"
   ],
   "notes": [
-   "spec evidence [cl_mem_info] table value cell (List of supported param_names by {clGetMemObjectIn)"
+   "spec evidence [cl_mem_info] value cell col0 (List of supported param_names by {clGetMemObjectIn)"
   ],
   "value": "0x1106"
  },
@@ -8238,7 +8352,7 @@
    "cl_mem_info"
   ],
   "notes": [
-   "spec evidence [cl_mem_info] table value cell (List of supported param_names by {clGetMemObjectIn)"
+   "spec evidence [cl_mem_info] value cell col0 (List of supported param_names by {clGetMemObjectIn)"
   ],
   "value": "0x5001"
  },
@@ -8259,7 +8373,7 @@
    "cl_mem_properties"
   ],
   "notes": [
-   "spec evidence [cl_image_properties] table value cell (List of supported image creation properties)",
+   "spec evidence [cl_image_properties] value cell col0 (List of supported image creation properties)",
    "spec evidence [cl_mem_properties] G3 new-enums list"
   ],
   "value": "0x2051"
@@ -8324,7 +8438,7 @@
    "cl_mem_info"
   ],
   "notes": [
-   "spec evidence [cl_mem_info] table value cell (List of supported param_names by {clGetMemObjectIn)"
+   "spec evidence [cl_mem_info] value cell col0 (List of supported param_names by {clGetMemObjectIn)"
   ],
   "value": "0x1101"
  },
@@ -8334,7 +8448,7 @@
    "cl_mem_flags"
   ],
   "notes": [
-   "R1 C typedef container cl_mem_flags (container-declared)"
+   "R1 C typedef container cl_mem_flags (spec-listed)"
   ],
   "value": null
  },
@@ -8360,7 +8474,7 @@
    "cl_mem_info"
   ],
   "notes": [
-   "spec evidence [cl_mem_info] table value cell (List of supported param_names by {clGetMemObjectIn)"
+   "spec evidence [cl_mem_info] value cell col0 (List of supported param_names by {clGetMemObjectIn)"
   ],
   "value": "0x1103"
  },
@@ -8446,7 +8560,7 @@
    "cl_mem_info"
   ],
   "notes": [
-   "spec evidence [cl_mem_info] table value cell (List of supported param_names by {clGetMemObjectIn)"
+   "spec evidence [cl_mem_info] value cell col0 (List of supported param_names by {clGetMemObjectIn)"
   ],
   "value": "0x1104"
  },
@@ -8456,7 +8570,7 @@
    "cl_mem_flags"
   ],
   "notes": [
-   "R1 C typedef container cl_mem_flags (container-declared)"
+   "R1 C typedef container cl_mem_flags (spec-listed)"
   ],
   "value": null
  },
@@ -8540,7 +8654,7 @@
    "cl_mem_info"
   ],
   "notes": [
-   "spec evidence [cl_mem_info] table value cell (List of supported param_names by {clGetMemObjectIn)"
+   "spec evidence [cl_mem_info] value cell col0 (List of supported param_names by {clGetMemObjectIn)"
   ],
   "value": "0x1108"
  },
@@ -8550,7 +8664,7 @@
    "cl_mem_info"
   ],
   "notes": [
-   "spec evidence [cl_mem_info] table value cell (List of supported param_names by {clGetMemObjectIn)"
+   "spec evidence [cl_mem_info] value cell col0 (List of supported param_names by {clGetMemObjectIn)"
   ],
   "value": "0x110A"
  },
@@ -8590,7 +8704,7 @@
    "cl_mem_info"
   ],
   "notes": [
-   "spec evidence [cl_mem_info] table value cell (List of supported param_names by {clGetMemObjectIn)"
+   "spec evidence [cl_mem_info] value cell col0 (List of supported param_names by {clGetMemObjectIn)"
   ],
   "value": "0x1105"
  },
@@ -8700,7 +8814,7 @@
    "cl_mem_info"
   ],
   "notes": [
-   "spec evidence [cl_mem_info] table value cell (List of supported param_names by {clGetMemObjectIn)"
+   "spec evidence [cl_mem_info] value cell col0 (List of supported param_names by {clGetMemObjectIn)"
   ],
   "value": "0x1102"
  },
@@ -8750,7 +8864,7 @@
    "cl_mem_info"
   ],
   "notes": [
-   "spec evidence [cl_mem_info] table value cell (List of supported param_names by {clGetMemObjectIn)"
+   "spec evidence [cl_mem_info] value cell col0 (List of supported param_names by {clGetMemObjectIn)"
   ],
   "value": "0x1100"
  },
@@ -8800,7 +8914,7 @@
    "cl_mem_info"
   ],
   "notes": [
-   "spec evidence [cl_mem_info] table value cell (List of supported param_names by {clGetMemObjectIn)"
+   "spec evidence [cl_mem_info] value cell col0 (List of supported param_names by {clGetMemObjectIn)"
   ],
   "value": "0x1109"
  },
@@ -9756,7 +9870,7 @@
    "cl_device_mem_cache_type"
   ],
   "notes": [
-   "R1 C typedef container cl_device_mem_cache_type (container-declared)"
+   "R1 C typedef container cl_device_mem_cache_type (spec-listed)"
   ],
   "value": "0x0"
  },
@@ -9772,8 +9886,12 @@
  },
  "CL_NV12_INTEL": {
   "container": "enums.4100",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_channel_order"
+  ],
+  "notes": [
+   "spec evidence [cl_channel_order] value cell col0 (List of supported Image Channel Order Values)"
+  ],
   "value": "0x410E"
  },
  "CL_NV21": {
@@ -9880,7 +9998,7 @@
    "cl_pipe_info"
   ],
   "notes": [
-   "spec evidence [cl_pipe_info] table value cell (List of supported param_names by {clGetPipeInfo})"
+   "spec evidence [cl_pipe_info] value cell col0 (List of supported param_names by {clGetPipeInfo})"
   ],
   "value": "0x1121"
  },
@@ -9890,7 +10008,7 @@
    "cl_pipe_info"
   ],
   "notes": [
-   "spec evidence [cl_pipe_info] table value cell (List of supported param_names by {clGetPipeInfo})"
+   "spec evidence [cl_pipe_info] value cell col0 (List of supported param_names by {clGetPipeInfo})"
   ],
   "value": "0x1120"
  },
@@ -9900,7 +10018,7 @@
    "cl_pipe_info"
   ],
   "notes": [
-   "spec evidence [cl_pipe_info] table value cell (List of supported param_names by {clGetPipeInfo})"
+   "spec evidence [cl_pipe_info] value cell col0 (List of supported param_names by {clGetPipeInfo})"
   ],
   "value": "0x1122"
  },
@@ -9930,7 +10048,7 @@
    "cl_platform_info"
   ],
   "notes": [
-   "R1 C typedef container cl_platform_info (container-declared)"
+   "R1 C typedef container cl_platform_info (spec-listed)"
   ],
   "value": "0x0907"
  },
@@ -10000,7 +10118,7 @@
    "cl_platform_info"
   ],
   "notes": [
-   "R1 C typedef container cl_platform_info (container-declared)"
+   "R1 C typedef container cl_platform_info (spec-listed)"
   ],
   "value": "0x0906"
  },
@@ -10154,7 +10272,7 @@
    "cl_profiling_info"
   ],
   "notes": [
-   "spec evidence [cl_profiling_info] table value cell (List of supported param_names by {clGetEventProfil)"
+   "spec evidence [cl_profiling_info] value cell col0 (List of supported param_names by {clGetEventProfil)"
   ],
   "value": "0x1284"
  },
@@ -10164,7 +10282,7 @@
    "cl_profiling_info"
   ],
   "notes": [
-   "spec evidence [cl_profiling_info] table value cell (List of supported param_names by {clGetEventProfil)"
+   "spec evidence [cl_profiling_info] value cell col0 (List of supported param_names by {clGetEventProfil)"
   ],
   "value": "0x1283"
  },
@@ -10174,7 +10292,7 @@
    "cl_profiling_info"
   ],
   "notes": [
-   "spec evidence [cl_profiling_info] table value cell (List of supported param_names by {clGetEventProfil)"
+   "spec evidence [cl_profiling_info] value cell col0 (List of supported param_names by {clGetEventProfil)"
   ],
   "value": "0x1280"
  },
@@ -10184,7 +10302,7 @@
    "cl_profiling_info"
   ],
   "notes": [
-   "spec evidence [cl_profiling_info] table value cell (List of supported param_names by {clGetEventProfil)"
+   "spec evidence [cl_profiling_info] value cell col0 (List of supported param_names by {clGetEventProfil)"
   ],
   "value": "0x1282"
  },
@@ -10194,7 +10312,7 @@
    "cl_profiling_info"
   ],
   "notes": [
-   "spec evidence [cl_profiling_info] table value cell (List of supported param_names by {clGetEventProfil)"
+   "spec evidence [cl_profiling_info] value cell col0 (List of supported param_names by {clGetEventProfil)"
   ],
   "value": "0x1281"
  },
@@ -10214,7 +10332,7 @@
    "cl_program_info"
   ],
   "notes": [
-   "spec evidence [cl_program_info] table value cell (List of supported param_names by {clGetProgramInfo)"
+   "spec evidence [cl_program_info] value cell col0 (List of supported param_names by {clGetProgramInfo)"
   ],
   "value": "0x1166"
  },
@@ -10224,7 +10342,7 @@
    "cl_program_info"
   ],
   "notes": [
-   "spec evidence [cl_program_info] table value cell (List of supported param_names by {clGetProgramInfo)"
+   "spec evidence [cl_program_info] value cell col0 (List of supported param_names by {clGetProgramInfo)"
   ],
   "value": "0x1165"
  },
@@ -10234,7 +10352,7 @@
    "cl_program_build_info"
   ],
   "notes": [
-   "spec evidence [cl_program_build_info] table value cell (List of supported param_names by {clGetProgramBuil)"
+   "spec evidence [cl_program_build_info] value cell col0 (List of supported param_names by {clGetProgramBuil)"
   ],
   "value": "0x1184"
  },
@@ -10244,7 +10362,7 @@
    "cl_program_binary_type"
   ],
   "notes": [
-   "R1 C typedef container cl_program_binary_type (container-declared)"
+   "R1 C typedef container cl_program_binary_type (spec-listed)"
   ],
   "value": "0x1"
  },
@@ -10254,7 +10372,7 @@
    "cl_program_binary_type"
   ],
   "notes": [
-   "R1 C typedef container cl_program_binary_type (container-declared)"
+   "R1 C typedef container cl_program_binary_type (spec-listed)"
   ],
   "value": "0x4"
  },
@@ -10274,7 +10392,7 @@
    "cl_program_binary_type"
   ],
   "notes": [
-   "R1 C typedef container cl_program_binary_type (container-declared)"
+   "R1 C typedef container cl_program_binary_type (spec-listed)"
   ],
   "value": "0x2"
  },
@@ -10284,7 +10402,7 @@
    "cl_program_binary_type"
   ],
   "notes": [
-   "R1 C typedef container cl_program_binary_type (container-declared)"
+   "R1 C typedef container cl_program_binary_type (spec-listed)"
   ],
   "value": "0x0"
  },
@@ -10294,7 +10412,7 @@
    "cl_program_build_info"
   ],
   "notes": [
-   "spec evidence [cl_program_build_info] table value cell (List of supported param_names by {clGetProgramBuil)"
+   "spec evidence [cl_program_build_info] value cell col0 (List of supported param_names by {clGetProgramBuil)"
   ],
   "value": "0x1185"
  },
@@ -10304,7 +10422,7 @@
    "cl_program_build_info"
   ],
   "notes": [
-   "spec evidence [cl_program_build_info] table value cell (List of supported param_names by {clGetProgramBuil)"
+   "spec evidence [cl_program_build_info] value cell col0 (List of supported param_names by {clGetProgramBuil)"
   ],
   "value": "0x1183"
  },
@@ -10314,7 +10432,7 @@
    "cl_program_build_info"
   ],
   "notes": [
-   "spec evidence [cl_program_build_info] table value cell (List of supported param_names by {clGetProgramBuil)"
+   "spec evidence [cl_program_build_info] value cell col0 (List of supported param_names by {clGetProgramBuil)"
   ],
   "value": "0x1182"
  },
@@ -10324,7 +10442,7 @@
    "cl_program_build_info"
   ],
   "notes": [
-   "spec evidence [cl_program_build_info] table value cell (List of supported param_names by {clGetProgramBuil)"
+   "spec evidence [cl_program_build_info] value cell col0 (List of supported param_names by {clGetProgramBuil)"
   ],
   "value": "0x1181"
  },
@@ -10334,7 +10452,7 @@
    "cl_program_info"
   ],
   "notes": [
-   "spec evidence [cl_program_info] table value cell (List of supported param_names by {clGetProgramInfo)"
+   "spec evidence [cl_program_info] value cell col0 (List of supported param_names by {clGetProgramInfo)"
   ],
   "value": "0x1161"
  },
@@ -10344,7 +10462,7 @@
    "cl_program_info"
   ],
   "notes": [
-   "spec evidence [cl_program_info] table value cell (List of supported param_names by {clGetProgramInfo)"
+   "spec evidence [cl_program_info] value cell col0 (List of supported param_names by {clGetProgramInfo)"
   ],
   "value": "0x1163"
  },
@@ -10356,9 +10474,11 @@
  },
  "CL_PROGRAM_IL": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_program_info"
+  ],
   "notes": [
-   "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
+   "spec evidence [cl_program_info] value cell col0 (List of supported param_names by {clGetProgramInfo)"
   ],
   "value": "0x1169"
  },
@@ -10378,7 +10498,7 @@
    "cl_program_info"
   ],
   "notes": [
-   "spec evidence [cl_program_info] table value cell (List of supported param_names by {clGetProgramInfo)"
+   "spec evidence [cl_program_info] value cell col0 (List of supported param_names by {clGetProgramInfo)"
   ],
   "value": "0x1168"
  },
@@ -10388,7 +10508,7 @@
    "cl_program_info"
   ],
   "notes": [
-   "spec evidence [cl_program_info] table value cell (List of supported param_names by {clGetProgramInfo)"
+   "spec evidence [cl_program_info] value cell col0 (List of supported param_names by {clGetProgramInfo)"
   ],
   "value": "0x1162"
  },
@@ -10404,7 +10524,7 @@
    "cl_program_info"
   ],
   "notes": [
-   "spec evidence [cl_program_info] table value cell (List of supported param_names by {clGetProgramInfo)"
+   "spec evidence [cl_program_info] value cell col0 (List of supported param_names by {clGetProgramInfo)"
   ],
   "value": "0x1167"
  },
@@ -10414,7 +10534,7 @@
    "cl_program_info"
   ],
   "notes": [
-   "spec evidence [cl_program_info] table value cell (List of supported param_names by {clGetProgramInfo)"
+   "spec evidence [cl_program_info] value cell col0 (List of supported param_names by {clGetProgramInfo)"
   ],
   "value": "0x1160"
  },
@@ -10424,7 +10544,7 @@
    "cl_program_info"
   ],
   "notes": [
-   "spec evidence [cl_program_info] table value cell (List of supported param_names by {clGetProgramInfo)"
+   "spec evidence [cl_program_info] value cell col0 (List of supported param_names by {clGetProgramInfo)"
   ],
   "value": "0x116A"
  },
@@ -10434,7 +10554,7 @@
    "cl_program_info"
   ],
   "notes": [
-   "spec evidence [cl_program_info] table value cell (List of supported param_names by {clGetProgramInfo)"
+   "spec evidence [cl_program_info] value cell col0 (List of supported param_names by {clGetProgramInfo)"
   ],
   "value": "0x116B"
  },
@@ -10444,7 +10564,7 @@
    "cl_program_info"
   ],
   "notes": [
-   "spec evidence [cl_program_info] table value cell (List of supported param_names by {clGetProgramInfo)"
+   "spec evidence [cl_program_info] value cell col0 (List of supported param_names by {clGetProgramInfo)"
   ],
   "value": "0x1164"
  },
@@ -10476,7 +10596,7 @@
    "cl_command_queue_capabilities_intel"
   ],
   "notes": [
-   "R1 C typedef container cl_command_queue_capabilities_intel (spec-listed)"
+   "R1 C typedef container cl_command_queue_capabilities_intel (container-declared)"
   ],
   "value": null
  },
@@ -10486,7 +10606,7 @@
    "cl_command_queue_capabilities_intel"
   ],
   "notes": [
-   "R1 C typedef container cl_command_queue_capabilities_intel (spec-listed)"
+   "R1 C typedef container cl_command_queue_capabilities_intel (container-declared)"
   ],
   "value": null
  },
@@ -10496,7 +10616,7 @@
    "cl_command_queue_capabilities_intel"
   ],
   "notes": [
-   "R1 C typedef container cl_command_queue_capabilities_intel (spec-listed)"
+   "R1 C typedef container cl_command_queue_capabilities_intel (container-declared)"
   ],
   "value": null
  },
@@ -10566,7 +10686,7 @@
    "cl_command_queue_capabilities_intel"
   ],
   "notes": [
-   "R1 C typedef container cl_command_queue_capabilities_intel (spec-listed)"
+   "R1 C typedef container cl_command_queue_capabilities_intel (container-declared)"
   ],
   "value": null
  },
@@ -10586,7 +10706,7 @@
    "cl_command_queue_capabilities_intel"
   ],
   "notes": [
-   "R1 C typedef container cl_command_queue_capabilities_intel (spec-listed)"
+   "R1 C typedef container cl_command_queue_capabilities_intel (container-declared)"
   ],
   "value": null
  },
@@ -10596,7 +10716,7 @@
    "cl_command_queue_capabilities_intel"
   ],
   "notes": [
-   "R1 C typedef container cl_command_queue_capabilities_intel (spec-listed)"
+   "R1 C typedef container cl_command_queue_capabilities_intel (container-declared)"
   ],
   "value": null
  },
@@ -10632,7 +10752,7 @@
    "cl_command_queue_info"
   ],
   "notes": [
-   "spec evidence [cl_command_queue_info] table value cell (List of supported param_names by {clGetCommandQueu)"
+   "spec evidence [cl_command_queue_info] value cell col0 (List of supported param_names by {clGetCommandQueu)"
   ],
   "value": "0x1090"
  },
@@ -10658,7 +10778,7 @@
    "cl_command_queue_info"
   ],
   "notes": [
-   "spec evidence [cl_command_queue_info] table value cell (List of supported param_names by {clGetCommandQueu)"
+   "spec evidence [cl_command_queue_info] value cell col0 (List of supported param_names by {clGetCommandQueu)"
   ],
   "value": "0x1091"
  },
@@ -10668,17 +10788,19 @@
    "cl_command_queue_info"
   ],
   "notes": [
-   "spec evidence [cl_command_queue_info] table value cell (List of supported param_names by {clGetCommandQueu)"
+   "spec evidence [cl_command_queue_info] value cell col0 (List of supported param_names by {clGetCommandQueu)"
   ],
   "value": "0x1095"
  },
  "CL_QUEUE_FAMILY_INTEL": {
   "container": "enums.4180",
   "groups": [
-   "cl_device_info"
+   "cl_command_queue_info",
+   "cl_command_queue_properties"
   ],
   "notes": [
-   "spec evidence [cl_device_info] G4 sentence+define"
+   "spec evidence [cl_command_queue_info] G4 sentence+define",
+   "spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties by clC)"
   ],
   "value": "0x418C"
  },
@@ -10695,10 +10817,12 @@
  "CL_QUEUE_INDEX_INTEL": {
   "container": "enums.4180",
   "groups": [
-   "cl_device_info"
+   "cl_command_queue_info",
+   "cl_command_queue_properties"
   ],
   "notes": [
-   "spec evidence [cl_device_info] G4 sentence+define"
+   "spec evidence [cl_command_queue_info] G4 sentence+define",
+   "spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties by clC)"
   ],
   "value": "0x418D"
  },
@@ -10767,9 +10891,11 @@
  "CL_QUEUE_PRIORITY_KHR": {
   "container": "cl_device_info",
   "groups": [
+   "cl_command_queue_properties",
    "cl_queue_properties"
   ],
   "notes": [
+   "spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties by {cl)",
    "spec evidence [cl_queue_properties] G3 new-enums list"
   ],
   "value": "0x1096"
@@ -10807,10 +10933,12 @@
  "CL_QUEUE_PROPERTIES": {
   "container": "cl_device_info",
   "groups": [
-   "cl_command_queue_info"
+   "cl_command_queue_info",
+   "cl_command_queue_properties"
   ],
   "notes": [
-   "spec evidence [cl_command_queue_info] table value cell (List of supported param_names by {clGetCommandQueu)"
+   "spec evidence [cl_command_queue_info] value cell col0 (List of supported param_names by {clGetCommandQueu)",
+   "spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties by {cl)"
   ],
   "value": "0x1093"
  },
@@ -10820,7 +10948,7 @@
    "cl_command_queue_info"
   ],
   "notes": [
-   "spec evidence [cl_command_queue_info] table value cell (List of supported param_names by {clGetCommandQueu)"
+   "spec evidence [cl_command_queue_info] value cell col0 (List of supported param_names by {clGetCommandQueu)"
   ],
   "value": "0x1098"
  },
@@ -10830,7 +10958,7 @@
    "cl_command_queue_info"
   ],
   "notes": [
-   "spec evidence [cl_command_queue_info] table value cell (List of supported param_names by {clGetCommandQueu)"
+   "spec evidence [cl_command_queue_info] value cell col0 (List of supported param_names by {clGetCommandQueu)"
   ],
   "value": "0x1092"
  },
@@ -10847,10 +10975,12 @@
  "CL_QUEUE_SIZE": {
   "container": "cl_device_info",
   "groups": [
-   "cl_command_queue_info"
+   "cl_command_queue_info",
+   "cl_command_queue_properties"
   ],
   "notes": [
-   "spec evidence [cl_command_queue_info] table value cell (List of supported param_names by {clGetCommandQueu)"
+   "spec evidence [cl_command_queue_info] value cell col0 (List of supported param_names by {clGetCommandQueu)",
+   "spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties by {cl)"
   ],
   "value": "0x1094"
  },
@@ -10877,9 +11007,11 @@
  "CL_QUEUE_THROTTLE_KHR": {
   "container": "cl_device_info",
   "groups": [
+   "cl_command_queue_properties",
    "cl_queue_properties"
   ],
   "notes": [
+   "spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties by {cl)",
    "spec evidence [cl_queue_properties] G3 new-enums list"
   ],
   "value": "0x1097"
@@ -10910,7 +11042,7 @@
    "cl_channel_order"
   ],
   "notes": [
-   "spec evidence [cl_channel_order] table value cell (Compatible Image Channel Orders)"
+   "spec evidence [cl_channel_order] value cell col0 (List of supported Image Channel Order Values)"
   ],
   "value": "0x10B0"
  },
@@ -10920,7 +11052,7 @@
    "cl_channel_order"
   ],
   "notes": [
-   "spec evidence [cl_channel_order] table value cell (Image Channel Order mapping)"
+   "spec evidence [cl_channel_order] value cell col0 (Image Channel Order mapping)"
   ],
   "value": "0x10B3"
  },
@@ -10930,7 +11062,7 @@
    "cl_device_mem_cache_type"
   ],
   "notes": [
-   "R1 C typedef container cl_device_mem_cache_type (container-declared)"
+   "R1 C typedef container cl_device_mem_cache_type (spec-listed)"
   ],
   "value": "0x1"
  },
@@ -10940,7 +11072,7 @@
    "cl_device_mem_cache_type"
   ],
   "notes": [
-   "R1 C typedef container cl_device_mem_cache_type (container-declared)"
+   "R1 C typedef container cl_device_mem_cache_type (spec-listed)"
   ],
   "value": "0x2"
  },
@@ -10950,7 +11082,7 @@
    "cl_channel_order"
   ],
   "notes": [
-   "spec evidence [cl_channel_order] table value cell (Image Channel Order mapping)"
+   "spec evidence [cl_channel_order] value cell col0 (List of supported Image Channel Order Values)"
   ],
   "value": "0x10B2"
  },
@@ -10960,7 +11092,7 @@
    "cl_channel_order"
   ],
   "notes": [
-   "spec evidence [cl_channel_order] table value cell (List of supported Image Channel Order Values)"
+   "spec evidence [cl_channel_order] value cell col0 (List of supported Image Channel Order Values)"
   ],
   "value": "0x10B4"
  },
@@ -10970,7 +11102,7 @@
    "cl_channel_order"
   ],
   "notes": [
-   "spec evidence [cl_channel_order] table value cell (Compatible Image Channel Orders)"
+   "spec evidence [cl_channel_order] value cell col0 (List of supported Image Channel Order Values)"
   ],
   "value": "0x10B5"
  },
@@ -11021,8 +11153,8 @@
    "cl_sampler_properties"
   ],
   "notes": [
-   "spec evidence [cl_sampler_info] table value cell (List of supported param_names by {clGetSamplerInfo)",
-   "spec evidence [cl_sampler_properties] table value cell (List of supported sampler creation properties by {)"
+   "spec evidence [cl_sampler_info] value cell col0 (List of supported param_names by {clGetSamplerInfo)",
+   "spec evidence [cl_sampler_properties] value cell col0 (List of supported sampler creation properties by {)"
   ],
   "value": "0x1153"
  },
@@ -11032,7 +11164,7 @@
    "cl_sampler_info"
   ],
   "notes": [
-   "spec evidence [cl_sampler_info] table value cell (List of supported param_names by {clGetSamplerInfo)"
+   "spec evidence [cl_sampler_info] value cell col0 (List of supported param_names by {clGetSamplerInfo)"
   ],
   "value": "0x1151"
  },
@@ -11043,8 +11175,8 @@
    "cl_sampler_properties"
   ],
   "notes": [
-   "spec evidence [cl_sampler_info] table value cell (List of supported param_names by {clGetSamplerInfo)",
-   "spec evidence [cl_sampler_properties] table value cell (List of supported sampler creation properties by {)"
+   "spec evidence [cl_sampler_info] value cell col0 (List of supported param_names by {clGetSamplerInfo)",
+   "spec evidence [cl_sampler_properties] value cell col0 (List of supported sampler creation properties by {)"
   ],
   "value": "0x1154"
  },
@@ -11062,7 +11194,7 @@
    "cl_sampler_properties"
   ],
   "notes": [
-   "spec evidence [cl_sampler_properties] table value cell (List of supported sampler creation properties by {)"
+   "spec evidence [cl_sampler_properties] value cell col0 (List of supported sampler creation properties by {)"
   ],
   "value": "0x1157"
  },
@@ -11080,7 +11212,7 @@
    "cl_sampler_properties"
   ],
   "notes": [
-   "spec evidence [cl_sampler_properties] table value cell (List of supported sampler creation properties by {)"
+   "spec evidence [cl_sampler_properties] value cell col0 (List of supported sampler creation properties by {)"
   ],
   "value": "0x1156"
  },
@@ -11098,7 +11230,7 @@
    "cl_sampler_properties"
   ],
   "notes": [
-   "spec evidence [cl_sampler_properties] table value cell (List of supported sampler creation properties by {)"
+   "spec evidence [cl_sampler_properties] value cell col0 (List of supported sampler creation properties by {)"
   ],
   "value": "0x1155"
  },
@@ -11109,8 +11241,8 @@
    "cl_sampler_properties"
   ],
   "notes": [
-   "spec evidence [cl_sampler_info] table value cell (List of supported param_names by {clGetSamplerInfo)",
-   "spec evidence [cl_sampler_properties] table value cell (List of supported sampler creation properties by {)"
+   "spec evidence [cl_sampler_info] value cell col0 (List of supported param_names by {clGetSamplerInfo)",
+   "spec evidence [cl_sampler_properties] value cell col0 (List of supported sampler creation properties by {)"
   ],
   "value": "0x1152"
  },
@@ -11120,7 +11252,7 @@
    "cl_sampler_info"
   ],
   "notes": [
-   "spec evidence [cl_sampler_info] table value cell (List of supported param_names by {clGetSamplerInfo)"
+   "spec evidence [cl_sampler_info] value cell col0 (List of supported param_names by {clGetSamplerInfo)"
   ],
   "value": "0x1158"
  },
@@ -11130,7 +11262,7 @@
    "cl_sampler_info"
   ],
   "notes": [
-   "spec evidence [cl_sampler_info] table value cell (List of supported param_names by {clGetSamplerInfo)"
+   "spec evidence [cl_sampler_info] value cell col0 (List of supported param_names by {clGetSamplerInfo)"
   ],
   "value": "0x1150"
  },
@@ -11340,7 +11472,7 @@
    "cl_channel_type"
   ],
   "notes": [
-   "spec evidence [cl_channel_type] table value cell (List of supported Image Channel Data Types)"
+   "spec evidence [cl_channel_type] value cell col0 (List of supported Image Channel Data Types)"
   ],
   "value": "0x10D8"
  },
@@ -11350,7 +11482,7 @@
    "cl_channel_type"
   ],
   "notes": [
-   "spec evidence [cl_channel_type] table value cell (List of supported Image Channel Data Types)"
+   "spec evidence [cl_channel_type] value cell col0 (List of supported Image Channel Data Types)"
   ],
   "value": "0x10D9"
  },
@@ -11360,7 +11492,7 @@
    "cl_channel_type"
   ],
   "notes": [
-   "spec evidence [cl_channel_type] table value cell (List of supported Image Channel Data Types)"
+   "spec evidence [cl_channel_type] value cell col0 (List of supported Image Channel Data Types)"
   ],
   "value": "0x10D7"
  },
@@ -11370,7 +11502,7 @@
    "cl_channel_type"
   ],
   "notes": [
-   "spec evidence [cl_channel_type] table value cell (List of supported Image Channel Data Types)"
+   "spec evidence [cl_channel_type] value cell col0 (List of supported Image Channel Data Types)"
   ],
   "value": "0x10D1"
  },
@@ -11380,7 +11512,7 @@
    "cl_channel_type"
   ],
   "notes": [
-   "spec evidence [cl_channel_type] table value cell (List of supported Image Channel Data Types)"
+   "spec evidence [cl_channel_type] value cell col0 (List of supported Image Channel Data Types)"
   ],
   "value": "0x10D0"
  },
@@ -11706,7 +11838,7 @@
    "cl_device_unified_shared_memory_capabilities_intel"
   ],
   "notes": [
-   "R1 C typedef container cl_device_unified_shared_memory_capabilities_intel (spec-listed)"
+   "R1 C typedef container cl_device_unified_shared_memory_capabilities_intel (container-declared)"
   ],
   "value": null
  },
@@ -11716,7 +11848,7 @@
    "cl_device_unified_shared_memory_capabilities_intel"
   ],
   "notes": [
-   "R1 C typedef container cl_device_unified_shared_memory_capabilities_intel (spec-listed)"
+   "R1 C typedef container cl_device_unified_shared_memory_capabilities_intel (container-declared)"
   ],
   "value": null
  },
@@ -11726,7 +11858,7 @@
    "cl_device_unified_shared_memory_capabilities_intel"
   ],
   "notes": [
-   "R1 C typedef container cl_device_unified_shared_memory_capabilities_intel (spec-listed)"
+   "R1 C typedef container cl_device_unified_shared_memory_capabilities_intel (container-declared)"
   ],
   "value": null
  },
@@ -11736,7 +11868,7 @@
    "cl_device_unified_shared_memory_capabilities_intel"
   ],
   "notes": [
-   "R1 C typedef container cl_device_unified_shared_memory_capabilities_intel (spec-listed)"
+   "R1 C typedef container cl_device_unified_shared_memory_capabilities_intel (container-declared)"
   ],
   "value": null
  },
@@ -11746,7 +11878,7 @@
    "cl_channel_type"
   ],
   "notes": [
-   "spec evidence [cl_channel_type] table value cell (List of supported Image Channel Data Types)"
+   "spec evidence [cl_channel_type] value cell col0 (List of supported Image Channel Data Types)"
   ],
   "value": "0x10E1"
  },
@@ -11756,7 +11888,7 @@
    "cl_channel_type"
   ],
   "notes": [
-   "spec evidence [cl_channel_type] table value cell (List of supported Image Channel Data Types)"
+   "spec evidence [cl_channel_type] value cell col0 (List of supported Image Channel Data Types)"
   ],
   "value": "0x10E9"
  },
@@ -11766,7 +11898,7 @@
    "cl_channel_type"
   ],
   "notes": [
-   "spec evidence [cl_channel_type] table value cell (List of supported Image Channel Data Types)"
+   "spec evidence [cl_channel_type] value cell col0 (List of supported Image Channel Data Types)"
   ],
   "value": "0x10EA"
  },
@@ -11776,7 +11908,7 @@
    "cl_channel_type"
   ],
   "notes": [
-   "spec evidence [cl_channel_type] table value cell (Image Channel Data Type mapping)"
+   "spec evidence [cl_channel_type] value cell col0 (List of supported Image Channel Data Types)"
   ],
   "value": "0x10D3"
  },
@@ -11796,7 +11928,7 @@
    "cl_channel_type"
   ],
   "notes": [
-   "spec evidence [cl_channel_type] table value cell (List of supported Image Channel Data Types)"
+   "spec evidence [cl_channel_type] value cell col0 (List of supported Image Channel Data Types)"
   ],
   "value": "0x10D2"
  },
@@ -11806,7 +11938,7 @@
    "cl_channel_type"
   ],
   "notes": [
-   "spec evidence [cl_channel_type] table value cell (List of supported Image Channel Data Types)"
+   "spec evidence [cl_channel_type] value cell col0 (List of supported Image Channel Data Types)"
   ],
   "value": "0x10D6"
  },
@@ -11816,7 +11948,7 @@
    "cl_channel_type"
   ],
   "notes": [
-   "spec evidence [cl_channel_type] table value cell (List of supported Image Channel Data Types)"
+   "spec evidence [cl_channel_type] value cell col0 (List of supported Image Channel Data Types)"
   ],
   "value": "0x10E0"
  },
@@ -11826,7 +11958,7 @@
    "cl_channel_type"
   ],
   "notes": [
-   "spec evidence [cl_channel_type] table value cell (List of supported Image Channel Data Types)"
+   "spec evidence [cl_channel_type] value cell col0 (List of supported Image Channel Data Types)"
   ],
   "value": "0x10E5"
  },
@@ -11836,7 +11968,7 @@
    "cl_channel_type"
   ],
   "notes": [
-   "spec evidence [cl_channel_type] table value cell (List of supported Image Channel Data Types)"
+   "spec evidence [cl_channel_type] value cell col0 (List of supported Image Channel Data Types)"
   ],
   "value": "0x10D5"
  },
@@ -11846,7 +11978,7 @@
    "cl_channel_type"
   ],
   "notes": [
-   "spec evidence [cl_channel_type] table value cell (List of supported Image Channel Data Types)"
+   "spec evidence [cl_channel_type] value cell col0 (List of supported Image Channel Data Types)"
   ],
   "value": "0x10D4"
  },
@@ -11856,7 +11988,7 @@
    "cl_channel_type"
   ],
   "notes": [
-   "spec evidence [cl_channel_type] table value cell (List of supported Image Channel Data Types)"
+   "spec evidence [cl_channel_type] value cell col0 (List of supported Image Channel Data Types)"
   ],
   "value": "0x10E6"
  },
@@ -11866,7 +11998,7 @@
    "cl_channel_type"
   ],
   "notes": [
-   "spec evidence [cl_channel_type] table value cell (List of supported Image Channel Data Types)"
+   "spec evidence [cl_channel_type] value cell col0 (List of supported Image Channel Data Types)"
   ],
   "value": "0x10E7"
  },
@@ -11876,7 +12008,7 @@
    "cl_channel_type"
   ],
   "notes": [
-   "spec evidence [cl_channel_type] table value cell (List of supported Image Channel Data Types)"
+   "spec evidence [cl_channel_type] value cell col0 (List of supported Image Channel Data Types)"
   ],
   "value": "0x10E8"
  },
@@ -11886,7 +12018,7 @@
    "cl_channel_type"
   ],
   "notes": [
-   "spec evidence [cl_channel_type] table value cell (List of supported Image Channel Data Types)"
+   "spec evidence [cl_channel_type] value cell col0 (List of supported Image Channel Data Types)"
   ],
   "value": "0x10DB"
  },
@@ -11896,7 +12028,7 @@
    "cl_channel_type"
   ],
   "notes": [
-   "spec evidence [cl_channel_type] table value cell (List of supported Image Channel Data Types)"
+   "spec evidence [cl_channel_type] value cell col0 (List of supported Image Channel Data Types)"
   ],
   "value": "0x10DC"
  },
@@ -11906,7 +12038,7 @@
    "cl_channel_type"
   ],
   "notes": [
-   "spec evidence [cl_channel_type] table value cell (List of supported Image Channel Data Types)"
+   "spec evidence [cl_channel_type] value cell col0 (List of supported Image Channel Data Types)"
   ],
   "value": "0x10DA"
  },
@@ -12030,8 +12162,12 @@
  },
  "CL_YUYV_INTEL": {
   "container": "enums.4070",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_channel_order"
+  ],
+  "notes": [
+   "spec evidence [cl_channel_order] value cell col0 (List of supported Image Channel Order Values)"
+  ],
   "value": "0x4076"
  },
  "CL_YV12": {
