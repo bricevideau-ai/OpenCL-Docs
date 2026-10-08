@@ -1953,8 +1953,12 @@
  },
  "CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_ARBITRATION_ALGORITHM_IMG": {
   "container": "enums.4220",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_queue_properties"
+  ],
+  "notes": [
+   "manual: registry-provenance: cl.xml <require comment=\"cl_queue_properties\"> authored by paulfradgley #1469 2025-10-21 cl_img_scheduling_controls. No published extension spec found (checked KhronosGroup/OpenCL-Registry 2026-10-08); matches PR#1587."
+  ],
   "value": "0x4224"
  },
  "CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_ARBITRATION_ALGORITHM_ROUND_ROBIN_IMG": {
@@ -1971,14 +1975,22 @@
  },
  "CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_EXECUTE_COUNT_IMG": {
   "container": "enums.4220",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_queue_properties"
+  ],
+  "notes": [
+   "manual: registry-provenance: cl.xml <require comment=\"cl_queue_properties\"> authored by paulfradgley #1469 2025-10-21 cl_img_scheduling_controls. No published extension spec found (checked KhronosGroup/OpenCL-Registry 2026-10-08); matches PR#1587."
+  ],
   "value": "0x422B"
  },
  "CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_SCHEDULING_ALGORITHM_IMG": {
   "container": "enums.4220",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_queue_properties"
+  ],
+  "notes": [
+   "manual: registry-provenance: cl.xml <require comment=\"cl_queue_properties\"> authored by paulfradgley #1469 2025-10-21 cl_img_scheduling_controls. No published extension spec found (checked KhronosGroup/OpenCL-Registry 2026-10-08); matches PR#1587."
+  ],
   "value": "0x4223"
  },
  "CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_SCHEDULING_ALGORITHM_LINEAR_ORDER_IMG": {
@@ -5367,8 +5379,12 @@
  },
  "CL_DEVICE_SCHEDULING_CONTROLS_CAPABILITIES_IMG": {
   "container": "enums.4220",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_info"
+  ],
+  "notes": [
+   "manual: registry-provenance: cl.xml <require comment=\"cl_device_info\"> authored by paulfradgley #1469 2025-10-21 cl_img_scheduling_controls. No published extension spec found (checked KhronosGroup/OpenCL-Registry 2026-10-08); matches PR#1587."
+  ],
   "value": "0x4222"
  },
  "CL_DEVICE_SCHEDULING_DEFERRED_FLUSH_ARM": {
@@ -9039,8 +9055,12 @@
  },
  "CL_MEM_DEVICE_ID_INTEL": {
   "container": "enums.4210",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_mem_properties"
+  ],
+  "notes": [
+   "manual: registry-provenance: cl.xml <require comment=\"cl_mem_properties\"> authored by Mike Kinsner (Intel) Kinsner #858 2022-11-08, commit msg 'Add comment indicating which type the enums apply to'. No published extension spec found (checked KhronosGroup/OpenCL-Registry 2026-10-08); matches PR#1587."
+  ],
   "value": "0x4219"
  },
  "CL_MEM_DEVICE_PRIVATE_ADDRESS_EXT": {
@@ -9221,8 +9241,12 @@
  },
  "CL_MEM_LOCALLY_UNCACHED_RESOURCE_INTEL": {
   "container": "enums.4210",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_mem_properties"
+  ],
+  "notes": [
+   "manual: registry-provenance: cl.xml <require comment=\"cl_mem_properties\"> authored by Mike Kinsner (Intel) #858 2022-11-08, commit msg 'Add comment indicating which type the enums apply to'. No published extension spec found (checked KhronosGroup/OpenCL-Registry 2026-10-08); matches PR#1587."
+  ],
   "value": "0x4218"
  },
  "CL_MEM_MAP_COUNT": {

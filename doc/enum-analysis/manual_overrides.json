@@ -77,6 +77,24 @@
     ],
    "spec_evidence": "manual: /regspec/all/ext/cl_ext_migrate_memobject.txt — <param_name> is CL_EVENT_COMMAND_TYPE: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
   },
+ "CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_ARBITRATION_ALGORITHM_IMG": {
+   "groups": [
+     "cl_queue_properties"
+    ],
+   "spec_evidence": "registry-provenance: cl.xml <require comment=\"cl_queue_properties\"> authored by paulfradgley #1469 2025-10-21 cl_img_scheduling_controls. No published extension spec found (checked KhronosGroup/OpenCL-Registry 2026-10-08); matches PR#1587."
+  },
+ "CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_EXECUTE_COUNT_IMG": {
+   "groups": [
+     "cl_queue_properties"
+    ],
+   "spec_evidence": "registry-provenance: cl.xml <require comment=\"cl_queue_properties\"> authored by paulfradgley #1469 2025-10-21 cl_img_scheduling_controls. No published extension spec found (checked KhronosGroup/OpenCL-Registry 2026-10-08); matches PR#1587."
+  },
+ "CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_SCHEDULING_ALGORITHM_IMG": {
+   "groups": [
+     "cl_queue_properties"
+    ],
+   "spec_evidence": "registry-provenance: cl.xml <require comment=\"cl_queue_properties\"> authored by paulfradgley #1469 2025-10-21 cl_img_scheduling_controls. No published extension spec found (checked KhronosGroup/OpenCL-Registry 2026-10-08); matches PR#1587."
+  },
  "CL_COMMAND_READ_HOST_PIPE_INTEL": {
    "groups": [
      "cl_command_type"
@@ -544,6 +562,12 @@
      "cl_device_info"
     ],
    "spec_evidence": "manual: cl_arm_scheduling_controls L49-66 param_name of clGetDeviceInfo"
+  },
+ "CL_DEVICE_SCHEDULING_CONTROLS_CAPABILITIES_IMG": {
+   "groups": [
+     "cl_device_info"
+    ],
+   "spec_evidence": "registry-provenance: cl.xml <require comment=\"cl_device_info\"> authored by paulfradgley #1469 2025-10-21 cl_img_scheduling_controls. No published extension spec found (checked KhronosGroup/OpenCL-Registry 2026-10-08); matches PR#1587."
   },
  "CL_DEVICE_SIMD_INSTRUCTION_WIDTH_AMD": {
    "groups": [
@@ -1019,6 +1043,12 @@
     ],
    "spec_evidence": "cl_khr_external_memory.asciidoc L60-61: listed under cl_mem_properties_TYPE; cl_image_properties is not a cl.xml type (removed)"
   },
+ "CL_MEM_DEVICE_ID_INTEL": {
+   "groups": [
+     "cl_mem_properties"
+    ],
+   "spec_evidence": "registry-provenance: cl.xml <require comment=\"cl_mem_properties\"> authored by Mike Kinsner (Intel) Kinsner #858 2022-11-08, commit msg 'Add comment indicating which type the enums apply to'. No published extension spec found (checked KhronosGroup/OpenCL-Registry 2026-10-08); matches PR#1587."
+  },
  "CL_MEM_DEVICE_PRIVATE_ADDRESS_EXT": {
    "groups": [
      "cl_mem_properties"
@@ -1036,6 +1066,12 @@
      "cl_mem_info"
     ],
    "spec_evidence": "manual: /regspec/all/intel/cl_intel_dx9_media_sharing.txt — clCreateFromDX9MediaSurfaceINTEL, [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  },
+ "CL_MEM_LOCALLY_UNCACHED_RESOURCE_INTEL": {
+   "groups": [
+     "cl_mem_properties"
+    ],
+   "spec_evidence": "registry-provenance: cl.xml <require comment=\"cl_mem_properties\"> authored by Mike Kinsner (Intel) #858 2022-11-08, commit msg 'Add comment indicating which type the enums apply to'. No published extension spec found (checked KhronosGroup/OpenCL-Registry 2026-10-08); matches PR#1587."
   },
  "CL_MEM_OBJECT_BUFFER": {
    "groups": [

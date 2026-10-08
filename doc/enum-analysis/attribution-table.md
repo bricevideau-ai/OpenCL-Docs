@@ -9,8 +9,8 @@ when a value is valid in several sets.
 ## Coverage
 
 - Total `<enum>` entries in cl.xml: **1334**
-- Assigned one or more groups: **1293**
-- Left ungrouped: **41** (GL precedent: gl.xml leaves ~12,000 of 15,392 ungrouped;
+- Assigned one or more groups: **1299**
+- Left ungrouped: **35** (GL precedent: gl.xml leaves ~12,000 of 15,392 ungrouped;
   ungrouped = platform constants, opaque-handle values, and other context-dependent values
   whose meaning is defined by the API call site rather than by a named value set)
 - Multi-group values: **13** (e.g. ['cl_context_info', 'cl_context_properties'])
@@ -34,13 +34,13 @@ when a value is valid in several sets.
 | `CL_CONTEXT_ADAPTER_D3D9EX_KHR` | `cl_context_info, cl_context_properties` | spec evidence [cl_context_properties] value cell col0 (List of supported context creation properties by {) / spec evidence [cl_context_info] G3 new-enums list |
 | `CL_CONTEXT_ADAPTER_D3D9_KHR` | `cl_context_info, cl_context_properties` | spec evidence [cl_context_properties] value cell col0 (List of supported context creation properties by {) / spec evidence [cl_context_info] G3 new-enums list |
 | `CL_CONTEXT_ADAPTER_DXVA_KHR` | `cl_context_info, cl_context_properties` | spec evidence [cl_context_properties] value cell col0 (List of supported context creation properties by {) / spec evidence [cl_context_info] G3 new-enums list |
-| `CL_MEM_ALLOC_FLAGS_INTEL` | `cl_mem_info_intel, cl_mem_properties_intel` | spec evidence [cl_mem_info_intel] value cell col0 (List of supported param_names by clGetMemAllocInfo) / spec evidence [cl_mem_properties_intel] G4 typedef+defi |
+| `CL_MEM_ALLOC_FLAGS_INTEL` | `cl_mem_info_intel, cl_mem_properties_intel` | spec evidence [cl_mem_properties_intel] G4 typedef+define / spec evidence [cl_mem_info_intel] value cell col0 (List of supported param_names by clGetMemAllocInf |
 | `CL_QUEUE_FAMILY_INTEL` | `cl_command_queue_info, cl_command_queue_properties` | spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties by clC) / spec evidence [cl_command_queue_info] G4 sent |
 | `CL_QUEUE_INDEX_INTEL` | `cl_command_queue_info, cl_command_queue_properties` | spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties by clC) / spec evidence [cl_command_queue_info] G4 sent |
-| `CL_QUEUE_PRIORITY_KHR` | `cl_command_queue_properties, cl_queue_properties` | spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties by {cl) / spec evidence [cl_queue_properties] G3 new-en |
+| `CL_QUEUE_PRIORITY_KHR` | `cl_command_queue_properties, cl_queue_properties` | spec evidence [cl_queue_properties] G3 new-enums list / spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties |
 | `CL_QUEUE_PROPERTIES` | `cl_command_queue_info, cl_command_queue_properties` | spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties by {cl) / spec evidence [cl_command_queue_info] value c |
 | `CL_QUEUE_SIZE` | `cl_command_queue_info, cl_command_queue_properties` | spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties by {cl) / spec evidence [cl_command_queue_info] value c |
-| `CL_QUEUE_THROTTLE_KHR` | `cl_command_queue_properties, cl_queue_properties` | spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties by {cl) / spec evidence [cl_queue_properties] G3 new-en |
+| `CL_QUEUE_THROTTLE_KHR` | `cl_command_queue_properties, cl_queue_properties` | spec evidence [cl_queue_properties] G3 new-enums list / spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties |
 | `CL_SAMPLER_ADDRESSING_MODE` | `cl_sampler_info, cl_sampler_properties` | spec evidence [cl_sampler_properties] value cell col0 (List of supported sampler creation properties by {) / spec evidence [cl_sampler_info] value cell col0 (Li |
 | `CL_SAMPLER_FILTER_MODE` | `cl_sampler_info, cl_sampler_properties` | spec evidence [cl_sampler_properties] value cell col0 (List of supported sampler creation properties by {) / spec evidence [cl_sampler_info] value cell col0 (Li |
 | `CL_SAMPLER_NORMALIZED_COORDS` | `cl_sampler_info, cl_sampler_properties` | spec evidence [cl_sampler_properties] value cell col0 (List of supported sampler creation properties by {) / spec evidence [cl_sampler_info] value cell col0 (Li |
@@ -245,11 +245,11 @@ when a value is valid in several sets.
 | `CL_COMMAND_MIGRATE_MEM_OBJECT_EXT` | enums.4040 | `cl_command_type` | manual: /regspec/all/ext/cl_ext_migrate_memobject.txt — <param_name> is CL_EVENT_COMMAND_TYPE: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08] |
 | `CL_COMMAND_NATIVE_KERNEL` | cl_device_info | `cl_command_type` | spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types) |
 | `CL_COMMAND_NDRANGE_KERNEL` | cl_device_info | `cl_command_type` | spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types) |
-| `CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_ARBITRATION_ALGORITHM_IMG` | enums.4220 | — (ungrouped, GL precedent) |  |
+| `CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_ARBITRATION_ALGORITHM_IMG` | enums.4220 | `cl_queue_properties` | manual: registry-provenance: cl.xml <require comment="cl_queue_properties"> authored by paulfradgley #1469 2025-10-21 cl_img_scheduling_controls. No p |
 | `CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_ARBITRATION_ALGORITHM_ROUND_ROBIN_IMG` | enums.4220 | — (ungrouped, GL precedent) |  |
 | `CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_ARBITRATION_ALGORITHM_TASK_DEMAND_IMG` | enums.4220 | — (ungrouped, GL precedent) |  |
-| `CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_EXECUTE_COUNT_IMG` | enums.4220 | — (ungrouped, GL precedent) |  |
-| `CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_SCHEDULING_ALGORITHM_IMG` | enums.4220 | — (ungrouped, GL precedent) |  |
+| `CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_EXECUTE_COUNT_IMG` | enums.4220 | `cl_queue_properties` | manual: registry-provenance: cl.xml <require comment="cl_queue_properties"> authored by paulfradgley #1469 2025-10-21 cl_img_scheduling_controls. No p |
+| `CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_SCHEDULING_ALGORITHM_IMG` | enums.4220 | `cl_queue_properties` | manual: registry-provenance: cl.xml <require comment="cl_queue_properties"> authored by paulfradgley #1469 2025-10-21 cl_img_scheduling_controls. No p |
 | `CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_SCHEDULING_ALGORITHM_LINEAR_ORDER_IMG` | enums.4220 | — (ungrouped, GL precedent) |  |
 | `CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_SCHEDULING_ALGORITHM_MORTON_ORDER_IMG` | enums.4220 | — (ungrouped, GL precedent) |  |
 | `CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_SCHEDULING_ALGORITHM_THREED_MORTON_ORDER_IMG` | enums.4220 | — (ungrouped, GL precedent) |  |
@@ -590,7 +590,7 @@ when a value is valid in several sets.
 | `CL_DEVICE_SCHEDULING_COMPUTE_UNIT_BATCH_QUEUE_SIZE_ARM` | cl_device_scheduling_controls_capabilities_arm | `cl_device_scheduling_controls_capabilities_arm` | R1 C typedef container cl_device_scheduling_controls_capabilities_arm (container-declared) |
 | `CL_DEVICE_SCHEDULING_COMPUTE_UNIT_LIMIT_ARM` | cl_device_scheduling_controls_capabilities_arm | `cl_device_scheduling_controls_capabilities_arm` | R1 C typedef container cl_device_scheduling_controls_capabilities_arm (container-declared) |
 | `CL_DEVICE_SCHEDULING_CONTROLS_CAPABILITIES_ARM` | enums.41E0 | `cl_device_info` | manual: cl_arm_scheduling_controls L49-66 param_name of clGetDeviceInfo |
-| `CL_DEVICE_SCHEDULING_CONTROLS_CAPABILITIES_IMG` | enums.4220 | — (ungrouped, GL precedent) |  |
+| `CL_DEVICE_SCHEDULING_CONTROLS_CAPABILITIES_IMG` | enums.4220 | `cl_device_info` | manual: registry-provenance: cl.xml <require comment="cl_device_info"> authored by paulfradgley #1469 2025-10-21 cl_img_scheduling_controls. No publis |
 | `CL_DEVICE_SCHEDULING_DEFERRED_FLUSH_ARM` | cl_device_scheduling_controls_capabilities_arm | `cl_device_scheduling_controls_capabilities_arm` | R1 C typedef container cl_device_scheduling_controls_capabilities_arm (container-declared) |
 | `CL_DEVICE_SCHEDULING_KERNEL_BATCHING_ARM` | cl_device_scheduling_controls_capabilities_arm | `cl_device_scheduling_controls_capabilities_arm` | R1 C typedef container cl_device_scheduling_controls_capabilities_arm (container-declared) |
 | `CL_DEVICE_SCHEDULING_REGISTER_ALLOCATION_ARM` | cl_device_scheduling_controls_capabilities_arm | `cl_device_scheduling_controls_capabilities_arm` | R1 C typedef container cl_device_scheduling_controls_capabilities_arm (container-declared) |
@@ -957,7 +957,7 @@ when a value is valid in several sets.
 | `CL_MEM_DEVICE_ADDRESS_EXT` | enums.5000 | `cl_mem_info` | spec evidence [cl_mem_info] value cell col0 (List of supported param_names by {clGetMemObjectIn) |
 | `CL_MEM_DEVICE_HANDLE_LIST_END_KHR` | MiscNumbers | `cl_mem_properties` | spec evidence [cl_mem_properties] G3 new-enums list |
 | `CL_MEM_DEVICE_HANDLE_LIST_KHR` | enums.2000 | `cl_mem_properties` | manual: cl_khr_external_memory.asciidoc L60-61: listed under cl_mem_properties_TYPE; cl_image_properties is not a cl.xml type (removed); spec evidence |
-| `CL_MEM_DEVICE_ID_INTEL` | enums.4210 | — (ungrouped, GL precedent) |  |
+| `CL_MEM_DEVICE_ID_INTEL` | enums.4210 | `cl_mem_properties` | manual: registry-provenance: cl.xml <require comment="cl_mem_properties"> authored by Mike Kinsner (Intel) Kinsner #858 2022-11-08, commit msg 'Add co |
 | `CL_MEM_DEVICE_PRIVATE_ADDRESS_EXT` | enums.5000 | `cl_mem_properties` | manual: cl_ext_buffer_device_address: clCreateBufferWithProperties creation property flag |
 | `CL_MEM_DX9_MEDIA_ADAPTER_TYPE_KHR` | enums.2000 | `cl_mem_info` | spec evidence [cl_mem_info] G3 new-enums list |
 | `CL_MEM_DX9_MEDIA_SURFACE_INFO_KHR` | enums.2000 | `cl_mem_info` | spec evidence [cl_mem_info] G3 new-enums list |
@@ -978,7 +978,7 @@ when a value is valid in several sets.
 | `CL_MEM_IMMUTABLE_EXT` | cl_mem_flags | `cl_mem_flags` | R1 C typedef container cl_mem_flags (spec-listed) |
 | `CL_MEM_ION_HOST_PTR_QCOM` | enums.40A0 | — (ungrouped, GL precedent) |  |
 | `CL_MEM_KERNEL_READ_AND_WRITE` | cl_mem_flags | `cl_mem_flags` | R1 C typedef container cl_mem_flags (spec-listed) |
-| `CL_MEM_LOCALLY_UNCACHED_RESOURCE_INTEL` | enums.4210 | — (ungrouped, GL precedent) |  |
+| `CL_MEM_LOCALLY_UNCACHED_RESOURCE_INTEL` | enums.4210 | `cl_mem_properties` | manual: registry-provenance: cl.xml <require comment="cl_mem_properties"> authored by Mike Kinsner (Intel) #858 2022-11-08, commit msg 'Add comment in |
 | `CL_MEM_MAP_COUNT` | cl_device_info | `cl_mem_info` | spec evidence [cl_mem_info] value cell col0 (List of supported param_names by {clGetMemObjectIn) |
 | `CL_MEM_NO_ACCESS_INTEL` | cl_mem_flags | `cl_mem_flags` | R1 C typedef container cl_mem_flags (spec-listed) |
 | `CL_MEM_OBJECT_ALLOCATION_FAILURE` | ErrorCodes.0 | `ErrorCode` | R3 cl.xml ErrorCodes container (GL precedent group=ErrorCode; spec: same set as API return values) |

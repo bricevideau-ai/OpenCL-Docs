@@ -2466,24 +2466,24 @@ server's OpenCL/api-docs repository.
         <enum value="0x4215"        name="CL_COMMAND_WRITE_HOST_PIPE_INTEL" group="cl_command_type"/>
         <enum value="0x4216"        name="CL_PROGRAM_NUM_HOST_PIPES_INTEL" group="cl_program_info"/>
         <enum value="0x4217"        name="CL_PROGRAM_HOST_PIPE_NAMES_INTEL" group="cl_program_info"/>
-        <enum value="0x4218"        name="CL_MEM_LOCALLY_UNCACHED_RESOURCE_INTEL"/>
-        <enum value="0x4219"        name="CL_MEM_DEVICE_ID_INTEL"/>
+        <enum value="0x4218"        name="CL_MEM_LOCALLY_UNCACHED_RESOURCE_INTEL" group="cl_mem_properties"/>
+        <enum value="0x4219"        name="CL_MEM_DEVICE_ID_INTEL" group="cl_mem_properties"/>
             <unused start="0x421A" end="0x421F"/>
     </enums>
 
     <enums start="0x4220" end="0x422F" name="enums.4220" vendor="IMG">
         <enum value="0x4220"        name="CL_SVM_ALLOC_EXTERNAL_MEMORY_DMA_BUF_VIRTUAL_ADDRESS_IMG" group="cl_svm_alloc_properties_khr"/>
         <enum value="0x4221"        name="CL_SVM_ALLOC_EXTERNAL_MEMORY_DMA_BUF_IMG" group="cl_svm_alloc_properties_khr"/>
-        <enum value="0x4222"        name="CL_DEVICE_SCHEDULING_CONTROLS_CAPABILITIES_IMG"/>
-        <enum value="0x4223"        name="CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_SCHEDULING_ALGORITHM_IMG"/>
-        <enum value="0x4224"        name="CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_ARBITRATION_ALGORITHM_IMG"/>
+        <enum value="0x4222"        name="CL_DEVICE_SCHEDULING_CONTROLS_CAPABILITIES_IMG" group="cl_device_info"/>
+        <enum value="0x4223"        name="CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_SCHEDULING_ALGORITHM_IMG" group="cl_queue_properties"/>
+        <enum value="0x4224"        name="CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_ARBITRATION_ALGORITHM_IMG" group="cl_queue_properties"/>
         <enum value="0x4225"        name="CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_SCHEDULING_ALGORITHM_LINEAR_ORDER_IMG"/>
         <enum value="0x4226"        name="CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_SCHEDULING_ALGORITHM_MORTON_ORDER_IMG"/>
         <enum value="0x4227"        name="CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_SCHEDULING_ALGORITHM_TWOD_MORTON_ORDER_IMG"/>
         <enum value="0x4228"        name="CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_SCHEDULING_ALGORITHM_THREED_MORTON_ORDER_IMG"/>
         <enum value="0x4229"        name="CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_ARBITRATION_ALGORITHM_TASK_DEMAND_IMG"/>
         <enum value="0x422A"        name="CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_ARBITRATION_ALGORITHM_ROUND_ROBIN_IMG"/>
-        <enum value="0x422B"        name="CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_EXECUTE_COUNT_IMG"/>
+        <enum value="0x422B"        name="CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_EXECUTE_COUNT_IMG" group="cl_queue_properties"/>
             <unused start="0x422C" end="0x422C" comment="Reserved"/>
         <enum value="0x422D"        name="CL_SEMAPHORE_FAST_PATH_IMG"/>
             <unused start="0x422E" end="0x422F"/>
