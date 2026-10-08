@@ -87,17 +87,28 @@ The require comment (which we initially misread as `cl_platform_info` in our pas
 matches the reserved-range comment in the registry: "0x116C–0x117F Reserved for
 cl_program_info". Sibling `CL_PROGRAM_IL` (0x1169) is `cl_program_info`. Corrected.
 
-### B4. `CL_QUEUE_*` scheduling/priority tokens under `cl_queue_properties`
+### B4. `CL_QUEUE_*` scheduling/priority tokens — **upstream right, we were wrong
+(corrected per owner adjudication, Brice 2026-10-08)**
 
-`<require comment="cl_queue_properties">` in cl_arm_scheduling_controls
-(`CL_QUEUE_KERNEL_BATCHING_ARM`, `CL_QUEUE_DEFERRED_FLUSH_ARM`,
-`CL_QUEUE_COMPUTE_UNIT_LIMIT_ARM`) and cl_intel_command_queue_families
-(`CL_QUEUE_FAMILY_INTEL`, `CL_QUEUE_INDEX_INTEL`). These **do** exist as creation
-properties of `clCreateCommandQueueWithProperties` — upstream's intent matches
-spec. The *type name* `cl_queue_properties` is not a typedef in cl.xml (the 2.0
-typedef is `cl_command_queue_properties`); our `group=` keeps the real container
-(`cl_command_queue_properties[/info]`). Not an error worth reporting — a naming
-convention mismatch.
+`<require comment="cl_queue_properties">` in cl_arm_scheduling_controls and
+cl_intel_command_queue_families, plus the spec's own table (api/opencl_runtime_layer.asciidoc
+`queue-properties-table`, clCreateCommandQueueWithProperties), which lists
+`CL_QUEUE_PRIORITY_KHR` (value type `cl_queue_priority_khr`) and
+`CL_QUEUE_THROTTLE_KHR` (`cl_queue_throttle_khr`) as **2.0 property-list entries
+of `cl_queue_properties`** — not members of the 1.2 `cl_command_queue_properties`
+bitfield (whose spec'd members are OUT_OF_ORDER/PROFILING/ON_DEVICE/ON_DEVICE_DEFAULT).
+`cl_queue_properties` IS a real typedef (`typedef cl_properties cl_queue_properties`),
+so the require comment is correct and our original `cl_command_queue_properties`
+front-group was the error. Corrected:
+- `CL_QUEUE_PRIORITY_KHR` → `cl_queue_properties, cl_queue_properties_khr`
+- `CL_QUEUE_THROTTLE_KHR` → `cl_queue_properties, cl_queue_properties_khr`
+- `CL_QUEUE_SIZE` → `cl_command_queue_info, cl_queue_properties, cl_queue_properties_khr`
+- `CL_QUEUE_PROPERTIES` → `cl_command_queue_info, cl_queue_properties, cl_queue_properties_khr`
+(the last two per the spec source note "This enum is used for two purposes: as
+a property and for a query" — dual role, both tables).
+`CL_QUEUE_FAMILY_INTEL`/`CL_QUEUE_INDEX_INTEL` (command-queue-families ext) stay
+on `cl_command_queue_info,cl_command_queue_properties` — separate extension, its
+spec tables were not part of this exchange.
 
 ### B5. ARM SVM bitmask tokens under `cl_device_svm_capabilities_arm` / `cl_svm_mem_flags_arm`
 

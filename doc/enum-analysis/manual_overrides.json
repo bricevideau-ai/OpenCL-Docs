@@ -1482,6 +1482,36 @@
   ],
   "spec_evidence": "manual: cl_arm_scheduling_controls L79-85 + Table 9 queue creation properties"
  },
+ "CL_QUEUE_PRIORITY_KHR": {
+  "groups": [
+   "cl_queue_properties",
+   "cl_queue_properties_khr"
+  ],
+  "spec_evidence": "OpenCL 3.0 spec, api/opencl_runtime_layer.asciidoc: queue-properties-table (clCreateCommandQueueWithProperties) lists CL_QUEUE_PRIORITY_KHR (property value type cl_queue_priority_khr) and CL_QUEUE_THROTTLE_KHR (cl_queue_throttle_khr) — 2.0 property-list entries of cl_queue_properties, NOT members of the 1.2 cl_command_queue_properties bitfield (members: OUT_OF_ORDER/PROFILING/ON_DEVICE/ON_DEVICE_DEFAULT). Upstream require comment: cl_queue_properties. Owner adjudication Brice 2026-10-08."
+ },
+ "CL_QUEUE_PROPERTIES": {
+  "groups": [
+   "cl_command_queue_info",
+   "cl_queue_properties",
+   "cl_queue_properties_khr"
+  ],
+  "spec_evidence": "OpenCL 3.0 spec, api/opencl_runtime_layer.asciidoc: CL_QUEUE_PROPERTIES and CL_QUEUE_SIZE appear in BOTH the queue-properties-table (creation property names of clCreateCommandQueueWithProperties) AND the clGetCommandQueueInfo query table (source note: 'This enum is used for two purposes: as a property and for a query') — dual role. Owner adjudication Brice 2026-10-08."
+ },
+ "CL_QUEUE_SIZE": {
+  "groups": [
+   "cl_command_queue_info",
+   "cl_queue_properties",
+   "cl_queue_properties_khr"
+  ],
+  "spec_evidence": "OpenCL 3.0 spec, api/opencl_runtime_layer.asciidoc: CL_QUEUE_PROPERTIES and CL_QUEUE_SIZE appear in BOTH the queue-properties-table (creation property names of clCreateCommandQueueWithProperties) AND the clGetCommandQueueInfo query table (source note: 'This enum is used for two purposes: as a property and for a query') — dual role. Owner adjudication Brice 2026-10-08."
+ },
+ "CL_QUEUE_THROTTLE_KHR": {
+  "groups": [
+   "cl_queue_properties",
+   "cl_queue_properties_khr"
+  ],
+  "spec_evidence": "OpenCL 3.0 spec, api/opencl_runtime_layer.asciidoc: queue-properties-table (clCreateCommandQueueWithProperties) lists CL_QUEUE_PRIORITY_KHR (property value type cl_queue_priority_khr) and CL_QUEUE_THROTTLE_KHR (cl_queue_throttle_khr) — 2.0 property-list entries of cl_queue_properties, NOT members of the 1.2 cl_command_queue_properties bitfield (members: OUT_OF_ORDER/PROFILING/ON_DEVICE/ON_DEVICE_DEFAULT). Upstream require comment: cl_queue_properties. Owner adjudication Brice 2026-10-08."
+ },
  "CL_RGBx": {
   "groups": [
    "cl_channel_order"

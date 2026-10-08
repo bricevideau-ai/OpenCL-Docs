@@ -661,10 +661,11 @@ SELF_TESTS = {
     "CL_QUEUE_PRIORITY_MED_KHR":  {"cl_queue_priority_khr"},
     "CL_QUEUE_PRIORITY_LOW_KHR":  {"cl_queue_priority_khr"},
     # queue-hint *names* (New Enums bullets of cl_khr_priority_hints /
-    # cl_khr_throttle_hints under cl_queue_properties_TYPE) + the core
-    # cl_command_queue_properties table row
-    "CL_QUEUE_PRIORITY_KHR": {"cl_queue_properties", "cl_command_queue_properties"},
-    "CL_QUEUE_THROTTLE_KHR": {"cl_queue_properties", "cl_command_queue_properties"},
+    # cl_khr_throttle_hints under cl_queue_properties_TYPE) — 2.0
+    # property-list entries of cl_queue_properties, per spec table +
+    # owner adjudication (Brice 2026-10-08)
+    "CL_QUEUE_PRIORITY_KHR": {"cl_queue_properties", "cl_queue_properties_khr"},
+    "CL_QUEUE_THROTTLE_KHR": {"cl_queue_properties", "cl_queue_properties_khr"},
     # Intel USM: CL_MEM_ALLOC_FLAGS_INTEL appears as a property
     # (cl_mem_properties_intel table) and a query (cl_mem_alloc_info table)
     "CL_MEM_ALLOC_FLAGS_INTEL": {"cl_mem_properties_intel"},

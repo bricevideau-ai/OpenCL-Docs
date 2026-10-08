@@ -11833,10 +11833,11 @@
  "CL_QUEUE_PRIORITY_KHR": {
   "container": "cl_device_info",
   "groups": [
-   "cl_command_queue_properties",
-   "cl_queue_properties"
+   "cl_queue_properties",
+   "cl_queue_properties_khr"
   ],
   "notes": [
+   "manual: OpenCL 3.0 spec, api/opencl_runtime_layer.asciidoc: queue-properties-table (clCreateCommandQueueWithProperties) lists CL_QUEUE_PRIORITY_KHR (property value type cl_queue_priority_khr) and CL_QUEUE_THROTTLE_KHR (cl_queue_throttle_khr) \u2014 2.0 property-list entries of cl_queue_properties, NOT members of the 1.2 cl_command_queue_properties bitfield (members: OUT_OF_ORDER/PROFILING/ON_DEVICE/ON_DEVICE_DEFAULT). Upstream require comment: cl_queue_properties. Owner adjudication Brice 2026-10-08.",
    "spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties by {cl)",
    "spec evidence [cl_queue_properties] G3 new-enums list"
   ],
@@ -11876,9 +11877,11 @@
   "container": "cl_device_info",
   "groups": [
    "cl_command_queue_info",
-   "cl_command_queue_properties"
+   "cl_queue_properties",
+   "cl_queue_properties_khr"
   ],
   "notes": [
+   "manual: OpenCL 3.0 spec, api/opencl_runtime_layer.asciidoc: CL_QUEUE_PROPERTIES and CL_QUEUE_SIZE appear in BOTH the queue-properties-table (creation property names of clCreateCommandQueueWithProperties) AND the clGetCommandQueueInfo query table (source note: 'This enum is used for two purposes: as a property and for a query') \u2014 dual role. Owner adjudication Brice 2026-10-08.",
    "spec evidence [cl_command_queue_info] value cell col0 (List of supported param_names by {clGetCommandQueu)",
    "spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties by {cl)"
   ],
@@ -11918,9 +11921,11 @@
   "container": "cl_device_info",
   "groups": [
    "cl_command_queue_info",
-   "cl_command_queue_properties"
+   "cl_queue_properties",
+   "cl_queue_properties_khr"
   ],
   "notes": [
+   "manual: OpenCL 3.0 spec, api/opencl_runtime_layer.asciidoc: CL_QUEUE_PROPERTIES and CL_QUEUE_SIZE appear in BOTH the queue-properties-table (creation property names of clCreateCommandQueueWithProperties) AND the clGetCommandQueueInfo query table (source note: 'This enum is used for two purposes: as a property and for a query') \u2014 dual role. Owner adjudication Brice 2026-10-08.",
    "spec evidence [cl_command_queue_info] value cell col0 (List of supported param_names by {clGetCommandQueu)",
    "spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties by {cl)"
   ],
@@ -11949,10 +11954,11 @@
  "CL_QUEUE_THROTTLE_KHR": {
   "container": "cl_device_info",
   "groups": [
-   "cl_command_queue_properties",
-   "cl_queue_properties"
+   "cl_queue_properties",
+   "cl_queue_properties_khr"
   ],
   "notes": [
+   "manual: OpenCL 3.0 spec, api/opencl_runtime_layer.asciidoc: queue-properties-table (clCreateCommandQueueWithProperties) lists CL_QUEUE_PRIORITY_KHR (property value type cl_queue_priority_khr) and CL_QUEUE_THROTTLE_KHR (cl_queue_throttle_khr) \u2014 2.0 property-list entries of cl_queue_properties, NOT members of the 1.2 cl_command_queue_properties bitfield (members: OUT_OF_ORDER/PROFILING/ON_DEVICE/ON_DEVICE_DEFAULT). Upstream require comment: cl_queue_properties. Owner adjudication Brice 2026-10-08.",
    "spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties by {cl)",
    "spec evidence [cl_queue_properties] G3 new-enums list"
   ],
