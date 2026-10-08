@@ -11730,9 +11730,10 @@
   "container": "enums.4180",
   "groups": [
    "cl_command_queue_info",
-   "cl_command_queue_properties"
+   "cl_queue_properties"
   ],
   "notes": [
+   "manual: cl_intel_command_queue_families: Table 8 (queue creation properties by clCreateCommandQueueWithProperties) + Table 9 (Add to clGetCommandQueueInfo param_names) \u2014 dual role, value type cl_uint. Dual-role per Brice's SIZE/PROPERTIES pattern 2026-10-08. No cl_queue_properties_intel typedef exists in cl.xml (only cl_queue_properties + cl_queue_properties_khr).",
    "spec evidence [cl_command_queue_info] G4 sentence+define",
    "spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties by clC)"
   ],
@@ -11752,9 +11753,10 @@
   "container": "enums.4180",
   "groups": [
    "cl_command_queue_info",
-   "cl_command_queue_properties"
+   "cl_queue_properties"
   ],
   "notes": [
+   "manual: cl_intel_command_queue_families: Table 8 (queue creation properties by clCreateCommandQueueWithProperties) + Table 9 (Add to clGetCommandQueueInfo param_names) \u2014 dual role, value type cl_uint. Dual-role per Brice's SIZE/PROPERTIES pattern 2026-10-08. No cl_queue_properties_intel typedef exists in cl.xml (only cl_queue_properties + cl_queue_properties_khr).",
    "spec evidence [cl_command_queue_info] G4 sentence+define",
    "spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties by clC)"
   ],

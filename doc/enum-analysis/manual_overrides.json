@@ -1470,6 +1470,20 @@
   ],
   "spec_evidence": "manual: cl_arm_scheduling_controls L79-85 + Table 9 queue creation properties"
  },
+ "CL_QUEUE_FAMILY_INTEL": {
+  "groups": [
+   "cl_command_queue_info",
+   "cl_queue_properties"
+  ],
+  "spec_evidence": "cl_intel_command_queue_families: Table 8 (queue creation properties by clCreateCommandQueueWithProperties) + Table 9 (Add to clGetCommandQueueInfo param_names) — dual role, value type cl_uint. Dual-role per Brice's SIZE/PROPERTIES pattern 2026-10-08. No cl_queue_properties_intel typedef exists in cl.xml (only cl_queue_properties + cl_queue_properties_khr)."
+ },
+ "CL_QUEUE_INDEX_INTEL": {
+  "groups": [
+   "cl_command_queue_info",
+   "cl_queue_properties"
+  ],
+  "spec_evidence": "cl_intel_command_queue_families: Table 8 (queue creation properties by clCreateCommandQueueWithProperties) + Table 9 (Add to clGetCommandQueueInfo param_names) — dual role, value type cl_uint. Dual-role per Brice's SIZE/PROPERTIES pattern 2026-10-08. No cl_queue_properties_intel typedef exists in cl.xml (only cl_queue_properties + cl_queue_properties_khr)."
+ },
  "CL_QUEUE_JOB_SLOT_ARM": {
   "groups": [
    "cl_queue_properties"
