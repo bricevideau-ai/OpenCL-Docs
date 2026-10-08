@@ -717,7 +717,7 @@ SELF_TESTS = {
     "CL_DEVICE_SCHEDULING_CONTROLS_CAPABILITIES_ARM": {"cl_device_info"},
     "CL_KERNEL_EXEC_INFO_WORKGROUP_BATCH_SIZE_ARM": {"cl_kernel_exec_info"},
     "CL_KERNEL_MAX_WARP_COUNT_ARM": {"cl_kernel_info"},
-    "CL_QUEUE_KERNEL_BATCHING_ARM": {"cl_command_queue_properties"},
+    "CL_QUEUE_KERNEL_BATCHING_ARM": {"cl_queue_properties", "cl_queue_properties_khr"},
     # ARM controlled termination: query key vs bit set
     "CL_EVENT_COMMAND_TERMINATION_REASON_ARM": {"cl_event_info"},
     "CL_DEVICE_CONTROLLED_TERMINATION_CAPABILITIES_ARM": {"cl_device_info"},

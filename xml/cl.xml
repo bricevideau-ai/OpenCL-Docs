@@ -2421,25 +2421,25 @@ server's OpenCL/api-docs repository.
 
     <enums start="0x41E0" end="0x41FF" name="enums.41E0" vendor="Arm">
         <enum value="0x41E0"        name="CL_DEVICE_JOB_SLOTS_ARM" group="cl_device_info"/>
-        <enum value="0x41E1"        name="CL_QUEUE_JOB_SLOT_ARM" group="cl_queue_properties"/>
+        <enum value="0x41E1"        name="CL_QUEUE_JOB_SLOT_ARM" group="cl_queue_properties,cl_queue_properties_khr"/>
         <enum value="0x41E2"        name="CL_IMPORT_TYPE_ANDROID_HARDWARE_BUFFER_ARM" group="cl_import_properties_arm"/>
         <enum value="0x41E3"        name="CL_IMPORT_DMA_BUF_DATA_CONSISTENCY_WITH_HOST_ARM" group="cl_import_properties_arm"/>
         <enum value="0x41E4"        name="CL_DEVICE_SCHEDULING_CONTROLS_CAPABILITIES_ARM" group="cl_device_info"/>
         <enum value="0x41E5"        name="CL_KERNEL_EXEC_INFO_WORKGROUP_BATCH_SIZE_ARM" group="cl_kernel_exec_info"/>
         <enum value="0x41E6"        name="CL_KERNEL_EXEC_INFO_WORKGROUP_BATCH_SIZE_MODIFIER_ARM" group="cl_kernel_exec_info"/>
-        <enum value="0x41E7"        name="CL_QUEUE_KERNEL_BATCHING_ARM" group="cl_command_queue_properties"/>
+        <enum value="0x41E7"        name="CL_QUEUE_KERNEL_BATCHING_ARM" group="cl_queue_properties,cl_queue_properties_khr"/>
         <enum value="0x41E8"        name="CL_KERNEL_EXEC_INFO_WARP_COUNT_LIMIT_ARM" group="cl_kernel_exec_info"/>
         <enum value="0x41E9"        name="CL_KERNEL_MAX_WARP_COUNT_ARM" group="cl_kernel_info"/>
         <enum value="0x41EA"        name="CL_DEVICE_MAX_WARP_COUNT_ARM" group="cl_device_info"/>
         <enum value="0x41EB"        name="CL_DEVICE_SUPPORTED_REGISTER_ALLOCATIONS_ARM" group="cl_device_info"/>
-        <enum value="0x41EC"        name="CL_QUEUE_DEFERRED_FLUSH_ARM" group="cl_command_queue_properties"/>
+        <enum value="0x41EC"        name="CL_QUEUE_DEFERRED_FLUSH_ARM" group="cl_queue_properties,cl_queue_properties_khr"/>
         <enum value="0x41ED"        name="CL_EVENT_COMMAND_TERMINATION_REASON_ARM" group="cl_event_info"/>
         <enum value="0x41EE"        name="CL_DEVICE_CONTROLLED_TERMINATION_CAPABILITIES_ARM" group="cl_device_info"/>
         <enum value="0x41EF"        name="CL_IMPORT_ANDROID_HARDWARE_BUFFER_PLANE_INDEX_ARM" group="cl_import_properties_arm"/>
         <enum value="0x41F0"        name="CL_IMPORT_ANDROID_HARDWARE_BUFFER_LAYER_INDEX_ARM" group="cl_import_properties_arm"/>
         <enum value="0x41F1"        name="CL_KERNEL_EXEC_INFO_COMPUTE_UNIT_MAX_QUEUED_BATCHES_ARM" group="cl_kernel_exec_info"/>
         <unused start="0x41F2" end="0x41F2" comment="Reserved for cl_arm_core_builtins"/>
-        <enum value="0x41F3"        name="CL_QUEUE_COMPUTE_UNIT_LIMIT_ARM" group="cl_command_queue_properties"/>
+        <enum value="0x41F3"        name="CL_QUEUE_COMPUTE_UNIT_LIMIT_ARM" group="cl_queue_properties,cl_queue_properties_khr"/>
         <unused start="0x41F4" end="0x41F4" comment="Reserved"/>
         <unused start="0x41F5" end="0x41F6" comment="Reserved"/>
             <unused start="0x41F7" end="0x41FF"/>

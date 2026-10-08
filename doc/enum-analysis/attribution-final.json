@@ -11669,10 +11669,11 @@
  "CL_QUEUE_COMPUTE_UNIT_LIMIT_ARM": {
   "container": "enums.41E0",
   "groups": [
-   "cl_command_queue_properties"
+   "cl_queue_properties",
+   "cl_queue_properties_khr"
   ],
   "notes": [
-   "manual: cl_arm_scheduling_controls L79-85 + Table 9 queue creation properties"
+   "manual: cl_arm_scheduling_controls (spec in repo, extensions/cl_arm_scheduling_controls.asciidoc L79): 'Accepted value for the _properties_ parameter to clCreateCommandQueueWithProperties' \u2014 queue creation properties table (type cl_bool/cl_uint), NOT in any clGetCommandQueueInfo query table. Owner uniformity Brice 2026-10-08: same carrier as PRIORITY/THROTTLE (cl_queue_properties,cl_queue_properties_khr)."
   ],
   "value": "0x41F3"
  },
@@ -11699,10 +11700,11 @@
  "CL_QUEUE_DEFERRED_FLUSH_ARM": {
   "container": "enums.41E0",
   "groups": [
-   "cl_command_queue_properties"
+   "cl_queue_properties",
+   "cl_queue_properties_khr"
   ],
   "notes": [
-   "manual: cl_arm_scheduling_controls L79-85 + Table 9 queue creation properties"
+   "manual: cl_arm_scheduling_controls (spec in repo, extensions/cl_arm_scheduling_controls.asciidoc L79): 'Accepted value for the _properties_ parameter to clCreateCommandQueueWithProperties' \u2014 queue creation properties table (type cl_bool/cl_uint), NOT in any clGetCommandQueueInfo query table. Owner uniformity Brice 2026-10-08: same carrier as PRIORITY/THROTTLE (cl_queue_properties,cl_queue_properties_khr)."
   ],
   "value": "0x41EC"
  },
@@ -11767,20 +11769,22 @@
  "CL_QUEUE_JOB_SLOT_ARM": {
   "container": "enums.41E0",
   "groups": [
-   "cl_queue_properties"
+   "cl_queue_properties",
+   "cl_queue_properties_khr"
   ],
   "notes": [
-   "manual: /regspec/all/arm/cl_arm_job_slot_selection.txt \u2014 Command queue property [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+   "manual: arm scheduler extension: require comment cl_queue_properties for CL_QUEUE_JOB_SLOT_ARM + companion CL_DEVICE_JOB_SLOTS_ARM under cl_device_info (creation property of clCreateCommandQueueWithProperties). Chapter not in this repo; owner uniformity Brice 2026-10-08 (same carrier as PRIORITY/THROTTLE)."
   ],
   "value": "0x41E1"
  },
  "CL_QUEUE_KERNEL_BATCHING_ARM": {
   "container": "enums.41E0",
   "groups": [
-   "cl_command_queue_properties"
+   "cl_queue_properties",
+   "cl_queue_properties_khr"
   ],
   "notes": [
-   "manual: cl_arm_scheduling_controls L79-85 + Table 9 queue creation properties"
+   "manual: cl_arm_scheduling_controls (spec in repo, extensions/cl_arm_scheduling_controls.asciidoc L79): 'Accepted value for the _properties_ parameter to clCreateCommandQueueWithProperties' \u2014 queue creation properties table (type cl_bool/cl_uint), NOT in any clGetCommandQueueInfo query table. Owner uniformity Brice 2026-10-08: same carrier as PRIORITY/THROTTLE (cl_queue_properties,cl_queue_properties_khr)."
   ],
   "value": "0x41E7"
  },
