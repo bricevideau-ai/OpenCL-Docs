@@ -1962,67 +1962,82 @@
  "CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_ARBITRATION_ALGORITHM_IMG": {
   "container": "enums.4220",
   "groups": [
-   "cl_queue_properties"
+   "cl_queue_properties",
+   "cl_queue_properties_khr"
   ],
   "notes": [
-   "manual: registry-provenance: cl.xml <require comment=\"cl_queue_properties\"> authored by paulfradgley #1469 2025-10-21 cl_img_scheduling_controls. No published extension spec found (checked KhronosGroup/OpenCL-Registry 2026-10-08); matches PR#1587."
+   "manual: cl_img_scheduling_controls (rev 0.3.0): property names of clCreateCommandQueueWithProperties per author's own <require comment=\"cl_queue_properties\"> (PR #1469). Aligned to the uniform carrier."
   ],
   "value": "0x4224"
  },
  "CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_ARBITRATION_ALGORITHM_ROUND_ROBIN_IMG": {
   "container": "enums.4220",
   "groups": [],
-  "notes": [],
+  "notes": [
+   "manual: Ungrouped by design (searched 2026-10-08): cl_img_scheduling_controls is rev 0.3.0, NO spec chapter exists (not in registry.khronos.org extension index [only cl_img_cached_allocations/generate_mipmap/mem_properties/use_gralloc_ptr/yuv_image], not in KhronosGroup/OpenCL-Registry [107-chapter download], not in this repo's extensions/, added via PR #1469 which touched cl.xml only). The author named ONLY the device-side bitfield (cl_device_scheduling_controls_capabilities_img, whose bit members are the CL_DEVICE_WORK_GROUP_* twins \u2014 distinct tokens). No value-set type for CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_*_ORDER/ALGORITHM/TASK_DEMAND/ROUND_ROBIN exists in any source. Not forced into a type; awaiting IMG spec chapter that should introduce one (cf. cl_queue_priority_khr pattern)."
+  ],
   "value": "0x422A"
  },
  "CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_ARBITRATION_ALGORITHM_TASK_DEMAND_IMG": {
   "container": "enums.4220",
   "groups": [],
-  "notes": [],
+  "notes": [
+   "manual: Ungrouped by design (searched 2026-10-08): cl_img_scheduling_controls is rev 0.3.0, NO spec chapter exists (not in registry.khronos.org extension index [only cl_img_cached_allocations/generate_mipmap/mem_properties/use_gralloc_ptr/yuv_image], not in KhronosGroup/OpenCL-Registry [107-chapter download], not in this repo's extensions/, added via PR #1469 which touched cl.xml only). The author named ONLY the device-side bitfield (cl_device_scheduling_controls_capabilities_img, whose bit members are the CL_DEVICE_WORK_GROUP_* twins \u2014 distinct tokens). No value-set type for CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_*_ORDER/ALGORITHM/TASK_DEMAND/ROUND_ROBIN exists in any source. Not forced into a type; awaiting IMG spec chapter that should introduce one (cf. cl_queue_priority_khr pattern)."
+  ],
   "value": "0x4229"
  },
  "CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_EXECUTE_COUNT_IMG": {
   "container": "enums.4220",
   "groups": [
-   "cl_queue_properties"
+   "cl_queue_properties",
+   "cl_queue_properties_khr"
   ],
   "notes": [
-   "manual: registry-provenance: cl.xml <require comment=\"cl_queue_properties\"> authored by paulfradgley #1469 2025-10-21 cl_img_scheduling_controls. No published extension spec found (checked KhronosGroup/OpenCL-Registry 2026-10-08); matches PR#1587."
+   "manual: cl_img_scheduling_controls (rev 0.3.0): property names of clCreateCommandQueueWithProperties per author's own <require comment=\"cl_queue_properties\"> (PR #1469). Aligned to the uniform carrier."
   ],
   "value": "0x422B"
  },
  "CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_SCHEDULING_ALGORITHM_IMG": {
   "container": "enums.4220",
   "groups": [
-   "cl_queue_properties"
+   "cl_queue_properties",
+   "cl_queue_properties_khr"
   ],
   "notes": [
-   "manual: registry-provenance: cl.xml <require comment=\"cl_queue_properties\"> authored by paulfradgley #1469 2025-10-21 cl_img_scheduling_controls. No published extension spec found (checked KhronosGroup/OpenCL-Registry 2026-10-08); matches PR#1587."
+   "manual: cl_img_scheduling_controls (rev 0.3.0): property names of clCreateCommandQueueWithProperties per author's own <require comment=\"cl_queue_properties\"> (PR #1469). Aligned to the uniform carrier."
   ],
   "value": "0x4223"
  },
  "CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_SCHEDULING_ALGORITHM_LINEAR_ORDER_IMG": {
   "container": "enums.4220",
   "groups": [],
-  "notes": [],
+  "notes": [
+   "manual: Ungrouped by design (searched 2026-10-08): cl_img_scheduling_controls is rev 0.3.0, NO spec chapter exists (not in registry.khronos.org extension index [only cl_img_cached_allocations/generate_mipmap/mem_properties/use_gralloc_ptr/yuv_image], not in KhronosGroup/OpenCL-Registry [107-chapter download], not in this repo's extensions/, added via PR #1469 which touched cl.xml only). The author named ONLY the device-side bitfield (cl_device_scheduling_controls_capabilities_img, whose bit members are the CL_DEVICE_WORK_GROUP_* twins \u2014 distinct tokens). No value-set type for CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_*_ORDER/ALGORITHM/TASK_DEMAND/ROUND_ROBIN exists in any source. Not forced into a type; awaiting IMG spec chapter that should introduce one (cf. cl_queue_priority_khr pattern)."
+  ],
   "value": "0x4225"
  },
  "CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_SCHEDULING_ALGORITHM_MORTON_ORDER_IMG": {
   "container": "enums.4220",
   "groups": [],
-  "notes": [],
+  "notes": [
+   "manual: Ungrouped by design (searched 2026-10-08): cl_img_scheduling_controls is rev 0.3.0, NO spec chapter exists (not in registry.khronos.org extension index [only cl_img_cached_allocations/generate_mipmap/mem_properties/use_gralloc_ptr/yuv_image], not in KhronosGroup/OpenCL-Registry [107-chapter download], not in this repo's extensions/, added via PR #1469 which touched cl.xml only). The author named ONLY the device-side bitfield (cl_device_scheduling_controls_capabilities_img, whose bit members are the CL_DEVICE_WORK_GROUP_* twins \u2014 distinct tokens). No value-set type for CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_*_ORDER/ALGORITHM/TASK_DEMAND/ROUND_ROBIN exists in any source. Not forced into a type; awaiting IMG spec chapter that should introduce one (cf. cl_queue_priority_khr pattern)."
+  ],
   "value": "0x4226"
  },
  "CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_SCHEDULING_ALGORITHM_THREED_MORTON_ORDER_IMG": {
   "container": "enums.4220",
   "groups": [],
-  "notes": [],
+  "notes": [
+   "manual: Ungrouped by design (searched 2026-10-08): cl_img_scheduling_controls is rev 0.3.0, NO spec chapter exists (not in registry.khronos.org extension index [only cl_img_cached_allocations/generate_mipmap/mem_properties/use_gralloc_ptr/yuv_image], not in KhronosGroup/OpenCL-Registry [107-chapter download], not in this repo's extensions/, added via PR #1469 which touched cl.xml only). The author named ONLY the device-side bitfield (cl_device_scheduling_controls_capabilities_img, whose bit members are the CL_DEVICE_WORK_GROUP_* twins \u2014 distinct tokens). No value-set type for CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_*_ORDER/ALGORITHM/TASK_DEMAND/ROUND_ROBIN exists in any source. Not forced into a type; awaiting IMG spec chapter that should introduce one (cf. cl_queue_priority_khr pattern)."
+  ],
   "value": "0x4228"
  },
  "CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_SCHEDULING_ALGORITHM_TWOD_MORTON_ORDER_IMG": {
   "container": "enums.4220",
   "groups": [],
-  "notes": [],
+  "notes": [
+   "manual: Ungrouped by design (searched 2026-10-08): cl_img_scheduling_controls is rev 0.3.0, NO spec chapter exists (not in registry.khronos.org extension index [only cl_img_cached_allocations/generate_mipmap/mem_properties/use_gralloc_ptr/yuv_image], not in KhronosGroup/OpenCL-Registry [107-chapter download], not in this repo's extensions/, added via PR #1469 which touched cl.xml only). The author named ONLY the device-side bitfield (cl_device_scheduling_controls_capabilities_img, whose bit members are the CL_DEVICE_WORK_GROUP_* twins \u2014 distinct tokens). No value-set type for CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_*_ORDER/ALGORITHM/TASK_DEMAND/ROUND_ROBIN exists in any source. Not forced into a type; awaiting IMG spec chapter that should introduce one (cf. cl_queue_priority_khr pattern)."
+  ],
   "value": "0x4227"
  },
  "CL_COMMAND_READ_BUFFER": {
