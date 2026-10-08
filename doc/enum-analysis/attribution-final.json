@@ -4863,10 +4863,10 @@
  "CL_DEVICE_PARTITION_BY_AFFINITY_DOMAIN_EXT": {
   "container": "enums.4050",
   "groups": [
-   "cl_device_partition_property"
+   "cl_device_partition_property_ext"
   ],
   "notes": [
-   "manual: legacy alias of CL_DEVICE_PARTITION_BY_AFFINITY_DOMAIN (cl_ext_device_fission; core member already cl_device_partition_property)"
+   "manual: cl.xml declares two DISTINCT partition-property types (lines 136/171): typedef cl_ulong cl_device_partition_property_ext (EXT 1.1 list) vs typedef intptr_t cl_device_partition_property (core 3.0 list). Generated cl_ext.h: clCreateSubDevicesEXT(const cl_device_partition_property_ext* properties) \u2014 so all _EXT list members belong to the _ext type. Brice adjudication 2026-10-08: put the _EXT partition tokens in cl_device_partition_property_ext."
   ],
   "value": "0x4053"
  },
@@ -4883,10 +4883,10 @@
  "CL_DEVICE_PARTITION_BY_COUNTS_EXT": {
   "container": "enums.4050",
   "groups": [
-   "cl_device_partition_property"
+   "cl_device_partition_property_ext"
   ],
   "notes": [
-   "manual: legacy alias of CL_DEVICE_PARTITION_BY_COUNTS (cl_ext_device_fission; core member already cl_device_partition_property)"
+   "manual: cl.xml declares two DISTINCT partition-property types (lines 136/171): typedef cl_ulong cl_device_partition_property_ext (EXT 1.1 list) vs typedef intptr_t cl_device_partition_property (core 3.0 list). Generated cl_ext.h: clCreateSubDevicesEXT(const cl_device_partition_property_ext* properties) \u2014 so all _EXT list members belong to the _ext type. Brice adjudication 2026-10-08: put the _EXT partition tokens in cl_device_partition_property_ext."
   ],
   "value": "0x4051"
  },
@@ -4903,10 +4903,10 @@
  "CL_DEVICE_PARTITION_BY_NAMES_EXT": {
   "container": "enums.4050",
   "groups": [
-   "cl_device_partition_property"
+   "cl_device_partition_property_ext"
   ],
   "notes": [
-   "manual: legacy alias of CL_DEVICE_PARTITION_BY_NAMES (cl_ext_device_fission)"
+   "manual: cl.xml declares two DISTINCT partition-property types (lines 136/171): typedef cl_ulong cl_device_partition_property_ext (EXT 1.1 list) vs typedef intptr_t cl_device_partition_property (core 3.0 list). Generated cl_ext.h: clCreateSubDevicesEXT(const cl_device_partition_property_ext* properties) \u2014 so all _EXT list members belong to the _ext type. Brice adjudication 2026-10-08: put the _EXT partition tokens in cl_device_partition_property_ext."
   ],
   "value": "0x4052"
  },
@@ -4933,10 +4933,10 @@
  "CL_DEVICE_PARTITION_EQUALLY_EXT": {
   "container": "enums.4050",
   "groups": [
-   "cl_device_partition_property"
+   "cl_device_partition_property_ext"
   ],
   "notes": [
-   "manual: legacy alias of CL_DEVICE_PARTITION_EQUALLY (cl_ext_device_fission; core member already cl_device_partition_property)"
+   "manual: cl.xml declares two DISTINCT partition-property types (lines 136/171): typedef cl_ulong cl_device_partition_property_ext (EXT 1.1 list) vs typedef intptr_t cl_device_partition_property (core 3.0 list). Generated cl_ext.h: clCreateSubDevicesEXT(const cl_device_partition_property_ext* properties) \u2014 so all _EXT list members belong to the _ext type. Brice adjudication 2026-10-08: put the _EXT partition tokens in cl_device_partition_property_ext."
   ],
   "value": "0x4050"
  },
@@ -10863,20 +10863,20 @@
  "CL_PARTITION_BY_COUNTS_LIST_END_EXT": {
   "container": "MiscNumbers",
   "groups": [
-   "cl_device_partition_property"
+   "cl_device_partition_property_ext"
   ],
   "notes": [
-   "manual: KHR-inherited: list terminator for cl_device_partition_property"
+   "manual: cl.xml declares two DISTINCT partition-property types (lines 136/171): typedef cl_ulong cl_device_partition_property_ext (EXT 1.1 list) vs typedef intptr_t cl_device_partition_property (core 3.0 list). Generated cl_ext.h: clCreateSubDevicesEXT(const cl_device_partition_property_ext* properties) \u2014 so all _EXT list members belong to the _ext type. Brice adjudication 2026-10-08: put the _EXT partition tokens in cl_device_partition_property_ext."
   ],
   "value": "((cl_device_partition_property_ext)0)"
  },
  "CL_PARTITION_BY_NAMES_LIST_END_EXT": {
   "container": "MiscNumbers",
   "groups": [
-   "cl_device_partition_property"
+   "cl_device_partition_property_ext"
   ],
   "notes": [
-   "manual: list terminator of the EXT partition-property list; value cast to cl_device_partition_property_ext; sibling _COUNTS_ already cl_device_partition_property"
+   "manual: cl.xml declares two DISTINCT partition-property types (lines 136/171): typedef cl_ulong cl_device_partition_property_ext (EXT 1.1 list) vs typedef intptr_t cl_device_partition_property (core 3.0 list). Generated cl_ext.h: clCreateSubDevicesEXT(const cl_device_partition_property_ext* properties) \u2014 so all _EXT list members belong to the _ext type. Brice adjudication 2026-10-08: put the _EXT partition tokens in cl_device_partition_property_ext."
   ],
   "value": "((cl_device_partition_property_ext)0 - 1)"
  },
@@ -11544,10 +11544,10 @@
  "CL_PROPERTIES_LIST_END_EXT": {
   "container": "MiscNumbers",
   "groups": [
-   "cl_device_partition_property"
+   "cl_device_partition_property_ext"
   ],
   "notes": [
-   "manual: cl.xml MiscNumbers container (line 827) \u2014 identical value ((cl_device_partition_property)0) as CL_PARTITION_BY_COUNTS_LIST_END_EXT and CL_DEVICE_PARTITION_BY_COUNTS_LIST_END, both grouped cl_device_partition_property; core spec: CL_DEVICE_PARTITION_BY_COUNTS_LIST_END (0) terminates device_partition_property lists (cl_ext_device_fission)."
+   "manual: cl.xml declares two DISTINCT partition-property types (lines 136/171): typedef cl_ulong cl_device_partition_property_ext (EXT 1.1 list) vs typedef intptr_t cl_device_partition_property (core 3.0 list). Generated cl_ext.h: clCreateSubDevicesEXT(const cl_device_partition_property_ext* properties) \u2014 so all _EXT list members belong to the _ext type. Brice adjudication 2026-10-08: put the _EXT partition tokens in cl_device_partition_property_ext."
   ],
   "value": "((cl_device_partition_property_ext)0)"
  },

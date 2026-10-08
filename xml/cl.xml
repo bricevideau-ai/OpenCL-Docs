@@ -825,10 +825,10 @@ server's OpenCL/api-docs repository.
     </enums>
 
     <enums name="MiscNumbers" vendor="Multiple" comment="Tokens whose numeric value is intrinsically meaningful">
-        <enum value="((cl_device_partition_property_ext)0)"        name="CL_PROPERTIES_LIST_END_EXT" group="cl_device_partition_property"/>
-        <enum value="((cl_device_partition_property_ext)0)"        name="CL_PARTITION_BY_COUNTS_LIST_END_EXT" group="cl_device_partition_property"/>
+        <enum value="((cl_device_partition_property_ext)0)"        name="CL_PROPERTIES_LIST_END_EXT" group="cl_device_partition_property_ext"/>
+        <enum value="((cl_device_partition_property_ext)0)"        name="CL_PARTITION_BY_COUNTS_LIST_END_EXT" group="cl_device_partition_property_ext"/>
         <enum value="0x0"           name="CL_DEVICE_PARTITION_BY_COUNTS_LIST_END" group="cl_device_partition_property"/>
-        <enum value="((cl_device_partition_property_ext)0 - 1)"    name="CL_PARTITION_BY_NAMES_LIST_END_EXT" group="cl_device_partition_property"/>
+        <enum value="((cl_device_partition_property_ext)0 - 1)"    name="CL_PARTITION_BY_NAMES_LIST_END_EXT" group="cl_device_partition_property_ext"/>
         <enum value="-1"            name="CL_PARTITION_BY_NAMES_LIST_END_INTEL" group="cl_device_partition_property"/>
         <enum value="0"             name="CL_MEM_DEVICE_HANDLE_LIST_END_KHR" group="cl_mem_properties"/>
         <enum value="0"             name="CL_SEMAPHORE_DEVICE_HANDLE_LIST_END_KHR" group="cl_semaphore_info_khr"/>
@@ -2214,11 +2214,11 @@ server's OpenCL/api-docs repository.
     </enums>
 
     <enums start="0x4050" end="0x405F" name="enums.4050" vendor="Apple">
-        <enum value="0x4050"        name="CL_DEVICE_PARTITION_EQUALLY_EXT" group="cl_device_partition_property"/>
-        <enum value="0x4051"        name="CL_DEVICE_PARTITION_BY_COUNTS_EXT" group="cl_device_partition_property"/>
-        <enum value="0x4052"        name="CL_DEVICE_PARTITION_BY_NAMES_EXT" group="cl_device_partition_property"/>
+        <enum value="0x4050"        name="CL_DEVICE_PARTITION_EQUALLY_EXT" group="cl_device_partition_property_ext"/>
+        <enum value="0x4051"        name="CL_DEVICE_PARTITION_BY_COUNTS_EXT" group="cl_device_partition_property_ext"/>
+        <enum value="0x4052"        name="CL_DEVICE_PARTITION_BY_NAMES_EXT" group="cl_device_partition_property_ext"/>
         <enum value="0x4052"        name="CL_DEVICE_PARTITION_BY_NAMES_INTEL" group="cl_device_partition_property"/>
-        <enum value="0x4053"        name="CL_DEVICE_PARTITION_BY_AFFINITY_DOMAIN_EXT" group="cl_device_partition_property"/>
+        <enum value="0x4053"        name="CL_DEVICE_PARTITION_BY_AFFINITY_DOMAIN_EXT" group="cl_device_partition_property_ext"/>
         <enum value="0x4054"        name="CL_DEVICE_PARENT_DEVICE_EXT" group="cl_device_info"/>
         <enum value="0x4055"        name="CL_DEVICE_PARTITION_TYPES_EXT" group="cl_device_info"/>
         <enum value="0x4056"        name="CL_DEVICE_AFFINITY_DOMAINS_EXT" group="cl_device_info"/>

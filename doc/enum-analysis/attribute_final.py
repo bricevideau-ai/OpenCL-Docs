@@ -741,8 +741,16 @@ SELF_TESTS = {
     # INTEL dx9 media acquire/release -> cl_command_type (clGetEventInfo CL_EVENT_COMMAND_TYPE)
     "CL_COMMAND_ACQUIRE_DX9_OBJECTS_INTEL": {"cl_command_type"},
     "CL_COMMAND_RELEASE_DX9_OBJECTS_INTEL": {"cl_command_type"},
-    # partition list terminator -> cl_device_partition_property
-    "CL_PROPERTIES_LIST_END_EXT": {"cl_device_partition_property"},
+    # partition list terminator -> cl_device_partition_property_ext (Brice 2026-10-08)
+    "CL_PROPERTIES_LIST_END_EXT": {"cl_device_partition_property_ext"},
+    "CL_PARTITION_BY_COUNTS_LIST_END_EXT": {"cl_device_partition_property_ext"},
+    "CL_PARTITION_BY_NAMES_LIST_END_EXT": {"cl_device_partition_property_ext"},
+    "CL_DEVICE_PARTITION_EQUALLY_EXT": {"cl_device_partition_property_ext"},
+    "CL_DEVICE_PARTITION_BY_COUNTS_EXT": {"cl_device_partition_property_ext"},
+    "CL_DEVICE_PARTITION_BY_NAMES_EXT": {"cl_device_partition_property_ext"},
+    "CL_DEVICE_PARTITION_BY_AFFINITY_DOMAIN_EXT": {"cl_device_partition_property_ext"},
+    # INTEL partition terminator stays on the core (intptr_t) type
+    "CL_PARTITION_BY_NAMES_LIST_END_INTEL": {"cl_device_partition_property"},
 
 }
 
@@ -785,8 +793,17 @@ NEGATIVE_TESTS = {
     # INTEL dx9 acquire/release are command types, not device/info queries
     "CL_COMMAND_ACQUIRE_DX9_OBJECTS_INTEL": {"cl_device_info"},
     "CL_COMMAND_RELEASE_DX9_OBJECTS_INTEL": {"cl_device_info"},
-    # partition list terminator = not an info query
+    # partition list terminator = the EXT (cl_ulong) property list, not core
     "CL_PROPERTIES_LIST_END_EXT": {"cl_device_info"},
+    # 2026-10-08 Brice adjudication: the _EXT partition family belongs to
+    # cl_device_partition_property_ext (cl_ulong, clCreateSubDevicesEXT param),
+    # NOT the core cl_device_partition_property (intptr_t)
+    "CL_PARTITION_BY_COUNTS_LIST_END_EXT": {"cl_device_partition_property"},
+    "CL_PARTITION_BY_NAMES_LIST_END_EXT": {"cl_device_partition_property"},
+    "CL_DEVICE_PARTITION_EQUALLY_EXT": {"cl_device_partition_property"},
+    "CL_DEVICE_PARTITION_BY_COUNTS_EXT": {"cl_device_partition_property"},
+    "CL_DEVICE_PARTITION_BY_NAMES_EXT": {"cl_device_partition_property"},
+    "CL_DEVICE_PARTITION_BY_AFFINITY_DOMAIN_EXT": {"cl_device_partition_property"},
 
 }
 
