@@ -825,7 +825,7 @@ server's OpenCL/api-docs repository.
     </enums>
 
     <enums name="MiscNumbers" vendor="Multiple" comment="Tokens whose numeric value is intrinsically meaningful">
-        <enum value="((cl_device_partition_property_ext)0)"        name="CL_PROPERTIES_LIST_END_EXT"/>
+        <enum value="((cl_device_partition_property_ext)0)"        name="CL_PROPERTIES_LIST_END_EXT" group="cl_device_partition_property"/>
         <enum value="((cl_device_partition_property_ext)0)"        name="CL_PARTITION_BY_COUNTS_LIST_END_EXT" group="cl_device_partition_property"/>
         <enum value="0x0"           name="CL_DEVICE_PARTITION_BY_COUNTS_LIST_END" group="cl_device_partition_property"/>
         <enum value="((cl_device_partition_property_ext)0 - 1)"    name="CL_PARTITION_BY_NAMES_LIST_END_EXT" group="cl_device_partition_property"/>
@@ -2157,8 +2157,8 @@ server's OpenCL/api-docs repository.
         <enum value="0x4025"        name="CL_ALL_DEVICES_FOR_DX9_INTEL" group="cl_dx9_device_set_intel"/>
         <enum value="0x4026"        name="CL_CONTEXT_D3D9_DEVICE_INTEL" group="cl_context_properties"/>
         <enum value="0x4027"        name="CL_MEM_DX9_RESOURCE_INTEL" group="cl_mem_info"/>
-        <enum value="0x402A"        name="CL_COMMAND_ACQUIRE_DX9_OBJECTS_INTEL"/>
-        <enum value="0x402B"        name="CL_COMMAND_RELEASE_DX9_OBJECTS_INTEL"/>
+        <enum value="0x402A"        name="CL_COMMAND_ACQUIRE_DX9_OBJECTS_INTEL" group="cl_command_type"/>
+        <enum value="0x402B"        name="CL_COMMAND_RELEASE_DX9_OBJECTS_INTEL" group="cl_command_type"/>
         <!-- unused <enum value="0x4022"      name="CL_D3D9_DEVICE_NV"/> -->
         <!-- unused <enum value="0x4023"      name="CL_D3D9_ADAPTER_NAME_NV"/> -->
         <!-- unused <enum value="0x4024"      name="CL_PREFERRED_DEVICES_FOR_D3D9_NV"/> -->
@@ -2275,12 +2275,12 @@ server's OpenCL/api-docs repository.
         <enum value="0x40A1"        name="CL_DEVICE_PAGE_SIZE_QCOM" group="cl_device_info"/>
         <enum value="0x40A2"        name="CL_IMAGE_ROW_ALIGNMENT_QCOM" group="cl_image_pitch_info_qcom"/>
         <enum value="0x40A3"        name="CL_IMAGE_SLICE_ALIGNMENT_QCOM" group="cl_image_pitch_info_qcom"/>
-        <enum value="0x40A4"        name="CL_MEM_HOST_UNCACHED_QCOM"/>
-        <enum value="0x40A5"        name="CL_MEM_HOST_WRITEBACK_QCOM"/>
-        <enum value="0x40A6"        name="CL_MEM_HOST_WRITETHROUGH_QCOM"/>
-        <enum value="0x40A7"        name="CL_MEM_HOST_WRITE_COMBINING_QCOM"/>
-        <enum value="0x40A8"        name="CL_MEM_ION_HOST_PTR_QCOM"/>
-        <enum value="0x40A9"        name="CL_MEM_HOST_IOCOHERENT_QCOM"/>
+        <enum value="0x40A4"        name="CL_MEM_HOST_UNCACHED_QCOM" group="cl_mem_ext_host_ptr"/>
+        <enum value="0x40A5"        name="CL_MEM_HOST_WRITEBACK_QCOM" group="cl_mem_ext_host_ptr"/>
+        <enum value="0x40A6"        name="CL_MEM_HOST_WRITETHROUGH_QCOM" group="cl_mem_ext_host_ptr"/>
+        <enum value="0x40A7"        name="CL_MEM_HOST_WRITE_COMBINING_QCOM" group="cl_mem_ext_host_ptr"/>
+        <enum value="0x40A8"        name="CL_MEM_ION_HOST_PTR_QCOM" group="cl_mem_ext_host_ptr"/>
+        <enum value="0x40A9"        name="CL_MEM_HOST_IOCOHERENT_QCOM" group="cl_mem_ext_host_ptr"/>
             <unused start="0x40AA" end="0x40AF"/>
     </enums>
 
@@ -2309,7 +2309,7 @@ server's OpenCL/api-docs repository.
         <enum value="0x40C3"        name="CL_PERF_HINT_HIGH_QCOM" group="cl_perf_hint_qcom"/>
         <enum value="0x40C4"        name="CL_PERF_HINT_NORMAL_QCOM" group="cl_perf_hint_qcom"/>
         <enum value="0x40C5"        name="CL_PERF_HINT_LOW_QCOM" group="cl_perf_hint_qcom"/>
-        <enum value="0x40C6"        name="CL_MEM_ANDROID_NATIVE_BUFFER_HOST_PTR_QCOM"/>
+        <enum value="0x40C6"        name="CL_MEM_ANDROID_NATIVE_BUFFER_HOST_PTR_QCOM" group="cl_mem_ext_host_ptr"/>
             <unused start="0x40C7" end="0x40CF"/>
     </enums>
 

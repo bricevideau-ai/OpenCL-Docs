@@ -3,37 +3,37 @@
   "groups": [
    "cl_accelerator_info_intel"
   ],
-  "spec_evidence": "manual: /regspec/all/intel/cl_intel_accelerator.txt — pointed to by <param_value>.  This size is dependent on the param_name, and [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/intel/cl_intel_accelerator.txt \u2014 pointed to by <param_value>.  This size is dependent on the param_name, and [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_ACCELERATOR_DESCRIPTOR_INTEL": {
   "groups": [
    "cl_accelerator_info_intel"
   ],
-  "spec_evidence": "manual: /regspec/all/intel/cl_intel_accelerator.txt — pointed to by <param_value>.  This size is dependent on the param_name, and [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/intel/cl_intel_accelerator.txt \u2014 pointed to by <param_value>.  This size is dependent on the param_name, and [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_ACCELERATOR_REFERENCE_COUNT_INTEL": {
   "groups": [
    "cl_accelerator_info_intel"
   ],
-  "spec_evidence": "manual: /regspec/all/intel/cl_intel_accelerator.txt — pointed to by <param_value>.  This size is dependent on the param_name, and [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/intel/cl_intel_accelerator.txt \u2014 pointed to by <param_value>.  This size is dependent on the param_name, and [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_ACCELERATOR_TYPE_INTEL": {
   "groups": [
    "cl_accelerator_info_intel"
   ],
-  "spec_evidence": "manual: /regspec/all/intel/cl_intel_accelerator.txt — pointed to by <param_value>.  This size is dependent on the param_name, and [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/intel/cl_intel_accelerator.txt \u2014 pointed to by <param_value>.  This size is dependent on the param_name, and [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_ALL_DEVICES_FOR_DX9_INTEL": {
   "groups": [
    "cl_dx9_device_set_intel"
   ],
-  "spec_evidence": "manual: /regspec/all/intel/cl_intel_dx9_media_sharing.txt — OpenCL devices are being queried by clGetDeviceIDsFromDX9INTEL. [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/intel/cl_intel_dx9_media_sharing.txt \u2014 OpenCL devices are being queried by clGetDeviceIDsFromDX9INTEL. [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_ALL_DEVICES_FOR_VA_API_INTEL": {
   "groups": [
    "cl_va_api_device_set_intel"
   ],
-  "spec_evidence": "manual: /regspec/all/intel/cl_intel_va_api_media_sharing.txt — parameter of clGetDeviceIDsFromVA_APIMediaAdapterINTEL: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/intel/cl_intel_va_api_media_sharing.txt \u2014 parameter of clGetDeviceIDsFromVA_APIMediaAdapterINTEL: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_CHAR_BIT": {
   "groups": [
@@ -59,6 +59,12 @@
   ],
   "spec_evidence": "user adjudication 2026-10-08 (Brice): safely cl_command_type. Naming drift from 2011 spec's CL_COMMAND_ACQUIRE_DX9_OBJECTS_INTEL (0x402A); token introduced #67 (2019 header extraction), no require block in cl.xml. Matches PR#1587."
  },
+ "CL_COMMAND_ACQUIRE_DX9_OBJECTS_INTEL": {
+  "groups": [
+   "cl_command_type"
+  ],
+  "spec_evidence": "manual: KhronosGroup/OpenCL-Registry extensions/cl_intel_dx9_media_sharing.txt \u2014 'Returned in the <param_value> parameter of clGetEventInfo when <param_name> is CL_EVENT_COMMAND_TYPE' + 'Add to Table 5.15 ... for cl_event_info CL_EVENT_COMMAND_TYPE'. Sibling precedent in this file: CL_COMMAND_ACQUIRE_DX9_MEDIA_SURFACES_KHR -> cl_command_type."
+ },
  "CL_COMMAND_ACQUIRE_GRALLOC_OBJECTS_IMG": {
   "groups": [
    "cl_command_type"
@@ -69,7 +75,7 @@
   "groups": [
    "cl_command_type"
   ],
-  "spec_evidence": "manual: /regspec/all/intel/cl_intel_va_api_media_sharing.txt — surface using clCreateFromVA_APIMediaSurfaceINTEL.\" [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/intel/cl_intel_va_api_media_sharing.txt \u2014 surface using clCreateFromVA_APIMediaSurfaceINTEL.\" [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_COMMAND_GENERATE_MIPMAP_IMG": {
   "groups": [
@@ -93,7 +99,7 @@
   "groups": [
    "cl_command_type"
   ],
-  "spec_evidence": "cl_intel_unified_shared_memory: 'New return values from clGetEventInfo when param_name is CL_EVENT_COMMAND_TYPE' — command type, not exec info (verified spec text 2026-10-08)"
+  "spec_evidence": "cl_intel_unified_shared_memory: 'New return values from clGetEventInfo when param_name is CL_EVENT_COMMAND_TYPE' \u2014 command type, not exec info (verified spec text 2026-10-08)"
  },
  "CL_COMMAND_MIGRATEMEM_INTEL": {
   "groups": [
@@ -105,7 +111,7 @@
   "groups": [
    "cl_command_type"
   ],
-  "spec_evidence": "manual: /regspec/all/ext/cl_ext_migrate_memobject.txt — <param_name> is CL_EVENT_COMMAND_TYPE: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/ext/cl_ext_migrate_memobject.txt \u2014 <param_name> is CL_EVENT_COMMAND_TYPE: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_ARBITRATION_ALGORITHM_IMG": {
   "groups": [
@@ -116,11 +122,11 @@
  },
  "CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_ARBITRATION_ALGORITHM_ROUND_ROBIN_IMG": {
   "groups": [],
-  "spec_evidence": "Ungrouped by design (searched 2026-10-08): cl_img_scheduling_controls is rev 0.3.0, NO spec chapter exists (not in registry.khronos.org extension index [only cl_img_cached_allocations/generate_mipmap/mem_properties/use_gralloc_ptr/yuv_image], not in KhronosGroup/OpenCL-Registry [107-chapter download], not in this repo's extensions/, added via PR #1469 which touched cl.xml only). The author named ONLY the device-side bitfield (cl_device_scheduling_controls_capabilities_img, whose bit members are the CL_DEVICE_WORK_GROUP_* twins — distinct tokens). No value-set type for CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_*_ORDER/ALGORITHM/TASK_DEMAND/ROUND_ROBIN exists in any source. Not forced into a type; awaiting IMG spec chapter that should introduce one (cf. cl_queue_priority_khr pattern)."
+  "spec_evidence": "Ungrouped by design (searched 2026-10-08): cl_img_scheduling_controls is rev 0.3.0, NO spec chapter exists (not in registry.khronos.org extension index [only cl_img_cached_allocations/generate_mipmap/mem_properties/use_gralloc_ptr/yuv_image], not in KhronosGroup/OpenCL-Registry [107-chapter download], not in this repo's extensions/, added via PR #1469 which touched cl.xml only). The author named ONLY the device-side bitfield (cl_device_scheduling_controls_capabilities_img, whose bit members are the CL_DEVICE_WORK_GROUP_* twins \u2014 distinct tokens). No value-set type for CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_*_ORDER/ALGORITHM/TASK_DEMAND/ROUND_ROBIN exists in any source. Not forced into a type; awaiting IMG spec chapter that should introduce one (cf. cl_queue_priority_khr pattern)."
  },
  "CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_ARBITRATION_ALGORITHM_TASK_DEMAND_IMG": {
   "groups": [],
-  "spec_evidence": "Ungrouped by design (searched 2026-10-08): cl_img_scheduling_controls is rev 0.3.0, NO spec chapter exists (not in registry.khronos.org extension index [only cl_img_cached_allocations/generate_mipmap/mem_properties/use_gralloc_ptr/yuv_image], not in KhronosGroup/OpenCL-Registry [107-chapter download], not in this repo's extensions/, added via PR #1469 which touched cl.xml only). The author named ONLY the device-side bitfield (cl_device_scheduling_controls_capabilities_img, whose bit members are the CL_DEVICE_WORK_GROUP_* twins — distinct tokens). No value-set type for CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_*_ORDER/ALGORITHM/TASK_DEMAND/ROUND_ROBIN exists in any source. Not forced into a type; awaiting IMG spec chapter that should introduce one (cf. cl_queue_priority_khr pattern)."
+  "spec_evidence": "Ungrouped by design (searched 2026-10-08): cl_img_scheduling_controls is rev 0.3.0, NO spec chapter exists (not in registry.khronos.org extension index [only cl_img_cached_allocations/generate_mipmap/mem_properties/use_gralloc_ptr/yuv_image], not in KhronosGroup/OpenCL-Registry [107-chapter download], not in this repo's extensions/, added via PR #1469 which touched cl.xml only). The author named ONLY the device-side bitfield (cl_device_scheduling_controls_capabilities_img, whose bit members are the CL_DEVICE_WORK_GROUP_* twins \u2014 distinct tokens). No value-set type for CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_*_ORDER/ALGORITHM/TASK_DEMAND/ROUND_ROBIN exists in any source. Not forced into a type; awaiting IMG spec chapter that should introduce one (cf. cl_queue_priority_khr pattern)."
  },
  "CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_EXECUTE_COUNT_IMG": {
   "groups": [
@@ -138,19 +144,19 @@
  },
  "CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_SCHEDULING_ALGORITHM_LINEAR_ORDER_IMG": {
   "groups": [],
-  "spec_evidence": "Ungrouped by design (searched 2026-10-08): cl_img_scheduling_controls is rev 0.3.0, NO spec chapter exists (not in registry.khronos.org extension index [only cl_img_cached_allocations/generate_mipmap/mem_properties/use_gralloc_ptr/yuv_image], not in KhronosGroup/OpenCL-Registry [107-chapter download], not in this repo's extensions/, added via PR #1469 which touched cl.xml only). The author named ONLY the device-side bitfield (cl_device_scheduling_controls_capabilities_img, whose bit members are the CL_DEVICE_WORK_GROUP_* twins — distinct tokens). No value-set type for CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_*_ORDER/ALGORITHM/TASK_DEMAND/ROUND_ROBIN exists in any source. Not forced into a type; awaiting IMG spec chapter that should introduce one (cf. cl_queue_priority_khr pattern)."
+  "spec_evidence": "Ungrouped by design (searched 2026-10-08): cl_img_scheduling_controls is rev 0.3.0, NO spec chapter exists (not in registry.khronos.org extension index [only cl_img_cached_allocations/generate_mipmap/mem_properties/use_gralloc_ptr/yuv_image], not in KhronosGroup/OpenCL-Registry [107-chapter download], not in this repo's extensions/, added via PR #1469 which touched cl.xml only). The author named ONLY the device-side bitfield (cl_device_scheduling_controls_capabilities_img, whose bit members are the CL_DEVICE_WORK_GROUP_* twins \u2014 distinct tokens). No value-set type for CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_*_ORDER/ALGORITHM/TASK_DEMAND/ROUND_ROBIN exists in any source. Not forced into a type; awaiting IMG spec chapter that should introduce one (cf. cl_queue_priority_khr pattern)."
  },
  "CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_SCHEDULING_ALGORITHM_MORTON_ORDER_IMG": {
   "groups": [],
-  "spec_evidence": "Ungrouped by design (searched 2026-10-08): cl_img_scheduling_controls is rev 0.3.0, NO spec chapter exists (not in registry.khronos.org extension index [only cl_img_cached_allocations/generate_mipmap/mem_properties/use_gralloc_ptr/yuv_image], not in KhronosGroup/OpenCL-Registry [107-chapter download], not in this repo's extensions/, added via PR #1469 which touched cl.xml only). The author named ONLY the device-side bitfield (cl_device_scheduling_controls_capabilities_img, whose bit members are the CL_DEVICE_WORK_GROUP_* twins — distinct tokens). No value-set type for CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_*_ORDER/ALGORITHM/TASK_DEMAND/ROUND_ROBIN exists in any source. Not forced into a type; awaiting IMG spec chapter that should introduce one (cf. cl_queue_priority_khr pattern)."
+  "spec_evidence": "Ungrouped by design (searched 2026-10-08): cl_img_scheduling_controls is rev 0.3.0, NO spec chapter exists (not in registry.khronos.org extension index [only cl_img_cached_allocations/generate_mipmap/mem_properties/use_gralloc_ptr/yuv_image], not in KhronosGroup/OpenCL-Registry [107-chapter download], not in this repo's extensions/, added via PR #1469 which touched cl.xml only). The author named ONLY the device-side bitfield (cl_device_scheduling_controls_capabilities_img, whose bit members are the CL_DEVICE_WORK_GROUP_* twins \u2014 distinct tokens). No value-set type for CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_*_ORDER/ALGORITHM/TASK_DEMAND/ROUND_ROBIN exists in any source. Not forced into a type; awaiting IMG spec chapter that should introduce one (cf. cl_queue_priority_khr pattern)."
  },
  "CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_SCHEDULING_ALGORITHM_THREED_MORTON_ORDER_IMG": {
   "groups": [],
-  "spec_evidence": "Ungrouped by design (searched 2026-10-08): cl_img_scheduling_controls is rev 0.3.0, NO spec chapter exists (not in registry.khronos.org extension index [only cl_img_cached_allocations/generate_mipmap/mem_properties/use_gralloc_ptr/yuv_image], not in KhronosGroup/OpenCL-Registry [107-chapter download], not in this repo's extensions/, added via PR #1469 which touched cl.xml only). The author named ONLY the device-side bitfield (cl_device_scheduling_controls_capabilities_img, whose bit members are the CL_DEVICE_WORK_GROUP_* twins — distinct tokens). No value-set type for CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_*_ORDER/ALGORITHM/TASK_DEMAND/ROUND_ROBIN exists in any source. Not forced into a type; awaiting IMG spec chapter that should introduce one (cf. cl_queue_priority_khr pattern)."
+  "spec_evidence": "Ungrouped by design (searched 2026-10-08): cl_img_scheduling_controls is rev 0.3.0, NO spec chapter exists (not in registry.khronos.org extension index [only cl_img_cached_allocations/generate_mipmap/mem_properties/use_gralloc_ptr/yuv_image], not in KhronosGroup/OpenCL-Registry [107-chapter download], not in this repo's extensions/, added via PR #1469 which touched cl.xml only). The author named ONLY the device-side bitfield (cl_device_scheduling_controls_capabilities_img, whose bit members are the CL_DEVICE_WORK_GROUP_* twins \u2014 distinct tokens). No value-set type for CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_*_ORDER/ALGORITHM/TASK_DEMAND/ROUND_ROBIN exists in any source. Not forced into a type; awaiting IMG spec chapter that should introduce one (cf. cl_queue_priority_khr pattern)."
  },
  "CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_SCHEDULING_ALGORITHM_TWOD_MORTON_ORDER_IMG": {
   "groups": [],
-  "spec_evidence": "Ungrouped by design (searched 2026-10-08): cl_img_scheduling_controls is rev 0.3.0, NO spec chapter exists (not in registry.khronos.org extension index [only cl_img_cached_allocations/generate_mipmap/mem_properties/use_gralloc_ptr/yuv_image], not in KhronosGroup/OpenCL-Registry [107-chapter download], not in this repo's extensions/, added via PR #1469 which touched cl.xml only). The author named ONLY the device-side bitfield (cl_device_scheduling_controls_capabilities_img, whose bit members are the CL_DEVICE_WORK_GROUP_* twins — distinct tokens). No value-set type for CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_*_ORDER/ALGORITHM/TASK_DEMAND/ROUND_ROBIN exists in any source. Not forced into a type; awaiting IMG spec chapter that should introduce one (cf. cl_queue_priority_khr pattern)."
+  "spec_evidence": "Ungrouped by design (searched 2026-10-08): cl_img_scheduling_controls is rev 0.3.0, NO spec chapter exists (not in registry.khronos.org extension index [only cl_img_cached_allocations/generate_mipmap/mem_properties/use_gralloc_ptr/yuv_image], not in KhronosGroup/OpenCL-Registry [107-chapter download], not in this repo's extensions/, added via PR #1469 which touched cl.xml only). The author named ONLY the device-side bitfield (cl_device_scheduling_controls_capabilities_img, whose bit members are the CL_DEVICE_WORK_GROUP_* twins \u2014 distinct tokens). No value-set type for CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_*_ORDER/ALGORITHM/TASK_DEMAND/ROUND_ROBIN exists in any source. Not forced into a type; awaiting IMG spec chapter that should introduce one (cf. cl_queue_priority_khr pattern)."
  },
  "CL_COMMAND_READ_HOST_PIPE_INTEL": {
   "groups": [
@@ -164,6 +170,12 @@
   ],
   "spec_evidence": "user adjudication 2026-10-08 (Brice): safely cl_command_type. Naming drift from 2011 spec's CL_COMMAND_RELEASE_DX9_OBJECTS_INTEL (0x402B); token introduced #67 (2019 header extraction), no require block in cl.xml. Matches PR#1587."
  },
+ "CL_COMMAND_RELEASE_DX9_OBJECTS_INTEL": {
+  "groups": [
+   "cl_command_type"
+  ],
+  "spec_evidence": "manual: KhronosGroup/OpenCL-Registry extensions/cl_intel_dx9_media_sharing.txt \u2014 'Returned in the <param_value> parameter of clGetEventInfo when <param_name> is CL_EVENT_COMMAND_TYPE' + 'Add to Table 5.15 ... for cl_event_info CL_EVENT_COMMAND_TYPE'. Sibling precedent in this file: CL_COMMAND_ACQUIRE_DX9_MEDIA_SURFACES_KHR -> cl_command_type."
+ },
  "CL_COMMAND_RELEASE_GRALLOC_OBJECTS_IMG": {
   "groups": [
    "cl_command_type"
@@ -174,37 +186,37 @@
   "groups": [
    "cl_command_type"
   ],
-  "spec_evidence": "manual: /regspec/all/intel/cl_intel_va_api_media_sharing.txt — surface using clCreateFromVA_APIMediaSurfaceINTEL.\" [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/intel/cl_intel_va_api_media_sharing.txt \u2014 surface using clCreateFromVA_APIMediaSurfaceINTEL.\" [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_COMMAND_SVM_FREE_ARM": {
   "groups": [
    "cl_command_type"
   ],
-  "spec_evidence": "manual: /regspec/all/arm/cl_arm_shared_virtual_memory.txt — To be used by clGetEventInfo: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/arm/cl_arm_shared_virtual_memory.txt \u2014 To be used by clGetEventInfo: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_COMMAND_SVM_MAP_ARM": {
   "groups": [
    "cl_command_type"
   ],
-  "spec_evidence": "manual: /regspec/all/arm/cl_arm_shared_virtual_memory.txt — To be used by clGetEventInfo: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/arm/cl_arm_shared_virtual_memory.txt \u2014 To be used by clGetEventInfo: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_COMMAND_SVM_MEMCPY_ARM": {
   "groups": [
    "cl_command_type"
   ],
-  "spec_evidence": "manual: /regspec/all/arm/cl_arm_shared_virtual_memory.txt — To be used by clGetEventInfo: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/arm/cl_arm_shared_virtual_memory.txt \u2014 To be used by clGetEventInfo: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_COMMAND_SVM_MEMFILL_ARM": {
   "groups": [
    "cl_command_type"
   ],
-  "spec_evidence": "manual: /regspec/all/arm/cl_arm_shared_virtual_memory.txt — To be used by clGetEventInfo: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/arm/cl_arm_shared_virtual_memory.txt \u2014 To be used by clGetEventInfo: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_COMMAND_SVM_UNMAP_ARM": {
   "groups": [
    "cl_command_type"
   ],
-  "spec_evidence": "manual: /regspec/all/arm/cl_arm_shared_virtual_memory.txt — To be used by clGetEventInfo: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/arm/cl_arm_shared_virtual_memory.txt \u2014 To be used by clGetEventInfo: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_COMMAND_WRITE_HOST_PIPE_INTEL": {
   "groups": [
@@ -222,7 +234,7 @@
   "groups": [
    "cl_context_properties"
   ],
-  "spec_evidence": "manual: /regspec/all/intel/cl_intel_dx9_media_sharing.txt — clCreateContext and clCreateContextFromType: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/intel/cl_intel_dx9_media_sharing.txt \u2014 clCreateContext and clCreateContextFromType: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_CONTEXT_D3D9_DEVICE_INTEL": {
   "groups": [
@@ -234,7 +246,7 @@
   "groups": [
    "cl_context_properties"
   ],
-  "spec_evidence": "manual: /regspec/all/intel/cl_intel_dx9_media_sharing.txt — Add to the list of errors for clCreateContext: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/intel/cl_intel_dx9_media_sharing.txt \u2014 Add to the list of errors for clCreateContext: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_CONTEXT_PERF_HINT_QCOM": {
   "groups": [
@@ -246,25 +258,25 @@
   "groups": [
    "cl_context_properties"
   ],
-  "spec_evidence": "manual: /regspec/all/intel/cl_intel_driver_diagnostics.txt — clCreateContext and clCreateContextFromType: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/intel/cl_intel_driver_diagnostics.txt \u2014 clCreateContext and clCreateContextFromType: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_CONTEXT_VA_API_DISPLAY_INTEL": {
   "groups": [
    "cl_context_properties"
   ],
-  "spec_evidence": "manual: /regspec/all/intel/cl_intel_va_api_media_sharing.txt — Add to the list of errors for clCreateContext: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/intel/cl_intel_va_api_media_sharing.txt \u2014 Add to the list of errors for clCreateContext: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_D3D9EX_DEVICE_INTEL": {
   "groups": [
    "cl_dx9_device_source_intel"
   ],
-  "spec_evidence": "manual: /regspec/all/intel/cl_intel_dx9_media_sharing.txt — clGetDeviceIDsFromDX9INTEL returns CL_SUCCESS if the function is executed [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/intel/cl_intel_dx9_media_sharing.txt \u2014 clGetDeviceIDsFromDX9INTEL returns CL_SUCCESS if the function is executed [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_D3D9_DEVICE_INTEL": {
   "groups": [
    "cl_dx9_device_source_intel"
   ],
-  "spec_evidence": "manual: /regspec/all/intel/cl_intel_dx9_media_sharing.txt — clGetDeviceIDsFromDX9INTEL returns CL_SUCCESS if the function is executed [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/intel/cl_intel_dx9_media_sharing.txt \u2014 clGetDeviceIDsFromDX9INTEL returns CL_SUCCESS if the function is executed [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_DBL_DIG": {
   "groups": [
@@ -330,55 +342,55 @@
   "groups": [
    "cl_device_info"
   ],
-  "spec_evidence": "manual: /regspec/all/ext/cl_ext_device_fission.txt — clGetDeviceInfo: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/ext/cl_ext_device_fission.txt \u2014 clGetDeviceInfo: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_DEVICE_AVAILABLE_ASYNC_QUEUES_AMD": {
   "groups": [
    "cl_device_info"
   ],
-  "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the number of available async queues: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt \u2014 Return the number of available async queues: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_DEVICE_AVC_ME_SUPPORTS_PREEMPTION_INTEL": {
   "groups": [
    "cl_device_info"
   ],
-  "spec_evidence": "manual: /regspec/all/intel/cl_intel_device_side_avc_motion_estimation.txt — Accepted as arguments to clGetDeviceInfo [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/intel/cl_intel_device_side_avc_motion_estimation.txt \u2014 Accepted as arguments to clGetDeviceInfo [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_DEVICE_AVC_ME_SUPPORTS_TEXTURE_SAMPLER_USE_INTEL": {
   "groups": [
    "cl_device_info"
   ],
-  "spec_evidence": "manual: /regspec/all/intel/cl_intel_device_side_avc_motion_estimation.txt — Accepted as arguments to clGetDeviceInfo [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/intel/cl_intel_device_side_avc_motion_estimation.txt \u2014 Accepted as arguments to clGetDeviceInfo [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_DEVICE_AVC_ME_VERSION_INTEL": {
   "groups": [
    "cl_device_info"
   ],
-  "spec_evidence": "manual: /regspec/all/intel/cl_intel_device_side_avc_motion_estimation.txt — Accepted as arguments to clGetDeviceInfo [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/intel/cl_intel_device_side_avc_motion_estimation.txt \u2014 Accepted as arguments to clGetDeviceInfo [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_DEVICE_BOARD_NAME_AMD": {
   "groups": [
    "cl_device_info"
   ],
-  "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the SKU board name for the device: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt \u2014 Return the SKU board name for the device: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_DEVICE_COMPUTE_CAPABILITY_MAJOR_NV": {
   "groups": [
    "cl_device_info"
   ],
-  "spec_evidence": "manual: nv/cl_nv_device_attribute_query.txt — table 4.3 extension: 'Returns the major revision number that defines the CUDA compute capability' [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: nv/cl_nv_device_attribute_query.txt \u2014 table 4.3 extension: 'Returns the major revision number that defines the CUDA compute capability' [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_DEVICE_COMPUTE_CAPABILITY_MINOR_NV": {
   "groups": [
    "cl_device_info"
   ],
-  "spec_evidence": "manual: nv/cl_nv_device_attribute_query.txt — same table: 'Returns the minor revision number' [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: nv/cl_nv_device_attribute_query.txt \u2014 same table: 'Returns the minor revision number' [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_DEVICE_COMPUTE_UNITS_BITFIELD_ARM": {
   "groups": [
    "cl_device_info"
   ],
-  "spec_evidence": "manual: /regspec/all/arm/cl_arm_core_id.txt — New Procedures and Functions [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/arm/cl_arm_core_id.txt \u2014 New Procedures and Functions [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_DEVICE_CONTROLLED_TERMINATION_CAPABILITIES_ARM": {
   "groups": [
@@ -390,49 +402,49 @@
   "groups": [
    "cl_device_info"
   ],
-  "spec_evidence": "manual: /regspec/all/qcom/cl_qcom_ext_host_ptr.txt — Add the following token to Table 4.3 (clGetDeviceInfo OpenCL Device [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/qcom/cl_qcom_ext_host_ptr.txt \u2014 Add the following token to Table 4.3 (clGetDeviceInfo OpenCL Device [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_DEVICE_GFXIP_MAJOR_AMD": {
   "groups": [
    "cl_device_info"
   ],
-  "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the core engine GFXIP major version: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt \u2014 Return the core engine GFXIP major version: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_DEVICE_GFXIP_MINOR_AMD": {
   "groups": [
    "cl_device_info"
   ],
-  "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the core engine GFXIP minor version: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt \u2014 Return the core engine GFXIP minor version: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_DEVICE_GLOBAL_FREE_MEMORY_AMD": {
   "groups": [
    "cl_device_info"
   ],
-  "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the global free memory in KBytes for the device: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt \u2014 Return the global free memory in KBytes for the device: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_DEVICE_GLOBAL_MEM_CHANNELS_AMD": {
   "groups": [
    "cl_device_info"
   ],
-  "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the number of global memory channels: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt \u2014 Return the number of global memory channels: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_DEVICE_GLOBAL_MEM_CHANNEL_BANKS_AMD": {
   "groups": [
    "cl_device_info"
   ],
-  "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the number of banks in each global memory channel: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt \u2014 Return the number of banks in each global memory channel: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_DEVICE_GLOBAL_MEM_CHANNEL_BANK_WIDTH_AMD": {
   "groups": [
    "cl_device_info"
   ],
-  "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the width in bytes of each of global memory bank: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt \u2014 Return the width in bytes of each of global memory bank: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_DEVICE_GPU_OVERLAP_NV": {
   "groups": [
    "cl_device_info"
   ],
-  "spec_evidence": "manual: nv/cl_nv_device_attribute_query.txt — 'Returns CL_TRUE if the device can concurrently copy memory' [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: nv/cl_nv_device_attribute_query.txt \u2014 'Returns CL_TRUE if the device can concurrently copy memory' [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_DEVICE_IMAGE_BASE_ADDRESS_ALIGNMENT_KHR": {
   "groups": [
@@ -462,31 +474,31 @@
   "groups": [
    "cl_device_info"
   ],
-  "spec_evidence": "manual: nv/cl_nv_device_attribute_query.txt — 'CL_TRUE if the device is integrated with the memory' [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: nv/cl_nv_device_attribute_query.txt \u2014 'CL_TRUE if the device is integrated with the memory' [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_DEVICE_JOB_SLOTS_ARM": {
   "groups": [
    "cl_device_info"
   ],
-  "spec_evidence": "manual: /regspec/all/arm/cl_arm_job_slot_selection.txt — New Procedures and Functions [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/arm/cl_arm_job_slot_selection.txt \u2014 New Procedures and Functions [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_DEVICE_KERNEL_EXEC_TIMEOUT_NV": {
   "groups": [
    "cl_device_info"
   ],
-  "spec_evidence": "manual: nv/cl_nv_device_attribute_query.txt — 'CL_TRUE if there is a run time limit for kernels executed on the device' [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: nv/cl_nv_device_attribute_query.txt \u2014 'CL_TRUE if there is a run time limit for kernels executed on the device' [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_DEVICE_LOCAL_MEM_BANKS_AMD": {
   "groups": [
    "cl_device_info"
   ],
-  "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the number of banks of local memory: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt \u2014 Return the number of banks of local memory: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_DEVICE_LOCAL_MEM_SIZE_PER_COMPUTE_UNIT_AMD": {
   "groups": [
    "cl_device_info"
   ],
-  "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the local memory size in bytes per CU: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt \u2014 Return the local memory size in bytes per CU: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_DEVICE_MAX_HOST_READ_PIPES_INTEL": {
   "groups": [
@@ -510,7 +522,7 @@
   "groups": [
    "cl_device_info"
   ],
-  "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the extended maximum work group size [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt \u2014 Return the extended maximum work group size [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_DEVICE_MEMORY_CAPABILITIES_IMG": {
   "groups": [
@@ -522,25 +534,25 @@
   "groups": [
    "cl_device_info"
   ],
-  "spec_evidence": "manual: /regspec/all/intel/cl_intel_advanced_motion_estimation.txt — Modify the description of function clGetDeviceInfo [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/intel/cl_intel_advanced_motion_estimation.txt \u2014 Modify the description of function clGetDeviceInfo [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_DEVICE_NUM_SIMULTANEOUS_INTEROPS_INTEL": {
   "groups": [
    "cl_device_info"
   ],
-  "spec_evidence": "manual: /regspec/all/intel/cl_intel_simultaneous_sharing.txt — RESOLVED: Added description of all changes explicitly. [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/intel/cl_intel_simultaneous_sharing.txt \u2014 RESOLVED: Added description of all changes explicitly. [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_DEVICE_PAGE_SIZE_QCOM": {
   "groups": [
    "cl_device_info"
   ],
-  "spec_evidence": "manual: /regspec/all/qcom/cl_qcom_ext_host_ptr.txt — Add the following token to Table 4.3 (clGetDeviceInfo OpenCL Device [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/qcom/cl_qcom_ext_host_ptr.txt \u2014 Add the following token to Table 4.3 (clGetDeviceInfo OpenCL Device [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_DEVICE_PARENT_DEVICE_EXT": {
   "groups": [
    "cl_device_info"
   ],
-  "spec_evidence": "manual: /regspec/all/ext/cl_ext_device_fission.txt — clGetDeviceInfo: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/ext/cl_ext_device_fission.txt \u2014 clGetDeviceInfo: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_DEVICE_PARTITION_BY_AFFINITY_DOMAIN_EXT": {
   "groups": [
@@ -582,49 +594,49 @@
   "groups": [
    "cl_device_info"
   ],
-  "spec_evidence": "manual: /regspec/all/ext/cl_ext_device_fission.txt — clGetDeviceInfo: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/ext/cl_ext_device_fission.txt \u2014 clGetDeviceInfo: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_DEVICE_PARTITION_TYPES_EXT": {
   "groups": [
    "cl_device_info"
   ],
-  "spec_evidence": "manual: ext/cl_ext_device_fission.txt L382 — 'CL_DEVICE_PARTITION_TYPES_EXT - a selector to get a list of supported partition styles' (clGetDeviceInfo) [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: ext/cl_ext_device_fission.txt L382 \u2014 'CL_DEVICE_PARTITION_TYPES_EXT - a selector to get a list of supported partition styles' (clGetDeviceInfo) [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_DEVICE_PCIE_ID_AMD": {
   "groups": [
    "cl_device_info"
   ],
-  "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the device PCIe ID [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt \u2014 Return the device PCIe ID [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_DEVICE_PREFERRED_CONSTANT_BUFFER_SIZE_AMD": {
   "groups": [
    "cl_device_info"
   ],
-  "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the preferred constant buffer size [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt \u2014 Return the preferred constant buffer size [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_DEVICE_PREFERRED_WORK_GROUP_SIZE_AMD": {
   "groups": [
    "cl_device_info"
   ],
-  "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the preferred work group size: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt \u2014 Return the preferred work group size: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_DEVICE_PROFILING_TIMER_OFFSET_AMD": {
   "groups": [
    "cl_device_info"
   ],
-  "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the offset in nano-seconds between an event timestamp and Epoch: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt \u2014 Return the offset in nano-seconds between an event timestamp and Epoch: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_DEVICE_REFERENCE_COUNT_EXT": {
   "groups": [
    "cl_device_info"
   ],
-  "spec_evidence": "manual: /regspec/all/ext/cl_ext_device_fission.txt — If no partition style is supported then the size of the returned [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/ext/cl_ext_device_fission.txt \u2014 If no partition style is supported then the size of the returned [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_DEVICE_REGISTERS_PER_BLOCK_NV": {
   "groups": [
    "cl_device_info"
   ],
-  "spec_evidence": "manual: nv/cl_nv_device_attribute_query.txt — 'Maximum number of 32-bit registers available to a thread' [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: nv/cl_nv_device_attribute_query.txt \u2014 'Maximum number of 32-bit registers available to a thread' [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_DEVICE_SAFETY_MEM_SIZE_IMG": {
   "groups": [
@@ -648,25 +660,25 @@
   "groups": [
    "cl_device_info"
   ],
-  "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the number of instructions that a SIMD can execute in parallel: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt \u2014 Return the number of instructions that a SIMD can execute in parallel: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_DEVICE_SIMD_PER_COMPUTE_UNIT_AMD": {
   "groups": [
    "cl_device_info"
   ],
-  "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return number of SIMD (Single Instruction Multiple Data) units per compute [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt \u2014 Return number of SIMD (Single Instruction Multiple Data) units per compute [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_DEVICE_SIMD_WIDTH_AMD": {
   "groups": [
    "cl_device_info"
   ],
-  "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the maximum number of work items from the same work group that can [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt \u2014 Return the maximum number of work items from the same work group that can [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_DEVICE_SIMULTANEOUS_INTEROPS_INTEL": {
   "groups": [
    "cl_device_info"
   ],
-  "spec_evidence": "manual: /regspec/all/intel/cl_intel_simultaneous_sharing.txt — of clGetDeviceInfo: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/intel/cl_intel_simultaneous_sharing.txt \u2014 of clGetDeviceInfo: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_DEVICE_SUB_GROUP_SIZES_INTEL": {
   "groups": [
@@ -684,7 +696,7 @@
   "groups": [
    "cl_device_info"
   ],
-  "spec_evidence": "manual: /regspec/all/arm/cl_arm_shared_virtual_memory.txt — Flag values returned by clGetDeviceInfo with [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/arm/cl_arm_shared_virtual_memory.txt \u2014 Flag values returned by clGetDeviceInfo with [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_DEVICE_SVM_TYPE_CAPABILITIES_KHR": {
   "groups": [
@@ -696,25 +708,25 @@
   "groups": [
    "cl_device_info"
   ],
-  "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return 1 if thread trace is supported, 0 otherwise: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt \u2014 Return 1 if thread trace is supported, 0 otherwise: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_DEVICE_TOPOLOGY_AMD": {
   "groups": [
    "cl_device_info"
   ],
-  "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the topology for the device: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt \u2014 Return the topology for the device: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_DEVICE_WARP_SIZE_NV": {
   "groups": [
    "cl_device_info"
   ],
-  "spec_evidence": "manual: nv/cl_nv_device_attribute_query.txt — 'Warp size in work-items' [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: nv/cl_nv_device_attribute_query.txt \u2014 'Warp size in work-items' [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_DEVICE_WAVEFRONT_WIDTH_AMD": {
   "groups": [
    "cl_device_info"
   ],
-  "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the number of workitems per wavefront: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt \u2014 Return the number of workitems per wavefront: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_DEVICE_WORKGROUP_PROTECTION_DEVICE_ENQUEUE_CAPABILITIES_IMG": {
   "groups": [
@@ -732,7 +744,7 @@
   "groups": [
    "cl_dx9_device_source_intel"
   ],
-  "spec_evidence": "manual: /regspec/all/intel/cl_intel_dx9_media_sharing.txt — clGetDeviceIDsFromDX9INTEL returns CL_SUCCESS if the function is executed [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/intel/cl_intel_dx9_media_sharing.txt \u2014 clGetDeviceIDsFromDX9INTEL returns CL_SUCCESS if the function is executed [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_ECC_RECOVERED_IMG": {
   "groups": [
@@ -745,7 +757,7 @@
    "cl_image_info",
    "cl_egl_image_properties_khr"
   ],
-  "spec_evidence": "cl_intel_egl_image_yuv: 'as <param_name> of clGetImageInfo' + clCreateFromEGLImageKHR <properties> property — dual role (2026-10-08)"
+  "spec_evidence": "cl_intel_egl_image_yuv: 'as <param_name> of clGetImageInfo' + clCreateFromEGLImageKHR <properties> property \u2014 dual role (2026-10-08)"
  },
  "CL_EVENT_COMMAND_TERMINATION_REASON_ARM": {
   "groups": [
@@ -895,43 +907,43 @@
   "groups": [
    "cl_image_info"
   ],
-  "spec_evidence": "manual: /regspec/all/intel/cl_intel_dx9_media_sharing.txt — using clGetMemObjectInfo and clGetImageInfo with <param_name> [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/intel/cl_intel_dx9_media_sharing.txt \u2014 using clGetMemObjectInfo and clGetImageInfo with <param_name> [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_IMAGE_ROW_ALIGNMENT_QCOM": {
   "groups": [
    "cl_image_pitch_info_qcom"
   ],
-  "spec_evidence": "manual: /regspec/all/qcom/cl_qcom_ext_host_ptr.txt — Accepted by the <param_name> argument of clGetDeviceImageInfoQCOM [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/qcom/cl_qcom_ext_host_ptr.txt \u2014 Accepted by the <param_name> argument of clGetDeviceImageInfoQCOM [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_IMAGE_SLICE_ALIGNMENT_QCOM": {
   "groups": [
    "cl_image_pitch_info_qcom"
   ],
-  "spec_evidence": "manual: /regspec/all/qcom/cl_qcom_ext_host_ptr.txt — Accepted by the <param_name> argument of clGetDeviceImageInfoQCOM [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/qcom/cl_qcom_ext_host_ptr.txt \u2014 Accepted by the <param_name> argument of clGetDeviceImageInfoQCOM [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_IMAGE_VA_API_PLANE_INTEL": {
   "groups": [
    "cl_image_info"
   ],
-  "spec_evidence": "manual: /regspec/all/intel/cl_intel_va_api_media_sharing.txt — \"* CL_INVALID_VA_API_MEDIA_SURFACE_INTEL if <param_name> is [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/intel/cl_intel_va_api_media_sharing.txt \u2014 \"* CL_INVALID_VA_API_MEDIA_SURFACE_INTEL if <param_name> is [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_IMPORT_ANDROID_HARDWARE_BUFFER_LAYER_INDEX_ARM": {
   "groups": [
    "cl_import_properties_arm"
   ],
-  "spec_evidence": "manual: /regspec/all/arm/cl_arm_import_memory.txt — Valid values for CL_IMPORT_ANDROID_HARDWARE_BUFFER_PLANE_INDEX_ARM and [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/arm/cl_arm_import_memory.txt \u2014 Valid values for CL_IMPORT_ANDROID_HARDWARE_BUFFER_PLANE_INDEX_ARM and [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_IMPORT_ANDROID_HARDWARE_BUFFER_PLANE_INDEX_ARM": {
   "groups": [
    "cl_import_properties_arm"
   ],
-  "spec_evidence": "manual: /regspec/all/arm/cl_arm_import_memory.txt — Multiplanar buffers are only supported when backed by a single dma_buf. [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/arm/cl_arm_import_memory.txt \u2014 Multiplanar buffers are only supported when backed by a single dma_buf. [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_IMPORT_DMA_BUF_DATA_CONSISTENCY_WITH_HOST_ARM": {
   "groups": [
    "cl_import_properties_arm"
   ],
-  "spec_evidence": "manual: arm/cl_arm_import_memory.txt — listed in 'Valid <properties> are:' [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: arm/cl_arm_import_memory.txt \u2014 listed in 'Valid <properties> are:' [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_IMPORT_MEMORY_WHOLE_ALLOCATION_ARM": {
   "groups": [
@@ -943,13 +955,13 @@
   "groups": [
    "cl_import_properties_arm"
   ],
-  "spec_evidence": "manual: /regspec/all/arm/cl_arm_import_memory.txt — New Tokens [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/arm/cl_arm_import_memory.txt \u2014 New Tokens [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_IMPORT_TYPE_ARM": {
   "groups": [
    "cl_import_properties_arm"
   ],
-  "spec_evidence": "manual: arm/cl_arm_import_memory.txt — listed in 'Valid <properties> are:' [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: arm/cl_arm_import_memory.txt \u2014 listed in 'Valid <properties> are:' [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_IMPORT_TYPE_DMA_BUF_ARM": {
   "groups": [
@@ -967,7 +979,7 @@
   "groups": [
    "cl_import_properties_arm"
   ],
-  "spec_evidence": "manual: arm/cl_arm_import_memory.txt — listed in 'Valid <properties> are:' [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: arm/cl_arm_import_memory.txt \u2014 listed in 'Valid <properties> are:' [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_INFINITY": {
   "groups": [
@@ -997,7 +1009,7 @@
   "groups": [
    "cl_kernel_arg_info"
   ],
-  "spec_evidence": "PENDING (2026-10-08): Brice — 'Maybe more of an answer to kernel arg type query'; will confirm with Intel colleague 2026-10-09. Current value cl_kernel_arg_info is provisional (his first guess), NOT settled. Allocated #144 2019, no spec chapter, no require block."
+  "spec_evidence": "PENDING (2026-10-08): Brice \u2014 'Maybe more of an answer to kernel arg type query'; will confirm with Intel colleague 2026-10-09. Current value cl_kernel_arg_info is provisional (his first guess), NOT settled. Allocated #144 2019, no spec chapter, no require block."
  },
  "CL_KERNEL_COMPILE_SUB_GROUP_SIZE_INTEL": {
   "groups": [
@@ -1027,7 +1039,7 @@
   "groups": [
    "cl_kernel_exec_info_arm"
   ],
-  "spec_evidence": "manual: /regspec/all/arm/cl_arm_shared_virtual_memory.txt — To be used by clSetKernelExecInfoARM: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/arm/cl_arm_shared_virtual_memory.txt \u2014 To be used by clSetKernelExecInfoARM: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_KERNEL_EXEC_INFO_SVM_INDIRECT_ACCESS_KHR": {
   "groups": [
@@ -1045,7 +1057,7 @@
   "groups": [
    "cl_kernel_exec_info_arm"
   ],
-  "spec_evidence": "manual: /regspec/all/arm/cl_arm_shared_virtual_memory.txt — To be used by clSetKernelExecInfoARM: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/arm/cl_arm_shared_virtual_memory.txt \u2014 To be used by clSetKernelExecInfoARM: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_KERNEL_EXEC_INFO_WARP_COUNT_LIMIT_ARM": {
   "groups": [
@@ -1125,6 +1137,12 @@
   ],
   "spec_evidence": "cl_img_mem_properties: property NAME (valid 'properties' entry for clCreateBufferWithProperties); value-set = cl_mem_alloc_flags_img. Upstream require=cl_mem_properties; matches CL_MEM_DEVICE_ID_INTEL precedent (corrected 2026-10-08)"
  },
+ "CL_MEM_ANDROID_NATIVE_BUFFER_HOST_PTR_QCOM": {
+  "groups": [
+   "cl_mem_ext_host_ptr"
+  ],
+  "spec_evidence": "manual: KhronosGroup/OpenCL-Registry extensions/cl_qcom_android_native_buffer_host_ptr.txt \u2014 code example 'myANBmem.ext_host_ptr.allocation_type = CL_MEM_ANDROID_NATIVE_BUFFER_HOST_PTR_QCOM'; member of cl_mem_ext_host_ptr (cl.xml struct line 282)."
+ },
  "CL_MEM_CHANNEL_INTEL": {
   "groups": [
    "cl_mem_properties_intel"
@@ -1153,13 +1171,49 @@
   "groups": [
    "cl_mem_info"
   ],
-  "spec_evidence": "manual: /regspec/all/intel/cl_intel_dx9_media_sharing.txt — DirectX 9 resource using clCreateFromDX9MediaSurfaceIntel.\" [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/intel/cl_intel_dx9_media_sharing.txt \u2014 DirectX 9 resource using clCreateFromDX9MediaSurfaceIntel.\" [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_MEM_DX9_SHARED_HANDLE_INTEL": {
   "groups": [
    "cl_mem_info"
   ],
-  "spec_evidence": "manual: /regspec/all/intel/cl_intel_dx9_media_sharing.txt — clCreateFromDX9MediaSurfaceINTEL, [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/intel/cl_intel_dx9_media_sharing.txt \u2014 clCreateFromDX9MediaSurfaceINTEL, [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
+ "CL_MEM_HOST_IOCOHERENT_QCOM": {
+  "groups": [
+   "cl_mem_ext_host_ptr"
+  ],
+  "spec_evidence": "manual: KhronosGroup/OpenCL-Registry extensions/cl_qcom_ext_host_ptr.txt \u2014 cl.xml struct <type name=\"cl_mem_ext_host_ptr\"> (line 282) fields allocation_type + host_cache_policy; spec: 'Accepted values for cl_mem_ext_host_ptr::host_cache_policy'. Struct-name-as-group precedent in this file: CL_IMPORT_MEMORY_WHOLE_ALLOCATION_ARM -> cl_import_properties_arm (verified 2026-10-08)."
+ },
+ "CL_MEM_HOST_UNCACHED_QCOM": {
+  "groups": [
+   "cl_mem_ext_host_ptr"
+  ],
+  "spec_evidence": "manual: KhronosGroup/OpenCL-Registry extensions/cl_qcom_ext_host_ptr.txt \u2014 cl.xml struct <type name=\"cl_mem_ext_host_ptr\"> (line 282) fields allocation_type + host_cache_policy; spec: 'Accepted values for cl_mem_ext_host_ptr::host_cache_policy'. Struct-name-as-group precedent in this file: CL_IMPORT_MEMORY_WHOLE_ALLOCATION_ARM -> cl_import_properties_arm (verified 2026-10-08)."
+ },
+ "CL_MEM_HOST_WRITEBACK_QCOM": {
+  "groups": [
+   "cl_mem_ext_host_ptr"
+  ],
+  "spec_evidence": "manual: KhronosGroup/OpenCL-Registry extensions/cl_qcom_ext_host_ptr.txt \u2014 cl.xml struct <type name=\"cl_mem_ext_host_ptr\"> (line 282) fields allocation_type + host_cache_policy; spec: 'Accepted values for cl_mem_ext_host_ptr::host_cache_policy'. Struct-name-as-group precedent in this file: CL_IMPORT_MEMORY_WHOLE_ALLOCATION_ARM -> cl_import_properties_arm (verified 2026-10-08)."
+ },
+ "CL_MEM_HOST_WRITETHROUGH_QCOM": {
+  "groups": [
+   "cl_mem_ext_host_ptr"
+  ],
+  "spec_evidence": "manual: KhronosGroup/OpenCL-Registry extensions/cl_qcom_ext_host_ptr.txt \u2014 cl.xml struct <type name=\"cl_mem_ext_host_ptr\"> (line 282) fields allocation_type + host_cache_policy; spec: 'Accepted values for cl_mem_ext_host_ptr::host_cache_policy'. Struct-name-as-group precedent in this file: CL_IMPORT_MEMORY_WHOLE_ALLOCATION_ARM -> cl_import_properties_arm (verified 2026-10-08)."
+ },
+ "CL_MEM_HOST_WRITE_COMBINING_QCOM": {
+  "groups": [
+   "cl_mem_ext_host_ptr"
+  ],
+  "spec_evidence": "manual: KhronosGroup/OpenCL-Registry extensions/cl_qcom_ext_host_ptr.txt \u2014 cl.xml struct <type name=\"cl_mem_ext_host_ptr\"> (line 282) fields allocation_type + host_cache_policy; spec: 'Accepted values for cl_mem_ext_host_ptr::host_cache_policy'. Struct-name-as-group precedent in this file: CL_IMPORT_MEMORY_WHOLE_ALLOCATION_ARM -> cl_import_properties_arm (verified 2026-10-08)."
+ },
+ "CL_MEM_ION_HOST_PTR_QCOM": {
+  "groups": [
+   "cl_mem_ext_host_ptr"
+  ],
+  "spec_evidence": "manual: KhronosGroup/OpenCL-Registry extensions/cl_qcom_ion_host_ptr.txt \u2014 CL_MEM_ION_HOST_PTR_QCOM is the allocation_type value of cl_mem_ext_host_ptr (cl.xml struct line 289); same host_ptr-struct family as cl_qcom_ext_host_ptr."
  },
  "CL_MEM_LOCALLY_UNCACHED_RESOURCE_INTEL": {
   "groups": [
@@ -1225,7 +1279,7 @@
   "groups": [
    "cl_mem_info"
   ],
-  "spec_evidence": "manual: /regspec/all/intel/cl_intel_va_api_media_sharing.txt — using clGetMemObjectInfo and clGetImageInfo with <param_name> [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/intel/cl_intel_va_api_media_sharing.txt \u2014 using clGetMemObjectInfo and clGetImageInfo with <param_name> [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_M_1_PI": {
   "groups": [
@@ -1441,13 +1495,13 @@
   "groups": [
    "cl_dx9_device_set_intel"
   ],
-  "spec_evidence": "manual: /regspec/all/intel/cl_intel_dx9_media_sharing.txt — OpenCL devices are being queried by clGetDeviceIDsFromDX9INTEL. [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/intel/cl_intel_dx9_media_sharing.txt \u2014 OpenCL devices are being queried by clGetDeviceIDsFromDX9INTEL. [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_PREFERRED_DEVICES_FOR_VA_API_INTEL": {
   "groups": [
    "cl_va_api_device_set_intel"
   ],
-  "spec_evidence": "manual: /regspec/all/intel/cl_intel_va_api_media_sharing.txt — parameter of clGetDeviceIDsFromVA_APIMediaAdapterINTEL: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/intel/cl_intel_va_api_media_sharing.txt \u2014 parameter of clGetDeviceIDsFromVA_APIMediaAdapterINTEL: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_PRINTF_BUFFERSIZE_ARM": {
   "groups": [
@@ -1471,13 +1525,19 @@
   "groups": [
    "cl_program_info"
   ],
-  "spec_evidence": "cl_khr_il_program: program info query (sibling CL_PROGRAM_IL 0x1169 is cl_program_info; same reserved range 'Reserved for cl_program_info') — corrected from cl_platform_info 2026-10-08"
+  "spec_evidence": "cl_khr_il_program: program info query (sibling CL_PROGRAM_IL 0x1169 is cl_program_info; same reserved range 'Reserved for cl_program_info') \u2014 corrected from cl_platform_info 2026-10-08"
  },
  "CL_PROGRAM_NUM_HOST_PIPES_INTEL": {
   "groups": [
    "cl_program_info"
   ],
   "spec_evidence": "manual: cl_intel_program_scope_host_pipe param_name of clGetProgramInfo"
+ },
+ "CL_PROPERTIES_LIST_END_EXT": {
+  "groups": [
+   "cl_device_partition_property"
+  ],
+  "spec_evidence": "manual: cl.xml MiscNumbers container (line 827) \u2014 identical value ((cl_device_partition_property)0) as CL_PARTITION_BY_COUNTS_LIST_END_EXT and CL_DEVICE_PARTITION_BY_COUNTS_LIST_END, both grouped cl_device_partition_property; core spec: CL_DEVICE_PARTITION_BY_COUNTS_LIST_END (0) terminates device_partition_property lists (cl_ext_device_fission)."
  },
  "CL_QUEUED": {
   "groups": [
@@ -1490,14 +1550,14 @@
    "cl_queue_properties",
    "cl_queue_properties_khr"
   ],
-  "spec_evidence": "cl_arm_scheduling_controls (spec in repo, extensions/cl_arm_scheduling_controls.asciidoc L79): 'Accepted value for the _properties_ parameter to clCreateCommandQueueWithProperties' — queue creation properties table (type cl_bool/cl_uint), NOT in any clGetCommandQueueInfo query table. Owner uniformity Brice 2026-10-08: same carrier as PRIORITY/THROTTLE (cl_queue_properties,cl_queue_properties_khr)."
+  "spec_evidence": "cl_arm_scheduling_controls (spec in repo, extensions/cl_arm_scheduling_controls.asciidoc L79): 'Accepted value for the _properties_ parameter to clCreateCommandQueueWithProperties' \u2014 queue creation properties table (type cl_bool/cl_uint), NOT in any clGetCommandQueueInfo query table. Owner uniformity Brice 2026-10-08: same carrier as PRIORITY/THROTTLE (cl_queue_properties,cl_queue_properties_khr)."
  },
  "CL_QUEUE_DEFERRED_FLUSH_ARM": {
   "groups": [
    "cl_queue_properties",
    "cl_queue_properties_khr"
   ],
-  "spec_evidence": "cl_arm_scheduling_controls (spec in repo, extensions/cl_arm_scheduling_controls.asciidoc L79): 'Accepted value for the _properties_ parameter to clCreateCommandQueueWithProperties' — queue creation properties table (type cl_bool/cl_uint), NOT in any clGetCommandQueueInfo query table. Owner uniformity Brice 2026-10-08: same carrier as PRIORITY/THROTTLE (cl_queue_properties,cl_queue_properties_khr)."
+  "spec_evidence": "cl_arm_scheduling_controls (spec in repo, extensions/cl_arm_scheduling_controls.asciidoc L79): 'Accepted value for the _properties_ parameter to clCreateCommandQueueWithProperties' \u2014 queue creation properties table (type cl_bool/cl_uint), NOT in any clGetCommandQueueInfo query table. Owner uniformity Brice 2026-10-08: same carrier as PRIORITY/THROTTLE (cl_queue_properties,cl_queue_properties_khr)."
  },
  "CL_QUEUE_FAMILY_INTEL": {
   "groups": [
@@ -1505,7 +1565,7 @@
    "cl_queue_properties",
    "cl_queue_properties_khr"
   ],
-  "spec_evidence": "cl_intel_command_queue_families: Table 8 (clCreateCommandQueueWithProperties creation properties) + Table 9 (Add to clGetCommandQueueInfo param_names) — dual role. Owner expectation Brice 2026-10-08: same 3-entry pattern as SIZE/PROPERTIES (info + cl_queue_properties + cl_queue_properties_khr)."
+  "spec_evidence": "cl_intel_command_queue_families: Table 8 (clCreateCommandQueueWithProperties creation properties) + Table 9 (Add to clGetCommandQueueInfo param_names) \u2014 dual role. Owner expectation Brice 2026-10-08: same 3-entry pattern as SIZE/PROPERTIES (info + cl_queue_properties + cl_queue_properties_khr)."
  },
  "CL_QUEUE_INDEX_INTEL": {
   "groups": [
@@ -1513,7 +1573,7 @@
    "cl_queue_properties",
    "cl_queue_properties_khr"
   ],
-  "spec_evidence": "cl_intel_command_queue_families: Table 8 (clCreateCommandQueueWithProperties creation properties) + Table 9 (Add to clGetCommandQueueInfo param_names) — dual role. Owner expectation Brice 2026-10-08: same 3-entry pattern as SIZE/PROPERTIES (info + cl_queue_properties + cl_queue_properties_khr)."
+  "spec_evidence": "cl_intel_command_queue_families: Table 8 (clCreateCommandQueueWithProperties creation properties) + Table 9 (Add to clGetCommandQueueInfo param_names) \u2014 dual role. Owner expectation Brice 2026-10-08: same 3-entry pattern as SIZE/PROPERTIES (info + cl_queue_properties + cl_queue_properties_khr)."
  },
  "CL_QUEUE_JOB_SLOT_ARM": {
   "groups": [
@@ -1527,14 +1587,14 @@
    "cl_queue_properties",
    "cl_queue_properties_khr"
   ],
-  "spec_evidence": "cl_arm_scheduling_controls (spec in repo, extensions/cl_arm_scheduling_controls.asciidoc L79): 'Accepted value for the _properties_ parameter to clCreateCommandQueueWithProperties' — queue creation properties table (type cl_bool/cl_uint), NOT in any clGetCommandQueueInfo query table. Owner uniformity Brice 2026-10-08: same carrier as PRIORITY/THROTTLE (cl_queue_properties,cl_queue_properties_khr)."
+  "spec_evidence": "cl_arm_scheduling_controls (spec in repo, extensions/cl_arm_scheduling_controls.asciidoc L79): 'Accepted value for the _properties_ parameter to clCreateCommandQueueWithProperties' \u2014 queue creation properties table (type cl_bool/cl_uint), NOT in any clGetCommandQueueInfo query table. Owner uniformity Brice 2026-10-08: same carrier as PRIORITY/THROTTLE (cl_queue_properties,cl_queue_properties_khr)."
  },
  "CL_QUEUE_PRIORITY_KHR": {
   "groups": [
    "cl_queue_properties",
    "cl_queue_properties_khr"
   ],
-  "spec_evidence": "OpenCL 3.0 spec, api/opencl_runtime_layer.asciidoc: queue-properties-table (clCreateCommandQueueWithProperties) lists CL_QUEUE_PRIORITY_KHR (property value type cl_queue_priority_khr) and CL_QUEUE_THROTTLE_KHR (cl_queue_throttle_khr) — 2.0 property-list entries of cl_queue_properties, NOT members of the 1.2 cl_command_queue_properties bitfield (members: OUT_OF_ORDER/PROFILING/ON_DEVICE/ON_DEVICE_DEFAULT). Upstream require comment: cl_queue_properties. Owner adjudication Brice 2026-10-08."
+  "spec_evidence": "OpenCL 3.0 spec, api/opencl_runtime_layer.asciidoc: queue-properties-table (clCreateCommandQueueWithProperties) lists CL_QUEUE_PRIORITY_KHR (property value type cl_queue_priority_khr) and CL_QUEUE_THROTTLE_KHR (cl_queue_throttle_khr) \u2014 2.0 property-list entries of cl_queue_properties, NOT members of the 1.2 cl_command_queue_properties bitfield (members: OUT_OF_ORDER/PROFILING/ON_DEVICE/ON_DEVICE_DEFAULT). Upstream require comment: cl_queue_properties. Owner adjudication Brice 2026-10-08."
  },
  "CL_QUEUE_PROPERTIES": {
   "groups": [
@@ -1542,7 +1602,7 @@
    "cl_queue_properties",
    "cl_queue_properties_khr"
   ],
-  "spec_evidence": "OpenCL 3.0 spec, api/opencl_runtime_layer.asciidoc: CL_QUEUE_PROPERTIES and CL_QUEUE_SIZE appear in BOTH the queue-properties-table (creation property names of clCreateCommandQueueWithProperties) AND the clGetCommandQueueInfo query table (source note: 'This enum is used for two purposes: as a property and for a query') — dual role. Owner adjudication Brice 2026-10-08."
+  "spec_evidence": "OpenCL 3.0 spec, api/opencl_runtime_layer.asciidoc: CL_QUEUE_PROPERTIES and CL_QUEUE_SIZE appear in BOTH the queue-properties-table (creation property names of clCreateCommandQueueWithProperties) AND the clGetCommandQueueInfo query table (source note: 'This enum is used for two purposes: as a property and for a query') \u2014 dual role. Owner adjudication Brice 2026-10-08."
  },
  "CL_QUEUE_SIZE": {
   "groups": [
@@ -1550,14 +1610,14 @@
    "cl_queue_properties",
    "cl_queue_properties_khr"
   ],
-  "spec_evidence": "OpenCL 3.0 spec, api/opencl_runtime_layer.asciidoc: CL_QUEUE_PROPERTIES and CL_QUEUE_SIZE appear in BOTH the queue-properties-table (creation property names of clCreateCommandQueueWithProperties) AND the clGetCommandQueueInfo query table (source note: 'This enum is used for two purposes: as a property and for a query') — dual role. Owner adjudication Brice 2026-10-08."
+  "spec_evidence": "OpenCL 3.0 spec, api/opencl_runtime_layer.asciidoc: CL_QUEUE_PROPERTIES and CL_QUEUE_SIZE appear in BOTH the queue-properties-table (creation property names of clCreateCommandQueueWithProperties) AND the clGetCommandQueueInfo query table (source note: 'This enum is used for two purposes: as a property and for a query') \u2014 dual role. Owner adjudication Brice 2026-10-08."
  },
  "CL_QUEUE_THROTTLE_KHR": {
   "groups": [
    "cl_queue_properties",
    "cl_queue_properties_khr"
   ],
-  "spec_evidence": "OpenCL 3.0 spec, api/opencl_runtime_layer.asciidoc: queue-properties-table (clCreateCommandQueueWithProperties) lists CL_QUEUE_PRIORITY_KHR (property value type cl_queue_priority_khr) and CL_QUEUE_THROTTLE_KHR (cl_queue_throttle_khr) — 2.0 property-list entries of cl_queue_properties, NOT members of the 1.2 cl_command_queue_properties bitfield (members: OUT_OF_ORDER/PROFILING/ON_DEVICE/ON_DEVICE_DEFAULT). Upstream require comment: cl_queue_properties. Owner adjudication Brice 2026-10-08."
+  "spec_evidence": "OpenCL 3.0 spec, api/opencl_runtime_layer.asciidoc: queue-properties-table (clCreateCommandQueueWithProperties) lists CL_QUEUE_PRIORITY_KHR (property value type cl_queue_priority_khr) and CL_QUEUE_THROTTLE_KHR (cl_queue_throttle_khr) \u2014 2.0 property-list entries of cl_queue_properties, NOT members of the 1.2 cl_command_queue_properties bitfield (members: OUT_OF_ORDER/PROFILING/ON_DEVICE/ON_DEVICE_DEFAULT). Upstream require comment: cl_queue_properties. Owner adjudication Brice 2026-10-08."
  },
  "CL_RGBx": {
   "groups": [
@@ -1755,7 +1815,7 @@
   "groups": [
    "cl_va_api_device_source_intel"
   ],
-  "spec_evidence": "manual: /regspec/all/intel/cl_intel_va_api_media_sharing.txt — clGetDeviceIDsFromVA_APIMediaAdapterINTEL returns CL_SUCCESS if the [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  "spec_evidence": "manual: /regspec/all/intel/cl_intel_va_api_media_sharing.txt \u2014 clGetDeviceIDsFromVA_APIMediaAdapterINTEL returns CL_SUCCESS if the [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
  },
  "CL_VYUY_INTEL": {
   "groups": [

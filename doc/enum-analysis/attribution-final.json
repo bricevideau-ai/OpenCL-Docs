@@ -1461,8 +1461,12 @@
  },
  "CL_COMMAND_ACQUIRE_DX9_OBJECTS_INTEL": {
   "container": "enums.4010",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_command_type"
+  ],
+  "notes": [
+   "manual: KhronosGroup/OpenCL-Registry extensions/cl_intel_dx9_media_sharing.txt \u2014 'Returned in the <param_value> parameter of clGetEventInfo when <param_name> is CL_EVENT_COMMAND_TYPE' + 'Add to Table 5.15 ... for cl_event_info CL_EVENT_COMMAND_TYPE'. Sibling precedent in this file: CL_COMMAND_ACQUIRE_DX9_MEDIA_SURFACES_KHR -> cl_command_type."
+  ],
   "value": "0x402A"
  },
  "CL_COMMAND_ACQUIRE_EGL_OBJECTS_KHR": {
@@ -2122,8 +2126,12 @@
  },
  "CL_COMMAND_RELEASE_DX9_OBJECTS_INTEL": {
   "container": "enums.4010",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_command_type"
+  ],
+  "notes": [
+   "manual: KhronosGroup/OpenCL-Registry extensions/cl_intel_dx9_media_sharing.txt \u2014 'Returned in the <param_value> parameter of clGetEventInfo when <param_name> is CL_EVENT_COMMAND_TYPE' + 'Add to Table 5.15 ... for cl_event_info CL_EVENT_COMMAND_TYPE'. Sibling precedent in this file: CL_COMMAND_ACQUIRE_DX9_MEDIA_SURFACES_KHR -> cl_command_type."
+  ],
   "value": "0x402B"
  },
  "CL_COMMAND_RELEASE_EGL_OBJECTS_KHR": {
@@ -8992,8 +9000,12 @@
  },
  "CL_MEM_ANDROID_NATIVE_BUFFER_HOST_PTR_QCOM": {
   "container": "enums.40C0",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_mem_ext_host_ptr"
+  ],
+  "notes": [
+   "manual: KhronosGroup/OpenCL-Registry extensions/cl_qcom_android_native_buffer_host_ptr.txt \u2014 code example 'myANBmem.ext_host_ptr.allocation_type = CL_MEM_ANDROID_NATIVE_BUFFER_HOST_PTR_QCOM'; member of cl_mem_ext_host_ptr (cl.xml struct line 282)."
+  ],
   "value": "0x40C6"
  },
  "CL_MEM_ASSOCIATED_MEMOBJECT": {
@@ -9190,8 +9202,12 @@
  },
  "CL_MEM_HOST_IOCOHERENT_QCOM": {
   "container": "enums.40A0",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_mem_ext_host_ptr"
+  ],
+  "notes": [
+   "manual: KhronosGroup/OpenCL-Registry extensions/cl_qcom_ext_host_ptr.txt \u2014 cl.xml struct <type name=\"cl_mem_ext_host_ptr\"> (line 282) fields allocation_type + host_cache_policy; spec: 'Accepted values for cl_mem_ext_host_ptr::host_cache_policy'. Struct-name-as-group precedent in this file: CL_IMPORT_MEMORY_WHOLE_ALLOCATION_ARM -> cl_import_properties_arm (verified 2026-10-08)."
+  ],
   "value": "0x40A9"
  },
  "CL_MEM_HOST_NO_ACCESS": {
@@ -9226,26 +9242,42 @@
  },
  "CL_MEM_HOST_UNCACHED_QCOM": {
   "container": "enums.40A0",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_mem_ext_host_ptr"
+  ],
+  "notes": [
+   "manual: KhronosGroup/OpenCL-Registry extensions/cl_qcom_ext_host_ptr.txt \u2014 cl.xml struct <type name=\"cl_mem_ext_host_ptr\"> (line 282) fields allocation_type + host_cache_policy; spec: 'Accepted values for cl_mem_ext_host_ptr::host_cache_policy'. Struct-name-as-group precedent in this file: CL_IMPORT_MEMORY_WHOLE_ALLOCATION_ARM -> cl_import_properties_arm (verified 2026-10-08)."
+  ],
   "value": "0x40A4"
  },
  "CL_MEM_HOST_WRITEBACK_QCOM": {
   "container": "enums.40A0",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_mem_ext_host_ptr"
+  ],
+  "notes": [
+   "manual: KhronosGroup/OpenCL-Registry extensions/cl_qcom_ext_host_ptr.txt \u2014 cl.xml struct <type name=\"cl_mem_ext_host_ptr\"> (line 282) fields allocation_type + host_cache_policy; spec: 'Accepted values for cl_mem_ext_host_ptr::host_cache_policy'. Struct-name-as-group precedent in this file: CL_IMPORT_MEMORY_WHOLE_ALLOCATION_ARM -> cl_import_properties_arm (verified 2026-10-08)."
+  ],
   "value": "0x40A5"
  },
  "CL_MEM_HOST_WRITETHROUGH_QCOM": {
   "container": "enums.40A0",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_mem_ext_host_ptr"
+  ],
+  "notes": [
+   "manual: KhronosGroup/OpenCL-Registry extensions/cl_qcom_ext_host_ptr.txt \u2014 cl.xml struct <type name=\"cl_mem_ext_host_ptr\"> (line 282) fields allocation_type + host_cache_policy; spec: 'Accepted values for cl_mem_ext_host_ptr::host_cache_policy'. Struct-name-as-group precedent in this file: CL_IMPORT_MEMORY_WHOLE_ALLOCATION_ARM -> cl_import_properties_arm (verified 2026-10-08)."
+  ],
   "value": "0x40A6"
  },
  "CL_MEM_HOST_WRITE_COMBINING_QCOM": {
   "container": "enums.40A0",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_mem_ext_host_ptr"
+  ],
+  "notes": [
+   "manual: KhronosGroup/OpenCL-Registry extensions/cl_qcom_ext_host_ptr.txt \u2014 cl.xml struct <type name=\"cl_mem_ext_host_ptr\"> (line 282) fields allocation_type + host_cache_policy; spec: 'Accepted values for cl_mem_ext_host_ptr::host_cache_policy'. Struct-name-as-group precedent in this file: CL_IMPORT_MEMORY_WHOLE_ALLOCATION_ARM -> cl_import_properties_arm (verified 2026-10-08)."
+  ],
   "value": "0x40A7"
  },
  "CL_MEM_HOST_WRITE_ONLY": {
@@ -9270,8 +9302,12 @@
  },
  "CL_MEM_ION_HOST_PTR_QCOM": {
   "container": "enums.40A0",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_mem_ext_host_ptr"
+  ],
+  "notes": [
+   "manual: KhronosGroup/OpenCL-Registry extensions/cl_qcom_ion_host_ptr.txt \u2014 CL_MEM_ION_HOST_PTR_QCOM is the allocation_type value of cl_mem_ext_host_ptr (cl.xml struct line 289); same host_ptr-struct family as cl_qcom_ext_host_ptr."
+  ],
   "value": "0x40A8"
  },
  "CL_MEM_KERNEL_READ_AND_WRITE": {
@@ -11507,8 +11543,12 @@
  },
  "CL_PROPERTIES_LIST_END_EXT": {
   "container": "MiscNumbers",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_partition_property"
+  ],
+  "notes": [
+   "manual: cl.xml MiscNumbers container (line 827) \u2014 identical value ((cl_device_partition_property)0) as CL_PARTITION_BY_COUNTS_LIST_END_EXT and CL_DEVICE_PARTITION_BY_COUNTS_LIST_END, both grouped cl_device_partition_property; core spec: CL_DEVICE_PARTITION_BY_COUNTS_LIST_END (0) terminates device_partition_property lists (cl_ext_device_fission)."
+  ],
   "value": "((cl_device_partition_property_ext)0)"
  },
  "CL_QUEUED": {

@@ -730,7 +730,20 @@ SELF_TESTS = {
     "CL_SVM_ALLOC_ACCESS_FLAGS_KHR": {"cl_svm_alloc_properties_khr"},
     # command execution status value set (registry name)
     "CL_COMPLETE": {"clCommandExecutionStatus"},
-    "CL_RUNNING": {"clCommandExecutionStatus"},
+    "CL_RUNNING": {"clCommandExecutionStatus"},    # QCOM host-ptr values -> host_ptr-struct group (2026-10-08 adjudication)
+    "CL_MEM_HOST_UNCACHED_QCOM": {"cl_mem_ext_host_ptr"},
+    "CL_MEM_HOST_WRITEBACK_QCOM": {"cl_mem_ext_host_ptr"},
+    "CL_MEM_HOST_WRITETHROUGH_QCOM": {"cl_mem_ext_host_ptr"},
+    "CL_MEM_HOST_WRITE_COMBINING_QCOM": {"cl_mem_ext_host_ptr"},
+    "CL_MEM_HOST_IOCOHERENT_QCOM": {"cl_mem_ext_host_ptr"},
+    "CL_MEM_ION_HOST_PTR_QCOM": {"cl_mem_ext_host_ptr"},
+    "CL_MEM_ANDROID_NATIVE_BUFFER_HOST_PTR_QCOM": {"cl_mem_ext_host_ptr"},
+    # INTEL dx9 media acquire/release -> cl_command_type (clGetEventInfo CL_EVENT_COMMAND_TYPE)
+    "CL_COMMAND_ACQUIRE_DX9_OBJECTS_INTEL": {"cl_command_type"},
+    "CL_COMMAND_RELEASE_DX9_OBJECTS_INTEL": {"cl_command_type"},
+    # partition list terminator -> cl_device_partition_property
+    "CL_PROPERTIES_LIST_END_EXT": {"cl_device_partition_property"},
+
 }
 
 # negative guard: QCOM perf-hint pair must not cross-contaminate (the original bug)
@@ -764,6 +777,17 @@ NEGATIVE_TESTS = {
     # cl_command_queue_properties members, not cl_device_info queries
     "CL_QUEUE_PRIORITY_KHR": {"cl_device_info"},
     "CL_QUEUE_THROTTLE_KHR": {"cl_device_info"},
+    # QCOM host-ptr values are host_ptr-struct values, NOT buffer create flags
+    "CL_MEM_HOST_UNCACHED_QCOM": {"cl_mem_flags"},
+    "CL_MEM_HOST_IOCOHERENT_QCOM": {"cl_mem_flags"},
+    "CL_MEM_ION_HOST_PTR_QCOM": {"cl_mem_flags"},
+    "CL_MEM_ANDROID_NATIVE_BUFFER_HOST_PTR_QCOM": {"cl_mem_flags"},
+    # INTEL dx9 acquire/release are command types, not device/info queries
+    "CL_COMMAND_ACQUIRE_DX9_OBJECTS_INTEL": {"cl_device_info"},
+    "CL_COMMAND_RELEASE_DX9_OBJECTS_INTEL": {"cl_device_info"},
+    # partition list terminator = not an info query
+    "CL_PROPERTIES_LIST_END_EXT": {"cl_device_info"},
+
 }
 
 

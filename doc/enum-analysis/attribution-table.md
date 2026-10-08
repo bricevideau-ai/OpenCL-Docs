@@ -9,11 +9,11 @@ when a value is valid in several sets.
 ## Coverage
 
 - Total `<enum>` entries in cl.xml: **1334**
-- Assigned one or more groups: **1304**
-- Left ungrouped: **30** (GL precedent: gl.xml leaves ~12,000 of 15,392 ungrouped;
+- Assigned one or more groups: **1316**
+- Left ungrouped: **18** (GL precedent: gl.xml leaves ~12,000 of 15,392 ungrouped;
   ungrouped = platform constants, opaque-handle values, and other context-dependent values
   whose meaning is defined by the API call site rather than by a named value set)
-- Multi-group values: **13** (e.g. ['cl_context_info', 'cl_context_properties'])
+- Multi-group values: **21** (e.g. ['cl_queue_properties', 'cl_queue_properties_khr'])
 
 ## Rule table (how each group is determined)
 
@@ -31,19 +31,27 @@ when a value is valid in several sets.
 
 | token | groups | reason (spec evidence) |
 |---|---|---|
+| `CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_ARBITRATION_ALGORITHM_IMG` | `cl_queue_properties, cl_queue_properties_khr` | manual: cl_img_scheduling_controls (rev 0.3.0): property names of clCreateCommandQueueWithProperties per author's own <require comment="cl_queue_properties"> (P |
+| `CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_EXECUTE_COUNT_IMG` | `cl_queue_properties, cl_queue_properties_khr` | manual: cl_img_scheduling_controls (rev 0.3.0): property names of clCreateCommandQueueWithProperties per author's own <require comment="cl_queue_properties"> (P |
+| `CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_SCHEDULING_ALGORITHM_IMG` | `cl_queue_properties, cl_queue_properties_khr` | manual: cl_img_scheduling_controls (rev 0.3.0): property names of clCreateCommandQueueWithProperties per author's own <require comment="cl_queue_properties"> (P |
 | `CL_CONTEXT_ADAPTER_D3D9EX_KHR` | `cl_context_info, cl_context_properties` | spec evidence [cl_context_info] G3 new-enums list / spec evidence [cl_context_properties] value cell col0 (List of supported context creation properties by {) |
 | `CL_CONTEXT_ADAPTER_D3D9_KHR` | `cl_context_info, cl_context_properties` | spec evidence [cl_context_info] G3 new-enums list / spec evidence [cl_context_properties] value cell col0 (List of supported context creation properties by {) |
 | `CL_CONTEXT_ADAPTER_DXVA_KHR` | `cl_context_info, cl_context_properties` | spec evidence [cl_context_info] G3 new-enums list / spec evidence [cl_context_properties] value cell col0 (List of supported context creation properties by {) |
-| `CL_MEM_ALLOC_FLAGS_INTEL` | `cl_mem_info_intel, cl_mem_properties_intel` | spec evidence [cl_mem_info_intel] value cell col0 (List of supported param_names by clGetMemAllocInfo) / spec evidence [cl_mem_properties_intel] G4 typedef+defi |
-| `CL_QUEUE_FAMILY_INTEL` | `cl_command_queue_info, cl_command_queue_properties` | spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties by clC) / spec evidence [cl_command_queue_info] G4 sent |
-| `CL_QUEUE_INDEX_INTEL` | `cl_command_queue_info, cl_command_queue_properties` | spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties by clC) / spec evidence [cl_command_queue_info] G4 sent |
-| `CL_QUEUE_PRIORITY_KHR` | `cl_command_queue_properties, cl_queue_properties` | spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties by {cl) / spec evidence [cl_queue_properties] G3 new-en |
-| `CL_QUEUE_PROPERTIES` | `cl_command_queue_info, cl_command_queue_properties` | spec evidence [cl_command_queue_info] value cell col0 (List of supported param_names by {clGetCommandQueu) / spec evidence [cl_command_queue_properties] value c |
-| `CL_QUEUE_SIZE` | `cl_command_queue_info, cl_command_queue_properties` | spec evidence [cl_command_queue_info] value cell col0 (List of supported param_names by {clGetCommandQueu) / spec evidence [cl_command_queue_properties] value c |
-| `CL_QUEUE_THROTTLE_KHR` | `cl_command_queue_properties, cl_queue_properties` | spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties by {cl) / spec evidence [cl_queue_properties] G3 new-en |
-| `CL_SAMPLER_ADDRESSING_MODE` | `cl_sampler_info, cl_sampler_properties` | spec evidence [cl_sampler_properties] value cell col0 (List of supported sampler creation properties by {) / spec evidence [cl_sampler_info] value cell col0 (Li |
-| `CL_SAMPLER_FILTER_MODE` | `cl_sampler_info, cl_sampler_properties` | spec evidence [cl_sampler_properties] value cell col0 (List of supported sampler creation properties by {) / spec evidence [cl_sampler_info] value cell col0 (Li |
-| `CL_SAMPLER_NORMALIZED_COORDS` | `cl_sampler_info, cl_sampler_properties` | spec evidence [cl_sampler_properties] value cell col0 (List of supported sampler creation properties by {) / spec evidence [cl_sampler_info] value cell col0 (Li |
+| `CL_EGL_YUV_PLANE_INTEL` | `cl_image_info, cl_egl_image_properties_khr` | manual: cl_intel_egl_image_yuv: 'as <param_name> of clGetImageInfo' + clCreateFromEGLImageKHR <properties> property — dual role (2026-10-08) |
+| `CL_MEM_ALLOC_FLAGS_INTEL` | `cl_mem_info_intel, cl_mem_properties_intel` | spec evidence [cl_mem_properties_intel] G4 typedef+define / spec evidence [cl_mem_info_intel] value cell col0 (List of supported param_names by clGetMemAllocInf |
+| `CL_QUEUE_COMPUTE_UNIT_LIMIT_ARM` | `cl_queue_properties, cl_queue_properties_khr` | manual: cl_arm_scheduling_controls (spec in repo, extensions/cl_arm_scheduling_controls.asciidoc L79): 'Accepted value for the _properties_ parameter to clCreat |
+| `CL_QUEUE_DEFERRED_FLUSH_ARM` | `cl_queue_properties, cl_queue_properties_khr` | manual: cl_arm_scheduling_controls (spec in repo, extensions/cl_arm_scheduling_controls.asciidoc L79): 'Accepted value for the _properties_ parameter to clCreat |
+| `CL_QUEUE_FAMILY_INTEL` | `cl_command_queue_info, cl_queue_properties, cl_queue_properties_khr` | spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties by clC) / manual: cl_intel_command_queue_families: Tabl |
+| `CL_QUEUE_INDEX_INTEL` | `cl_command_queue_info, cl_queue_properties, cl_queue_properties_khr` | spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties by clC) / manual: cl_intel_command_queue_families: Tabl |
+| `CL_QUEUE_JOB_SLOT_ARM` | `cl_queue_properties, cl_queue_properties_khr` | manual: arm scheduler extension: require comment cl_queue_properties for CL_QUEUE_JOB_SLOT_ARM + companion CL_DEVICE_JOB_SLOTS_ARM under cl_device_info (creatio |
+| `CL_QUEUE_KERNEL_BATCHING_ARM` | `cl_queue_properties, cl_queue_properties_khr` | manual: cl_arm_scheduling_controls (spec in repo, extensions/cl_arm_scheduling_controls.asciidoc L79): 'Accepted value for the _properties_ parameter to clCreat |
+| `CL_QUEUE_PRIORITY_KHR` | `cl_queue_properties, cl_queue_properties_khr` | spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties by {cl) / spec evidence [cl_queue_properties] G3 new-en |
+| `CL_QUEUE_PROPERTIES` | `cl_command_queue_info, cl_queue_properties, cl_queue_properties_khr` | spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties by {cl) / spec evidence [cl_command_queue_info] value c |
+| `CL_QUEUE_SIZE` | `cl_command_queue_info, cl_queue_properties, cl_queue_properties_khr` | spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties by {cl) / spec evidence [cl_command_queue_info] value c |
+| `CL_QUEUE_THROTTLE_KHR` | `cl_queue_properties, cl_queue_properties_khr` | spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties by {cl) / spec evidence [cl_queue_properties] G3 new-en |
+| `CL_SAMPLER_ADDRESSING_MODE` | `cl_sampler_info, cl_sampler_properties` | spec evidence [cl_sampler_info] value cell col0 (List of supported param_names by {clGetSamplerInfo) / spec evidence [cl_sampler_properties] value cell col0 (Li |
+| `CL_SAMPLER_FILTER_MODE` | `cl_sampler_info, cl_sampler_properties` | spec evidence [cl_sampler_info] value cell col0 (List of supported param_names by {clGetSamplerInfo) / spec evidence [cl_sampler_properties] value cell col0 (Li |
+| `CL_SAMPLER_NORMALIZED_COORDS` | `cl_sampler_info, cl_sampler_properties` | spec evidence [cl_sampler_info] value cell col0 (List of supported param_names by {clGetSamplerInfo) / spec evidence [cl_sampler_properties] value cell col0 (Li |
 
 ## Full assignment table
 
@@ -195,7 +203,7 @@ when a value is valid in several sets.
 | `CL_COMMAND_ACQUIRE_D3D11_OBJECTS_KHR` | enums.4010 | `cl_command_type` | spec evidence [cl_command_type] G3 new-enums list |
 | `CL_COMMAND_ACQUIRE_D3D9_OBJECTS_INTEL` | enums.4010 | `cl_command_type` | manual: user adjudication 2026-10-08 (Brice): safely cl_command_type. Naming drift from 2011 spec's CL_COMMAND_ACQUIRE_DX9_OBJECTS_INTEL (0x402A); tok |
 | `CL_COMMAND_ACQUIRE_DX9_MEDIA_SURFACES_KHR` | enums.2000 | `cl_command_type` | spec evidence [cl_command_type] G3 new-enums list |
-| `CL_COMMAND_ACQUIRE_DX9_OBJECTS_INTEL` | enums.4010 | — (ungrouped, GL precedent) |  |
+| `CL_COMMAND_ACQUIRE_DX9_OBJECTS_INTEL` | enums.4010 | `cl_command_type` | manual: KhronosGroup/OpenCL-Registry extensions/cl_intel_dx9_media_sharing.txt — 'Returned in the <param_value> parameter of clGetEventInfo when <para |
 | `CL_COMMAND_ACQUIRE_EGL_OBJECTS_KHR` | enums.2000 | `cl_command_type` | spec evidence [cl_command_type] G3 new-enums list |
 | `CL_COMMAND_ACQUIRE_EXTERNAL_MEM_OBJECTS_KHR` | enums.2000 | `cl_command_type` | spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types) |
 | `CL_COMMAND_ACQUIRE_GL_OBJECTS` | cl_device_info | `cl_command_type` | spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types) |
@@ -237,23 +245,23 @@ when a value is valid in several sets.
 | `CL_COMMAND_MAP_BUFFER` | cl_device_info | `cl_command_type` | spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types) |
 | `CL_COMMAND_MAP_IMAGE` | cl_device_info | `cl_command_type` | spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types) |
 | `CL_COMMAND_MARKER` | cl_device_info | `cl_command_type` | spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types) |
-| `CL_COMMAND_MEMADVISE_INTEL` | enums.4200 | `cl_kernel_exec_info` | spec evidence [cl_kernel_exec_info] G4 sentence+define |
-| `CL_COMMAND_MEMCPY_INTEL` | enums.4200 | `cl_kernel_exec_info` | spec evidence [cl_kernel_exec_info] G4 sentence+define |
-| `CL_COMMAND_MEMFILL_INTEL` | enums.4200 | `cl_kernel_exec_info` | spec evidence [cl_kernel_exec_info] G4 sentence+define |
-| `CL_COMMAND_MIGRATEMEM_INTEL` | enums.4200 | `cl_kernel_exec_info` | spec evidence [cl_kernel_exec_info] G4 sentence+define |
+| `CL_COMMAND_MEMADVISE_INTEL` | enums.4200 | `cl_command_type` | manual: cl_intel_unified_shared_memory: 'New return values from clGetEventInfo when param_name is CL_EVENT_COMMAND_TYPE' (verified 2026-10-08); spec e |
+| `CL_COMMAND_MEMCPY_INTEL` | enums.4200 | `cl_command_type` | manual: cl_intel_unified_shared_memory: 'New return values from clGetEventInfo when param_name is CL_EVENT_COMMAND_TYPE' (verified 2026-10-08); spec e |
+| `CL_COMMAND_MEMFILL_INTEL` | enums.4200 | `cl_command_type` | manual: cl_intel_unified_shared_memory: 'New return values from clGetEventInfo when param_name is CL_EVENT_COMMAND_TYPE' — command type, not exec info |
+| `CL_COMMAND_MIGRATEMEM_INTEL` | enums.4200 | `cl_command_type` | manual: cl_intel_unified_shared_memory: 'New return values from clGetEventInfo when param_name is CL_EVENT_COMMAND_TYPE' (verified 2026-10-08); spec e |
 | `CL_COMMAND_MIGRATE_MEM_OBJECTS` | cl_device_info | `cl_command_type` | spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types) |
 | `CL_COMMAND_MIGRATE_MEM_OBJECT_EXT` | enums.4040 | `cl_command_type` | manual: /regspec/all/ext/cl_ext_migrate_memobject.txt — <param_name> is CL_EVENT_COMMAND_TYPE: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08] |
 | `CL_COMMAND_NATIVE_KERNEL` | cl_device_info | `cl_command_type` | spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types) |
 | `CL_COMMAND_NDRANGE_KERNEL` | cl_device_info | `cl_command_type` | spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types) |
-| `CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_ARBITRATION_ALGORITHM_IMG` | enums.4220 | `cl_queue_properties` | manual: registry-provenance: cl.xml <require comment="cl_queue_properties"> authored by paulfradgley #1469 2025-10-21 cl_img_scheduling_controls. No p |
-| `CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_ARBITRATION_ALGORITHM_ROUND_ROBIN_IMG` | enums.4220 | — (ungrouped, GL precedent) |  |
-| `CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_ARBITRATION_ALGORITHM_TASK_DEMAND_IMG` | enums.4220 | — (ungrouped, GL precedent) |  |
-| `CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_EXECUTE_COUNT_IMG` | enums.4220 | `cl_queue_properties` | manual: registry-provenance: cl.xml <require comment="cl_queue_properties"> authored by paulfradgley #1469 2025-10-21 cl_img_scheduling_controls. No p |
-| `CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_SCHEDULING_ALGORITHM_IMG` | enums.4220 | `cl_queue_properties` | manual: registry-provenance: cl.xml <require comment="cl_queue_properties"> authored by paulfradgley #1469 2025-10-21 cl_img_scheduling_controls. No p |
-| `CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_SCHEDULING_ALGORITHM_LINEAR_ORDER_IMG` | enums.4220 | — (ungrouped, GL precedent) |  |
-| `CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_SCHEDULING_ALGORITHM_MORTON_ORDER_IMG` | enums.4220 | — (ungrouped, GL precedent) |  |
-| `CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_SCHEDULING_ALGORITHM_THREED_MORTON_ORDER_IMG` | enums.4220 | — (ungrouped, GL precedent) |  |
-| `CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_SCHEDULING_ALGORITHM_TWOD_MORTON_ORDER_IMG` | enums.4220 | — (ungrouped, GL precedent) |  |
+| `CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_ARBITRATION_ALGORITHM_IMG` | enums.4220 | `cl_queue_properties`, `cl_queue_properties_khr` | manual: cl_img_scheduling_controls (rev 0.3.0): property names of clCreateCommandQueueWithProperties per author's own <require comment="cl_queue_prope |
+| `CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_ARBITRATION_ALGORITHM_ROUND_ROBIN_IMG` | enums.4220 | — (ungrouped, GL precedent) | manual: Ungrouped by design (searched 2026-10-08): cl_img_scheduling_controls is rev 0.3.0, NO spec chapter exists (not in registry.khronos.org extens |
+| `CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_ARBITRATION_ALGORITHM_TASK_DEMAND_IMG` | enums.4220 | — (ungrouped, GL precedent) | manual: Ungrouped by design (searched 2026-10-08): cl_img_scheduling_controls is rev 0.3.0, NO spec chapter exists (not in registry.khronos.org extens |
+| `CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_EXECUTE_COUNT_IMG` | enums.4220 | `cl_queue_properties`, `cl_queue_properties_khr` | manual: cl_img_scheduling_controls (rev 0.3.0): property names of clCreateCommandQueueWithProperties per author's own <require comment="cl_queue_prope |
+| `CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_SCHEDULING_ALGORITHM_IMG` | enums.4220 | `cl_queue_properties`, `cl_queue_properties_khr` | manual: cl_img_scheduling_controls (rev 0.3.0): property names of clCreateCommandQueueWithProperties per author's own <require comment="cl_queue_prope |
+| `CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_SCHEDULING_ALGORITHM_LINEAR_ORDER_IMG` | enums.4220 | — (ungrouped, GL precedent) | manual: Ungrouped by design (searched 2026-10-08): cl_img_scheduling_controls is rev 0.3.0, NO spec chapter exists (not in registry.khronos.org extens |
+| `CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_SCHEDULING_ALGORITHM_MORTON_ORDER_IMG` | enums.4220 | — (ungrouped, GL precedent) | manual: Ungrouped by design (searched 2026-10-08): cl_img_scheduling_controls is rev 0.3.0, NO spec chapter exists (not in registry.khronos.org extens |
+| `CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_SCHEDULING_ALGORITHM_THREED_MORTON_ORDER_IMG` | enums.4220 | — (ungrouped, GL precedent) | manual: Ungrouped by design (searched 2026-10-08): cl_img_scheduling_controls is rev 0.3.0, NO spec chapter exists (not in registry.khronos.org extens |
+| `CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_SCHEDULING_ALGORITHM_TWOD_MORTON_ORDER_IMG` | enums.4220 | — (ungrouped, GL precedent) | manual: Ungrouped by design (searched 2026-10-08): cl_img_scheduling_controls is rev 0.3.0, NO spec chapter exists (not in registry.khronos.org extens |
 | `CL_COMMAND_READ_BUFFER` | cl_device_info | `cl_command_type` | spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types) |
 | `CL_COMMAND_READ_BUFFER_RECT` | cl_device_info | `cl_command_type` | spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types) |
 | `CL_COMMAND_READ_HOST_PIPE_INTEL` | enums.4210 | `cl_command_type` | manual: cl_intel_program_scope_host_pipe Table 37 supported event command type |
@@ -262,7 +270,7 @@ when a value is valid in several sets.
 | `CL_COMMAND_RELEASE_D3D11_OBJECTS_KHR` | enums.4010 | `cl_command_type` | spec evidence [cl_command_type] G3 new-enums list |
 | `CL_COMMAND_RELEASE_D3D9_OBJECTS_INTEL` | enums.4010 | `cl_command_type` | manual: user adjudication 2026-10-08 (Brice): safely cl_command_type. Naming drift from 2011 spec's CL_COMMAND_RELEASE_DX9_OBJECTS_INTEL (0x402B); tok |
 | `CL_COMMAND_RELEASE_DX9_MEDIA_SURFACES_KHR` | enums.2000 | `cl_command_type` | spec evidence [cl_command_type] G3 new-enums list |
-| `CL_COMMAND_RELEASE_DX9_OBJECTS_INTEL` | enums.4010 | — (ungrouped, GL precedent) |  |
+| `CL_COMMAND_RELEASE_DX9_OBJECTS_INTEL` | enums.4010 | `cl_command_type` | manual: KhronosGroup/OpenCL-Registry extensions/cl_intel_dx9_media_sharing.txt — 'Returned in the <param_value> parameter of clGetEventInfo when <para |
 | `CL_COMMAND_RELEASE_EGL_OBJECTS_KHR` | enums.2000 | `cl_command_type` | spec evidence [cl_command_type] G3 new-enums list |
 | `CL_COMMAND_RELEASE_EXTERNAL_MEM_OBJECTS_KHR` | enums.2000 | `cl_command_type` | spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types) |
 | `CL_COMMAND_RELEASE_GL_OBJECTS` | cl_device_info | `cl_command_type` | spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types) |
@@ -670,7 +678,7 @@ when a value is valid in several sets.
 | `CL_ECC_UNRECOVERED_IMG` | ErrorCodes.1122 | `ErrorCode` | R3 cl.xml ErrorCodes container (GL precedent group=ErrorCode; spec: same set as API return values) |
 | `CL_EGL_DISPLAY_KHR` | enums.2000 | `cl_context_properties` | spec evidence [cl_context_properties] G3 new-enums list |
 | `CL_EGL_RESOURCE_NOT_ACQUIRED_KHR` | ErrorCodes.1092 | `ErrorCode` | R3 cl.xml ErrorCodes container (GL precedent group=ErrorCode; spec: same set as API return values); spec evidence [ErrorCode] G3 new-error-codes list |
-| `CL_EGL_YUV_PLANE_INTEL` | enums.4100 | `cl_image_info` | manual: /regspec/all/intel/cl_intel_egl_image_yuv.txt — and <image> was not created by the function clCreateFromEGLImageKHR. [verified vs KhronosGroup |
+| `CL_EGL_YUV_PLANE_INTEL` | enums.4100 | `cl_image_info`, `cl_egl_image_properties_khr` | manual: cl_intel_egl_image_yuv: 'as <param_name> of clGetImageInfo' + clCreateFromEGLImageKHR <properties> property — dual role (2026-10-08) |
 | `CL_ERROR_RESERVED0_IMG` | ErrorCodes.1122 | `ErrorCode` | R3 cl.xml ErrorCodes container (GL precedent group=ErrorCode; spec: same set as API return values) |
 | `CL_ERROR_RESERVED1_IMG` | ErrorCodes.1122 | `ErrorCode` | R3 cl.xml ErrorCodes container (GL precedent group=ErrorCode; spec: same set as API return values) |
 | `CL_ERROR_RESERVED2_IMG` | ErrorCodes.1122 | `ErrorCode` | R3 cl.xml ErrorCodes container (GL precedent group=ErrorCode; spec: same set as API return values) |
@@ -776,7 +784,7 @@ when a value is valid in several sets.
 | `CL_IMPORT_ANDROID_HARDWARE_BUFFER_LAYER_INDEX_ARM` | enums.41E0 | `cl_import_properties_arm` | manual: /regspec/all/arm/cl_arm_import_memory.txt — Valid values for CL_IMPORT_ANDROID_HARDWARE_BUFFER_PLANE_INDEX_ARM and [verified vs KhronosGroup/O |
 | `CL_IMPORT_ANDROID_HARDWARE_BUFFER_PLANE_INDEX_ARM` | enums.41E0 | `cl_import_properties_arm` | manual: /regspec/all/arm/cl_arm_import_memory.txt — Multiplanar buffers are only supported when backed by a single dma_buf. [verified vs KhronosGroup/ |
 | `CL_IMPORT_DMA_BUF_DATA_CONSISTENCY_WITH_HOST_ARM` | enums.41E0 | `cl_import_properties_arm` | manual: arm/cl_arm_import_memory.txt — listed in 'Valid <properties> are:' [verified vs KhronosGroup/OpenCL-Registry 2026-10-08] |
-| `CL_IMPORT_MEMORY_WHOLE_ALLOCATION_ARM` | Constants.cl_arm_import_memory | — (ungrouped, GL precedent) |  |
+| `CL_IMPORT_MEMORY_WHOLE_ALLOCATION_ARM` | Constants.cl_arm_import_memory | `cl_import_properties_arm` | manual: cl_arm_import_memory: '<size> may be set to CL_IMPORT_MEMORY_WHOLE_ALLOCATION_ARM' in clImportMemory; grouped with CL_IMPORT_TYPE_ANDROID_HARD |
 | `CL_IMPORT_TYPE_ANDROID_HARDWARE_BUFFER_ARM` | enums.41E0 | `cl_import_properties_arm` | manual: /regspec/all/arm/cl_arm_import_memory.txt — New Tokens [verified vs KhronosGroup/OpenCL-Registry 2026-10-08] |
 | `CL_IMPORT_TYPE_ARM` | enums.40B0 | `cl_import_properties_arm` | manual: arm/cl_arm_import_memory.txt — listed in 'Valid <properties> are:' [verified vs KhronosGroup/OpenCL-Registry 2026-10-08] |
 | `CL_IMPORT_TYPE_DMA_BUF_ARM` | enums.40B0 | `cl_import_properties_arm` | manual: arm/cl_arm_import_memory.txt L118-123: same [verified vs KhronosGroup/OpenCL-Registry 2026-10-08] |
@@ -933,7 +941,7 @@ when a value is valid in several sets.
 | `CL_MEM_ALLOC_BUFFER_LOCATION_INTEL` | enums.4190 | `cl_mem_info_intel` | spec evidence [cl_mem_info_intel] value cell col0 (List of supported param_names by clGetMemAllocInfo) |
 | `CL_MEM_ALLOC_CPU_LOCAL_IMG` | cl_mem_alloc_flags_img | `cl_mem_alloc_flags_img` | R1 C typedef container cl_mem_alloc_flags_img (container-declared) |
 | `CL_MEM_ALLOC_DEVICE_INTEL` | enums.4190 | `cl_mem_info_intel` | spec evidence [cl_mem_info_intel] G4 sentence+define |
-| `CL_MEM_ALLOC_FLAGS_IMG` | enums.40D0 | `cl_mem_alloc_flags_img` | spec evidence [cl_mem_alloc_flags_img] G4 typedef+define |
+| `CL_MEM_ALLOC_FLAGS_IMG` | enums.40D0 | `cl_mem_properties` | manual: cl_img_mem_properties: property NAME (valid 'properties' entry for clCreateBufferWithProperties); value-set = cl_mem_alloc_flags_img. Upstream |
 | `CL_MEM_ALLOC_FLAGS_INTEL` | enums.4190 | `cl_mem_info_intel`, `cl_mem_properties_intel` | spec evidence [cl_mem_info_intel] value cell col0 (List of supported param_names by clGetMemAllocInfo); spec evidence [cl_mem_properties_intel] G4 typ |
 | `CL_MEM_ALLOC_GPU_CACHED_IMG` | cl_mem_alloc_flags_img | `cl_mem_alloc_flags_img` | R1 C typedef container cl_mem_alloc_flags_img (container-declared) |
 | `CL_MEM_ALLOC_GPU_LOCAL_IMG` | cl_mem_alloc_flags_img | `cl_mem_alloc_flags_img` | R1 C typedef container cl_mem_alloc_flags_img (container-declared) |
@@ -946,7 +954,7 @@ when a value is valid in several sets.
 | `CL_MEM_ALLOC_SIZE_INTEL` | enums.4190 | `cl_mem_info_intel` | spec evidence [cl_mem_info_intel] G4 sentence+define |
 | `CL_MEM_ALLOC_TYPE_INTEL` | enums.4190 | `cl_mem_info_intel` | spec evidence [cl_mem_info_intel] G4 sentence+define |
 | `CL_MEM_ALLOC_WRITE_COMBINED_INTEL` | cl_mem_alloc_flags_intel | `cl_mem_alloc_flags_intel` | R1 C typedef container cl_mem_alloc_flags_intel (container-declared) |
-| `CL_MEM_ANDROID_NATIVE_BUFFER_HOST_PTR_QCOM` | enums.40C0 | — (ungrouped, GL precedent) |  |
+| `CL_MEM_ANDROID_NATIVE_BUFFER_HOST_PTR_QCOM` | enums.40C0 | `cl_mem_ext_host_ptr` | manual: KhronosGroup/OpenCL-Registry extensions/cl_qcom_android_native_buffer_host_ptr.txt — code example 'myANBmem.ext_host_ptr.allocation_type = CL_ |
 | `CL_MEM_ASSOCIATED_MEMOBJECT` | cl_device_info | `cl_mem_info` | spec evidence [cl_mem_info] value cell col0 (List of supported param_names by {clGetMemObjectIn) |
 | `CL_MEM_CHANNEL_INTEL` | enums.4210 | `cl_mem_properties_intel` | manual: cl_intel_mem_channel_property: property for clCreateBufferWithPropertiesINTEL |
 | `CL_MEM_CONTEXT` | cl_device_info | `cl_mem_info` | spec evidence [cl_mem_info] value cell col0 (List of supported param_names by {clGetMemObjectIn) |
@@ -966,17 +974,17 @@ when a value is valid in several sets.
 | `CL_MEM_EXT_HOST_PTR_QCOM` | cl_mem_flags | `cl_mem_flags` | R1 C typedef container cl_mem_flags (container-declared) |
 | `CL_MEM_FLAGS` | cl_device_info | `cl_mem_info` | spec evidence [cl_mem_info] value cell col0 (List of supported param_names by {clGetMemObjectIn) |
 | `CL_MEM_FORCE_HOST_MEMORY_INTEL` | cl_mem_flags | `cl_mem_flags` | R1 C typedef container cl_mem_flags (spec-listed) |
-| `CL_MEM_HOST_IOCOHERENT_QCOM` | enums.40A0 | — (ungrouped, GL precedent) |  |
+| `CL_MEM_HOST_IOCOHERENT_QCOM` | enums.40A0 | `cl_mem_ext_host_ptr` | manual: KhronosGroup/OpenCL-Registry extensions/cl_qcom_ext_host_ptr.txt — cl.xml struct <type name="cl_mem_ext_host_ptr"> (line 282) fields allocatio |
 | `CL_MEM_HOST_NO_ACCESS` | cl_mem_flags | `cl_mem_flags` | R1 C typedef container cl_mem_flags (spec-listed) |
 | `CL_MEM_HOST_PTR` | cl_device_info | `cl_mem_info` | spec evidence [cl_mem_info] value cell col0 (List of supported param_names by {clGetMemObjectIn) |
 | `CL_MEM_HOST_READ_ONLY` | cl_mem_flags | `cl_mem_flags` | R1 C typedef container cl_mem_flags (spec-listed) |
-| `CL_MEM_HOST_UNCACHED_QCOM` | enums.40A0 | — (ungrouped, GL precedent) |  |
-| `CL_MEM_HOST_WRITEBACK_QCOM` | enums.40A0 | — (ungrouped, GL precedent) |  |
-| `CL_MEM_HOST_WRITETHROUGH_QCOM` | enums.40A0 | — (ungrouped, GL precedent) |  |
-| `CL_MEM_HOST_WRITE_COMBINING_QCOM` | enums.40A0 | — (ungrouped, GL precedent) |  |
+| `CL_MEM_HOST_UNCACHED_QCOM` | enums.40A0 | `cl_mem_ext_host_ptr` | manual: KhronosGroup/OpenCL-Registry extensions/cl_qcom_ext_host_ptr.txt — cl.xml struct <type name="cl_mem_ext_host_ptr"> (line 282) fields allocatio |
+| `CL_MEM_HOST_WRITEBACK_QCOM` | enums.40A0 | `cl_mem_ext_host_ptr` | manual: KhronosGroup/OpenCL-Registry extensions/cl_qcom_ext_host_ptr.txt — cl.xml struct <type name="cl_mem_ext_host_ptr"> (line 282) fields allocatio |
+| `CL_MEM_HOST_WRITETHROUGH_QCOM` | enums.40A0 | `cl_mem_ext_host_ptr` | manual: KhronosGroup/OpenCL-Registry extensions/cl_qcom_ext_host_ptr.txt — cl.xml struct <type name="cl_mem_ext_host_ptr"> (line 282) fields allocatio |
+| `CL_MEM_HOST_WRITE_COMBINING_QCOM` | enums.40A0 | `cl_mem_ext_host_ptr` | manual: KhronosGroup/OpenCL-Registry extensions/cl_qcom_ext_host_ptr.txt — cl.xml struct <type name="cl_mem_ext_host_ptr"> (line 282) fields allocatio |
 | `CL_MEM_HOST_WRITE_ONLY` | cl_mem_flags | `cl_mem_flags` | R1 C typedef container cl_mem_flags (spec-listed) |
 | `CL_MEM_IMMUTABLE_EXT` | cl_mem_flags | `cl_mem_flags` | R1 C typedef container cl_mem_flags (spec-listed) |
-| `CL_MEM_ION_HOST_PTR_QCOM` | enums.40A0 | — (ungrouped, GL precedent) |  |
+| `CL_MEM_ION_HOST_PTR_QCOM` | enums.40A0 | `cl_mem_ext_host_ptr` | manual: KhronosGroup/OpenCL-Registry extensions/cl_qcom_ion_host_ptr.txt — CL_MEM_ION_HOST_PTR_QCOM is the allocation_type value of cl_mem_ext_host_pt |
 | `CL_MEM_KERNEL_READ_AND_WRITE` | cl_mem_flags | `cl_mem_flags` | R1 C typedef container cl_mem_flags (spec-listed) |
 | `CL_MEM_LOCALLY_UNCACHED_RESOURCE_INTEL` | enums.4210 | `cl_mem_properties` | manual: registry-provenance: cl.xml <require comment="cl_mem_properties"> authored by Mike Kinsner (Intel) #858 2022-11-08, commit msg 'Add comment in |
 | `CL_MEM_MAP_COUNT` | cl_device_info | `cl_mem_info` | spec evidence [cl_mem_info] value cell col0 (List of supported param_names by {clGetMemObjectIn) |
@@ -1191,7 +1199,7 @@ when a value is valid in several sets.
 | `CL_PROGRAM_DEVICES` | cl_device_info | `cl_program_info` | spec evidence [cl_program_info] value cell col0 (List of supported param_names by {clGetProgramInfo) |
 | `CL_PROGRAM_HOST_PIPE_NAMES_INTEL` | enums.4210 | `cl_program_info` | manual: cl_intel_program_scope_host_pipe param_name of clGetProgramInfo |
 | `CL_PROGRAM_IL` | cl_device_info | `cl_program_info` | spec evidence [cl_program_info] value cell col0 (List of supported param_names by {clGetProgramInfo) |
-| `CL_PROGRAM_IL_KHR` | cl_device_info | `cl_platform_info` | spec evidence [cl_platform_info] G3 new-enums list |
+| `CL_PROGRAM_IL_KHR` | cl_device_info | `cl_program_info` | manual: cl_khr_il_program: program info query (sibling CL_PROGRAM_IL 0x1169 is cl_program_info; same reserved range 'Reserved for cl_program_info') —  |
 | `CL_PROGRAM_KERNEL_NAMES` | cl_device_info | `cl_program_info` | spec evidence [cl_program_info] value cell col0 (List of supported param_names by {clGetProgramInfo) |
 | `CL_PROGRAM_NUM_DEVICES` | cl_device_info | `cl_program_info` | spec evidence [cl_program_info] value cell col0 (List of supported param_names by {clGetProgramInfo) |
 | `CL_PROGRAM_NUM_HOST_PIPES_INTEL` | enums.4210 | `cl_program_info` | manual: cl_intel_program_scope_host_pipe param_name of clGetProgramInfo |
@@ -1200,7 +1208,7 @@ when a value is valid in several sets.
 | `CL_PROGRAM_SCOPE_GLOBAL_CTORS_PRESENT` | cl_device_info | `cl_program_info` | spec evidence [cl_program_info] value cell col0 (List of supported param_names by {clGetProgramInfo) |
 | `CL_PROGRAM_SCOPE_GLOBAL_DTORS_PRESENT` | cl_device_info | `cl_program_info` | spec evidence [cl_program_info] value cell col0 (List of supported param_names by {clGetProgramInfo) |
 | `CL_PROGRAM_SOURCE` | cl_device_info | `cl_program_info` | spec evidence [cl_program_info] value cell col0 (List of supported param_names by {clGetProgramInfo) |
-| `CL_PROPERTIES_LIST_END_EXT` | MiscNumbers | — (ungrouped, GL precedent) |  |
+| `CL_PROPERTIES_LIST_END_EXT` | MiscNumbers | `cl_device_partition_property` | manual: cl.xml MiscNumbers container (line 827) — identical value ((cl_device_partition_property)0) as CL_PARTITION_BY_COUNTS_LIST_END_EXT and CL_DEVI |
 | `CL_QUEUED` | clCommandExecutionStatus | `clCommandExecutionStatus` | manual: core command-execution-status value set of clGetEventInfo/CL_EVENT_COMMAND_EXECUTION_STATUS (registry type clCommandExecutionStatus; + cl_img_ |
 | `CL_QUEUE_CAPABILITY_BARRIER_INTEL` | cl_command_queue_capabilities_intel | `cl_command_queue_capabilities_intel` | R1 C typedef container cl_command_queue_capabilities_intel (container-declared) |
 | `CL_QUEUE_CAPABILITY_CREATE_CROSS_QUEUE_EVENTS_INTEL` | cl_command_queue_capabilities_intel | `cl_command_queue_capabilities_intel` | R1 C typedef container cl_command_queue_capabilities_intel (container-declared) |
@@ -1218,34 +1226,34 @@ when a value is valid in several sets.
 | `CL_QUEUE_CAPABILITY_TRANSFER_BUFFER_RECT_INTEL` | cl_command_queue_capabilities_intel | `cl_command_queue_capabilities_intel` | R1 C typedef container cl_command_queue_capabilities_intel (container-declared) |
 | `CL_QUEUE_CAPABILITY_TRANSFER_IMAGE_BUFFER_INTEL` | cl_command_queue_capabilities_intel | `cl_command_queue_capabilities_intel` | R1 C typedef container cl_command_queue_capabilities_intel (container-declared) |
 | `CL_QUEUE_CAPABILITY_TRANSFER_IMAGE_INTEL` | cl_command_queue_capabilities_intel | `cl_command_queue_capabilities_intel` | R1 C typedef container cl_command_queue_capabilities_intel (container-declared) |
-| `CL_QUEUE_COMPUTE_UNIT_LIMIT_ARM` | enums.41E0 | `cl_command_queue_properties` | manual: cl_arm_scheduling_controls L79-85 + Table 9 queue creation properties |
+| `CL_QUEUE_COMPUTE_UNIT_LIMIT_ARM` | enums.41E0 | `cl_queue_properties`, `cl_queue_properties_khr` | manual: cl_arm_scheduling_controls (spec in repo, extensions/cl_arm_scheduling_controls.asciidoc L79): 'Accepted value for the _properties_ parameter  |
 | `CL_QUEUE_CONTEXT` | cl_device_info | `cl_command_queue_info` | spec evidence [cl_command_queue_info] value cell col0 (List of supported param_names by {clGetCommandQueu) |
 | `CL_QUEUE_DEFAULT_CAPABILITIES_INTEL` | Constants.cl_intel_command_queue_families | `cl_command_queue_capabilities_intel` | spec evidence [cl_command_queue_capabilities_intel] G4 typedef+define |
-| `CL_QUEUE_DEFERRED_FLUSH_ARM` | enums.41E0 | `cl_command_queue_properties` | manual: cl_arm_scheduling_controls L79-85 + Table 9 queue creation properties |
+| `CL_QUEUE_DEFERRED_FLUSH_ARM` | enums.41E0 | `cl_queue_properties`, `cl_queue_properties_khr` | manual: cl_arm_scheduling_controls (spec in repo, extensions/cl_arm_scheduling_controls.asciidoc L79): 'Accepted value for the _properties_ parameter  |
 | `CL_QUEUE_DEVICE` | cl_device_info | `cl_command_queue_info` | spec evidence [cl_command_queue_info] value cell col0 (List of supported param_names by {clGetCommandQueu) |
 | `CL_QUEUE_DEVICE_DEFAULT` | cl_device_info | `cl_command_queue_info` | spec evidence [cl_command_queue_info] value cell col0 (List of supported param_names by {clGetCommandQueu) |
-| `CL_QUEUE_FAMILY_INTEL` | enums.4180 | `cl_command_queue_info`, `cl_command_queue_properties` | spec evidence [cl_command_queue_info] G4 sentence+define; spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creatio |
+| `CL_QUEUE_FAMILY_INTEL` | enums.4180 | `cl_command_queue_info`, `cl_queue_properties`, `cl_queue_properties_khr` | manual: cl_intel_command_queue_families: Table 8 (clCreateCommandQueueWithProperties creation properties) + Table 9 (Add to clGetCommandQueueInfo para |
 | `CL_QUEUE_FAMILY_MAX_NAME_SIZE_INTEL` | Constants.cl_intel_command_queue_families | `cl_command_queue_info` | spec evidence [cl_command_queue_info] G4 sentence+define |
-| `CL_QUEUE_INDEX_INTEL` | enums.4180 | `cl_command_queue_info`, `cl_command_queue_properties` | spec evidence [cl_command_queue_info] G4 sentence+define; spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creatio |
-| `CL_QUEUE_JOB_SLOT_ARM` | enums.41E0 | `cl_queue_properties` | manual: /regspec/all/arm/cl_arm_job_slot_selection.txt — Command queue property [verified vs KhronosGroup/OpenCL-Registry 2026-10-08] |
-| `CL_QUEUE_KERNEL_BATCHING_ARM` | enums.41E0 | `cl_command_queue_properties` | manual: cl_arm_scheduling_controls L79-85 + Table 9 queue creation properties |
+| `CL_QUEUE_INDEX_INTEL` | enums.4180 | `cl_command_queue_info`, `cl_queue_properties`, `cl_queue_properties_khr` | manual: cl_intel_command_queue_families: Table 8 (clCreateCommandQueueWithProperties creation properties) + Table 9 (Add to clGetCommandQueueInfo para |
+| `CL_QUEUE_JOB_SLOT_ARM` | enums.41E0 | `cl_queue_properties`, `cl_queue_properties_khr` | manual: arm scheduler extension: require comment cl_queue_properties for CL_QUEUE_JOB_SLOT_ARM + companion CL_DEVICE_JOB_SLOTS_ARM under cl_device_inf |
+| `CL_QUEUE_KERNEL_BATCHING_ARM` | enums.41E0 | `cl_queue_properties`, `cl_queue_properties_khr` | manual: cl_arm_scheduling_controls (spec in repo, extensions/cl_arm_scheduling_controls.asciidoc L79): 'Accepted value for the _properties_ parameter  |
 | `CL_QUEUE_NO_SYNC_OPERATIONS_INTEL` | cl_command_queue_properties | `cl_command_queue_properties` | R1 C typedef container cl_command_queue_properties (container-declared) |
 | `CL_QUEUE_ON_DEVICE` | cl_command_queue_properties | `cl_command_queue_properties` | R1 C typedef container cl_command_queue_properties (container-declared) |
 | `CL_QUEUE_ON_DEVICE_DEFAULT` | cl_command_queue_properties | `cl_command_queue_properties` | R1 C typedef container cl_command_queue_properties (container-declared) |
 | `CL_QUEUE_OUT_OF_ORDER_EXEC_MODE_ENABLE` | cl_command_queue_properties | `cl_command_queue_properties` | R1 C typedef container cl_command_queue_properties (spec-listed) |
 | `CL_QUEUE_PRIORITY_HIGH_KHR` | cl_queue_priority_khr | `cl_queue_priority_khr` | R1 C typedef container cl_queue_priority_khr (spec-listed) |
-| `CL_QUEUE_PRIORITY_KHR` | cl_device_info | `cl_command_queue_properties`, `cl_queue_properties` | spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties by {cl); spec evidence [cl_queue_properties]  |
+| `CL_QUEUE_PRIORITY_KHR` | cl_device_info | `cl_queue_properties`, `cl_queue_properties_khr` | manual: OpenCL 3.0 spec, api/opencl_runtime_layer.asciidoc: queue-properties-table (clCreateCommandQueueWithProperties) lists CL_QUEUE_PRIORITY_KHR (p |
 | `CL_QUEUE_PRIORITY_LOW_KHR` | cl_queue_priority_khr | `cl_queue_priority_khr` | R1 C typedef container cl_queue_priority_khr (spec-listed) |
 | `CL_QUEUE_PRIORITY_MED_KHR` | cl_queue_priority_khr | `cl_queue_priority_khr` | R1 C typedef container cl_queue_priority_khr (spec-listed) |
 | `CL_QUEUE_PROFILING_ENABLE` | cl_command_queue_properties | `cl_command_queue_properties` | R1 C typedef container cl_command_queue_properties (spec-listed) |
-| `CL_QUEUE_PROPERTIES` | cl_device_info | `cl_command_queue_info`, `cl_command_queue_properties` | spec evidence [cl_command_queue_info] value cell col0 (List of supported param_names by {clGetCommandQueu); spec evidence [cl_command_queue_properties |
+| `CL_QUEUE_PROPERTIES` | cl_device_info | `cl_command_queue_info`, `cl_queue_properties`, `cl_queue_properties_khr` | manual: OpenCL 3.0 spec, api/opencl_runtime_layer.asciidoc: CL_QUEUE_PROPERTIES and CL_QUEUE_SIZE appear in BOTH the queue-properties-table (creation  |
 | `CL_QUEUE_PROPERTIES_ARRAY` | cl_device_info | `cl_command_queue_info` | spec evidence [cl_command_queue_info] value cell col0 (List of supported param_names by {clGetCommandQueu) |
 | `CL_QUEUE_REFERENCE_COUNT` | cl_device_info | `cl_command_queue_info` | spec evidence [cl_command_queue_info] value cell col0 (List of supported param_names by {clGetCommandQueu) |
 | `CL_QUEUE_RESERVED_QCOM` | cl_command_queue_properties | `cl_command_queue_properties` | R1 C typedef container cl_command_queue_properties (container-declared) |
-| `CL_QUEUE_SIZE` | cl_device_info | `cl_command_queue_info`, `cl_command_queue_properties` | spec evidence [cl_command_queue_info] value cell col0 (List of supported param_names by {clGetCommandQueu); spec evidence [cl_command_queue_properties |
+| `CL_QUEUE_SIZE` | cl_device_info | `cl_command_queue_info`, `cl_queue_properties`, `cl_queue_properties_khr` | manual: OpenCL 3.0 spec, api/opencl_runtime_layer.asciidoc: CL_QUEUE_PROPERTIES and CL_QUEUE_SIZE appear in BOTH the queue-properties-table (creation  |
 | `CL_QUEUE_THREAD_LOCAL_EXEC_ENABLE_INTEL` | cl_command_queue_properties | `cl_command_queue_properties` | R1 C typedef container cl_command_queue_properties (container-declared) |
 | `CL_QUEUE_THROTTLE_HIGH_KHR` | cl_queue_throttle_khr | `cl_queue_throttle_khr` | R1 C typedef container cl_queue_throttle_khr (spec-listed) |
-| `CL_QUEUE_THROTTLE_KHR` | cl_device_info | `cl_command_queue_properties`, `cl_queue_properties` | spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties by {cl); spec evidence [cl_queue_properties]  |
+| `CL_QUEUE_THROTTLE_KHR` | cl_device_info | `cl_queue_properties`, `cl_queue_properties_khr` | manual: OpenCL 3.0 spec, api/opencl_runtime_layer.asciidoc: queue-properties-table (clCreateCommandQueueWithProperties) lists CL_QUEUE_PRIORITY_KHR (p |
 | `CL_QUEUE_THROTTLE_LOW_KHR` | cl_queue_throttle_khr | `cl_queue_throttle_khr` | R1 C typedef container cl_queue_throttle_khr (spec-listed) |
 | `CL_QUEUE_THROTTLE_MED_KHR` | cl_queue_throttle_khr | `cl_queue_throttle_khr` | R1 C typedef container cl_queue_throttle_khr (spec-listed) |
 | `CL_R` | cl_device_info | `cl_channel_order` | spec evidence [cl_channel_order] value cell col0 (List of supported Image Channel Order Values) |
@@ -1280,7 +1288,7 @@ when a value is valid in several sets.
 | `CL_SEMAPHORE_EXPORTABLE_KHR` | enums.2000 | `cl_semaphore_info_khr` | spec evidence [cl_semaphore_info_khr] G3 new-enums list |
 | `CL_SEMAPHORE_EXPORT_HANDLE_TYPES_KHR` | enums.2000 | `cl_semaphore_properties_khr` | spec evidence [cl_semaphore_properties_khr] G3 new-enums list |
 | `CL_SEMAPHORE_EXPORT_HANDLE_TYPES_LIST_END_KHR` | MiscNumbers | `cl_semaphore_properties_khr` | spec evidence [cl_semaphore_properties_khr] G3 new-enums list |
-| `CL_SEMAPHORE_FAST_PATH_IMG` | enums.4220 | — (ungrouped, GL precedent) |  |
+| `CL_SEMAPHORE_FAST_PATH_IMG` | enums.4220 | `cl_semaphore_properties_khr` | manual: IMG external-semaphore fast path creation property (upstream require=cl_semaphore_properties_khr; adopted 2026-10-08) |
 | `CL_SEMAPHORE_HANDLE_D3D12_FENCE_KHR` | enums.2000 | `cl_external_semaphore_handle_type_khr` | spec evidence [cl_external_semaphore_handle_type_khr] G3 new-enums list |
 | `CL_SEMAPHORE_HANDLE_OPAQUE_FD_KHR` | enums.2000 | `cl_external_semaphore_handle_type_khr` | spec evidence [cl_external_semaphore_handle_type_khr] G3 new-enums list |
 | `CL_SEMAPHORE_HANDLE_OPAQUE_WIN32_KHR` | enums.2000 | `cl_external_semaphore_handle_type_khr` | spec evidence [cl_external_semaphore_handle_type_khr] G3 new-enums list |
