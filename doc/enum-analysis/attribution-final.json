@@ -1878,9 +1878,10 @@
  "CL_COMMAND_MEMADVISE_INTEL": {
   "container": "enums.4200",
   "groups": [
-   "cl_kernel_exec_info"
+   "cl_command_type"
   ],
   "notes": [
+   "manual: cl_intel_unified_shared_memory: 'New return values from clGetEventInfo when param_name is CL_EVENT_COMMAND_TYPE' (verified 2026-10-08)",
    "spec evidence [cl_kernel_exec_info] G4 sentence+define"
   ],
   "value": "0x4207"
@@ -1888,9 +1889,10 @@
  "CL_COMMAND_MEMCPY_INTEL": {
   "container": "enums.4200",
   "groups": [
-   "cl_kernel_exec_info"
+   "cl_command_type"
   ],
   "notes": [
+   "manual: cl_intel_unified_shared_memory: 'New return values from clGetEventInfo when param_name is CL_EVENT_COMMAND_TYPE' (verified 2026-10-08)",
    "spec evidence [cl_kernel_exec_info] G4 sentence+define"
   ],
   "value": "0x4205"
@@ -1898,9 +1900,10 @@
  "CL_COMMAND_MEMFILL_INTEL": {
   "container": "enums.4200",
   "groups": [
-   "cl_kernel_exec_info"
+   "cl_command_type"
   ],
   "notes": [
+   "manual: cl_intel_unified_shared_memory: 'New return values from clGetEventInfo when param_name is CL_EVENT_COMMAND_TYPE' \u2014 command type, not exec info (verified spec text 2026-10-08)",
    "spec evidence [cl_kernel_exec_info] G4 sentence+define"
   ],
   "value": "0x4204"
@@ -1908,9 +1911,10 @@
  "CL_COMMAND_MIGRATEMEM_INTEL": {
   "container": "enums.4200",
   "groups": [
-   "cl_kernel_exec_info"
+   "cl_command_type"
   ],
   "notes": [
+   "manual: cl_intel_unified_shared_memory: 'New return values from clGetEventInfo when param_name is CL_EVENT_COMMAND_TYPE' (verified 2026-10-08)",
    "spec evidence [cl_kernel_exec_info] G4 sentence+define"
   ],
   "value": "0x4206"
@@ -6200,10 +6204,11 @@
  "CL_EGL_YUV_PLANE_INTEL": {
   "container": "enums.4100",
   "groups": [
-   "cl_image_info"
+   "cl_image_info",
+   "cl_egl_image_properties_khr"
   ],
   "notes": [
-   "manual: /regspec/all/intel/cl_intel_egl_image_yuv.txt \u2014 and <image> was not created by the function clCreateFromEGLImageKHR. [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+   "manual: cl_intel_egl_image_yuv: 'as <param_name> of clGetImageInfo' + clCreateFromEGLImageKHR <properties> property \u2014 dual role (2026-10-08)"
   ],
   "value": "0x4107"
  },
@@ -7259,8 +7264,12 @@
  },
  "CL_IMPORT_MEMORY_WHOLE_ALLOCATION_ARM": {
   "container": "Constants.cl_arm_import_memory",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_import_properties_arm"
+  ],
+  "notes": [
+   "manual: cl_arm_import_memory: '<size> may be set to CL_IMPORT_MEMORY_WHOLE_ALLOCATION_ARM' in clImportMemory; grouped with CL_IMPORT_TYPE_ANDROID_HARDWARE_BUFFER_ARM (adjudicated 2026-10-08)"
+  ],
   "value": "SIZE_MAX"
  },
  "CL_IMPORT_TYPE_ANDROID_HARDWARE_BUFFER_ARM": {
@@ -8836,9 +8845,10 @@
  "CL_MEM_ALLOC_FLAGS_IMG": {
   "container": "enums.40D0",
   "groups": [
-   "cl_mem_alloc_flags_img"
+   "cl_mem_properties"
   ],
   "notes": [
+   "manual: cl_img_mem_properties: property NAME (valid 'properties' entry for clCreateBufferWithProperties); value-set = cl_mem_alloc_flags_img. Upstream require=cl_mem_properties; matches CL_MEM_DEVICE_ID_INTEL precedent (corrected 2026-10-08)",
    "spec evidence [cl_mem_alloc_flags_img] G4 typedef+define"
   ],
   "value": "0x40D7"
@@ -11392,9 +11402,10 @@
  "CL_PROGRAM_IL_KHR": {
   "container": "cl_device_info",
   "groups": [
-   "cl_platform_info"
+   "cl_program_info"
   ],
   "notes": [
+   "manual: cl_khr_il_program: program info query (sibling CL_PROGRAM_IL 0x1169 is cl_program_info; same reserved range 'Reserved for cl_program_info') \u2014 corrected from cl_platform_info 2026-10-08",
    "spec evidence [cl_platform_info] G3 new-enums list"
   ],
   "value": "0x1169"
@@ -12301,8 +12312,12 @@
  },
  "CL_SEMAPHORE_FAST_PATH_IMG": {
   "container": "enums.4220",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_semaphore_properties_khr"
+  ],
+  "notes": [
+   "manual: IMG external-semaphore fast path creation property (upstream require=cl_semaphore_properties_khr; adopted 2026-10-08)"
+  ],
   "value": "0x422D"
  },
  "CL_SEMAPHORE_HANDLE_D3D12_FENCE_KHR": {

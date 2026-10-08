@@ -1,1688 +1,1737 @@
 {
  "CL_ACCELERATOR_CONTEXT_INTEL": {
-   "groups": [
-     "cl_accelerator_info_intel"
-    ],
-   "spec_evidence": "manual: /regspec/all/intel/cl_intel_accelerator.txt — pointed to by <param_value>.  This size is dependent on the param_name, and [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_accelerator_info_intel"
+  ],
+  "spec_evidence": "manual: /regspec/all/intel/cl_intel_accelerator.txt — pointed to by <param_value>.  This size is dependent on the param_name, and [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_ACCELERATOR_DESCRIPTOR_INTEL": {
-   "groups": [
-     "cl_accelerator_info_intel"
-    ],
-   "spec_evidence": "manual: /regspec/all/intel/cl_intel_accelerator.txt — pointed to by <param_value>.  This size is dependent on the param_name, and [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_accelerator_info_intel"
+  ],
+  "spec_evidence": "manual: /regspec/all/intel/cl_intel_accelerator.txt — pointed to by <param_value>.  This size is dependent on the param_name, and [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_ACCELERATOR_REFERENCE_COUNT_INTEL": {
-   "groups": [
-     "cl_accelerator_info_intel"
-    ],
-   "spec_evidence": "manual: /regspec/all/intel/cl_intel_accelerator.txt — pointed to by <param_value>.  This size is dependent on the param_name, and [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_accelerator_info_intel"
+  ],
+  "spec_evidence": "manual: /regspec/all/intel/cl_intel_accelerator.txt — pointed to by <param_value>.  This size is dependent on the param_name, and [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_ACCELERATOR_TYPE_INTEL": {
-   "groups": [
-     "cl_accelerator_info_intel"
-    ],
-   "spec_evidence": "manual: /regspec/all/intel/cl_intel_accelerator.txt — pointed to by <param_value>.  This size is dependent on the param_name, and [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_accelerator_info_intel"
+  ],
+  "spec_evidence": "manual: /regspec/all/intel/cl_intel_accelerator.txt — pointed to by <param_value>.  This size is dependent on the param_name, and [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_ALL_DEVICES_FOR_DX9_INTEL": {
-   "groups": [
-     "cl_dx9_device_set_intel"
-    ],
-   "spec_evidence": "manual: /regspec/all/intel/cl_intel_dx9_media_sharing.txt — OpenCL devices are being queried by clGetDeviceIDsFromDX9INTEL. [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_dx9_device_set_intel"
+  ],
+  "spec_evidence": "manual: /regspec/all/intel/cl_intel_dx9_media_sharing.txt — OpenCL devices are being queried by clGetDeviceIDsFromDX9INTEL. [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_ALL_DEVICES_FOR_VA_API_INTEL": {
-   "groups": [
-     "cl_va_api_device_set_intel"
-    ],
-   "spec_evidence": "manual: /regspec/all/intel/cl_intel_va_api_media_sharing.txt — parameter of clGetDeviceIDsFromVA_APIMediaAdapterINTEL: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_va_api_device_set_intel"
+  ],
+  "spec_evidence": "manual: /regspec/all/intel/cl_intel_va_api_media_sharing.txt — parameter of clGetDeviceIDsFromVA_APIMediaAdapterINTEL: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_CHAR_BIT": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_CHAR_MAX": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_CHAR_MIN": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_COMMAND_ACQUIRE_D3D9_OBJECTS_INTEL": {
-   "groups": [
-     "cl_command_type"
-    ],
-   "spec_evidence": "user adjudication 2026-10-08 (Brice): safely cl_command_type. Naming drift from 2011 spec's CL_COMMAND_ACQUIRE_DX9_OBJECTS_INTEL (0x402A); token introduced #67 (2019 header extraction), no require block in cl.xml. Matches PR#1587."
-  },
+  "groups": [
+   "cl_command_type"
+  ],
+  "spec_evidence": "user adjudication 2026-10-08 (Brice): safely cl_command_type. Naming drift from 2011 spec's CL_COMMAND_ACQUIRE_DX9_OBJECTS_INTEL (0x402A); token introduced #67 (2019 header extraction), no require block in cl.xml. Matches PR#1587."
+ },
  "CL_COMMAND_ACQUIRE_GRALLOC_OBJECTS_IMG": {
-   "groups": [
-     "cl_command_type"
-    ],
-   "spec_evidence": "manual: cl_img_use_gralloc_ptr new command type (clEnqueueAcquire/ReleaseGrallocObject)"
-  },
+  "groups": [
+   "cl_command_type"
+  ],
+  "spec_evidence": "manual: cl_img_use_gralloc_ptr new command type (clEnqueueAcquire/ReleaseGrallocObject)"
+ },
  "CL_COMMAND_ACQUIRE_VA_API_MEDIA_SURFACES_INTEL": {
-   "groups": [
-     "cl_command_type"
-    ],
-   "spec_evidence": "manual: /regspec/all/intel/cl_intel_va_api_media_sharing.txt — surface using clCreateFromVA_APIMediaSurfaceINTEL.\" [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_command_type"
+  ],
+  "spec_evidence": "manual: /regspec/all/intel/cl_intel_va_api_media_sharing.txt — surface using clCreateFromVA_APIMediaSurfaceINTEL.\" [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_COMMAND_GENERATE_MIPMAP_IMG": {
-   "groups": [
-     "cl_command_type"
-    ],
-   "spec_evidence": "manual: cl_img_generate_mipmap new command type (clEnqueueGenerateMipmap)"
-  },
+  "groups": [
+   "cl_command_type"
+  ],
+  "spec_evidence": "manual: cl_img_generate_mipmap new command type (clEnqueueGenerateMipmap)"
+ },
+ "CL_COMMAND_MEMADVISE_INTEL": {
+  "groups": [
+   "cl_command_type"
+  ],
+  "spec_evidence": "cl_intel_unified_shared_memory: 'New return values from clGetEventInfo when param_name is CL_EVENT_COMMAND_TYPE' (verified 2026-10-08)"
+ },
+ "CL_COMMAND_MEMCPY_INTEL": {
+  "groups": [
+   "cl_command_type"
+  ],
+  "spec_evidence": "cl_intel_unified_shared_memory: 'New return values from clGetEventInfo when param_name is CL_EVENT_COMMAND_TYPE' (verified 2026-10-08)"
+ },
+ "CL_COMMAND_MEMFILL_INTEL": {
+  "groups": [
+   "cl_command_type"
+  ],
+  "spec_evidence": "cl_intel_unified_shared_memory: 'New return values from clGetEventInfo when param_name is CL_EVENT_COMMAND_TYPE' — command type, not exec info (verified spec text 2026-10-08)"
+ },
+ "CL_COMMAND_MIGRATEMEM_INTEL": {
+  "groups": [
+   "cl_command_type"
+  ],
+  "spec_evidence": "cl_intel_unified_shared_memory: 'New return values from clGetEventInfo when param_name is CL_EVENT_COMMAND_TYPE' (verified 2026-10-08)"
+ },
  "CL_COMMAND_MIGRATE_MEM_OBJECT_EXT": {
-   "groups": [
-     "cl_command_type"
-    ],
-   "spec_evidence": "manual: /regspec/all/ext/cl_ext_migrate_memobject.txt — <param_name> is CL_EVENT_COMMAND_TYPE: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_command_type"
+  ],
+  "spec_evidence": "manual: /regspec/all/ext/cl_ext_migrate_memobject.txt — <param_name> is CL_EVENT_COMMAND_TYPE: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_ARBITRATION_ALGORITHM_IMG": {
-   "groups": [
-     "cl_queue_properties"
-    ],
-   "spec_evidence": "registry-provenance: cl.xml <require comment=\"cl_queue_properties\"> authored by paulfradgley #1469 2025-10-21 cl_img_scheduling_controls. No published extension spec found (checked KhronosGroup/OpenCL-Registry 2026-10-08); matches PR#1587."
-  },
+  "groups": [
+   "cl_queue_properties"
+  ],
+  "spec_evidence": "registry-provenance: cl.xml <require comment=\"cl_queue_properties\"> authored by paulfradgley #1469 2025-10-21 cl_img_scheduling_controls. No published extension spec found (checked KhronosGroup/OpenCL-Registry 2026-10-08); matches PR#1587."
+ },
  "CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_EXECUTE_COUNT_IMG": {
-   "groups": [
-     "cl_queue_properties"
-    ],
-   "spec_evidence": "registry-provenance: cl.xml <require comment=\"cl_queue_properties\"> authored by paulfradgley #1469 2025-10-21 cl_img_scheduling_controls. No published extension spec found (checked KhronosGroup/OpenCL-Registry 2026-10-08); matches PR#1587."
-  },
+  "groups": [
+   "cl_queue_properties"
+  ],
+  "spec_evidence": "registry-provenance: cl.xml <require comment=\"cl_queue_properties\"> authored by paulfradgley #1469 2025-10-21 cl_img_scheduling_controls. No published extension spec found (checked KhronosGroup/OpenCL-Registry 2026-10-08); matches PR#1587."
+ },
  "CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_SCHEDULING_ALGORITHM_IMG": {
-   "groups": [
-     "cl_queue_properties"
-    ],
-   "spec_evidence": "registry-provenance: cl.xml <require comment=\"cl_queue_properties\"> authored by paulfradgley #1469 2025-10-21 cl_img_scheduling_controls. No published extension spec found (checked KhronosGroup/OpenCL-Registry 2026-10-08); matches PR#1587."
-  },
+  "groups": [
+   "cl_queue_properties"
+  ],
+  "spec_evidence": "registry-provenance: cl.xml <require comment=\"cl_queue_properties\"> authored by paulfradgley #1469 2025-10-21 cl_img_scheduling_controls. No published extension spec found (checked KhronosGroup/OpenCL-Registry 2026-10-08); matches PR#1587."
+ },
  "CL_COMMAND_READ_HOST_PIPE_INTEL": {
-   "groups": [
-     "cl_command_type"
-    ],
-   "spec_evidence": "manual: cl_intel_program_scope_host_pipe Table 37 supported event command type"
-  },
+  "groups": [
+   "cl_command_type"
+  ],
+  "spec_evidence": "manual: cl_intel_program_scope_host_pipe Table 37 supported event command type"
+ },
  "CL_COMMAND_RELEASE_D3D9_OBJECTS_INTEL": {
-   "groups": [
-     "cl_command_type"
-    ],
-   "spec_evidence": "user adjudication 2026-10-08 (Brice): safely cl_command_type. Naming drift from 2011 spec's CL_COMMAND_RELEASE_DX9_OBJECTS_INTEL (0x402B); token introduced #67 (2019 header extraction), no require block in cl.xml. Matches PR#1587."
-  },
+  "groups": [
+   "cl_command_type"
+  ],
+  "spec_evidence": "user adjudication 2026-10-08 (Brice): safely cl_command_type. Naming drift from 2011 spec's CL_COMMAND_RELEASE_DX9_OBJECTS_INTEL (0x402B); token introduced #67 (2019 header extraction), no require block in cl.xml. Matches PR#1587."
+ },
  "CL_COMMAND_RELEASE_GRALLOC_OBJECTS_IMG": {
-   "groups": [
-     "cl_command_type"
-    ],
-   "spec_evidence": "manual: cl_img_use_gralloc_ptr new command type"
-  },
+  "groups": [
+   "cl_command_type"
+  ],
+  "spec_evidence": "manual: cl_img_use_gralloc_ptr new command type"
+ },
  "CL_COMMAND_RELEASE_VA_API_MEDIA_SURFACES_INTEL": {
-   "groups": [
-     "cl_command_type"
-    ],
-   "spec_evidence": "manual: /regspec/all/intel/cl_intel_va_api_media_sharing.txt — surface using clCreateFromVA_APIMediaSurfaceINTEL.\" [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_command_type"
+  ],
+  "spec_evidence": "manual: /regspec/all/intel/cl_intel_va_api_media_sharing.txt — surface using clCreateFromVA_APIMediaSurfaceINTEL.\" [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_COMMAND_SVM_FREE_ARM": {
-   "groups": [
-     "cl_command_type"
-    ],
-   "spec_evidence": "manual: /regspec/all/arm/cl_arm_shared_virtual_memory.txt — To be used by clGetEventInfo: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_command_type"
+  ],
+  "spec_evidence": "manual: /regspec/all/arm/cl_arm_shared_virtual_memory.txt — To be used by clGetEventInfo: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_COMMAND_SVM_MAP_ARM": {
-   "groups": [
-     "cl_command_type"
-    ],
-   "spec_evidence": "manual: /regspec/all/arm/cl_arm_shared_virtual_memory.txt — To be used by clGetEventInfo: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_command_type"
+  ],
+  "spec_evidence": "manual: /regspec/all/arm/cl_arm_shared_virtual_memory.txt — To be used by clGetEventInfo: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_COMMAND_SVM_MEMCPY_ARM": {
-   "groups": [
-     "cl_command_type"
-    ],
-   "spec_evidence": "manual: /regspec/all/arm/cl_arm_shared_virtual_memory.txt — To be used by clGetEventInfo: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_command_type"
+  ],
+  "spec_evidence": "manual: /regspec/all/arm/cl_arm_shared_virtual_memory.txt — To be used by clGetEventInfo: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_COMMAND_SVM_MEMFILL_ARM": {
-   "groups": [
-     "cl_command_type"
-    ],
-   "spec_evidence": "manual: /regspec/all/arm/cl_arm_shared_virtual_memory.txt — To be used by clGetEventInfo: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_command_type"
+  ],
+  "spec_evidence": "manual: /regspec/all/arm/cl_arm_shared_virtual_memory.txt — To be used by clGetEventInfo: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_COMMAND_SVM_UNMAP_ARM": {
-   "groups": [
-     "cl_command_type"
-    ],
-   "spec_evidence": "manual: /regspec/all/arm/cl_arm_shared_virtual_memory.txt — To be used by clGetEventInfo: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_command_type"
+  ],
+  "spec_evidence": "manual: /regspec/all/arm/cl_arm_shared_virtual_memory.txt — To be used by clGetEventInfo: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_COMMAND_WRITE_HOST_PIPE_INTEL": {
-   "groups": [
-     "cl_command_type"
-    ],
-   "spec_evidence": "manual: cl_intel_program_scope_host_pipe Table 37 event command type (clEnqueueWriteHostPipeINTEL)"
-  },
+  "groups": [
+   "cl_command_type"
+  ],
+  "spec_evidence": "manual: cl_intel_program_scope_host_pipe Table 37 event command type (clEnqueueWriteHostPipeINTEL)"
+ },
  "CL_COMPLETE": {
-   "groups": [
-     "clCommandExecutionStatus"
-    ],
-   "spec_evidence": "manual: core command-execution-status value set of clGetEventInfo/CL_EVENT_COMMAND_EXECUTION_STATUS (registry type clCommandExecutionStatus; + cl_img_safety_mechanisms for ECC_RECOVERED)"
-  },
+  "groups": [
+   "clCommandExecutionStatus"
+  ],
+  "spec_evidence": "manual: core command-execution-status value set of clGetEventInfo/CL_EVENT_COMMAND_EXECUTION_STATUS (registry type clCommandExecutionStatus; + cl_img_safety_mechanisms for ECC_RECOVERED)"
+ },
  "CL_CONTEXT_D3D9EX_DEVICE_INTEL": {
-   "groups": [
-     "cl_context_properties"
-    ],
-   "spec_evidence": "manual: /regspec/all/intel/cl_intel_dx9_media_sharing.txt — clCreateContext and clCreateContextFromType: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_context_properties"
+  ],
+  "spec_evidence": "manual: /regspec/all/intel/cl_intel_dx9_media_sharing.txt — clCreateContext and clCreateContextFromType: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_CONTEXT_D3D9_DEVICE_INTEL": {
-   "groups": [
-     "cl_context_properties"
-    ],
-   "spec_evidence": "manual: intel/cl_intel_dx9_media_sharing.txt L98-99: property name in <properties> of clCreateContext [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_context_properties"
+  ],
+  "spec_evidence": "manual: intel/cl_intel_dx9_media_sharing.txt L98-99: property name in <properties> of clCreateContext [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_CONTEXT_DXVA_DEVICE_INTEL": {
-   "groups": [
-     "cl_context_properties"
-    ],
-   "spec_evidence": "manual: /regspec/all/intel/cl_intel_dx9_media_sharing.txt — Add to the list of errors for clCreateContext: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_context_properties"
+  ],
+  "spec_evidence": "manual: /regspec/all/intel/cl_intel_dx9_media_sharing.txt — Add to the list of errors for clCreateContext: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_CONTEXT_PERF_HINT_QCOM": {
-   "groups": [
-     "cl_context_properties"
-    ],
-   "spec_evidence": "manual: extensions/cl_qcom_perf_hint.asciidoc L83-88 'Added to the list of supported properties by clCreateContext' -> creation property / param_name; L118 Table row 'CL_CONTEXT_PERF_HINT_QCOM | cl_perf_hint_qcom'"
-  },
+  "groups": [
+   "cl_context_properties"
+  ],
+  "spec_evidence": "manual: extensions/cl_qcom_perf_hint.asciidoc L83-88 'Added to the list of supported properties by clCreateContext' -> creation property / param_name; L118 Table row 'CL_CONTEXT_PERF_HINT_QCOM | cl_perf_hint_qcom'"
+ },
  "CL_CONTEXT_SHOW_DIAGNOSTICS_INTEL": {
-   "groups": [
-     "cl_context_properties"
-    ],
-   "spec_evidence": "manual: /regspec/all/intel/cl_intel_driver_diagnostics.txt — clCreateContext and clCreateContextFromType: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_context_properties"
+  ],
+  "spec_evidence": "manual: /regspec/all/intel/cl_intel_driver_diagnostics.txt — clCreateContext and clCreateContextFromType: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_CONTEXT_VA_API_DISPLAY_INTEL": {
-   "groups": [
-     "cl_context_properties"
-    ],
-   "spec_evidence": "manual: /regspec/all/intel/cl_intel_va_api_media_sharing.txt — Add to the list of errors for clCreateContext: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_context_properties"
+  ],
+  "spec_evidence": "manual: /regspec/all/intel/cl_intel_va_api_media_sharing.txt — Add to the list of errors for clCreateContext: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_D3D9EX_DEVICE_INTEL": {
-   "groups": [
-     "cl_dx9_device_source_intel"
-    ],
-   "spec_evidence": "manual: /regspec/all/intel/cl_intel_dx9_media_sharing.txt — clGetDeviceIDsFromDX9INTEL returns CL_SUCCESS if the function is executed [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_dx9_device_source_intel"
+  ],
+  "spec_evidence": "manual: /regspec/all/intel/cl_intel_dx9_media_sharing.txt — clGetDeviceIDsFromDX9INTEL returns CL_SUCCESS if the function is executed [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_D3D9_DEVICE_INTEL": {
-   "groups": [
-     "cl_dx9_device_source_intel"
-    ],
-   "spec_evidence": "manual: /regspec/all/intel/cl_intel_dx9_media_sharing.txt — clGetDeviceIDsFromDX9INTEL returns CL_SUCCESS if the function is executed [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_dx9_device_source_intel"
+  ],
+  "spec_evidence": "manual: /regspec/all/intel/cl_intel_dx9_media_sharing.txt — clGetDeviceIDsFromDX9INTEL returns CL_SUCCESS if the function is executed [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_DBL_DIG": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_DBL_EPSILON": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_DBL_MANT_DIG": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_DBL_MAX": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_DBL_MAX_10_EXP": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_DBL_MAX_EXP": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_DBL_MIN": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_DBL_MIN_10_EXP": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_DBL_MIN_EXP": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_DBL_RADIX": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_DEVICE_AFFINITY_DOMAINS_EXT": {
-   "groups": [
-     "cl_device_info"
-    ],
-   "spec_evidence": "manual: /regspec/all/ext/cl_ext_device_fission.txt — clGetDeviceInfo: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_device_info"
+  ],
+  "spec_evidence": "manual: /regspec/all/ext/cl_ext_device_fission.txt — clGetDeviceInfo: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_DEVICE_AVAILABLE_ASYNC_QUEUES_AMD": {
-   "groups": [
-     "cl_device_info"
-    ],
-   "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the number of available async queues: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_device_info"
+  ],
+  "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the number of available async queues: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_DEVICE_AVC_ME_SUPPORTS_PREEMPTION_INTEL": {
-   "groups": [
-     "cl_device_info"
-    ],
-   "spec_evidence": "manual: /regspec/all/intel/cl_intel_device_side_avc_motion_estimation.txt — Accepted as arguments to clGetDeviceInfo [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_device_info"
+  ],
+  "spec_evidence": "manual: /regspec/all/intel/cl_intel_device_side_avc_motion_estimation.txt — Accepted as arguments to clGetDeviceInfo [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_DEVICE_AVC_ME_SUPPORTS_TEXTURE_SAMPLER_USE_INTEL": {
-   "groups": [
-     "cl_device_info"
-    ],
-   "spec_evidence": "manual: /regspec/all/intel/cl_intel_device_side_avc_motion_estimation.txt — Accepted as arguments to clGetDeviceInfo [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_device_info"
+  ],
+  "spec_evidence": "manual: /regspec/all/intel/cl_intel_device_side_avc_motion_estimation.txt — Accepted as arguments to clGetDeviceInfo [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_DEVICE_AVC_ME_VERSION_INTEL": {
-   "groups": [
-     "cl_device_info"
-    ],
-   "spec_evidence": "manual: /regspec/all/intel/cl_intel_device_side_avc_motion_estimation.txt — Accepted as arguments to clGetDeviceInfo [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_device_info"
+  ],
+  "spec_evidence": "manual: /regspec/all/intel/cl_intel_device_side_avc_motion_estimation.txt — Accepted as arguments to clGetDeviceInfo [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_DEVICE_BOARD_NAME_AMD": {
-   "groups": [
-     "cl_device_info"
-    ],
-   "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the SKU board name for the device: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_device_info"
+  ],
+  "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the SKU board name for the device: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_DEVICE_COMPUTE_CAPABILITY_MAJOR_NV": {
-   "groups": [
-     "cl_device_info"
-    ],
-   "spec_evidence": "manual: nv/cl_nv_device_attribute_query.txt — table 4.3 extension: 'Returns the major revision number that defines the CUDA compute capability' [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_device_info"
+  ],
+  "spec_evidence": "manual: nv/cl_nv_device_attribute_query.txt — table 4.3 extension: 'Returns the major revision number that defines the CUDA compute capability' [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_DEVICE_COMPUTE_CAPABILITY_MINOR_NV": {
-   "groups": [
-     "cl_device_info"
-    ],
-   "spec_evidence": "manual: nv/cl_nv_device_attribute_query.txt — same table: 'Returns the minor revision number' [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_device_info"
+  ],
+  "spec_evidence": "manual: nv/cl_nv_device_attribute_query.txt — same table: 'Returns the minor revision number' [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_DEVICE_COMPUTE_UNITS_BITFIELD_ARM": {
-   "groups": [
-     "cl_device_info"
-    ],
-   "spec_evidence": "manual: /regspec/all/arm/cl_arm_core_id.txt — New Procedures and Functions [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_device_info"
+  ],
+  "spec_evidence": "manual: /regspec/all/arm/cl_arm_core_id.txt — New Procedures and Functions [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_DEVICE_CONTROLLED_TERMINATION_CAPABILITIES_ARM": {
-   "groups": [
-     "cl_device_info"
-    ],
-   "spec_evidence": "manual: cl_arm_controlled_kernel_termination: param_name of clGetDeviceInfo returning cl_device_controlled_termination_capabilities_arm bitfield"
-  },
+  "groups": [
+   "cl_device_info"
+  ],
+  "spec_evidence": "manual: cl_arm_controlled_kernel_termination: param_name of clGetDeviceInfo returning cl_device_controlled_termination_capabilities_arm bitfield"
+ },
  "CL_DEVICE_EXT_MEM_PADDING_IN_BYTES_QCOM": {
-   "groups": [
-     "cl_device_info"
-    ],
-   "spec_evidence": "manual: /regspec/all/qcom/cl_qcom_ext_host_ptr.txt — Add the following token to Table 4.3 (clGetDeviceInfo OpenCL Device [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_device_info"
+  ],
+  "spec_evidence": "manual: /regspec/all/qcom/cl_qcom_ext_host_ptr.txt — Add the following token to Table 4.3 (clGetDeviceInfo OpenCL Device [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_DEVICE_GFXIP_MAJOR_AMD": {
-   "groups": [
-     "cl_device_info"
-    ],
-   "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the core engine GFXIP major version: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_device_info"
+  ],
+  "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the core engine GFXIP major version: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_DEVICE_GFXIP_MINOR_AMD": {
-   "groups": [
-     "cl_device_info"
-    ],
-   "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the core engine GFXIP minor version: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_device_info"
+  ],
+  "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the core engine GFXIP minor version: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_DEVICE_GLOBAL_FREE_MEMORY_AMD": {
-   "groups": [
-     "cl_device_info"
-    ],
-   "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the global free memory in KBytes for the device: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_device_info"
+  ],
+  "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the global free memory in KBytes for the device: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_DEVICE_GLOBAL_MEM_CHANNELS_AMD": {
-   "groups": [
-     "cl_device_info"
-    ],
-   "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the number of global memory channels: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_device_info"
+  ],
+  "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the number of global memory channels: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_DEVICE_GLOBAL_MEM_CHANNEL_BANKS_AMD": {
-   "groups": [
-     "cl_device_info"
-    ],
-   "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the number of banks in each global memory channel: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_device_info"
+  ],
+  "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the number of banks in each global memory channel: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_DEVICE_GLOBAL_MEM_CHANNEL_BANK_WIDTH_AMD": {
-   "groups": [
-     "cl_device_info"
-    ],
-   "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the width in bytes of each of global memory bank: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_device_info"
+  ],
+  "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the width in bytes of each of global memory bank: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_DEVICE_GPU_OVERLAP_NV": {
-   "groups": [
-     "cl_device_info"
-    ],
-   "spec_evidence": "manual: nv/cl_nv_device_attribute_query.txt — 'Returns CL_TRUE if the device can concurrently copy memory' [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_device_info"
+  ],
+  "spec_evidence": "manual: nv/cl_nv_device_attribute_query.txt — 'Returns CL_TRUE if the device can concurrently copy memory' [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_DEVICE_IMAGE_BASE_ADDRESS_ALIGNMENT_KHR": {
-   "groups": [
-     "cl_device_info"
-    ],
-   "spec_evidence": "manual: cl_khr_image2d_from_buffer New API Enums param_name of clGetDeviceInfo"
-  },
+  "groups": [
+   "cl_device_info"
+  ],
+  "spec_evidence": "manual: cl_khr_image2d_from_buffer New API Enums param_name of clGetDeviceInfo"
+ },
  "CL_DEVICE_IMAGE_PITCH_ALIGNMENT_KHR": {
-   "groups": [
-     "cl_device_info"
-    ],
-   "spec_evidence": "manual: cl_khr_image2d_from_buffer New API Enums param_name of clGetDeviceInfo"
-  },
+  "groups": [
+   "cl_device_info"
+  ],
+  "spec_evidence": "manual: cl_khr_image2d_from_buffer New API Enums param_name of clGetDeviceInfo"
+ },
  "CL_DEVICE_INTEGER_DOT_PRODUCT_ACCELERATION_PROPERTIES_4x8BIT_PACKED": {
-   "groups": [
-     "cl_device_info"
-    ],
-   "spec_evidence": "manual: core-inherited of _KHR variant; sibling _8BIT_ already cl_device_info"
-  },
+  "groups": [
+   "cl_device_info"
+  ],
+  "spec_evidence": "manual: core-inherited of _KHR variant; sibling _8BIT_ already cl_device_info"
+ },
  "CL_DEVICE_INTEGER_DOT_PRODUCT_ACCELERATION_PROPERTIES_4x8BIT_PACKED_KHR": {
-   "groups": [
-     "cl_device_info"
-    ],
-   "spec_evidence": "manual: cl_khr_integer_dot_product Table 5 OpenCL Device Queries; sibling _8BIT_ already cl_device_info"
-  },
+  "groups": [
+   "cl_device_info"
+  ],
+  "spec_evidence": "manual: cl_khr_integer_dot_product Table 5 OpenCL Device Queries; sibling _8BIT_ already cl_device_info"
+ },
  "CL_DEVICE_INTEGRATED_MEMORY_NV": {
-   "groups": [
-     "cl_device_info"
-    ],
-   "spec_evidence": "manual: nv/cl_nv_device_attribute_query.txt — 'CL_TRUE if the device is integrated with the memory' [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_device_info"
+  ],
+  "spec_evidence": "manual: nv/cl_nv_device_attribute_query.txt — 'CL_TRUE if the device is integrated with the memory' [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_DEVICE_JOB_SLOTS_ARM": {
-   "groups": [
-     "cl_device_info"
-    ],
-   "spec_evidence": "manual: /regspec/all/arm/cl_arm_job_slot_selection.txt — New Procedures and Functions [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_device_info"
+  ],
+  "spec_evidence": "manual: /regspec/all/arm/cl_arm_job_slot_selection.txt — New Procedures and Functions [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_DEVICE_KERNEL_EXEC_TIMEOUT_NV": {
-   "groups": [
-     "cl_device_info"
-    ],
-   "spec_evidence": "manual: nv/cl_nv_device_attribute_query.txt — 'CL_TRUE if there is a run time limit for kernels executed on the device' [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_device_info"
+  ],
+  "spec_evidence": "manual: nv/cl_nv_device_attribute_query.txt — 'CL_TRUE if there is a run time limit for kernels executed on the device' [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_DEVICE_LOCAL_MEM_BANKS_AMD": {
-   "groups": [
-     "cl_device_info"
-    ],
-   "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the number of banks of local memory: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_device_info"
+  ],
+  "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the number of banks of local memory: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_DEVICE_LOCAL_MEM_SIZE_PER_COMPUTE_UNIT_AMD": {
-   "groups": [
-     "cl_device_info"
-    ],
-   "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the local memory size in bytes per CU: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_device_info"
+  ],
+  "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the local memory size in bytes per CU: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_DEVICE_MAX_HOST_READ_PIPES_INTEL": {
-   "groups": [
-     "cl_device_info"
-    ],
-   "spec_evidence": "user adjudication 2026-10-08 (Brice): device info query. Allocated #144 2019, no spec chapter, no require block; matches PR#1587."
-  },
+  "groups": [
+   "cl_device_info"
+  ],
+  "spec_evidence": "user adjudication 2026-10-08 (Brice): device info query. Allocated #144 2019, no spec chapter, no require block; matches PR#1587."
+ },
  "CL_DEVICE_MAX_HOST_WRITE_PIPES_INTEL": {
-   "groups": [
-     "cl_device_info"
-    ],
-   "spec_evidence": "user adjudication 2026-10-08 (Brice): device info query. Allocated #144 2019, no spec chapter, no require block; matches PR#1587."
-  },
+  "groups": [
+   "cl_device_info"
+  ],
+  "spec_evidence": "user adjudication 2026-10-08 (Brice): device info query. Allocated #144 2019, no spec chapter, no require block; matches PR#1587."
+ },
  "CL_DEVICE_MAX_WARP_COUNT_ARM": {
-   "groups": [
-     "cl_device_info"
-    ],
-   "spec_evidence": "manual: cl_arm_scheduling_controls L49-66 param_name of clGetDeviceInfo"
-  },
+  "groups": [
+   "cl_device_info"
+  ],
+  "spec_evidence": "manual: cl_arm_scheduling_controls L49-66 param_name of clGetDeviceInfo"
+ },
  "CL_DEVICE_MAX_WORK_GROUP_SIZE_AMD": {
-   "groups": [
-     "cl_device_info"
-    ],
-   "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the extended maximum work group size [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_device_info"
+  ],
+  "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the extended maximum work group size [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_DEVICE_MEMORY_CAPABILITIES_IMG": {
-   "groups": [
-     "cl_device_info"
-    ],
-   "spec_evidence": "manual: cl_img_mem_properties 'List of supported param name by clGetDeviceInfo'"
-  },
+  "groups": [
+   "cl_device_info"
+  ],
+  "spec_evidence": "manual: cl_img_mem_properties 'List of supported param name by clGetDeviceInfo'"
+ },
  "CL_DEVICE_ME_VERSION_INTEL": {
-   "groups": [
-     "cl_device_info"
-    ],
-   "spec_evidence": "manual: /regspec/all/intel/cl_intel_advanced_motion_estimation.txt — Modify the description of function clGetDeviceInfo [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_device_info"
+  ],
+  "spec_evidence": "manual: /regspec/all/intel/cl_intel_advanced_motion_estimation.txt — Modify the description of function clGetDeviceInfo [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_DEVICE_NUM_SIMULTANEOUS_INTEROPS_INTEL": {
-   "groups": [
-     "cl_device_info"
-    ],
-   "spec_evidence": "manual: /regspec/all/intel/cl_intel_simultaneous_sharing.txt — RESOLVED: Added description of all changes explicitly. [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_device_info"
+  ],
+  "spec_evidence": "manual: /regspec/all/intel/cl_intel_simultaneous_sharing.txt — RESOLVED: Added description of all changes explicitly. [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_DEVICE_PAGE_SIZE_QCOM": {
-   "groups": [
-     "cl_device_info"
-    ],
-   "spec_evidence": "manual: /regspec/all/qcom/cl_qcom_ext_host_ptr.txt — Add the following token to Table 4.3 (clGetDeviceInfo OpenCL Device [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_device_info"
+  ],
+  "spec_evidence": "manual: /regspec/all/qcom/cl_qcom_ext_host_ptr.txt — Add the following token to Table 4.3 (clGetDeviceInfo OpenCL Device [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_DEVICE_PARENT_DEVICE_EXT": {
-   "groups": [
-     "cl_device_info"
-    ],
-   "spec_evidence": "manual: /regspec/all/ext/cl_ext_device_fission.txt — clGetDeviceInfo: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_device_info"
+  ],
+  "spec_evidence": "manual: /regspec/all/ext/cl_ext_device_fission.txt — clGetDeviceInfo: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_DEVICE_PARTITION_BY_AFFINITY_DOMAIN_EXT": {
-   "groups": [
-     "cl_device_partition_property"
-    ],
-   "spec_evidence": "manual: legacy alias of CL_DEVICE_PARTITION_BY_AFFINITY_DOMAIN (cl_ext_device_fission; core member already cl_device_partition_property)"
-  },
+  "groups": [
+   "cl_device_partition_property"
+  ],
+  "spec_evidence": "manual: legacy alias of CL_DEVICE_PARTITION_BY_AFFINITY_DOMAIN (cl_ext_device_fission; core member already cl_device_partition_property)"
+ },
  "CL_DEVICE_PARTITION_BY_COUNTS_EXT": {
-   "groups": [
-     "cl_device_partition_property"
-    ],
-   "spec_evidence": "manual: legacy alias of CL_DEVICE_PARTITION_BY_COUNTS (cl_ext_device_fission; core member already cl_device_partition_property)"
-  },
+  "groups": [
+   "cl_device_partition_property"
+  ],
+  "spec_evidence": "manual: legacy alias of CL_DEVICE_PARTITION_BY_COUNTS (cl_ext_device_fission; core member already cl_device_partition_property)"
+ },
  "CL_DEVICE_PARTITION_BY_COUNTS_LIST_END": {
-   "groups": [
-     "cl_device_partition_property"
-    ],
-   "spec_evidence": "manual: core spec: list terminator for cl_device_partition_property (CL_DEVICE_PARTITION_BY_COUNTS_EXT)"
-  },
+  "groups": [
+   "cl_device_partition_property"
+  ],
+  "spec_evidence": "manual: core spec: list terminator for cl_device_partition_property (CL_DEVICE_PARTITION_BY_COUNTS_EXT)"
+ },
  "CL_DEVICE_PARTITION_BY_NAMES_EXT": {
-   "groups": [
-     "cl_device_partition_property"
-    ],
-   "spec_evidence": "manual: legacy alias of CL_DEVICE_PARTITION_BY_NAMES (cl_ext_device_fission)"
-  },
+  "groups": [
+   "cl_device_partition_property"
+  ],
+  "spec_evidence": "manual: legacy alias of CL_DEVICE_PARTITION_BY_NAMES (cl_ext_device_fission)"
+ },
  "CL_DEVICE_PARTITION_BY_NAMES_INTEL": {
-   "groups": [
-     "cl_device_partition_property"
-    ],
-   "spec_evidence": "manual: legacy alias of CL_DEVICE_PARTITION_BY_NAMES (cl_intel_device_partition_by_names; same value 0x4052)"
-  },
+  "groups": [
+   "cl_device_partition_property"
+  ],
+  "spec_evidence": "manual: legacy alias of CL_DEVICE_PARTITION_BY_NAMES (cl_intel_device_partition_by_names; same value 0x4052)"
+ },
  "CL_DEVICE_PARTITION_EQUALLY_EXT": {
-   "groups": [
-     "cl_device_partition_property"
-    ],
-   "spec_evidence": "manual: legacy alias of CL_DEVICE_PARTITION_EQUALLY (cl_ext_device_fission; core member already cl_device_partition_property)"
-  },
+  "groups": [
+   "cl_device_partition_property"
+  ],
+  "spec_evidence": "manual: legacy alias of CL_DEVICE_PARTITION_EQUALLY (cl_ext_device_fission; core member already cl_device_partition_property)"
+ },
  "CL_DEVICE_PARTITION_STYLE_EXT": {
-   "groups": [
-     "cl_device_info"
-    ],
-   "spec_evidence": "manual: /regspec/all/ext/cl_ext_device_fission.txt — clGetDeviceInfo: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_device_info"
+  ],
+  "spec_evidence": "manual: /regspec/all/ext/cl_ext_device_fission.txt — clGetDeviceInfo: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_DEVICE_PARTITION_TYPES_EXT": {
-   "groups": [
-     "cl_device_info"
-    ],
-   "spec_evidence": "manual: ext/cl_ext_device_fission.txt L382 — 'CL_DEVICE_PARTITION_TYPES_EXT - a selector to get a list of supported partition styles' (clGetDeviceInfo) [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_device_info"
+  ],
+  "spec_evidence": "manual: ext/cl_ext_device_fission.txt L382 — 'CL_DEVICE_PARTITION_TYPES_EXT - a selector to get a list of supported partition styles' (clGetDeviceInfo) [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_DEVICE_PCIE_ID_AMD": {
-   "groups": [
-     "cl_device_info"
-    ],
-   "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the device PCIe ID [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_device_info"
+  ],
+  "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the device PCIe ID [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_DEVICE_PREFERRED_CONSTANT_BUFFER_SIZE_AMD": {
-   "groups": [
-     "cl_device_info"
-    ],
-   "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the preferred constant buffer size [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_device_info"
+  ],
+  "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the preferred constant buffer size [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_DEVICE_PREFERRED_WORK_GROUP_SIZE_AMD": {
-   "groups": [
-     "cl_device_info"
-    ],
-   "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the preferred work group size: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_device_info"
+  ],
+  "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the preferred work group size: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_DEVICE_PROFILING_TIMER_OFFSET_AMD": {
-   "groups": [
-     "cl_device_info"
-    ],
-   "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the offset in nano-seconds between an event timestamp and Epoch: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_device_info"
+  ],
+  "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the offset in nano-seconds between an event timestamp and Epoch: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_DEVICE_REFERENCE_COUNT_EXT": {
-   "groups": [
-     "cl_device_info"
-    ],
-   "spec_evidence": "manual: /regspec/all/ext/cl_ext_device_fission.txt — If no partition style is supported then the size of the returned [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_device_info"
+  ],
+  "spec_evidence": "manual: /regspec/all/ext/cl_ext_device_fission.txt — If no partition style is supported then the size of the returned [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_DEVICE_REGISTERS_PER_BLOCK_NV": {
-   "groups": [
-     "cl_device_info"
-    ],
-   "spec_evidence": "manual: nv/cl_nv_device_attribute_query.txt — 'Maximum number of 32-bit registers available to a thread' [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_device_info"
+  ],
+  "spec_evidence": "manual: nv/cl_nv_device_attribute_query.txt — 'Maximum number of 32-bit registers available to a thread' [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_DEVICE_SAFETY_MEM_SIZE_IMG": {
-   "groups": [
-     "cl_device_info"
-    ],
-   "spec_evidence": "manual: cl_img_safety_mechanisms L80-85 + Table 5 param_names of clGetDeviceInfo"
-  },
+  "groups": [
+   "cl_device_info"
+  ],
+  "spec_evidence": "manual: cl_img_safety_mechanisms L80-85 + Table 5 param_names of clGetDeviceInfo"
+ },
  "CL_DEVICE_SCHEDULING_CONTROLS_CAPABILITIES_ARM": {
-   "groups": [
-     "cl_device_info"
-    ],
-   "spec_evidence": "manual: cl_arm_scheduling_controls L49-66 param_name of clGetDeviceInfo"
-  },
+  "groups": [
+   "cl_device_info"
+  ],
+  "spec_evidence": "manual: cl_arm_scheduling_controls L49-66 param_name of clGetDeviceInfo"
+ },
  "CL_DEVICE_SCHEDULING_CONTROLS_CAPABILITIES_IMG": {
-   "groups": [
-     "cl_device_info"
-    ],
-   "spec_evidence": "registry-provenance: cl.xml <require comment=\"cl_device_info\"> authored by paulfradgley #1469 2025-10-21 cl_img_scheduling_controls. No published extension spec found (checked KhronosGroup/OpenCL-Registry 2026-10-08); matches PR#1587."
-  },
+  "groups": [
+   "cl_device_info"
+  ],
+  "spec_evidence": "registry-provenance: cl.xml <require comment=\"cl_device_info\"> authored by paulfradgley #1469 2025-10-21 cl_img_scheduling_controls. No published extension spec found (checked KhronosGroup/OpenCL-Registry 2026-10-08); matches PR#1587."
+ },
  "CL_DEVICE_SIMD_INSTRUCTION_WIDTH_AMD": {
-   "groups": [
-     "cl_device_info"
-    ],
-   "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the number of instructions that a SIMD can execute in parallel: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_device_info"
+  ],
+  "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the number of instructions that a SIMD can execute in parallel: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_DEVICE_SIMD_PER_COMPUTE_UNIT_AMD": {
-   "groups": [
-     "cl_device_info"
-    ],
-   "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return number of SIMD (Single Instruction Multiple Data) units per compute [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_device_info"
+  ],
+  "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return number of SIMD (Single Instruction Multiple Data) units per compute [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_DEVICE_SIMD_WIDTH_AMD": {
-   "groups": [
-     "cl_device_info"
-    ],
-   "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the maximum number of work items from the same work group that can [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_device_info"
+  ],
+  "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the maximum number of work items from the same work group that can [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_DEVICE_SIMULTANEOUS_INTEROPS_INTEL": {
-   "groups": [
-     "cl_device_info"
-    ],
-   "spec_evidence": "manual: /regspec/all/intel/cl_intel_simultaneous_sharing.txt — of clGetDeviceInfo: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_device_info"
+  ],
+  "spec_evidence": "manual: /regspec/all/intel/cl_intel_simultaneous_sharing.txt — of clGetDeviceInfo: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_DEVICE_SUB_GROUP_SIZES_INTEL": {
-   "groups": [
-     "cl_device_info"
-    ],
-   "spec_evidence": "manual: cl_intel_required_subgroup_size L102-112 Additions to Table 4.3 cl_device_info"
-  },
+  "groups": [
+   "cl_device_info"
+  ],
+  "spec_evidence": "manual: cl_intel_required_subgroup_size L102-112 Additions to Table 4.3 cl_device_info"
+ },
  "CL_DEVICE_SUPPORTED_REGISTER_ALLOCATIONS_ARM": {
-   "groups": [
-     "cl_device_info"
-    ],
-   "spec_evidence": "manual: cl_arm_scheduling_controls L49-66 param_name of clGetDeviceInfo"
-  },
+  "groups": [
+   "cl_device_info"
+  ],
+  "spec_evidence": "manual: cl_arm_scheduling_controls L49-66 param_name of clGetDeviceInfo"
+ },
  "CL_DEVICE_SVM_CAPABILITIES_ARM": {
-   "groups": [
-     "cl_device_info"
-    ],
-   "spec_evidence": "manual: /regspec/all/arm/cl_arm_shared_virtual_memory.txt — Flag values returned by clGetDeviceInfo with [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_device_info"
+  ],
+  "spec_evidence": "manual: /regspec/all/arm/cl_arm_shared_virtual_memory.txt — Flag values returned by clGetDeviceInfo with [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_DEVICE_SVM_TYPE_CAPABILITIES_KHR": {
-   "groups": [
-     "cl_device_info"
-    ],
-   "spec_evidence": "manual: cl_khr_unified_svm param_name of clGetDeviceInfo"
-  },
+  "groups": [
+   "cl_device_info"
+  ],
+  "spec_evidence": "manual: cl_khr_unified_svm param_name of clGetDeviceInfo"
+ },
  "CL_DEVICE_THREAD_TRACE_SUPPORTED_AMD": {
-   "groups": [
-     "cl_device_info"
-    ],
-   "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return 1 if thread trace is supported, 0 otherwise: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_device_info"
+  ],
+  "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return 1 if thread trace is supported, 0 otherwise: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_DEVICE_TOPOLOGY_AMD": {
-   "groups": [
-     "cl_device_info"
-    ],
-   "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the topology for the device: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_device_info"
+  ],
+  "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the topology for the device: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_DEVICE_WARP_SIZE_NV": {
-   "groups": [
-     "cl_device_info"
-    ],
-   "spec_evidence": "manual: nv/cl_nv_device_attribute_query.txt — 'Warp size in work-items' [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_device_info"
+  ],
+  "spec_evidence": "manual: nv/cl_nv_device_attribute_query.txt — 'Warp size in work-items' [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_DEVICE_WAVEFRONT_WIDTH_AMD": {
-   "groups": [
-     "cl_device_info"
-    ],
-   "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the number of workitems per wavefront: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_device_info"
+  ],
+  "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the number of workitems per wavefront: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_DEVICE_WORKGROUP_PROTECTION_DEVICE_ENQUEUE_CAPABILITIES_IMG": {
-   "groups": [
-     "cl_device_info"
-    ],
-   "spec_evidence": "manual: cl_img_safety_mechanisms L80-85 + Table 5 param_names of clGetDeviceInfo"
-  },
+  "groups": [
+   "cl_device_info"
+  ],
+  "spec_evidence": "manual: cl_img_safety_mechanisms L80-85 + Table 5 param_names of clGetDeviceInfo"
+ },
  "CL_DEVICE_WORKGROUP_PROTECTION_SVM_CAPABILITIES_IMG": {
-   "groups": [
-     "cl_device_info"
-    ],
-   "spec_evidence": "manual: cl_img_safety_mechanisms L80-85 + Table 5 param_names of clGetDeviceInfo"
-  },
+  "groups": [
+   "cl_device_info"
+  ],
+  "spec_evidence": "manual: cl_img_safety_mechanisms L80-85 + Table 5 param_names of clGetDeviceInfo"
+ },
  "CL_DXVA_DEVICE_INTEL": {
-   "groups": [
-     "cl_dx9_device_source_intel"
-    ],
-   "spec_evidence": "manual: /regspec/all/intel/cl_intel_dx9_media_sharing.txt — clGetDeviceIDsFromDX9INTEL returns CL_SUCCESS if the function is executed [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_dx9_device_source_intel"
+  ],
+  "spec_evidence": "manual: /regspec/all/intel/cl_intel_dx9_media_sharing.txt — clGetDeviceIDsFromDX9INTEL returns CL_SUCCESS if the function is executed [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_ECC_RECOVERED_IMG": {
-   "groups": [
-     "clCommandExecutionStatus"
-    ],
-   "spec_evidence": "manual: core command-execution-status value set of clGetEventInfo/CL_EVENT_COMMAND_EXECUTION_STATUS (registry type clCommandExecutionStatus; + cl_img_safety_mechanisms for ECC_RECOVERED)"
-  },
+  "groups": [
+   "clCommandExecutionStatus"
+  ],
+  "spec_evidence": "manual: core command-execution-status value set of clGetEventInfo/CL_EVENT_COMMAND_EXECUTION_STATUS (registry type clCommandExecutionStatus; + cl_img_safety_mechanisms for ECC_RECOVERED)"
+ },
  "CL_EGL_YUV_PLANE_INTEL": {
-   "groups": [
-     "cl_image_info"
-    ],
-   "spec_evidence": "manual: /regspec/all/intel/cl_intel_egl_image_yuv.txt — and <image> was not created by the function clCreateFromEGLImageKHR. [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_image_info",
+   "cl_egl_image_properties_khr"
+  ],
+  "spec_evidence": "cl_intel_egl_image_yuv: 'as <param_name> of clGetImageInfo' + clCreateFromEGLImageKHR <properties> property — dual role (2026-10-08)"
+ },
  "CL_EVENT_COMMAND_TERMINATION_REASON_ARM": {
-   "groups": [
-     "cl_event_info"
-    ],
-   "spec_evidence": "manual: cl_arm_controlled_kernel_termination param_name of clGetEventInfo (query key, not a bit value)"
-  },
+  "groups": [
+   "cl_event_info"
+  ],
+  "spec_evidence": "manual: cl_arm_controlled_kernel_termination param_name of clGetEventInfo (query key, not a bit value)"
+ },
  "CL_FLT_DIG": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_FLT_EPSILON": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_FLT_MANT_DIG": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_FLT_MAX": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_FLT_MAX_10_EXP": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_FLT_MAX_EXP": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_FLT_MIN": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_FLT_MIN_10_EXP": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_FLT_MIN_EXP": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_FLT_RADIX": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_GRALLOC_RESOURCE_NOT_ACQUIRED_IMG": {
-   "groups": [
-     "ErrorCode"
-    ],
-   "spec_evidence": "manual: cl_img_use_gralloc_ptr error return code"
-  },
+  "groups": [
+   "ErrorCode"
+  ],
+  "spec_evidence": "manual: cl_img_use_gralloc_ptr error return code"
+ },
  "CL_HALF_DIG": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_HALF_EPSILON": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_HALF_MANT_DIG": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_HALF_MAX": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_HALF_MAX_10_EXP": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_HALF_MAX_EXP": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_HALF_MIN": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_HALF_MIN_10_EXP": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_HALF_MIN_EXP": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_HALF_RADIX": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_HUGE_VAL": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_HUGE_VALF": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_IMAGE_DX9_PLANE_INTEL": {
-   "groups": [
-     "cl_image_info"
-    ],
-   "spec_evidence": "manual: /regspec/all/intel/cl_intel_dx9_media_sharing.txt — using clGetMemObjectInfo and clGetImageInfo with <param_name> [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_image_info"
+  ],
+  "spec_evidence": "manual: /regspec/all/intel/cl_intel_dx9_media_sharing.txt — using clGetMemObjectInfo and clGetImageInfo with <param_name> [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_IMAGE_ROW_ALIGNMENT_QCOM": {
-   "groups": [
-     "cl_image_pitch_info_qcom"
-    ],
-   "spec_evidence": "manual: /regspec/all/qcom/cl_qcom_ext_host_ptr.txt — Accepted by the <param_name> argument of clGetDeviceImageInfoQCOM [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_image_pitch_info_qcom"
+  ],
+  "spec_evidence": "manual: /regspec/all/qcom/cl_qcom_ext_host_ptr.txt — Accepted by the <param_name> argument of clGetDeviceImageInfoQCOM [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_IMAGE_SLICE_ALIGNMENT_QCOM": {
-   "groups": [
-     "cl_image_pitch_info_qcom"
-    ],
-   "spec_evidence": "manual: /regspec/all/qcom/cl_qcom_ext_host_ptr.txt — Accepted by the <param_name> argument of clGetDeviceImageInfoQCOM [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_image_pitch_info_qcom"
+  ],
+  "spec_evidence": "manual: /regspec/all/qcom/cl_qcom_ext_host_ptr.txt — Accepted by the <param_name> argument of clGetDeviceImageInfoQCOM [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_IMAGE_VA_API_PLANE_INTEL": {
-   "groups": [
-     "cl_image_info"
-    ],
-   "spec_evidence": "manual: /regspec/all/intel/cl_intel_va_api_media_sharing.txt — \"* CL_INVALID_VA_API_MEDIA_SURFACE_INTEL if <param_name> is [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_image_info"
+  ],
+  "spec_evidence": "manual: /regspec/all/intel/cl_intel_va_api_media_sharing.txt — \"* CL_INVALID_VA_API_MEDIA_SURFACE_INTEL if <param_name> is [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_IMPORT_ANDROID_HARDWARE_BUFFER_LAYER_INDEX_ARM": {
-   "groups": [
-     "cl_import_properties_arm"
-    ],
-   "spec_evidence": "manual: /regspec/all/arm/cl_arm_import_memory.txt — Valid values for CL_IMPORT_ANDROID_HARDWARE_BUFFER_PLANE_INDEX_ARM and [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_import_properties_arm"
+  ],
+  "spec_evidence": "manual: /regspec/all/arm/cl_arm_import_memory.txt — Valid values for CL_IMPORT_ANDROID_HARDWARE_BUFFER_PLANE_INDEX_ARM and [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_IMPORT_ANDROID_HARDWARE_BUFFER_PLANE_INDEX_ARM": {
-   "groups": [
-     "cl_import_properties_arm"
-    ],
-   "spec_evidence": "manual: /regspec/all/arm/cl_arm_import_memory.txt — Multiplanar buffers are only supported when backed by a single dma_buf. [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_import_properties_arm"
+  ],
+  "spec_evidence": "manual: /regspec/all/arm/cl_arm_import_memory.txt — Multiplanar buffers are only supported when backed by a single dma_buf. [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_IMPORT_DMA_BUF_DATA_CONSISTENCY_WITH_HOST_ARM": {
-   "groups": [
-     "cl_import_properties_arm"
-    ],
-   "spec_evidence": "manual: arm/cl_arm_import_memory.txt — listed in 'Valid <properties> are:' [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_import_properties_arm"
+  ],
+  "spec_evidence": "manual: arm/cl_arm_import_memory.txt — listed in 'Valid <properties> are:' [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
+ "CL_IMPORT_MEMORY_WHOLE_ALLOCATION_ARM": {
+  "groups": [
+   "cl_import_properties_arm"
+  ],
+  "spec_evidence": "cl_arm_import_memory: '<size> may be set to CL_IMPORT_MEMORY_WHOLE_ALLOCATION_ARM' in clImportMemory; grouped with CL_IMPORT_TYPE_ANDROID_HARDWARE_BUFFER_ARM (adjudicated 2026-10-08)"
+ },
  "CL_IMPORT_TYPE_ANDROID_HARDWARE_BUFFER_ARM": {
-   "groups": [
-     "cl_import_properties_arm"
-    ],
-   "spec_evidence": "manual: /regspec/all/arm/cl_arm_import_memory.txt — New Tokens [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_import_properties_arm"
+  ],
+  "spec_evidence": "manual: /regspec/all/arm/cl_arm_import_memory.txt — New Tokens [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_IMPORT_TYPE_ARM": {
-   "groups": [
-     "cl_import_properties_arm"
-    ],
-   "spec_evidence": "manual: arm/cl_arm_import_memory.txt — listed in 'Valid <properties> are:' [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_import_properties_arm"
+  ],
+  "spec_evidence": "manual: arm/cl_arm_import_memory.txt — listed in 'Valid <properties> are:' [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_IMPORT_TYPE_DMA_BUF_ARM": {
-   "groups": [
-     "cl_import_properties_arm"
-    ],
-   "spec_evidence": "manual: arm/cl_arm_import_memory.txt L118-123: same [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_import_properties_arm"
+  ],
+  "spec_evidence": "manual: arm/cl_arm_import_memory.txt L118-123: same [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_IMPORT_TYPE_HOST_ARM": {
-   "groups": [
-     "cl_import_properties_arm"
-    ],
-   "spec_evidence": "manual: arm/cl_arm_import_memory.txt L118-122: valid value of CL_IMPORT_TYPE_ARM; cl_import_type_arm typedef does not exist in cl.xml [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_import_properties_arm"
+  ],
+  "spec_evidence": "manual: arm/cl_arm_import_memory.txt L118-122: valid value of CL_IMPORT_TYPE_ARM; cl_import_type_arm typedef does not exist in cl.xml [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_IMPORT_TYPE_PROTECTED_ARM": {
-   "groups": [
-     "cl_import_properties_arm"
-    ],
-   "spec_evidence": "manual: arm/cl_arm_import_memory.txt — listed in 'Valid <properties> are:' [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_import_properties_arm"
+  ],
+  "spec_evidence": "manual: arm/cl_arm_import_memory.txt — listed in 'Valid <properties> are:' [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_INFINITY": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_INT_MAX": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_INT_MIN": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_INVALID_GRALLOC_OBJECT_IMG": {
-   "groups": [
-     "ErrorCode"
-    ],
-   "spec_evidence": "manual: cl_img_use_gralloc_ptr error return code"
-  },
+  "groups": [
+   "ErrorCode"
+  ],
+  "spec_evidence": "manual: cl_img_use_gralloc_ptr error return code"
+ },
  "CL_KERNEL_ARG_HOST_ACCESSIBLE_PIPE_INTEL": {
-   "groups": [
-     "cl_kernel_arg_info"
-    ],
-   "spec_evidence": "PENDING (2026-10-08): Brice — 'Maybe more of an answer to kernel arg type query'; will confirm with Intel colleague 2026-10-09. Current value cl_kernel_arg_info is provisional (his first guess), NOT settled. Allocated #144 2019, no spec chapter, no require block."
-  },
+  "groups": [
+   "cl_kernel_arg_info"
+  ],
+  "spec_evidence": "PENDING (2026-10-08): Brice — 'Maybe more of an answer to kernel arg type query'; will confirm with Intel colleague 2026-10-09. Current value cl_kernel_arg_info is provisional (his first guess), NOT settled. Allocated #144 2019, no spec chapter, no require block."
+ },
  "CL_KERNEL_COMPILE_SUB_GROUP_SIZE_INTEL": {
-   "groups": [
-     "cl_kernel_sub_group_info"
-    ],
-   "spec_evidence": "manual: cl_intel_required_subgroup_size L83-89 param_name of clGetKernelSubGroupInfo + Table 5.22"
-  },
+  "groups": [
+   "cl_kernel_sub_group_info"
+  ],
+  "spec_evidence": "manual: cl_intel_required_subgroup_size L83-89 param_name of clGetKernelSubGroupInfo + Table 5.22"
+ },
  "CL_KERNEL_EXEC_INFO_COMPUTE_UNIT_MAX_QUEUED_BATCHES_ARM": {
-   "groups": [
-     "cl_kernel_exec_info"
-    ],
-   "spec_evidence": "manual: cl_arm_scheduling_controls L69-76 + Table 31 param_names of clSetKernelExecInfo"
-  },
+  "groups": [
+   "cl_kernel_exec_info"
+  ],
+  "spec_evidence": "manual: cl_arm_scheduling_controls L69-76 + Table 31 param_names of clSetKernelExecInfo"
+ },
  "CL_KERNEL_EXEC_INFO_DEVICE_PTRS_EXT": {
-   "groups": [
-     "cl_kernel_exec_info"
-    ],
-   "spec_evidence": "manual: cl_ext_buffer_device_address / opencl_runtime_layer param_name of clSetKernelExecInfo"
-  },
+  "groups": [
+   "cl_kernel_exec_info"
+  ],
+  "spec_evidence": "manual: cl_ext_buffer_device_address / opencl_runtime_layer param_name of clSetKernelExecInfo"
+ },
  "CL_KERNEL_EXEC_INFO_SVM_FINE_GRAIN_SYSTEM": {
-   "groups": [
-     "cl_kernel_exec_info"
-    ],
-   "spec_evidence": "manual: cl_khr_unified_svm / opencl_runtime_layer param_name of clSetKernelExecInfo"
-  },
+  "groups": [
+   "cl_kernel_exec_info"
+  ],
+  "spec_evidence": "manual: cl_khr_unified_svm / opencl_runtime_layer param_name of clSetKernelExecInfo"
+ },
  "CL_KERNEL_EXEC_INFO_SVM_FINE_GRAIN_SYSTEM_ARM": {
-   "groups": [
-     "cl_kernel_exec_info_arm"
-    ],
-   "spec_evidence": "manual: /regspec/all/arm/cl_arm_shared_virtual_memory.txt — To be used by clSetKernelExecInfoARM: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_kernel_exec_info_arm"
+  ],
+  "spec_evidence": "manual: /regspec/all/arm/cl_arm_shared_virtual_memory.txt — To be used by clSetKernelExecInfoARM: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_KERNEL_EXEC_INFO_SVM_INDIRECT_ACCESS_KHR": {
-   "groups": [
-     "cl_kernel_exec_info"
-    ],
-   "spec_evidence": "manual: cl_khr_unified_svm / opencl_runtime_layer param_name of clSetKernelExecInfo"
-  },
+  "groups": [
+   "cl_kernel_exec_info"
+  ],
+  "spec_evidence": "manual: cl_khr_unified_svm / opencl_runtime_layer param_name of clSetKernelExecInfo"
+ },
  "CL_KERNEL_EXEC_INFO_SVM_PTRS": {
-   "groups": [
-     "cl_kernel_exec_info"
-    ],
-   "spec_evidence": "manual: cl_khr_unified_svm / opencl_runtime_layer param_name of clSetKernelExecInfo"
-  },
+  "groups": [
+   "cl_kernel_exec_info"
+  ],
+  "spec_evidence": "manual: cl_khr_unified_svm / opencl_runtime_layer param_name of clSetKernelExecInfo"
+ },
  "CL_KERNEL_EXEC_INFO_SVM_PTRS_ARM": {
-   "groups": [
-     "cl_kernel_exec_info_arm"
-    ],
-   "spec_evidence": "manual: /regspec/all/arm/cl_arm_shared_virtual_memory.txt — To be used by clSetKernelExecInfoARM: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_kernel_exec_info_arm"
+  ],
+  "spec_evidence": "manual: /regspec/all/arm/cl_arm_shared_virtual_memory.txt — To be used by clSetKernelExecInfoARM: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_KERNEL_EXEC_INFO_WARP_COUNT_LIMIT_ARM": {
-   "groups": [
-     "cl_kernel_exec_info"
-    ],
-   "spec_evidence": "manual: cl_arm_scheduling_controls L69-76 + Table 31 param_names of clSetKernelExecInfo"
-  },
+  "groups": [
+   "cl_kernel_exec_info"
+  ],
+  "spec_evidence": "manual: cl_arm_scheduling_controls L69-76 + Table 31 param_names of clSetKernelExecInfo"
+ },
  "CL_KERNEL_EXEC_INFO_WORKGROUP_BATCH_SIZE_ARM": {
-   "groups": [
-     "cl_kernel_exec_info"
-    ],
-   "spec_evidence": "manual: cl_arm_scheduling_controls L69-76 + Table 31 param_names of clSetKernelExecInfo"
-  },
+  "groups": [
+   "cl_kernel_exec_info"
+  ],
+  "spec_evidence": "manual: cl_arm_scheduling_controls L69-76 + Table 31 param_names of clSetKernelExecInfo"
+ },
  "CL_KERNEL_EXEC_INFO_WORKGROUP_BATCH_SIZE_MODIFIER_ARM": {
-   "groups": [
-     "cl_kernel_exec_info"
-    ],
-   "spec_evidence": "manual: cl_arm_scheduling_controls L69-76 + Table 31 param_names of clSetKernelExecInfo"
-  },
+  "groups": [
+   "cl_kernel_exec_info"
+  ],
+  "spec_evidence": "manual: cl_arm_scheduling_controls L69-76 + Table 31 param_names of clSetKernelExecInfo"
+ },
  "CL_KERNEL_MAX_WARP_COUNT_ARM": {
-   "groups": [
-     "cl_kernel_info"
-    ],
-   "spec_evidence": "manual: cl_arm_scheduling_controls L87-92 + Table 32 param_names of clGetKernelInfo"
-  },
+  "groups": [
+   "cl_kernel_info"
+  ],
+  "spec_evidence": "manual: cl_arm_scheduling_controls L87-92 + Table 32 param_names of clGetKernelInfo"
+ },
  "CL_KERNEL_SPILL_MEM_SIZE_INTEL": {
-   "groups": [
-     "cl_kernel_work_group_info"
-    ],
-   "spec_evidence": "manual: cl_intel_required_subgroup_size L76-81 param_name of clGetKernelWorkGroupInfo + Table 5.21"
-  },
+  "groups": [
+   "cl_kernel_work_group_info"
+  ],
+  "spec_evidence": "manual: cl_intel_required_subgroup_size L76-81 param_name of clGetKernelWorkGroupInfo + Table 5.21"
+ },
  "CL_LAYER_API_VERSION": {
-   "groups": [
-     "cl_layer_info"
-    ],
-   "spec_evidence": "manual: extensions/cl_loader_layers.asciidoc L91-97: 'Accepted as _param_name_ to the function *clGetLayerInfo*' (L95 #define CL_LAYER_API_VERSION 0x4240). Cross-checked vs PR#1587 on 2026-10-06: their 'cl_layer_info' was spec-correct; our earlier 'cl_layer_properties' was wrong."
-  },
+  "groups": [
+   "cl_layer_info"
+  ],
+  "spec_evidence": "manual: extensions/cl_loader_layers.asciidoc L91-97: 'Accepted as _param_name_ to the function *clGetLayerInfo*' (L95 #define CL_LAYER_API_VERSION 0x4240). Cross-checked vs PR#1587 on 2026-10-06: their 'cl_layer_info' was spec-correct; our earlier 'cl_layer_properties' was wrong."
+ },
  "CL_LAYER_API_VERSION_100": {
-   "groups": [
-     "cl_layer_info"
-    ],
-   "spec_evidence": "manual: extensions/cl_loader_layers.asciidoc L100-110: 'Returned by *clGetLayerInfo* when supplied CL_LAYER_API_VERSION and the corresponding layer implements version 1.0.0 of the layer API' (L109 #define CL_LAYER_API_VERSION_100 100). Cross-checked vs PR#1587 on 2026-10-06: their 'cl_layer_info' was spec-correct; our earlier 'cl_layer_properties' was wrong."
-  },
+  "groups": [
+   "cl_layer_info"
+  ],
+  "spec_evidence": "manual: extensions/cl_loader_layers.asciidoc L100-110: 'Returned by *clGetLayerInfo* when supplied CL_LAYER_API_VERSION and the corresponding layer implements version 1.0.0 of the layer API' (L109 #define CL_LAYER_API_VERSION_100 100). Cross-checked vs PR#1587 on 2026-10-06: their 'cl_layer_info' was spec-correct; our earlier 'cl_layer_properties' was wrong."
+ },
  "CL_LAYER_NAME": {
-   "groups": [
-     "cl_layer_info"
-    ],
-   "spec_evidence": "manual: extensions/cl_loader_layers.asciidoc L91-97: same 'Accepted as _param_name_ to *clGetLayerInfo*' block (L96 #define CL_LAYER_NAME 0x4241). Cross-checked vs PR#1587 on 2026-10-06: their 'cl_layer_info' was spec-correct; we had these unassigned."
-  },
+  "groups": [
+   "cl_layer_info"
+  ],
+  "spec_evidence": "manual: extensions/cl_loader_layers.asciidoc L91-97: same 'Accepted as _param_name_ to *clGetLayerInfo*' block (L96 #define CL_LAYER_NAME 0x4241). Cross-checked vs PR#1587 on 2026-10-06: their 'cl_layer_info' was spec-correct; we had these unassigned."
+ },
  "CL_LAYER_PROPERTIES_LIST_END": {
-   "groups": [
-     "cl_layer_properties"
-    ],
-   "spec_evidence": "manual: cl_loader_layers L117 'CL_LAYER_PROPERTIES_LIST_END ((cl_layer_properties)0)' list terminator; L239-240 'list is terminated with CL_LAYER_PROPERTIES_LIST_END'"
-  },
+  "groups": [
+   "cl_layer_properties"
+  ],
+  "spec_evidence": "manual: cl_loader_layers L117 'CL_LAYER_PROPERTIES_LIST_END ((cl_layer_properties)0)' list terminator; L239-240 'list is terminated with CL_LAYER_PROPERTIES_LIST_END'"
+ },
  "CL_LONG_MAX": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_LONG_MIN": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_MAXFLOAT": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
+ "CL_MEM_ALLOC_FLAGS_IMG": {
+  "groups": [
+   "cl_mem_properties"
+  ],
+  "spec_evidence": "cl_img_mem_properties: property NAME (valid 'properties' entry for clCreateBufferWithProperties); value-set = cl_mem_alloc_flags_img. Upstream require=cl_mem_properties; matches CL_MEM_DEVICE_ID_INTEL precedent (corrected 2026-10-08)"
+ },
  "CL_MEM_CHANNEL_INTEL": {
-   "groups": [
-     "cl_mem_properties_intel"
-    ],
-   "spec_evidence": "manual: cl_intel_mem_channel_property: property for clCreateBufferWithPropertiesINTEL"
-  },
+  "groups": [
+   "cl_mem_properties_intel"
+  ],
+  "spec_evidence": "manual: cl_intel_mem_channel_property: property for clCreateBufferWithPropertiesINTEL"
+ },
  "CL_MEM_DEVICE_HANDLE_LIST_KHR": {
-   "groups": [
-     "cl_mem_properties"
-    ],
-   "spec_evidence": "cl_khr_external_memory.asciidoc L60-61: listed under cl_mem_properties_TYPE; cl_image_properties is not a cl.xml type (removed)"
-  },
+  "groups": [
+   "cl_mem_properties"
+  ],
+  "spec_evidence": "cl_khr_external_memory.asciidoc L60-61: listed under cl_mem_properties_TYPE; cl_image_properties is not a cl.xml type (removed)"
+ },
  "CL_MEM_DEVICE_ID_INTEL": {
-   "groups": [
-     "cl_mem_properties"
-    ],
-   "spec_evidence": "registry-provenance: cl.xml <require comment=\"cl_mem_properties\"> authored by Mike Kinsner (Intel) Kinsner #858 2022-11-08, commit msg 'Add comment indicating which type the enums apply to'. No published extension spec found (checked KhronosGroup/OpenCL-Registry 2026-10-08); matches PR#1587."
-  },
+  "groups": [
+   "cl_mem_properties"
+  ],
+  "spec_evidence": "registry-provenance: cl.xml <require comment=\"cl_mem_properties\"> authored by Mike Kinsner (Intel) Kinsner #858 2022-11-08, commit msg 'Add comment indicating which type the enums apply to'. No published extension spec found (checked KhronosGroup/OpenCL-Registry 2026-10-08); matches PR#1587."
+ },
  "CL_MEM_DEVICE_PRIVATE_ADDRESS_EXT": {
-   "groups": [
-     "cl_mem_properties"
-    ],
-   "spec_evidence": "manual: cl_ext_buffer_device_address: clCreateBufferWithProperties creation property flag"
-  },
+  "groups": [
+   "cl_mem_properties"
+  ],
+  "spec_evidence": "manual: cl_ext_buffer_device_address: clCreateBufferWithProperties creation property flag"
+ },
  "CL_MEM_DX9_RESOURCE_INTEL": {
-   "groups": [
-     "cl_mem_info"
-    ],
-   "spec_evidence": "manual: /regspec/all/intel/cl_intel_dx9_media_sharing.txt — DirectX 9 resource using clCreateFromDX9MediaSurfaceIntel.\" [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_mem_info"
+  ],
+  "spec_evidence": "manual: /regspec/all/intel/cl_intel_dx9_media_sharing.txt — DirectX 9 resource using clCreateFromDX9MediaSurfaceIntel.\" [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_MEM_DX9_SHARED_HANDLE_INTEL": {
-   "groups": [
-     "cl_mem_info"
-    ],
-   "spec_evidence": "manual: /regspec/all/intel/cl_intel_dx9_media_sharing.txt — clCreateFromDX9MediaSurfaceINTEL, [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_mem_info"
+  ],
+  "spec_evidence": "manual: /regspec/all/intel/cl_intel_dx9_media_sharing.txt — clCreateFromDX9MediaSurfaceINTEL, [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_MEM_LOCALLY_UNCACHED_RESOURCE_INTEL": {
-   "groups": [
-     "cl_mem_properties"
-    ],
-   "spec_evidence": "registry-provenance: cl.xml <require comment=\"cl_mem_properties\"> authored by Mike Kinsner (Intel) #858 2022-11-08, commit msg 'Add comment indicating which type the enums apply to'. No published extension spec found (checked KhronosGroup/OpenCL-Registry 2026-10-08); matches PR#1587."
-  },
+  "groups": [
+   "cl_mem_properties"
+  ],
+  "spec_evidence": "registry-provenance: cl.xml <require comment=\"cl_mem_properties\"> authored by Mike Kinsner (Intel) #858 2022-11-08, commit msg 'Add comment indicating which type the enums apply to'. No published extension spec found (checked KhronosGroup/OpenCL-Registry 2026-10-08); matches PR#1587."
+ },
  "CL_MEM_OBJECT_BUFFER": {
-   "groups": [
-     "cl_mem_object_type"
-    ],
-   "spec_evidence": "manual: core spec: value set of cl_mem_object_type (image_type param of clCreateImage / clCreateImage2D)"
-  },
+  "groups": [
+   "cl_mem_object_type"
+  ],
+  "spec_evidence": "manual: core spec: value set of cl_mem_object_type (image_type param of clCreateImage / clCreateImage2D)"
+ },
  "CL_MEM_OBJECT_IMAGE1D": {
-   "groups": [
-     "cl_mem_object_type"
-    ],
-   "spec_evidence": "manual: core spec: value set of cl_mem_object_type (image_type param of clCreateImage / clCreateImage2D)"
-  },
+  "groups": [
+   "cl_mem_object_type"
+  ],
+  "spec_evidence": "manual: core spec: value set of cl_mem_object_type (image_type param of clCreateImage / clCreateImage2D)"
+ },
  "CL_MEM_OBJECT_IMAGE1D_ARRAY": {
-   "groups": [
-     "cl_mem_object_type"
-    ],
-   "spec_evidence": "manual: core spec: value set of cl_mem_object_type (image_type param of clCreateImage / clCreateImage2D)"
-  },
+  "groups": [
+   "cl_mem_object_type"
+  ],
+  "spec_evidence": "manual: core spec: value set of cl_mem_object_type (image_type param of clCreateImage / clCreateImage2D)"
+ },
  "CL_MEM_OBJECT_IMAGE1D_BUFFER": {
-   "groups": [
-     "cl_mem_object_type"
-    ],
-   "spec_evidence": "manual: core spec: value set of cl_mem_object_type (image_type param of clCreateImage / clCreateImage2D)"
-  },
+  "groups": [
+   "cl_mem_object_type"
+  ],
+  "spec_evidence": "manual: core spec: value set of cl_mem_object_type (image_type param of clCreateImage / clCreateImage2D)"
+ },
  "CL_MEM_OBJECT_IMAGE2D": {
-   "groups": [
-     "cl_mem_object_type"
-    ],
-   "spec_evidence": "manual: core spec: value set of cl_mem_object_type (image_type param of clCreateImage / clCreateImage2D)"
-  },
+  "groups": [
+   "cl_mem_object_type"
+  ],
+  "spec_evidence": "manual: core spec: value set of cl_mem_object_type (image_type param of clCreateImage / clCreateImage2D)"
+ },
  "CL_MEM_OBJECT_IMAGE2D_ARRAY": {
-   "groups": [
-     "cl_mem_object_type"
-    ],
-   "spec_evidence": "manual: core spec: value set of cl_mem_object_type (image_type param of clCreateImage / clCreateImage2D)"
-  },
+  "groups": [
+   "cl_mem_object_type"
+  ],
+  "spec_evidence": "manual: core spec: value set of cl_mem_object_type (image_type param of clCreateImage / clCreateImage2D)"
+ },
  "CL_MEM_OBJECT_IMAGE3D": {
-   "groups": [
-     "cl_mem_object_type"
-    ],
-   "spec_evidence": "manual: core spec: value set of cl_mem_object_type (image_type param of clCreateImage / clCreateImage2D)"
-  },
+  "groups": [
+   "cl_mem_object_type"
+  ],
+  "spec_evidence": "manual: core spec: value set of cl_mem_object_type (image_type param of clCreateImage / clCreateImage2D)"
+ },
  "CL_MEM_OBJECT_PIPE": {
-   "groups": [
-     "cl_mem_object_type"
-    ],
-   "spec_evidence": "manual: core spec: value set of cl_mem_object_type (image_type param of clCreateImage / clCreateImage2D)"
-  },
+  "groups": [
+   "cl_mem_object_type"
+  ],
+  "spec_evidence": "manual: core spec: value set of cl_mem_object_type (image_type param of clCreateImage / clCreateImage2D)"
+ },
  "CL_MEM_USES_SVM_POINTER_ARM": {
-   "groups": [
-     "cl_mem_info"
-    ],
-   "spec_evidence": "manual: arm/cl_arm_shared_virtual_memory.txt L178: clGetMemObjectInfo param_name [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_mem_info"
+  ],
+  "spec_evidence": "manual: arm/cl_arm_shared_virtual_memory.txt L178: clGetMemObjectInfo param_name [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_MEM_VA_API_MEDIA_SURFACE_INTEL": {
-   "groups": [
-     "cl_mem_info"
-    ],
-   "spec_evidence": "manual: /regspec/all/intel/cl_intel_va_api_media_sharing.txt — using clGetMemObjectInfo and clGetImageInfo with <param_name> [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_mem_info"
+  ],
+  "spec_evidence": "manual: /regspec/all/intel/cl_intel_va_api_media_sharing.txt — using clGetMemObjectInfo and clGetImageInfo with <param_name> [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_M_1_PI": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_M_1_PI_F": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_M_2_PI": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_M_2_PI_F": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_M_2_SQRTPI": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_M_2_SQRTPI_F": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_M_E": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_M_E_F": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_M_LN10": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_M_LN10_F": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_M_LN2": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_M_LN2_F": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_M_LOG10E": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_M_LOG10E_F": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_M_LOG2E": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_M_LOG2E_F": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_M_PI": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_M_PI_2": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_M_PI_2_F": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_M_PI_4": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_M_PI_4_F": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_M_PI_F": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_M_SQRT1_2": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_M_SQRT1_2_F": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_M_SQRT2": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_M_SQRT2_F": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_NAN": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_NV21": {
-   "groups": [
-     "cl_channel_order"
-    ],
-   "spec_evidence": "manual: cl_img_yuv_image image_channel_order (or deprecated pre-IMG alias)"
-  },
+  "groups": [
+   "cl_channel_order"
+  ],
+  "spec_evidence": "manual: cl_img_yuv_image image_channel_order (or deprecated pre-IMG alias)"
+ },
  "CL_NV21_IMG": {
-   "groups": [
-     "cl_channel_order"
-    ],
-   "spec_evidence": "manual: cl_img_yuv_image image_channel_order (or deprecated pre-IMG alias)"
-  },
+  "groups": [
+   "cl_channel_order"
+  ],
+  "spec_evidence": "manual: cl_img_yuv_image image_channel_order (or deprecated pre-IMG alias)"
+ },
  "CL_PARTITION_BY_COUNTS_LIST_END_EXT": {
-   "groups": [
-     "cl_device_partition_property"
-    ],
-   "spec_evidence": "manual: KHR-inherited: list terminator for cl_device_partition_property"
-  },
+  "groups": [
+   "cl_device_partition_property"
+  ],
+  "spec_evidence": "manual: KHR-inherited: list terminator for cl_device_partition_property"
+ },
  "CL_PARTITION_BY_NAMES_LIST_END_EXT": {
-   "groups": [
-     "cl_device_partition_property"
-    ],
-   "spec_evidence": "manual: list terminator of the EXT partition-property list; value cast to cl_device_partition_property_ext; sibling _COUNTS_ already cl_device_partition_property"
-  },
+  "groups": [
+   "cl_device_partition_property"
+  ],
+  "spec_evidence": "manual: list terminator of the EXT partition-property list; value cast to cl_device_partition_property_ext; sibling _COUNTS_ already cl_device_partition_property"
+ },
  "CL_PARTITION_BY_NAMES_LIST_END_INTEL": {
-   "groups": [
-     "cl_device_partition_property"
-    ],
-   "spec_evidence": "manual: list terminator of the INTEL partition-property list; sibling CL_PARTITION_BY_COUNTS_LIST_END_EXT already cl_device_partition_property"
-  },
+  "groups": [
+   "cl_device_partition_property"
+  ],
+  "spec_evidence": "manual: list terminator of the INTEL partition-property list; sibling CL_PARTITION_BY_COUNTS_LIST_END_EXT already cl_device_partition_property"
+ },
  "CL_PERF_HINT_HIGH_QCOM": {
-   "groups": [
-     "cl_perf_hint_qcom"
-    ],
-   "spec_evidence": "manual: extensions/cl_qcom_perf_hint.asciidoc L90-98 'New list of supported values for CL_CONTEXT_PERF_HINT_QCOM property'; L137-142 Table 13a, member type cl_perf_hint_qcom"
-  },
+  "groups": [
+   "cl_perf_hint_qcom"
+  ],
+  "spec_evidence": "manual: extensions/cl_qcom_perf_hint.asciidoc L90-98 'New list of supported values for CL_CONTEXT_PERF_HINT_QCOM property'; L137-142 Table 13a, member type cl_perf_hint_qcom"
+ },
  "CL_PERF_HINT_LOW_QCOM": {
-   "groups": [
-     "cl_perf_hint_qcom"
-    ],
-   "spec_evidence": "manual: extensions/cl_qcom_perf_hint.asciidoc L90-98 'New list of supported values for CL_CONTEXT_PERF_HINT_QCOM property'; L137-142 Table 13a, member type cl_perf_hint_qcom"
-  },
+  "groups": [
+   "cl_perf_hint_qcom"
+  ],
+  "spec_evidence": "manual: extensions/cl_qcom_perf_hint.asciidoc L90-98 'New list of supported values for CL_CONTEXT_PERF_HINT_QCOM property'; L137-142 Table 13a, member type cl_perf_hint_qcom"
+ },
  "CL_PERF_HINT_NORMAL_QCOM": {
-   "groups": [
-     "cl_perf_hint_qcom"
-    ],
-   "spec_evidence": "manual: extensions/cl_qcom_perf_hint.asciidoc L90-98 'New list of supported values for CL_CONTEXT_PERF_HINT_QCOM property'; L137-142 Table 13a, member type cl_perf_hint_qcom"
-  },
+  "groups": [
+   "cl_perf_hint_qcom"
+  ],
+  "spec_evidence": "manual: extensions/cl_qcom_perf_hint.asciidoc L90-98 'New list of supported values for CL_CONTEXT_PERF_HINT_QCOM property'; L137-142 Table 13a, member type cl_perf_hint_qcom"
+ },
  "CL_PREFERRED_DEVICES_FOR_DX9_INTEL": {
-   "groups": [
-     "cl_dx9_device_set_intel"
-    ],
-   "spec_evidence": "manual: /regspec/all/intel/cl_intel_dx9_media_sharing.txt — OpenCL devices are being queried by clGetDeviceIDsFromDX9INTEL. [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_dx9_device_set_intel"
+  ],
+  "spec_evidence": "manual: /regspec/all/intel/cl_intel_dx9_media_sharing.txt — OpenCL devices are being queried by clGetDeviceIDsFromDX9INTEL. [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_PREFERRED_DEVICES_FOR_VA_API_INTEL": {
-   "groups": [
-     "cl_va_api_device_set_intel"
-    ],
-   "spec_evidence": "manual: /regspec/all/intel/cl_intel_va_api_media_sharing.txt — parameter of clGetDeviceIDsFromVA_APIMediaAdapterINTEL: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_va_api_device_set_intel"
+  ],
+  "spec_evidence": "manual: /regspec/all/intel/cl_intel_va_api_media_sharing.txt — parameter of clGetDeviceIDsFromVA_APIMediaAdapterINTEL: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_PRINTF_BUFFERSIZE_ARM": {
-   "groups": [
-     "cl_context_properties"
-    ],
-   "spec_evidence": "manual: cl_arm_printf: context creation property value (size_t)"
-  },
+  "groups": [
+   "cl_context_properties"
+  ],
+  "spec_evidence": "manual: cl_arm_printf: context creation property value (size_t)"
+ },
  "CL_PRINTF_CALLBACK_ARM": {
-   "groups": [
-     "cl_context_properties"
-    ],
-   "spec_evidence": "manual: cl_arm_printf: context creation property (Table 7 param_name + value pair)"
-  },
+  "groups": [
+   "cl_context_properties"
+  ],
+  "spec_evidence": "manual: cl_arm_printf: context creation property (Table 7 param_name + value pair)"
+ },
  "CL_PROGRAM_HOST_PIPE_NAMES_INTEL": {
-   "groups": [
-     "cl_program_info"
-    ],
-   "spec_evidence": "manual: cl_intel_program_scope_host_pipe param_name of clGetProgramInfo"
-  },
+  "groups": [
+   "cl_program_info"
+  ],
+  "spec_evidence": "manual: cl_intel_program_scope_host_pipe param_name of clGetProgramInfo"
+ },
+ "CL_PROGRAM_IL_KHR": {
+  "groups": [
+   "cl_program_info"
+  ],
+  "spec_evidence": "cl_khr_il_program: program info query (sibling CL_PROGRAM_IL 0x1169 is cl_program_info; same reserved range 'Reserved for cl_program_info') — corrected from cl_platform_info 2026-10-08"
+ },
  "CL_PROGRAM_NUM_HOST_PIPES_INTEL": {
-   "groups": [
-     "cl_program_info"
-    ],
-   "spec_evidence": "manual: cl_intel_program_scope_host_pipe param_name of clGetProgramInfo"
-  },
+  "groups": [
+   "cl_program_info"
+  ],
+  "spec_evidence": "manual: cl_intel_program_scope_host_pipe param_name of clGetProgramInfo"
+ },
  "CL_QUEUED": {
-   "groups": [
-     "clCommandExecutionStatus"
-    ],
-   "spec_evidence": "manual: core command-execution-status value set of clGetEventInfo/CL_EVENT_COMMAND_EXECUTION_STATUS (registry type clCommandExecutionStatus; + cl_img_safety_mechanisms for ECC_RECOVERED)"
-  },
+  "groups": [
+   "clCommandExecutionStatus"
+  ],
+  "spec_evidence": "manual: core command-execution-status value set of clGetEventInfo/CL_EVENT_COMMAND_EXECUTION_STATUS (registry type clCommandExecutionStatus; + cl_img_safety_mechanisms for ECC_RECOVERED)"
+ },
  "CL_QUEUE_COMPUTE_UNIT_LIMIT_ARM": {
-   "groups": [
-     "cl_command_queue_properties"
-    ],
-   "spec_evidence": "manual: cl_arm_scheduling_controls L79-85 + Table 9 queue creation properties"
-  },
+  "groups": [
+   "cl_command_queue_properties"
+  ],
+  "spec_evidence": "manual: cl_arm_scheduling_controls L79-85 + Table 9 queue creation properties"
+ },
  "CL_QUEUE_DEFERRED_FLUSH_ARM": {
-   "groups": [
-     "cl_command_queue_properties"
-    ],
-   "spec_evidence": "manual: cl_arm_scheduling_controls L79-85 + Table 9 queue creation properties"
-  },
+  "groups": [
+   "cl_command_queue_properties"
+  ],
+  "spec_evidence": "manual: cl_arm_scheduling_controls L79-85 + Table 9 queue creation properties"
+ },
  "CL_QUEUE_JOB_SLOT_ARM": {
-   "groups": [
-     "cl_queue_properties"
-    ],
-   "spec_evidence": "manual: /regspec/all/arm/cl_arm_job_slot_selection.txt — Command queue property [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_queue_properties"
+  ],
+  "spec_evidence": "manual: /regspec/all/arm/cl_arm_job_slot_selection.txt — Command queue property [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_QUEUE_KERNEL_BATCHING_ARM": {
-   "groups": [
-     "cl_command_queue_properties"
-    ],
-   "spec_evidence": "manual: cl_arm_scheduling_controls L79-85 + Table 9 queue creation properties"
-  },
+  "groups": [
+   "cl_command_queue_properties"
+  ],
+  "spec_evidence": "manual: cl_arm_scheduling_controls L79-85 + Table 9 queue creation properties"
+ },
  "CL_RGBx": {
-   "groups": [
-     "cl_channel_order"
-    ],
-   "spec_evidence": "manual: core spec image channel order value set; appendix_e 'Optional image formats'"
-  },
+  "groups": [
+   "cl_channel_order"
+  ],
+  "spec_evidence": "manual: core spec image channel order value set; appendix_e 'Optional image formats'"
+ },
  "CL_RGx": {
-   "groups": [
-     "cl_channel_order"
-    ],
-   "spec_evidence": "manual: core spec image channel order value set; appendix_e 'Optional image formats'"
-  },
+  "groups": [
+   "cl_channel_order"
+  ],
+  "spec_evidence": "manual: core spec image channel order value set; appendix_e 'Optional image formats'"
+ },
  "CL_RUNNING": {
-   "groups": [
-     "clCommandExecutionStatus"
-    ],
-   "spec_evidence": "manual: core command-execution-status value set of clGetEventInfo/CL_EVENT_COMMAND_EXECUTION_STATUS (registry type clCommandExecutionStatus; + cl_img_safety_mechanisms for ECC_RECOVERED)"
-  },
+  "groups": [
+   "clCommandExecutionStatus"
+  ],
+  "spec_evidence": "manual: core command-execution-status value set of clGetEventInfo/CL_EVENT_COMMAND_EXECUTION_STATUS (registry type clCommandExecutionStatus; + cl_img_safety_mechanisms for ECC_RECOVERED)"
+ },
  "CL_Rx": {
-   "groups": [
-     "cl_channel_order"
-    ],
-   "spec_evidence": "manual: core spec image channel order value set; appendix_e 'Optional image formats'"
-  },
+  "groups": [
+   "cl_channel_order"
+  ],
+  "spec_evidence": "manual: core spec image channel order value set; appendix_e 'Optional image formats'"
+ },
  "CL_SAMPLER_LOD_MAX": {
-   "groups": [
-     "cl_sampler_properties"
-    ],
-   "spec_evidence": "manual: opencl_runtime_layer L8782+: 'List of supported sampler creation properties by clCreateSamplerWithProperties' (KHR-inherited, sibling _KHR variant in cl_sampler_properties already assigned or same set)"
-  },
+  "groups": [
+   "cl_sampler_properties"
+  ],
+  "spec_evidence": "manual: opencl_runtime_layer L8782+: 'List of supported sampler creation properties by clCreateSamplerWithProperties' (KHR-inherited, sibling _KHR variant in cl_sampler_properties already assigned or same set)"
+ },
  "CL_SAMPLER_LOD_MIN": {
-   "groups": [
-     "cl_sampler_properties"
-    ],
-   "spec_evidence": "manual: opencl_runtime_layer L8782+: 'List of supported sampler creation properties by clCreateSamplerWithProperties' (KHR-inherited, sibling _KHR variant in cl_sampler_properties already assigned or same set)"
-  },
+  "groups": [
+   "cl_sampler_properties"
+  ],
+  "spec_evidence": "manual: opencl_runtime_layer L8782+: 'List of supported sampler creation properties by clCreateSamplerWithProperties' (KHR-inherited, sibling _KHR variant in cl_sampler_properties already assigned or same set)"
+ },
  "CL_SAMPLER_MIP_FILTER_MODE": {
-   "groups": [
-     "cl_sampler_properties"
-    ],
-   "spec_evidence": "manual: opencl_runtime_layer: sampler creation property (KHR-inherited, sibling _KHR already cl_sampler_properties)"
-  },
+  "groups": [
+   "cl_sampler_properties"
+  ],
+  "spec_evidence": "manual: opencl_runtime_layer: sampler creation property (KHR-inherited, sibling _KHR already cl_sampler_properties)"
+ },
  "CL_SCHAR_MAX": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_SCHAR_MIN": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
+ "CL_SEMAPHORE_FAST_PATH_IMG": {
+  "groups": [
+   "cl_semaphore_properties_khr"
+  ],
+  "spec_evidence": "IMG external-semaphore fast path creation property (upstream require=cl_semaphore_properties_khr; adopted 2026-10-08)"
+ },
  "CL_SHRT_MAX": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_SHRT_MIN": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_SUBMITTED": {
-   "groups": [
-     "clCommandExecutionStatus"
-    ],
-   "spec_evidence": "manual: core command-execution-status value set of clGetEventInfo/CL_EVENT_COMMAND_EXECUTION_STATUS (registry type clCommandExecutionStatus; + cl_img_safety_mechanisms for ECC_RECOVERED)"
-  },
+  "groups": [
+   "clCommandExecutionStatus"
+  ],
+  "spec_evidence": "manual: core command-execution-status value set of clGetEventInfo/CL_EVENT_COMMAND_EXECUTION_STATUS (registry type clCommandExecutionStatus; + cl_img_safety_mechanisms for ECC_RECOVERED)"
+ },
  "CL_SVM_ALLOC_ACCESS_FLAGS_KHR": {
-   "groups": [
-     "cl_svm_alloc_properties_khr"
-    ],
-   "spec_evidence": "manual: cl_khr_unified_svm accepted as properties of clSVMAlloc"
-  },
+  "groups": [
+   "cl_svm_alloc_properties_khr"
+  ],
+  "spec_evidence": "manual: cl_khr_unified_svm accepted as properties of clSVMAlloc"
+ },
  "CL_SVM_ALLOC_ALIGNMENT_KHR": {
-   "groups": [
-     "cl_svm_alloc_properties_khr"
-    ],
-   "spec_evidence": "manual: cl_khr_unified_svm accepted as properties of clSVMAlloc"
-  },
+  "groups": [
+   "cl_svm_alloc_properties_khr"
+  ],
+  "spec_evidence": "manual: cl_khr_unified_svm accepted as properties of clSVMAlloc"
+ },
  "CL_SVM_ALLOC_ASSOCIATED_DEVICE_HANDLE_KHR": {
-   "groups": [
-     "cl_svm_alloc_properties_khr"
-    ],
-   "spec_evidence": "manual: cl_khr_unified_svm accepted as properties of clSVMAlloc"
-  },
+  "groups": [
+   "cl_svm_alloc_properties_khr"
+  ],
+  "spec_evidence": "manual: cl_khr_unified_svm accepted as properties of clSVMAlloc"
+ },
  "CL_SVM_ALLOC_EXTERNAL_MEMORY_DMA_BUF_IMG": {
-   "groups": [
-     "cl_svm_alloc_properties_khr"
-    ],
-   "spec_evidence": "manual: cl_img_unified_svm_external_memory_dma_buf: new row in SVM Allocation Properties table"
-  },
+  "groups": [
+   "cl_svm_alloc_properties_khr"
+  ],
+  "spec_evidence": "manual: cl_img_unified_svm_external_memory_dma_buf: new row in SVM Allocation Properties table"
+ },
  "CL_SVM_ALLOC_EXTERNAL_MEMORY_DMA_BUF_VIRTUAL_ADDRESS_IMG": {
-   "groups": [
-     "cl_svm_alloc_properties_khr"
-    ],
-   "spec_evidence": "manual: cl_img_unified_svm_external_memory_dma_buf: new row in SVM Allocation Properties table"
-  },
+  "groups": [
+   "cl_svm_alloc_properties_khr"
+  ],
+  "spec_evidence": "manual: cl_img_unified_svm_external_memory_dma_buf: new row in SVM Allocation Properties table"
+ },
  "CL_SVM_INFO_ACCESS_FLAGS_KHR": {
-   "groups": [
-     "cl_svm_pointer_info_khr"
-    ],
-   "spec_evidence": "manual: cl_khr_unified_svm: member of cl_svm_pointer_info_khr value set (param_names of clSVMGetInfo)"
-  },
+  "groups": [
+   "cl_svm_pointer_info_khr"
+  ],
+  "spec_evidence": "manual: cl_khr_unified_svm: member of cl_svm_pointer_info_khr value set (param_names of clSVMGetInfo)"
+ },
  "CL_SVM_INFO_ASSOCIATED_DEVICE_HANDLE_KHR": {
-   "groups": [
-     "cl_svm_pointer_info_khr"
-    ],
-   "spec_evidence": "manual: cl_khr_unified_svm: member of cl_svm_pointer_info_khr value set (param_names of clSVMGetInfo)"
-  },
+  "groups": [
+   "cl_svm_pointer_info_khr"
+  ],
+  "spec_evidence": "manual: cl_khr_unified_svm: member of cl_svm_pointer_info_khr value set (param_names of clSVMGetInfo)"
+ },
  "CL_SVM_INFO_BASE_PTR_KHR": {
-   "groups": [
-     "cl_svm_pointer_info_khr"
-    ],
-   "spec_evidence": "manual: cl_khr_unified_svm: member of cl_svm_pointer_info_khr (param_names of clSVMGetInfo)"
-  },
+  "groups": [
+   "cl_svm_pointer_info_khr"
+  ],
+  "spec_evidence": "manual: cl_khr_unified_svm: member of cl_svm_pointer_info_khr (param_names of clSVMGetInfo)"
+ },
  "CL_SVM_INFO_CAPABILITIES_KHR": {
-   "groups": [
-     "cl_svm_pointer_info_khr"
-    ],
-   "spec_evidence": "manual: cl_khr_unified_svm: member of cl_svm_pointer_info_khr (param_names of clSVMGetInfo)"
-  },
+  "groups": [
+   "cl_svm_pointer_info_khr"
+  ],
+  "spec_evidence": "manual: cl_khr_unified_svm: member of cl_svm_pointer_info_khr (param_names of clSVMGetInfo)"
+ },
  "CL_SVM_INFO_PROPERTIES_KHR": {
-   "groups": [
-     "cl_svm_pointer_info_khr"
-    ],
-   "spec_evidence": "manual: cl_khr_unified_svm: member of cl_svm_pointer_info_khr (param_names of clSVMGetInfo)"
-  },
+  "groups": [
+   "cl_svm_pointer_info_khr"
+  ],
+  "spec_evidence": "manual: cl_khr_unified_svm: member of cl_svm_pointer_info_khr (param_names of clSVMGetInfo)"
+ },
  "CL_SVM_INFO_SIZE_KHR": {
-   "groups": [
-     "cl_svm_pointer_info_khr"
-    ],
-   "spec_evidence": "manual: cl_khr_unified_svm: member of cl_svm_pointer_info_khr (param_names of clSVMGetInfo)"
-  },
+  "groups": [
+   "cl_svm_pointer_info_khr"
+  ],
+  "spec_evidence": "manual: cl_khr_unified_svm: member of cl_svm_pointer_info_khr (param_names of clSVMGetInfo)"
+ },
  "CL_SVM_INFO_TYPE_INDEX_KHR": {
-   "groups": [
-     "cl_svm_pointer_info_khr"
-    ],
-   "spec_evidence": "manual: cl_khr_unified_svm: member of cl_svm_pointer_info_khr (param_names of clSVMGetInfo)"
-  },
+  "groups": [
+   "cl_svm_pointer_info_khr"
+  ],
+  "spec_evidence": "manual: cl_khr_unified_svm: member of cl_svm_pointer_info_khr (param_names of clSVMGetInfo)"
+ },
  "CL_UCHAR_MAX": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_UINT_MAX": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_ULONG_MAX": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_UNSIGNED_INT_RAW10_EXT": {
-   "groups": [
-     "cl_channel_type"
-    ],
-   "spec_evidence": "manual: cl_ext_image_raw10_raw12: member of image channel data type value set (cl_channel_type)"
-  },
+  "groups": [
+   "cl_channel_type"
+  ],
+  "spec_evidence": "manual: cl_ext_image_raw10_raw12: member of image channel data type value set (cl_channel_type)"
+ },
  "CL_UNSIGNED_INT_RAW12_EXT": {
-   "groups": [
-     "cl_channel_type"
-    ],
-   "spec_evidence": "manual: cl_ext_image_raw10_raw12: member of image channel data type value set (cl_channel_type)"
-  },
+  "groups": [
+   "cl_channel_type"
+  ],
+  "spec_evidence": "manual: cl_ext_image_raw10_raw12: member of image channel data type value set (cl_channel_type)"
+ },
  "CL_USHRT_MAX": {
-   "groups": [
-     "C99MathConstants"
-    ],
-   "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
-  },
+  "groups": [
+   "C99MathConstants"
+  ],
+  "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+ },
  "CL_UYVY_INTEL": {
-   "groups": [
-     "cl_channel_order"
-    ],
-   "spec_evidence": "manual: cl_intel_packed_yuv L81 image_channel_order value set"
-  },
+  "groups": [
+   "cl_channel_order"
+  ],
+  "spec_evidence": "manual: cl_intel_packed_yuv L81 image_channel_order value set"
+ },
  "CL_VA_API_DISPLAY_INTEL": {
-   "groups": [
-     "cl_va_api_device_source_intel"
-    ],
-   "spec_evidence": "manual: /regspec/all/intel/cl_intel_va_api_media_sharing.txt — clGetDeviceIDsFromVA_APIMediaAdapterINTEL returns CL_SUCCESS if the [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
-  },
+  "groups": [
+   "cl_va_api_device_source_intel"
+  ],
+  "spec_evidence": "manual: /regspec/all/intel/cl_intel_va_api_media_sharing.txt — clGetDeviceIDsFromVA_APIMediaAdapterINTEL returns CL_SUCCESS if the [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+ },
  "CL_VYUY_INTEL": {
-   "groups": [
-     "cl_channel_order"
-    ],
-   "spec_evidence": "manual: cl_intel_packed_yuv L81 image_channel_order value set"
-  },
+  "groups": [
+   "cl_channel_order"
+  ],
+  "spec_evidence": "manual: cl_intel_packed_yuv L81 image_channel_order value set"
+ },
  "CL_YUYV_INTEL": {
-   "groups": [
-     "cl_channel_order"
-    ],
-   "spec_evidence": "manual: cl_intel_packed_yuv L81 image_channel_order value set"
-  },
+  "groups": [
+   "cl_channel_order"
+  ],
+  "spec_evidence": "manual: cl_intel_packed_yuv L81 image_channel_order value set"
+ },
  "CL_YV12": {
-   "groups": [
-     "cl_channel_order"
-    ],
-   "spec_evidence": "manual: cl_img_yuv_image image_channel_order (or deprecated pre-IMG alias)"
-  },
+  "groups": [
+   "cl_channel_order"
+  ],
+  "spec_evidence": "manual: cl_img_yuv_image image_channel_order (or deprecated pre-IMG alias)"
+ },
  "CL_YV12_IMG": {
-   "groups": [
-     "cl_channel_order"
-    ],
-   "spec_evidence": "manual: cl_img_yuv_image image_channel_order (or deprecated pre-IMG alias)"
-  },
+  "groups": [
+   "cl_channel_order"
+  ],
+  "spec_evidence": "manual: cl_img_yuv_image image_channel_order (or deprecated pre-IMG alias)"
+ },
  "CL_YVYU_INTEL": {
-   "groups": [
-     "cl_channel_order"
-    ],
-   "spec_evidence": "manual: cl_intel_packed_yuv L81 image_channel_order value set"
-  },
+  "groups": [
+   "cl_channel_order"
+  ],
+  "spec_evidence": "manual: cl_intel_packed_yuv L81 image_channel_order value set"
+ },
  "CL_sBGRA": {
-   "groups": [
-     "cl_channel_order"
-    ],
-   "spec_evidence": "manual: core spec image channel order value set; appendix_e 'Optional image formats'"
-  },
+  "groups": [
+   "cl_channel_order"
+  ],
+  "spec_evidence": "manual: core spec image channel order value set; appendix_e 'Optional image formats'"
+ },
  "CL_sRGB": {
-   "groups": [
-     "cl_channel_order"
-    ],
-   "spec_evidence": "manual: core spec image channel order value set; appendix_e 'Optional image formats'"
-  },
+  "groups": [
+   "cl_channel_order"
+  ],
+  "spec_evidence": "manual: core spec image channel order value set; appendix_e 'Optional image formats'"
+ },
  "CL_sRGBA": {
-   "groups": [
-     "cl_channel_order"
-    ],
-   "spec_evidence": "manual: core spec image channel order value set; appendix_e 'Optional image formats'"
-  },
+  "groups": [
+   "cl_channel_order"
+  ],
+  "spec_evidence": "manual: core spec image channel order value set; appendix_e 'Optional image formats'"
+ },
  "CL_sRGBx": {
-   "groups": [
-     "cl_channel_order"
-    ],
-   "spec_evidence": "manual: core spec image channel order value set; appendix_e 'Optional image formats'"
-  }
+  "groups": [
+   "cl_channel_order"
+  ],
+  "spec_evidence": "manual: core spec image channel order value set; appendix_e 'Optional image formats'"
+ }
 }
