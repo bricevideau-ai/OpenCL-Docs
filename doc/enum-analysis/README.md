@@ -10,9 +10,10 @@ multi-membership is comma-separated, e.g. `GL_DEPTH_BUFFER_BIT` →
 
 | File | What it is | Status |
 |---|---|---|
-| `attribute_final.py` | Attribution engine (v5): per-token spec evidence, 51 positive + negative self-tests, writes the JSON/MD outputs | active |
+| `attribute_final.py` | Attribution engine (v5): per-token spec evidence, 68 positive + negative self-tests (incl. the QCOM perf-hint cross-contamination guard), applies `manual_overrides.json`, writes the JSON/MD outputs | active |
 | `apply_groups.py` | Surgical applier: inserts ` group="A,B"` after `name="..."` on **definition** `<enum>` lines only (those carrying `value=`/`bitpos=`); require-reference lines untouched. Re-places stale groups when the attribution data changes. Self-verifying | active |
-| `attribution-final.json` | Per-token result: container, value, groups, evidence trail (1,028 assigned of 1,334) | generated |
+| `manual_overrides.json` | Every hand adjudication (178 tokens), each with its spec citation (`extensions/cl_*.asciidoc` line ranges / table names). Applied by `attribute_final.py` AFTER the rule engine, so re-running the engine never clobbers a verified decision. This is the "manual checking and discovery" layer for tokens the rules can't reach (or got wrong — e.g. the QCOM perf-hint inversion) | curated |
+| `attribution-final.json` | Per-token result: container, value, groups, evidence trail (1,204 assigned of 1,334) | generated |
 | `attribution-table.md` | Human review table (coverage, rules, multi-membership, full table) | generated |
 | `spec_check.py`, `spec-check.md` | Manual-adjudication helper: dumps the spec context around every *still-unassigned* token so each can be decided by hand | tool |
 | `attribute_v2.py`, `attribute_v3.py` | Earlier iterations kept as the audit trail of how the rules evolved | superseded |
@@ -60,11 +61,18 @@ multi-membership is comma-separated, e.g. `GL_DEPTH_BUFFER_BIT` →
 - **R3** cl.xml `ErrorCodes.*` containers → `group="ErrorCode"` (direct GL
   precedent: `GL_NO_ERROR` → `group=...ErrorCode`; cl.xml itself notes the
   values are "the same set of error codes returned from the API calls").
-- **Ungrouped** by design (GL precedent): platform constants (`CL_CHAR_BIT`),
-  vendor reserved-range tokens without a spec chapter in this repo,
-  opaque-handle values, and other context-dependent values. Every unassigned
-  token is listed with its container in the review table so each can be
-  adjudicated.
+- **Ungrouped** by design (GL precedent: gl.xml leaves 12,153 of 15,392 ungrouped):
+  vendor reserved-range tokens whose extension chapter is not in this repo
+  (the `_NV`/`_AMD`/`_QCOM`/some `_INTEL` families), size/limits constants with
+  no value-set role (e.g. `CL_LUID_SIZE`, `CL_VERSION_*_BITS` — gl.xml likewise
+  leaves `GL_MAX_TEXTURE_SIZE` ungrouped), and opaque-handle values. Every
+  unassigned token is listed with its container in the review table so each can
+  be adjudicated.
+- **Manual overrides** (`manual_overrides.json`): tokens whose correct group the
+  rule engine cannot derive from table labels alone — or that it derived
+  *wrongly* (the QCOM perf-hint inversion: property key vs value-set members) —
+  are adjudicated by hand against the vendor chapter text and pinned here with
+  their spec citation; the engine re-applies them every run.
 
 Only evidence that names a C type (a value-set token row, a typedef, or a
 Get-function's declared `param_name` parameter) is accepted — description
@@ -94,7 +102,8 @@ write.
 
 - `git diff` shows only the intended insertion: one ` group="..."` attribute per
   assigned definition line, no other byte changed.
-- All 27 self-tests pass.
+- All 68 self-tests (positive + negative + QCOM perf-hint cross-contamination
+  guard) pass; `manual_overrides.json` re-applied.
 - Schema: `rnc2rng xml/registry.rnc` + `lxml RelaxNG` — cl.xml **valid** against
   the extended `registry.rnc` (`attribute group { text } ?` added to `Enum`).
 - Registry loader: `scripts/reg.py -registry cl.xml -validate` — exit 0.

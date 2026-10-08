@@ -488,82 +488,82 @@ server's OpenCL/api-docs repository.
          parameter types, including bitmasks in their own namespaces -->
 
     <enums name="Constants" vendor="Khronos" comment="Miscellaneous API constants, in cl_platform.h">
-        <enum value="8"                                            name="CL_CHAR_BIT"/>
-        <enum value="127"                                          name="CL_SCHAR_MAX"/>
-        <enum value="(-127-1)"                                     name="CL_SCHAR_MIN"/>
-        <enum value="CL_SCHAR_MAX"                                 name="CL_CHAR_MAX"/>
-        <enum value="CL_SCHAR_MIN"                                 name="CL_CHAR_MIN"/>
-        <enum value="255"                                          name="CL_UCHAR_MAX"/>
-        <enum value="32767"                                        name="CL_SHRT_MAX"/>
-        <enum value="(-32767-1)"                                   name="CL_SHRT_MIN"/>
-        <enum value="65535"                                        name="CL_USHRT_MAX"/>
-        <enum value="2147483647"                                   name="CL_INT_MAX"/>
-        <enum value="(-2147483647-1)"                              name="CL_INT_MIN"/>
-        <enum value="0xffffffffU"                                  name="CL_UINT_MAX"/>
-        <enum value="((cl_long) 0x7FFFFFFFFFFFFFFFLL)"             name="CL_LONG_MAX"/>
-        <enum value="((cl_long) -0x7FFFFFFFFFFFFFFFLL - 1LL)"      name="CL_LONG_MIN"/>
-        <enum value="((cl_ulong) 0xFFFFFFFFFFFFFFFFULL)"           name="CL_ULONG_MAX"/>
-        <enum value="6"                                            name="CL_FLT_DIG"/>
-        <enum value="24"                                           name="CL_FLT_MANT_DIG"/>
-        <enum value="+38"                                          name="CL_FLT_MAX_10_EXP"/>
-        <enum value="+128"                                         name="CL_FLT_MAX_EXP"/>
-        <enum value="-37"                                          name="CL_FLT_MIN_10_EXP"/>
-        <enum value="-125"                                         name="CL_FLT_MIN_EXP"/>
-        <enum value="2"                                            name="CL_FLT_RADIX"/>
-        <enum value="340282346638528859811704183484516925440.0f"   name="CL_FLT_MAX"/>
-        <enum value="1.175494350822287507969e-38f"                 name="CL_FLT_MIN"/>
-        <enum value="1.1920928955078125e-7f"                       name="CL_FLT_EPSILON"/>
-        <enum value="3"                                            name="CL_HALF_DIG"/>
-        <enum value="11"                                           name="CL_HALF_MANT_DIG"/>
-        <enum value="+4"                                           name="CL_HALF_MAX_10_EXP"/>
-        <enum value="+16"                                          name="CL_HALF_MAX_EXP"/>
-        <enum value="-4"                                           name="CL_HALF_MIN_10_EXP"/>
-        <enum value="-13"                                          name="CL_HALF_MIN_EXP"/>
-        <enum value="2"                                            name="CL_HALF_RADIX"/>
-        <enum value="65504.0f"                                     name="CL_HALF_MAX"/>
-        <enum value="6.103515625e-05f"                             name="CL_HALF_MIN"/>
-        <enum value="9.765625e-04f"                                name="CL_HALF_EPSILON"/>
-        <enum value="15"                                           name="CL_DBL_DIG"/>
-        <enum value="53"                                           name="CL_DBL_MANT_DIG"/>
-        <enum value="+308"                                         name="CL_DBL_MAX_10_EXP"/>
-        <enum value="+1024"                                        name="CL_DBL_MAX_EXP"/>
-        <enum value="-307"                                         name="CL_DBL_MIN_10_EXP"/>
-        <enum value="-1021"                                        name="CL_DBL_MIN_EXP"/>
-        <enum value="2"                                            name="CL_DBL_RADIX"/>
-        <enum value="1.7976931348623158e+308"                      name="CL_DBL_MAX"/>
-        <enum value="2.225073858507201383090e-308"                 name="CL_DBL_MIN"/>
-        <enum value="2.220446049250313080847e-16"                  name="CL_DBL_EPSILON"/>
-        <enum value="2.7182818284590452354"                        name="CL_M_E"/>
-        <enum value="1.4426950408889634074"                        name="CL_M_LOG2E"/>
-        <enum value="0.43429448190325182765"                       name="CL_M_LOG10E"/>
-        <enum value="0.69314718055994530942"                       name="CL_M_LN2"/>
-        <enum value="2.30258509299404568402"                       name="CL_M_LN10"/>
-        <enum value="3.14159265358979323846"                       name="CL_M_PI"/>
-        <enum value="1.57079632679489661923"                       name="CL_M_PI_2"/>
-        <enum value="0.78539816339744830962"                       name="CL_M_PI_4"/>
-        <enum value="0.31830988618379067154"                       name="CL_M_1_PI"/>
-        <enum value="0.63661977236758134308"                       name="CL_M_2_PI"/>
-        <enum value="1.12837916709551257390"                       name="CL_M_2_SQRTPI"/>
-        <enum value="1.41421356237309504880"                       name="CL_M_SQRT2"/>
-        <enum value="0.70710678118654752440"                       name="CL_M_SQRT1_2"/>
-        <enum value="2.718281828f"                                 name="CL_M_E_F"/>
-        <enum value="1.442695041f"                                 name="CL_M_LOG2E_F"/>
-        <enum value="0.434294482f"                                 name="CL_M_LOG10E_F"/>
-        <enum value="0.693147181f"                                 name="CL_M_LN2_F"/>
-        <enum value="2.302585093f"                                 name="CL_M_LN10_F"/>
-        <enum value="3.141592654f"                                 name="CL_M_PI_F"/>
-        <enum value="1.570796327f"                                 name="CL_M_PI_2_F"/>
-        <enum value="0.785398163f"                                 name="CL_M_PI_4_F"/>
-        <enum value="0.318309886f"                                 name="CL_M_1_PI_F"/>
-        <enum value="0.636619772f"                                 name="CL_M_2_PI_F"/>
-        <enum value="1.128379167f"                                 name="CL_M_2_SQRTPI_F"/>
-        <enum value="1.414213562f"                                 name="CL_M_SQRT2_F"/>
-        <enum value="0.707106781f"                                 name="CL_M_SQRT1_2_F"/>
-        <enum value="(CL_INFINITY - CL_INFINITY)"                  name="CL_NAN"/>
-        <enum value="((cl_float) 1e50)"                            name="CL_HUGE_VALF"/>
-        <enum value="((cl_double) 1e500)"                          name="CL_HUGE_VAL"/>
-        <enum value="CL_FLT_MAX"                                   name="CL_MAXFLOAT"/>
-        <enum value="CL_HUGE_VALF"                                 name="CL_INFINITY"/>
+        <enum value="8"                                            name="CL_CHAR_BIT" group="C99MathConstants"/>
+        <enum value="127"                                          name="CL_SCHAR_MAX" group="C99MathConstants"/>
+        <enum value="(-127-1)"                                     name="CL_SCHAR_MIN" group="C99MathConstants"/>
+        <enum value="CL_SCHAR_MAX"                                 name="CL_CHAR_MAX" group="C99MathConstants"/>
+        <enum value="CL_SCHAR_MIN"                                 name="CL_CHAR_MIN" group="C99MathConstants"/>
+        <enum value="255"                                          name="CL_UCHAR_MAX" group="C99MathConstants"/>
+        <enum value="32767"                                        name="CL_SHRT_MAX" group="C99MathConstants"/>
+        <enum value="(-32767-1)"                                   name="CL_SHRT_MIN" group="C99MathConstants"/>
+        <enum value="65535"                                        name="CL_USHRT_MAX" group="C99MathConstants"/>
+        <enum value="2147483647"                                   name="CL_INT_MAX" group="C99MathConstants"/>
+        <enum value="(-2147483647-1)"                              name="CL_INT_MIN" group="C99MathConstants"/>
+        <enum value="0xffffffffU"                                  name="CL_UINT_MAX" group="C99MathConstants"/>
+        <enum value="((cl_long) 0x7FFFFFFFFFFFFFFFLL)"             name="CL_LONG_MAX" group="C99MathConstants"/>
+        <enum value="((cl_long) -0x7FFFFFFFFFFFFFFFLL - 1LL)"      name="CL_LONG_MIN" group="C99MathConstants"/>
+        <enum value="((cl_ulong) 0xFFFFFFFFFFFFFFFFULL)"           name="CL_ULONG_MAX" group="C99MathConstants"/>
+        <enum value="6"                                            name="CL_FLT_DIG" group="C99MathConstants"/>
+        <enum value="24"                                           name="CL_FLT_MANT_DIG" group="C99MathConstants"/>
+        <enum value="+38"                                          name="CL_FLT_MAX_10_EXP" group="C99MathConstants"/>
+        <enum value="+128"                                         name="CL_FLT_MAX_EXP" group="C99MathConstants"/>
+        <enum value="-37"                                          name="CL_FLT_MIN_10_EXP" group="C99MathConstants"/>
+        <enum value="-125"                                         name="CL_FLT_MIN_EXP" group="C99MathConstants"/>
+        <enum value="2"                                            name="CL_FLT_RADIX" group="C99MathConstants"/>
+        <enum value="340282346638528859811704183484516925440.0f"   name="CL_FLT_MAX" group="C99MathConstants"/>
+        <enum value="1.175494350822287507969e-38f"                 name="CL_FLT_MIN" group="C99MathConstants"/>
+        <enum value="1.1920928955078125e-7f"                       name="CL_FLT_EPSILON" group="C99MathConstants"/>
+        <enum value="3"                                            name="CL_HALF_DIG" group="C99MathConstants"/>
+        <enum value="11"                                           name="CL_HALF_MANT_DIG" group="C99MathConstants"/>
+        <enum value="+4"                                           name="CL_HALF_MAX_10_EXP" group="C99MathConstants"/>
+        <enum value="+16"                                          name="CL_HALF_MAX_EXP" group="C99MathConstants"/>
+        <enum value="-4"                                           name="CL_HALF_MIN_10_EXP" group="C99MathConstants"/>
+        <enum value="-13"                                          name="CL_HALF_MIN_EXP" group="C99MathConstants"/>
+        <enum value="2"                                            name="CL_HALF_RADIX" group="C99MathConstants"/>
+        <enum value="65504.0f"                                     name="CL_HALF_MAX" group="C99MathConstants"/>
+        <enum value="6.103515625e-05f"                             name="CL_HALF_MIN" group="C99MathConstants"/>
+        <enum value="9.765625e-04f"                                name="CL_HALF_EPSILON" group="C99MathConstants"/>
+        <enum value="15"                                           name="CL_DBL_DIG" group="C99MathConstants"/>
+        <enum value="53"                                           name="CL_DBL_MANT_DIG" group="C99MathConstants"/>
+        <enum value="+308"                                         name="CL_DBL_MAX_10_EXP" group="C99MathConstants"/>
+        <enum value="+1024"                                        name="CL_DBL_MAX_EXP" group="C99MathConstants"/>
+        <enum value="-307"                                         name="CL_DBL_MIN_10_EXP" group="C99MathConstants"/>
+        <enum value="-1021"                                        name="CL_DBL_MIN_EXP" group="C99MathConstants"/>
+        <enum value="2"                                            name="CL_DBL_RADIX" group="C99MathConstants"/>
+        <enum value="1.7976931348623158e+308"                      name="CL_DBL_MAX" group="C99MathConstants"/>
+        <enum value="2.225073858507201383090e-308"                 name="CL_DBL_MIN" group="C99MathConstants"/>
+        <enum value="2.220446049250313080847e-16"                  name="CL_DBL_EPSILON" group="C99MathConstants"/>
+        <enum value="2.7182818284590452354"                        name="CL_M_E" group="C99MathConstants"/>
+        <enum value="1.4426950408889634074"                        name="CL_M_LOG2E" group="C99MathConstants"/>
+        <enum value="0.43429448190325182765"                       name="CL_M_LOG10E" group="C99MathConstants"/>
+        <enum value="0.69314718055994530942"                       name="CL_M_LN2" group="C99MathConstants"/>
+        <enum value="2.30258509299404568402"                       name="CL_M_LN10" group="C99MathConstants"/>
+        <enum value="3.14159265358979323846"                       name="CL_M_PI" group="C99MathConstants"/>
+        <enum value="1.57079632679489661923"                       name="CL_M_PI_2" group="C99MathConstants"/>
+        <enum value="0.78539816339744830962"                       name="CL_M_PI_4" group="C99MathConstants"/>
+        <enum value="0.31830988618379067154"                       name="CL_M_1_PI" group="C99MathConstants"/>
+        <enum value="0.63661977236758134308"                       name="CL_M_2_PI" group="C99MathConstants"/>
+        <enum value="1.12837916709551257390"                       name="CL_M_2_SQRTPI" group="C99MathConstants"/>
+        <enum value="1.41421356237309504880"                       name="CL_M_SQRT2" group="C99MathConstants"/>
+        <enum value="0.70710678118654752440"                       name="CL_M_SQRT1_2" group="C99MathConstants"/>
+        <enum value="2.718281828f"                                 name="CL_M_E_F" group="C99MathConstants"/>
+        <enum value="1.442695041f"                                 name="CL_M_LOG2E_F" group="C99MathConstants"/>
+        <enum value="0.434294482f"                                 name="CL_M_LOG10E_F" group="C99MathConstants"/>
+        <enum value="0.693147181f"                                 name="CL_M_LN2_F" group="C99MathConstants"/>
+        <enum value="2.302585093f"                                 name="CL_M_LN10_F" group="C99MathConstants"/>
+        <enum value="3.141592654f"                                 name="CL_M_PI_F" group="C99MathConstants"/>
+        <enum value="1.570796327f"                                 name="CL_M_PI_2_F" group="C99MathConstants"/>
+        <enum value="0.785398163f"                                 name="CL_M_PI_4_F" group="C99MathConstants"/>
+        <enum value="0.318309886f"                                 name="CL_M_1_PI_F" group="C99MathConstants"/>
+        <enum value="0.636619772f"                                 name="CL_M_2_PI_F" group="C99MathConstants"/>
+        <enum value="1.128379167f"                                 name="CL_M_2_SQRTPI_F" group="C99MathConstants"/>
+        <enum value="1.414213562f"                                 name="CL_M_SQRT2_F" group="C99MathConstants"/>
+        <enum value="0.707106781f"                                 name="CL_M_SQRT1_2_F" group="C99MathConstants"/>
+        <enum value="(CL_INFINITY - CL_INFINITY)"                  name="CL_NAN" group="C99MathConstants"/>
+        <enum value="((cl_float) 1e50)"                            name="CL_HUGE_VALF" group="C99MathConstants"/>
+        <enum value="((cl_double) 1e500)"                          name="CL_HUGE_VAL" group="C99MathConstants"/>
+        <enum value="CL_FLT_MAX"                                   name="CL_MAXFLOAT" group="C99MathConstants"/>
+        <enum value="CL_HUGE_VALF"                                 name="CL_INFINITY" group="C99MathConstants"/>
             <comment> These values are defined differently along the
                         #if (defined (_WIN32) &amp;&amp; defined(_MSC_VER))
                       compilation path, as follows:
@@ -615,8 +615,8 @@ server's OpenCL/api-docs repository.
     </enums>
 
     <enums name="Constants.cl_loader_layers" vendor="Khronos" comment="Defined Layer API version, in cl_layer.h">
-        <enum value="100"                        name="CL_LAYER_API_VERSION_100"/>
-        <enum value="((cl_layer_properties)0)"   name="CL_LAYER_PROPERTIES_LIST_END"/>
+        <enum value="100"                        name="CL_LAYER_API_VERSION_100" group="cl_layer_properties"/>
+        <enum value="((cl_layer_properties)0)"   name="CL_LAYER_PROPERTIES_LIST_END" group="cl_layer_properties"/>
     </enums>
 
     <enums start="0" end="-999" name="ErrorCodes.0" vendor="Khronos" comment="Error codes start at 0 and decrease">
@@ -826,10 +826,10 @@ server's OpenCL/api-docs repository.
 
     <enums name="MiscNumbers" vendor="Multiple" comment="Tokens whose numeric value is intrinsically meaningful">
         <enum value="((cl_device_partition_property_ext)0)"        name="CL_PROPERTIES_LIST_END_EXT"/>
-        <enum value="((cl_device_partition_property_ext)0)"        name="CL_PARTITION_BY_COUNTS_LIST_END_EXT"/>
-        <enum value="0x0"           name="CL_DEVICE_PARTITION_BY_COUNTS_LIST_END"/>
-        <enum value="((cl_device_partition_property_ext)0 - 1)"    name="CL_PARTITION_BY_NAMES_LIST_END_EXT"/>
-        <enum value="-1"            name="CL_PARTITION_BY_NAMES_LIST_END_INTEL"/>
+        <enum value="((cl_device_partition_property_ext)0)"        name="CL_PARTITION_BY_COUNTS_LIST_END_EXT" group="cl_device_partition_property"/>
+        <enum value="0x0"           name="CL_DEVICE_PARTITION_BY_COUNTS_LIST_END" group="cl_device_partition_property"/>
+        <enum value="((cl_device_partition_property_ext)0 - 1)"    name="CL_PARTITION_BY_NAMES_LIST_END_EXT" group="cl_device_partition_property"/>
+        <enum value="-1"            name="CL_PARTITION_BY_NAMES_LIST_END_INTEL" group="cl_device_partition_property"/>
         <enum value="0"             name="CL_MEM_DEVICE_HANDLE_LIST_END_KHR" group="cl_mem_properties"/>
         <enum value="0"             name="CL_SEMAPHORE_DEVICE_HANDLE_LIST_END_KHR" group="cl_semaphore_info_khr"/>
         <enum value="0"             name="CL_SEMAPHORE_EXPORT_HANDLE_TYPES_LIST_END_KHR" group="cl_semaphore_properties_khr"/>
@@ -853,10 +853,10 @@ server's OpenCL/api-docs repository.
     </enums>
 
     <enums name="clCommandExecutionStatus" vendor="Khronos">
-        <enum value="0x0"           name="CL_COMPLETE"/>
-        <enum value="0x1"           name="CL_RUNNING"/>
-        <enum value="0x2"           name="CL_SUBMITTED"/>
-        <enum value="0x3"           name="CL_QUEUED"/>
+        <enum value="0x0"           name="CL_COMPLETE" group="clCommandExecutionStatus"/>
+        <enum value="0x1"           name="CL_RUNNING" group="clCommandExecutionStatus"/>
+        <enum value="0x2"           name="CL_SUBMITTED" group="clCommandExecutionStatus"/>
+        <enum value="0x3"           name="CL_QUEUED" group="clCommandExecutionStatus"/>
             <unused start="0x4" end="9999"/>
     </enums>
 
@@ -1666,9 +1666,9 @@ server's OpenCL/api-docs repository.
         <enum value="0x1048"        name="CL_DEVICE_PREFERRED_INTEROP_USER_SYNC" group="cl_device_info"/>
         <enum value="0x1049"        name="CL_DEVICE_PRINTF_BUFFER_SIZE" group="cl_device_info"/>
         <enum value="0x104A"        name="CL_DEVICE_IMAGE_PITCH_ALIGNMENT" group="cl_device_info"/>
-        <enum value="0x104A"        name="CL_DEVICE_IMAGE_PITCH_ALIGNMENT_KHR"/>
+        <enum value="0x104A"        name="CL_DEVICE_IMAGE_PITCH_ALIGNMENT_KHR" group="cl_device_info"/>
         <enum value="0x104B"        name="CL_DEVICE_IMAGE_BASE_ADDRESS_ALIGNMENT" group="cl_device_info"/>
-        <enum value="0x104B"        name="CL_DEVICE_IMAGE_BASE_ADDRESS_ALIGNMENT_KHR"/>
+        <enum value="0x104B"        name="CL_DEVICE_IMAGE_BASE_ADDRESS_ALIGNMENT_KHR" group="cl_device_info"/>
         <enum value="0x104C"        name="CL_DEVICE_MAX_READ_WRITE_IMAGE_ARGS" group="cl_device_info"/>
         <enum value="0x104D"        name="CL_DEVICE_MAX_GLOBAL_VARIABLE_SIZE" group="cl_device_info"/>
         <enum value="0x104E"        name="CL_DEVICE_QUEUE_ON_DEVICE_PROPERTIES" group="cl_device_info"/>
@@ -1722,10 +1722,10 @@ server's OpenCL/api-docs repository.
         <enum value="0x1073"        name="CL_DEVICE_INTEGER_DOT_PRODUCT_CAPABILITIES" group="cl_device_info"/>
         <enum value="0x1074"        name="CL_DEVICE_INTEGER_DOT_PRODUCT_ACCELERATION_PROPERTIES_8BIT_KHR" group="cl_device_info"/>
         <enum value="0x1074"        name="CL_DEVICE_INTEGER_DOT_PRODUCT_ACCELERATION_PROPERTIES_8BIT" group="cl_device_info"/>
-        <enum value="0x1075"        name="CL_DEVICE_INTEGER_DOT_PRODUCT_ACCELERATION_PROPERTIES_4x8BIT_PACKED_KHR"/>
-        <enum value="0x1075"        name="CL_DEVICE_INTEGER_DOT_PRODUCT_ACCELERATION_PROPERTIES_4x8BIT_PACKED"/>
+        <enum value="0x1075"        name="CL_DEVICE_INTEGER_DOT_PRODUCT_ACCELERATION_PROPERTIES_4x8BIT_PACKED_KHR" group="cl_device_info"/>
+        <enum value="0x1075"        name="CL_DEVICE_INTEGER_DOT_PRODUCT_ACCELERATION_PROPERTIES_4x8BIT_PACKED" group="cl_device_info"/>
         <enum value="0x1076"        name="CL_DEVICE_KERNEL_CLOCK_CAPABILITIES_KHR" group="cl_device_info"/>
-        <enum value="0x1077"        name="CL_DEVICE_SVM_TYPE_CAPABILITIES_KHR"/>
+        <enum value="0x1077"        name="CL_DEVICE_SVM_TYPE_CAPABILITIES_KHR" group="cl_device_info"/>
             <unused start="0x1078" end="0x107F" comment="Reserved for cl_device_info"/>
         <enum value="0x1080"        name="CL_CONTEXT_REFERENCE_COUNT" group="cl_context_info"/>
         <enum value="0x1081"        name="CL_CONTEXT_DEVICES" group="cl_context_info"/>
@@ -1759,15 +1759,15 @@ server's OpenCL/api-docs repository.
         <enum value="0x10B7"        name="CL_ARGB" group="cl_channel_order"/>
         <enum value="0x10B8"        name="CL_INTENSITY" group="cl_channel_order"/>
         <enum value="0x10B9"        name="CL_LUMINANCE" group="cl_channel_order"/>
-        <enum value="0x10BA"        name="CL_Rx"/>
-        <enum value="0x10BB"        name="CL_RGx"/>
-        <enum value="0x10BC"        name="CL_RGBx"/>
+        <enum value="0x10BA"        name="CL_Rx" group="cl_channel_order"/>
+        <enum value="0x10BB"        name="CL_RGx" group="cl_channel_order"/>
+        <enum value="0x10BC"        name="CL_RGBx" group="cl_channel_order"/>
         <enum value="0x10BD"        name="CL_DEPTH" group="cl_channel_order"/>
         <enum value="0x10BE"        name="CL_DEPTH_STENCIL" group="cl_channel_order"/>
-        <enum value="0x10BF"        name="CL_sRGB"/>
-        <enum value="0x10C0"        name="CL_sRGBx"/>
-        <enum value="0x10C1"        name="CL_sRGBA"/>
-        <enum value="0x10C2"        name="CL_sBGRA"/>
+        <enum value="0x10BF"        name="CL_sRGB" group="cl_channel_order"/>
+        <enum value="0x10C0"        name="CL_sRGBx" group="cl_channel_order"/>
+        <enum value="0x10C1"        name="CL_sRGBA" group="cl_channel_order"/>
+        <enum value="0x10C2"        name="CL_sBGRA" group="cl_channel_order"/>
         <enum value="0x10C3"        name="CL_ABGR" group="cl_channel_order"/>
             <unused start="0x10C4" end="0x10CF" comment="Reserved for cl_ext_yuv_images #722"/>
         <enum value="0x10D0"        name="CL_SNORM_INT8" group="cl_channel_type"/>
@@ -1789,8 +1789,8 @@ server's OpenCL/api-docs repository.
         <enum value="0x10E0"        name="CL_UNORM_INT_101010_2" group="cl_channel_type"/>
         <enum value="0x10E1"        name="CL_UNORM_INT10X6_EXT" group="cl_channel_type"/>
             <unused start="0x10E2" end="0x10E2" comment="Reserved for cl_ext_yuv_images #722"/>
-        <enum value="0x10E3"        name="CL_UNSIGNED_INT_RAW10_EXT"/>
-        <enum value="0x10E4"        name="CL_UNSIGNED_INT_RAW12_EXT"/>
+        <enum value="0x10E3"        name="CL_UNSIGNED_INT_RAW10_EXT" group="cl_channel_type"/>
+        <enum value="0x10E4"        name="CL_UNSIGNED_INT_RAW12_EXT" group="cl_channel_type"/>
         <enum value="0x10E5"        name="CL_UNORM_INT_2_101010_EXT" group="cl_channel_type"/>
         <enum value="0x10E6"        name="CL_UNSIGNED_INT10X6_EXT" group="cl_channel_type"/>
         <enum value="0x10E7"        name="CL_UNSIGNED_INT12X4_EXT" group="cl_channel_type"/>
@@ -1798,14 +1798,14 @@ server's OpenCL/api-docs repository.
         <enum value="0x10E9"        name="CL_UNORM_INT12X4_EXT" group="cl_channel_type"/>
         <enum value="0x10EA"        name="CL_UNORM_INT14X2_EXT" group="cl_channel_type"/>
             <unused start="0x10EB" end="0x10EF" comment="Reserved for cl_channel_type"/>
-        <enum value="0x10F0"        name="CL_MEM_OBJECT_BUFFER"/>
-        <enum value="0x10F1"        name="CL_MEM_OBJECT_IMAGE2D"/>
-        <enum value="0x10F2"        name="CL_MEM_OBJECT_IMAGE3D"/>
-        <enum value="0x10F3"        name="CL_MEM_OBJECT_IMAGE2D_ARRAY"/>
-        <enum value="0x10F4"        name="CL_MEM_OBJECT_IMAGE1D"/>
-        <enum value="0x10F5"        name="CL_MEM_OBJECT_IMAGE1D_ARRAY"/>
-        <enum value="0x10F6"        name="CL_MEM_OBJECT_IMAGE1D_BUFFER"/>
-        <enum value="0x10F7"        name="CL_MEM_OBJECT_PIPE"/>
+        <enum value="0x10F0"        name="CL_MEM_OBJECT_BUFFER" group="cl_mem_object_type"/>
+        <enum value="0x10F1"        name="CL_MEM_OBJECT_IMAGE2D" group="cl_mem_object_type"/>
+        <enum value="0x10F2"        name="CL_MEM_OBJECT_IMAGE3D" group="cl_mem_object_type"/>
+        <enum value="0x10F3"        name="CL_MEM_OBJECT_IMAGE2D_ARRAY" group="cl_mem_object_type"/>
+        <enum value="0x10F4"        name="CL_MEM_OBJECT_IMAGE1D" group="cl_mem_object_type"/>
+        <enum value="0x10F5"        name="CL_MEM_OBJECT_IMAGE1D_ARRAY" group="cl_mem_object_type"/>
+        <enum value="0x10F6"        name="CL_MEM_OBJECT_IMAGE1D_BUFFER" group="cl_mem_object_type"/>
+        <enum value="0x10F7"        name="CL_MEM_OBJECT_PIPE" group="cl_mem_object_type"/>
             <unused start="0x10F8" end="0x10FF" comment="Reserved for cl_mem_object_type"/>
         <enum value="0x1100"        name="CL_MEM_TYPE" group="cl_mem_info"/>
         <enum value="0x1101"        name="CL_MEM_FLAGS" group="cl_mem_info"/>
@@ -1850,11 +1850,11 @@ server's OpenCL/api-docs repository.
         <enum value="0x1152"        name="CL_SAMPLER_NORMALIZED_COORDS" group="cl_sampler_info,cl_sampler_properties"/>
         <enum value="0x1153"        name="CL_SAMPLER_ADDRESSING_MODE" group="cl_sampler_info,cl_sampler_properties"/>
         <enum value="0x1154"        name="CL_SAMPLER_FILTER_MODE" group="cl_sampler_info,cl_sampler_properties"/>
-        <enum value="0x1155"        name="CL_SAMPLER_MIP_FILTER_MODE"/>
+        <enum value="0x1155"        name="CL_SAMPLER_MIP_FILTER_MODE" group="cl_sampler_properties"/>
         <enum value="0x1155"        name="CL_SAMPLER_MIP_FILTER_MODE_KHR" group="cl_sampler_properties"/>
-        <enum value="0x1156"        name="CL_SAMPLER_LOD_MIN"/>
+        <enum value="0x1156"        name="CL_SAMPLER_LOD_MIN" group="cl_sampler_properties"/>
         <enum value="0x1156"        name="CL_SAMPLER_LOD_MIN_KHR" group="cl_sampler_properties"/>
-        <enum value="0x1157"        name="CL_SAMPLER_LOD_MAX"/>
+        <enum value="0x1157"        name="CL_SAMPLER_LOD_MAX" group="cl_sampler_properties"/>
         <enum value="0x1157"        name="CL_SAMPLER_LOD_MAX_KHR" group="cl_sampler_properties"/>
         <enum value="0x1158"        name="CL_SAMPLER_PROPERTIES" group="cl_sampler_info"/>
             <unused start="0x1159" end="0x115F" comment="Reserved for cl_sampler_info"/>
@@ -1906,12 +1906,12 @@ server's OpenCL/api-docs repository.
         <enum value="0x11B3"        name="CL_KERNEL_PREFERRED_WORK_GROUP_SIZE_MULTIPLE" group="cl_kernel_work_group_info"/>
         <enum value="0x11B4"        name="CL_KERNEL_PRIVATE_MEM_SIZE" group="cl_kernel_work_group_info"/>
         <enum value="0x11B5"        name="CL_KERNEL_GLOBAL_WORK_SIZE" group="cl_kernel_work_group_info"/>
-        <enum value="0x11B6"        name="CL_KERNEL_EXEC_INFO_SVM_PTRS"/>
-        <enum value="0x11B7"        name="CL_KERNEL_EXEC_INFO_SVM_FINE_GRAIN_SYSTEM"/>
+        <enum value="0x11B6"        name="CL_KERNEL_EXEC_INFO_SVM_PTRS" group="cl_kernel_exec_info"/>
+        <enum value="0x11B7"        name="CL_KERNEL_EXEC_INFO_SVM_FINE_GRAIN_SYSTEM" group="cl_kernel_exec_info"/>
         <enum value="0x11B8"        name="CL_KERNEL_LOCAL_SIZE_FOR_SUB_GROUP_COUNT" group="cl_kernel_sub_group_info"/>
         <enum value="0x11B9"        name="CL_KERNEL_MAX_NUM_SUB_GROUPS" group="cl_kernel_sub_group_info"/>
         <enum value="0x11BA"        name="CL_KERNEL_COMPILE_NUM_SUB_GROUPS" group="cl_kernel_sub_group_info"/>
-        <enum value="0x11BB"        name="CL_KERNEL_EXEC_INFO_SVM_INDIRECT_ACCESS_KHR"/>
+        <enum value="0x11BB"        name="CL_KERNEL_EXEC_INFO_SVM_INDIRECT_ACCESS_KHR" group="cl_kernel_exec_info"/>
             <unused start="0x11BC" end="0x11CF" comment="Reserved for cl_kernel_info / cl_kernel_work_group_info / cl_kernel_exec_info / cl_kernel_sub_group_info"/>
         <enum value="0x11D0"        name="CL_EVENT_COMMAND_QUEUE" group="cl_event_info"/>
         <enum value="0x11D1"        name="CL_EVENT_COMMAND_TYPE" group="cl_event_info"/>
@@ -2086,14 +2086,14 @@ server's OpenCL/api-docs repository.
             <unused start="0x206A" end="0x206F" comment="Reserved to Khronos for interop"/>
         <enum value="0x2070"        name="CL_EXTERNAL_MEMORY_HANDLE_ANDROID_HARDWARE_BUFFER_KHR" group="cl_external_memory_handle_type_khr"/>
             <unused start="0x2071" end="0x2077" comment="Reserved for cl_khr_unified_svm"/>
-        <enum value="0x2078"        name="CL_SVM_ALLOC_ASSOCIATED_DEVICE_HANDLE_KHR"/>
-        <enum value="0x2079"        name="CL_SVM_ALLOC_ACCESS_FLAGS_KHR"/>
-        <enum value="0x207A"        name="CL_SVM_ALLOC_ALIGNMENT_KHR"/>
+        <enum value="0x2078"        name="CL_SVM_ALLOC_ASSOCIATED_DEVICE_HANDLE_KHR" group="cl_svm_alloc_properties_khr"/>
+        <enum value="0x2079"        name="CL_SVM_ALLOC_ACCESS_FLAGS_KHR" group="cl_svm_alloc_properties_khr"/>
+        <enum value="0x207A"        name="CL_SVM_ALLOC_ALIGNMENT_KHR" group="cl_svm_alloc_properties_khr"/>
             <unused start="0x207B" end="0x2087" comment="Reserved for cl_khr_unified_svm cl_svm_alloc_properties_khr"/>
-        <enum value="0x2088"        name="CL_SVM_INFO_TYPE_INDEX_KHR"/>
-        <enum value="0x2089"        name="CL_SVM_INFO_CAPABILITIES_KHR"/>
-        <enum value="0x208A"        name="CL_SVM_INFO_PROPERTIES_KHR"/>
-        <enum value="0x208B"        name="CL_SVM_INFO_ACCESS_FLAGS_KHR"/>
+        <enum value="0x2088"        name="CL_SVM_INFO_TYPE_INDEX_KHR" group="cl_svm_pointer_info_khr"/>
+        <enum value="0x2089"        name="CL_SVM_INFO_CAPABILITIES_KHR" group="cl_svm_pointer_info_khr"/>
+        <enum value="0x208A"        name="CL_SVM_INFO_PROPERTIES_KHR" group="cl_svm_pointer_info_khr"/>
+        <enum value="0x208B"        name="CL_SVM_INFO_ACCESS_FLAGS_KHR" group="cl_svm_pointer_info_khr"/>
             <unused start="0x208C" end="0x208F" comment="Reserved for cl_khr_unified_svm cl_svm_pointer_info_khr, etc."/>
             <unused start="0x2090" end="0x2FFF" comment="Reserved to Khronos for interop"/>
     </enums>
@@ -2214,11 +2214,11 @@ server's OpenCL/api-docs repository.
     </enums>
 
     <enums start="0x4050" end="0x405F" name="enums.4050" vendor="Apple">
-        <enum value="0x4050"        name="CL_DEVICE_PARTITION_EQUALLY_EXT"/>
-        <enum value="0x4051"        name="CL_DEVICE_PARTITION_BY_COUNTS_EXT"/>
-        <enum value="0x4052"        name="CL_DEVICE_PARTITION_BY_NAMES_EXT"/>
-        <enum value="0x4052"        name="CL_DEVICE_PARTITION_BY_NAMES_INTEL"/>
-        <enum value="0x4053"        name="CL_DEVICE_PARTITION_BY_AFFINITY_DOMAIN_EXT"/>
+        <enum value="0x4050"        name="CL_DEVICE_PARTITION_EQUALLY_EXT" group="cl_device_partition_property"/>
+        <enum value="0x4051"        name="CL_DEVICE_PARTITION_BY_COUNTS_EXT" group="cl_device_partition_property"/>
+        <enum value="0x4052"        name="CL_DEVICE_PARTITION_BY_NAMES_EXT" group="cl_device_partition_property"/>
+        <enum value="0x4052"        name="CL_DEVICE_PARTITION_BY_NAMES_INTEL" group="cl_device_partition_property"/>
+        <enum value="0x4053"        name="CL_DEVICE_PARTITION_BY_AFFINITY_DOMAIN_EXT" group="cl_device_partition_property"/>
         <enum value="0x4054"        name="CL_DEVICE_PARENT_DEVICE_EXT"/>
         <enum value="0x4055"        name="CL_DEVICE_PARTITION_TYPES_EXT"/>
         <enum value="0x4056"        name="CL_DEVICE_AFFINITY_DOMAINS_EXT"/>
@@ -2239,9 +2239,9 @@ server's OpenCL/api-docs repository.
         <enum value="0x4074"        name="CL_MEM_DX9_SHARED_HANDLE_INTEL"/>
         <enum value="0x4075"        name="CL_IMAGE_DX9_PLANE_INTEL"/>
         <enum value="0x4076"        name="CL_YUYV_INTEL" group="cl_channel_order"/>
-        <enum value="0x4077"        name="CL_UYVY_INTEL"/>
-        <enum value="0x4078"        name="CL_YVYU_INTEL"/>
-        <enum value="0x4079"        name="CL_VYUY_INTEL"/>
+        <enum value="0x4077"        name="CL_UYVY_INTEL" group="cl_channel_order"/>
+        <enum value="0x4078"        name="CL_YVYU_INTEL" group="cl_channel_order"/>
+        <enum value="0x4079"        name="CL_VYUY_INTEL" group="cl_channel_order"/>
             <unused start="0x407A" end="0x407D"/>
         <enum value="0x407E"        name="CL_DEVICE_ME_VERSION_INTEL"/>
             <unused start="0x407F"/>
@@ -2285,8 +2285,8 @@ server's OpenCL/api-docs repository.
     </enums>
 
     <enums start="0x40B0" end="0x40BF" name="enums.40B0" vendor="Arm" comment="Per Bug 10337">
-        <enum value="0x40B0"        name="CL_PRINTF_CALLBACK_ARM"/>
-        <enum value="0x40B1"        name="CL_PRINTF_BUFFERSIZE_ARM"/>
+        <enum value="0x40B0"        name="CL_PRINTF_CALLBACK_ARM" group="cl_context_properties"/>
+        <enum value="0x40B1"        name="CL_PRINTF_BUFFERSIZE_ARM" group="cl_context_properties"/>
         <enum value="0x40B2"        name="CL_IMPORT_TYPE_ARM"/>
         <enum value="0x40B3"        name="CL_IMPORT_TYPE_HOST_ARM"/>
         <enum value="0x40B4"        name="CL_IMPORT_TYPE_DMA_BUF_ARM"/>
@@ -2305,31 +2305,31 @@ server's OpenCL/api-docs repository.
 
     <enums start="0x40C0" end="0x40CF" name="enums.40C0" vendor="Qualcomm" comment="Per Bug 10726">
             <unused start="0x40C0" end="0x40C1"/>
-        <enum value="0x40C2"        name="CL_CONTEXT_PERF_HINT_QCOM" group="cl_perf_hint_qcom"/>
-        <enum value="0x40C3"        name="CL_PERF_HINT_HIGH_QCOM"/>
-        <enum value="0x40C4"        name="CL_PERF_HINT_NORMAL_QCOM"/>
-        <enum value="0x40C5"        name="CL_PERF_HINT_LOW_QCOM"/>
+        <enum value="0x40C2"        name="CL_CONTEXT_PERF_HINT_QCOM" group="cl_context_properties"/>
+        <enum value="0x40C3"        name="CL_PERF_HINT_HIGH_QCOM" group="cl_perf_hint_qcom"/>
+        <enum value="0x40C4"        name="CL_PERF_HINT_NORMAL_QCOM" group="cl_perf_hint_qcom"/>
+        <enum value="0x40C5"        name="CL_PERF_HINT_LOW_QCOM" group="cl_perf_hint_qcom"/>
         <enum value="0x40C6"        name="CL_MEM_ANDROID_NATIVE_BUFFER_HOST_PTR_QCOM"/>
             <unused start="0x40C7" end="0x40CF"/>
     </enums>
 
     <enums start="0x40D0" end="0x40DF" name="enums.40D0" vendor="IMG" comment="Per Bug 11287">
-        <enum value="0x40D0"        name="CL_NV21"/>
-        <enum value="0x40D0"        name="CL_NV21_IMG"/>
-        <enum value="0x40D1"        name="CL_YV12"/>
-        <enum value="0x40D1"        name="CL_YV12_IMG"/>
-        <enum value="0x40D2"        name="CL_COMMAND_ACQUIRE_GRALLOC_OBJECTS_IMG"/>
-        <enum value="0x40D3"        name="CL_COMMAND_RELEASE_GRALLOC_OBJECTS_IMG"/>
-        <enum value="0x40D4"        name="CL_GRALLOC_RESOURCE_NOT_ACQUIRED_IMG"/>
-        <enum value="0x40D5"        name="CL_INVALID_GRALLOC_OBJECT_IMG"/>
-        <enum value="0x40D6"        name="CL_COMMAND_GENERATE_MIPMAP_IMG"/>
+        <enum value="0x40D0"        name="CL_NV21" group="cl_channel_order"/>
+        <enum value="0x40D0"        name="CL_NV21_IMG" group="cl_channel_order"/>
+        <enum value="0x40D1"        name="CL_YV12" group="cl_channel_order"/>
+        <enum value="0x40D1"        name="CL_YV12_IMG" group="cl_channel_order"/>
+        <enum value="0x40D2"        name="CL_COMMAND_ACQUIRE_GRALLOC_OBJECTS_IMG" group="cl_command_type"/>
+        <enum value="0x40D3"        name="CL_COMMAND_RELEASE_GRALLOC_OBJECTS_IMG" group="cl_command_type"/>
+        <enum value="0x40D4"        name="CL_GRALLOC_RESOURCE_NOT_ACQUIRED_IMG" group="ErrorCode"/>
+        <enum value="0x40D5"        name="CL_INVALID_GRALLOC_OBJECT_IMG" group="ErrorCode"/>
+        <enum value="0x40D6"        name="CL_COMMAND_GENERATE_MIPMAP_IMG" group="cl_command_type"/>
         <enum value="0x40D7"        name="CL_MEM_ALLOC_FLAGS_IMG" group="cl_mem_alloc_flags_img"/>
-        <enum value="0x40D8"        name="CL_DEVICE_MEMORY_CAPABILITIES_IMG"/>
+        <enum value="0x40D8"        name="CL_DEVICE_MEMORY_CAPABILITIES_IMG" group="cl_device_info"/>
         <enum value="0x40D9"        name="CL_CONTEXT_SAFETY_PROPERTIES_IMG" group="cl_context_safety_properties_img"/>
-        <enum value="0x40DA"        name="CL_DEVICE_WORKGROUP_PROTECTION_SVM_CAPABILITIES_IMG"/>
-        <enum value="0x40DB"        name="CL_DEVICE_WORKGROUP_PROTECTION_DEVICE_ENQUEUE_CAPABILITIES_IMG"/>
-        <enum value="0x40DC"        name="CL_DEVICE_SAFETY_MEM_SIZE_IMG"/>
-        <enum value="0x40DD"        name="CL_ECC_RECOVERED_IMG"/>
+        <enum value="0x40DA"        name="CL_DEVICE_WORKGROUP_PROTECTION_SVM_CAPABILITIES_IMG" group="cl_device_info"/>
+        <enum value="0x40DB"        name="CL_DEVICE_WORKGROUP_PROTECTION_DEVICE_ENQUEUE_CAPABILITIES_IMG" group="cl_device_info"/>
+        <enum value="0x40DC"        name="CL_DEVICE_SAFETY_MEM_SIZE_IMG" group="cl_device_info"/>
+        <enum value="0x40DD"        name="CL_ECC_RECOVERED_IMG" group="clCommandExecutionStatus"/>
         <unused start="0x40DE" end="0x40DF"/>
     </enums>
 
@@ -2353,9 +2353,9 @@ server's OpenCL/api-docs repository.
         <enum value="0x4105"        name="CL_DEVICE_NUM_SIMULTANEOUS_INTEROPS_INTEL"/>
         <enum value="0x4106"        name="CL_CONTEXT_SHOW_DIAGNOSTICS_INTEL"/>
         <enum value="0x4107"        name="CL_EGL_YUV_PLANE_INTEL"/>
-        <enum value="0x4108"        name="CL_DEVICE_SUB_GROUP_SIZES_INTEL"/>
-        <enum value="0x4109"        name="CL_KERNEL_SPILL_MEM_SIZE_INTEL"/>
-        <enum value="0x410A"        name="CL_KERNEL_COMPILE_SUB_GROUP_SIZE_INTEL"/>
+        <enum value="0x4108"        name="CL_DEVICE_SUB_GROUP_SIZES_INTEL" group="cl_device_info"/>
+        <enum value="0x4109"        name="CL_KERNEL_SPILL_MEM_SIZE_INTEL" group="cl_kernel_work_group_info"/>
+        <enum value="0x410A"        name="CL_KERNEL_COMPILE_SUB_GROUP_SIZE_INTEL" group="cl_kernel_sub_group_info"/>
         <enum value="0x410B"        name="CL_DEVICE_AVC_ME_VERSION_INTEL"/>
         <enum value="0x410C"        name="CL_DEVICE_AVC_ME_SUPPORTS_TEXTURE_SAMPLER_USE_INTEL"/>
         <enum value="0x410D"        name="CL_DEVICE_AVC_ME_SUPPORTS_PREEMPTION_INTEL"/>
@@ -2406,11 +2406,11 @@ server's OpenCL/api-docs repository.
         <enum value="0x4199"        name="CL_MEM_TYPE_SHARED_INTEL" group="cl_unified_shared_memory_type_intel"/>
         <enum value="0x419A"        name="CL_MEM_ALLOC_TYPE_INTEL" group="cl_mem_info_intel"/>
         <enum value="0x419B"        name="CL_MEM_ALLOC_BASE_PTR_INTEL" group="cl_mem_info_intel"/>
-        <enum value="0x419B"        name="CL_SVM_INFO_BASE_PTR_KHR"/>
+        <enum value="0x419B"        name="CL_SVM_INFO_BASE_PTR_KHR" group="cl_svm_pointer_info_khr"/>
         <enum value="0x419C"        name="CL_MEM_ALLOC_SIZE_INTEL" group="cl_mem_info_intel"/>
-        <enum value="0x419C"        name="CL_SVM_INFO_SIZE_KHR"/>
+        <enum value="0x419C"        name="CL_SVM_INFO_SIZE_KHR" group="cl_svm_pointer_info_khr"/>
         <enum value="0x419D"        name="CL_MEM_ALLOC_DEVICE_INTEL" group="cl_mem_info_intel"/>
-        <enum value="0x419D"        name="CL_SVM_INFO_ASSOCIATED_DEVICE_HANDLE_KHR"/>
+        <enum value="0x419D"        name="CL_SVM_INFO_ASSOCIATED_DEVICE_HANDLE_KHR" group="cl_svm_pointer_info_khr"/>
         <enum value="0x419E"        name="CL_MEM_ALLOC_BUFFER_LOCATION_INTEL" group="cl_mem_info_intel"/>
             <unused start="0x419F" end="0x419F"/>
     </enums>
@@ -2424,22 +2424,22 @@ server's OpenCL/api-docs repository.
         <enum value="0x41E1"        name="CL_QUEUE_JOB_SLOT_ARM"/>
         <enum value="0x41E2"        name="CL_IMPORT_TYPE_ANDROID_HARDWARE_BUFFER_ARM"/>
         <enum value="0x41E3"        name="CL_IMPORT_DMA_BUF_DATA_CONSISTENCY_WITH_HOST_ARM"/>
-        <enum value="0x41E4"        name="CL_DEVICE_SCHEDULING_CONTROLS_CAPABILITIES_ARM"/>
-        <enum value="0x41E5"        name="CL_KERNEL_EXEC_INFO_WORKGROUP_BATCH_SIZE_ARM"/>
-        <enum value="0x41E6"        name="CL_KERNEL_EXEC_INFO_WORKGROUP_BATCH_SIZE_MODIFIER_ARM"/>
-        <enum value="0x41E7"        name="CL_QUEUE_KERNEL_BATCHING_ARM"/>
-        <enum value="0x41E8"        name="CL_KERNEL_EXEC_INFO_WARP_COUNT_LIMIT_ARM"/>
-        <enum value="0x41E9"        name="CL_KERNEL_MAX_WARP_COUNT_ARM"/>
-        <enum value="0x41EA"        name="CL_DEVICE_MAX_WARP_COUNT_ARM"/>
-        <enum value="0x41EB"        name="CL_DEVICE_SUPPORTED_REGISTER_ALLOCATIONS_ARM"/>
-        <enum value="0x41EC"        name="CL_QUEUE_DEFERRED_FLUSH_ARM"/>
-        <enum value="0x41ED"        name="CL_EVENT_COMMAND_TERMINATION_REASON_ARM"/>
-        <enum value="0x41EE"        name="CL_DEVICE_CONTROLLED_TERMINATION_CAPABILITIES_ARM"/>
+        <enum value="0x41E4"        name="CL_DEVICE_SCHEDULING_CONTROLS_CAPABILITIES_ARM" group="cl_device_info"/>
+        <enum value="0x41E5"        name="CL_KERNEL_EXEC_INFO_WORKGROUP_BATCH_SIZE_ARM" group="cl_kernel_exec_info"/>
+        <enum value="0x41E6"        name="CL_KERNEL_EXEC_INFO_WORKGROUP_BATCH_SIZE_MODIFIER_ARM" group="cl_kernel_exec_info"/>
+        <enum value="0x41E7"        name="CL_QUEUE_KERNEL_BATCHING_ARM" group="cl_command_queue_properties"/>
+        <enum value="0x41E8"        name="CL_KERNEL_EXEC_INFO_WARP_COUNT_LIMIT_ARM" group="cl_kernel_exec_info"/>
+        <enum value="0x41E9"        name="CL_KERNEL_MAX_WARP_COUNT_ARM" group="cl_kernel_info"/>
+        <enum value="0x41EA"        name="CL_DEVICE_MAX_WARP_COUNT_ARM" group="cl_device_info"/>
+        <enum value="0x41EB"        name="CL_DEVICE_SUPPORTED_REGISTER_ALLOCATIONS_ARM" group="cl_device_info"/>
+        <enum value="0x41EC"        name="CL_QUEUE_DEFERRED_FLUSH_ARM" group="cl_command_queue_properties"/>
+        <enum value="0x41ED"        name="CL_EVENT_COMMAND_TERMINATION_REASON_ARM" group="cl_event_info"/>
+        <enum value="0x41EE"        name="CL_DEVICE_CONTROLLED_TERMINATION_CAPABILITIES_ARM" group="cl_device_info"/>
         <enum value="0x41EF"        name="CL_IMPORT_ANDROID_HARDWARE_BUFFER_PLANE_INDEX_ARM"/>
         <enum value="0x41F0"        name="CL_IMPORT_ANDROID_HARDWARE_BUFFER_LAYER_INDEX_ARM"/>
-        <enum value="0x41F1"        name="CL_KERNEL_EXEC_INFO_COMPUTE_UNIT_MAX_QUEUED_BATCHES_ARM"/>
+        <enum value="0x41F1"        name="CL_KERNEL_EXEC_INFO_COMPUTE_UNIT_MAX_QUEUED_BATCHES_ARM" group="cl_kernel_exec_info"/>
         <unused start="0x41F2" end="0x41F2" comment="Reserved for cl_arm_core_builtins"/>
-        <enum value="0x41F3"        name="CL_QUEUE_COMPUTE_UNIT_LIMIT_ARM"/>
+        <enum value="0x41F3"        name="CL_QUEUE_COMPUTE_UNIT_LIMIT_ARM" group="cl_command_queue_properties"/>
         <unused start="0x41F4" end="0x41F4" comment="Reserved"/>
         <unused start="0x41F5" end="0x41F6" comment="Reserved"/>
             <unused start="0x41F7" end="0x41FF"/>
@@ -2461,19 +2461,19 @@ server's OpenCL/api-docs repository.
         <enum value="0x4210"        name="CL_KERNEL_ARG_HOST_ACCESSIBLE_PIPE_INTEL"/>
         <enum value="0x4211"        name="CL_DEVICE_MAX_HOST_READ_PIPES_INTEL"/>
         <enum value="0x4212"        name="CL_DEVICE_MAX_HOST_WRITE_PIPES_INTEL"/>
-        <enum value="0x4213"        name="CL_MEM_CHANNEL_INTEL"/>
-        <enum value="0x4214"        name="CL_COMMAND_READ_HOST_PIPE_INTEL"/>
-        <enum value="0x4215"        name="CL_COMMAND_WRITE_HOST_PIPE_INTEL"/>
-        <enum value="0x4216"        name="CL_PROGRAM_NUM_HOST_PIPES_INTEL"/>
-        <enum value="0x4217"        name="CL_PROGRAM_HOST_PIPE_NAMES_INTEL"/>
+        <enum value="0x4213"        name="CL_MEM_CHANNEL_INTEL" group="cl_mem_properties_intel"/>
+        <enum value="0x4214"        name="CL_COMMAND_READ_HOST_PIPE_INTEL" group="cl_command_type"/>
+        <enum value="0x4215"        name="CL_COMMAND_WRITE_HOST_PIPE_INTEL" group="cl_command_type"/>
+        <enum value="0x4216"        name="CL_PROGRAM_NUM_HOST_PIPES_INTEL" group="cl_program_info"/>
+        <enum value="0x4217"        name="CL_PROGRAM_HOST_PIPE_NAMES_INTEL" group="cl_program_info"/>
         <enum value="0x4218"        name="CL_MEM_LOCALLY_UNCACHED_RESOURCE_INTEL"/>
         <enum value="0x4219"        name="CL_MEM_DEVICE_ID_INTEL"/>
             <unused start="0x421A" end="0x421F"/>
     </enums>
 
     <enums start="0x4220" end="0x422F" name="enums.4220" vendor="IMG">
-        <enum value="0x4220"        name="CL_SVM_ALLOC_EXTERNAL_MEMORY_DMA_BUF_VIRTUAL_ADDRESS_IMG"/>
-        <enum value="0x4221"        name="CL_SVM_ALLOC_EXTERNAL_MEMORY_DMA_BUF_IMG"/>
+        <enum value="0x4220"        name="CL_SVM_ALLOC_EXTERNAL_MEMORY_DMA_BUF_VIRTUAL_ADDRESS_IMG" group="cl_svm_alloc_properties_khr"/>
+        <enum value="0x4221"        name="CL_SVM_ALLOC_EXTERNAL_MEMORY_DMA_BUF_IMG" group="cl_svm_alloc_properties_khr"/>
         <enum value="0x4222"        name="CL_DEVICE_SCHEDULING_CONTROLS_CAPABILITIES_IMG"/>
         <enum value="0x4223"        name="CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_SCHEDULING_ALGORITHM_IMG"/>
         <enum value="0x4224"        name="CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_ARBITRATION_ALGORITHM_IMG"/>
@@ -2558,9 +2558,9 @@ server's OpenCL/api-docs repository.
     </enums>
 
     <enums start="0x5000" end="0x500F" name="enums.5000" comment="For cl_ext_buffer_device_address">
-        <enum value="0x5000"        name="CL_MEM_DEVICE_PRIVATE_ADDRESS_EXT"/>
+        <enum value="0x5000"        name="CL_MEM_DEVICE_PRIVATE_ADDRESS_EXT" group="cl_mem_properties"/>
         <enum value="0x5001"        name="CL_MEM_DEVICE_ADDRESS_EXT" group="cl_mem_info"/>
-        <enum value="0x5002"        name="CL_KERNEL_EXEC_INFO_DEVICE_PTRS_EXT"/>
+        <enum value="0x5002"        name="CL_KERNEL_EXEC_INFO_DEVICE_PTRS_EXT" group="cl_kernel_exec_info"/>
     </enums>
 
     <enums start="0x10000" end="0x10FFF" name="enums.10000" vendor="Khronos" comment="Experimental range for internal development only. Do not allocate.">

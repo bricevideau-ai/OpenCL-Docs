@@ -1367,20 +1367,32 @@
  },
  "CL_CHAR_BIT": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "8"
  },
  "CL_CHAR_MAX": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "CL_SCHAR_MAX"
  },
  "CL_CHAR_MIN": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "CL_SCHAR_MIN"
  },
  "CL_COMMAND_ACQUIRE_D3D10_OBJECTS_KHR": {
@@ -1457,8 +1469,12 @@
  },
  "CL_COMMAND_ACQUIRE_GRALLOC_OBJECTS_IMG": {
   "container": "enums.40D0",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_command_type"
+  ],
+  "notes": [
+   "manual: cl_img_use_gralloc_ptr new command type (clEnqueueAcquire/ReleaseGrallocObject)"
+  ],
   "value": "0x40D2"
  },
  "CL_COMMAND_ACQUIRE_VA_API_MEDIA_SURFACES_INTEL": {
@@ -1779,8 +1795,12 @@
  },
  "CL_COMMAND_GENERATE_MIPMAP_IMG": {
   "container": "enums.40D0",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_command_type"
+  ],
+  "notes": [
+   "manual: cl_img_generate_mipmap new command type (clEnqueueGenerateMipmap)"
+  ],
   "value": "0x40D6"
  },
  "CL_COMMAND_GL_FENCE_SYNC_OBJECT_KHR": {
@@ -1975,8 +1995,12 @@
  },
  "CL_COMMAND_READ_HOST_PIPE_INTEL": {
   "container": "enums.4210",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_command_type"
+  ],
+  "notes": [
+   "manual: cl_intel_program_scope_host_pipe Table 37 supported event command type"
+  ],
   "value": "0x4214"
  },
  "CL_COMMAND_READ_IMAGE": {
@@ -2063,8 +2087,12 @@
  },
  "CL_COMMAND_RELEASE_GRALLOC_OBJECTS_IMG": {
   "container": "enums.40D0",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_command_type"
+  ],
+  "notes": [
+   "manual: cl_img_use_gralloc_ptr new command type"
+  ],
   "value": "0x40D3"
  },
  "CL_COMMAND_RELEASE_VA_API_MEDIA_SURFACES_INTEL": {
@@ -2285,8 +2313,12 @@
  },
  "CL_COMMAND_WRITE_HOST_PIPE_INTEL": {
   "container": "enums.4210",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_command_type"
+  ],
+  "notes": [
+   "manual: cl_intel_program_scope_host_pipe Table 37 event command type (clEnqueueWriteHostPipeINTEL)"
+  ],
   "value": "0x4215"
  },
  "CL_COMMAND_WRITE_IMAGE": {
@@ -2321,8 +2353,12 @@
  },
  "CL_COMPLETE": {
   "container": "clCommandExecutionStatus",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "clCommandExecutionStatus"
+  ],
+  "notes": [
+   "manual: core command-execution-status value set of clGetEventInfo/CL_EVENT_COMMAND_EXECUTION_STATUS (registry type clCommandExecutionStatus; + cl_img_safety_mechanisms for ECC_RECOVERED)"
+  ],
   "value": "0x0"
  },
  "CL_CONTEXT_ADAPTER_D3D9EX_KHR": {
@@ -2532,9 +2568,10 @@
  "CL_CONTEXT_PERF_HINT_QCOM": {
   "container": "enums.40C0",
   "groups": [
-   "cl_perf_hint_qcom"
+   "cl_context_properties"
   ],
   "notes": [
+   "manual: extensions/cl_qcom_perf_hint.asciidoc L83-88 'Added to the list of supported properties by clCreateContext' -> creation property / param_name; L118 Table row 'CL_CONTEXT_PERF_HINT_QCOM | cl_perf_hint_qcom'",
    "spec evidence [cl_perf_hint_qcom] G4 typedef+define"
   ],
   "value": "0x40C2"
@@ -2730,62 +2767,102 @@
  },
  "CL_DBL_DIG": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "15"
  },
  "CL_DBL_EPSILON": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "2.220446049250313080847e-16"
  },
  "CL_DBL_MANT_DIG": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "53"
  },
  "CL_DBL_MAX": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "1.7976931348623158e+308"
  },
  "CL_DBL_MAX_10_EXP": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "+308"
  },
  "CL_DBL_MAX_EXP": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "+1024"
  },
  "CL_DBL_MIN": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "2.225073858507201383090e-308"
  },
  "CL_DBL_MIN_10_EXP": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "-307"
  },
  "CL_DBL_MIN_EXP": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "-1021"
  },
  "CL_DBL_RADIX": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "2"
  },
  "CL_DEPTH": {
@@ -3134,8 +3211,12 @@
  },
  "CL_DEVICE_CONTROLLED_TERMINATION_CAPABILITIES_ARM": {
   "container": "enums.41E0",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_info"
+  ],
+  "notes": [
+   "manual: cl_arm_controlled_kernel_termination: param_name of clGetDeviceInfo returning cl_device_controlled_termination_capabilities_arm bitfield"
+  ],
   "value": "0x41EE"
  },
  "CL_DEVICE_CONTROLLED_TERMINATION_FAILURE_ARM": {
@@ -3628,8 +3709,11 @@
  },
  "CL_DEVICE_IMAGE_BASE_ADDRESS_ALIGNMENT_KHR": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_device_info"
+  ],
   "notes": [
+   "manual: cl_khr_image2d_from_buffer New API Enums param_name of clGetDeviceInfo",
    "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
   ],
   "value": "0x104B"
@@ -3666,8 +3750,11 @@
  },
  "CL_DEVICE_IMAGE_PITCH_ALIGNMENT_KHR": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_device_info"
+  ],
   "notes": [
+   "manual: cl_khr_image2d_from_buffer New API Enums param_name of clGetDeviceInfo",
    "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
   ],
   "value": "0x104A"
@@ -3684,16 +3771,22 @@
  },
  "CL_DEVICE_INTEGER_DOT_PRODUCT_ACCELERATION_PROPERTIES_4x8BIT_PACKED": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_device_info"
+  ],
   "notes": [
+   "manual: core-inherited of _KHR variant; sibling _8BIT_ already cl_device_info",
    "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
   ],
   "value": "0x1075"
  },
  "CL_DEVICE_INTEGER_DOT_PRODUCT_ACCELERATION_PROPERTIES_4x8BIT_PACKED_KHR": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_device_info"
+  ],
   "notes": [
+   "manual: cl_khr_integer_dot_product Table 5 OpenCL Device Queries; sibling _8BIT_ already cl_device_info",
    "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
   ],
   "value": "0x1075"
@@ -4132,8 +4225,12 @@
  },
  "CL_DEVICE_MAX_WARP_COUNT_ARM": {
   "container": "enums.41E0",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_info"
+  ],
+  "notes": [
+   "manual: cl_arm_scheduling_controls L49-66 param_name of clGetDeviceInfo"
+  ],
   "value": "0x41EA"
  },
  "CL_DEVICE_MAX_WORK_GROUP_SIZE": {
@@ -4194,8 +4291,12 @@
  },
  "CL_DEVICE_MEMORY_CAPABILITIES_IMG": {
   "container": "enums.40D0",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_info"
+  ],
+  "notes": [
+   "manual: cl_img_mem_properties 'List of supported param name by clGetDeviceInfo'"
+  ],
   "value": "0x40D8"
  },
  "CL_DEVICE_MEM_BASE_ADDR_ALIGN": {
@@ -4514,8 +4615,12 @@
  },
  "CL_DEVICE_PARTITION_BY_AFFINITY_DOMAIN_EXT": {
   "container": "enums.4050",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_partition_property"
+  ],
+  "notes": [
+   "manual: legacy alias of CL_DEVICE_PARTITION_BY_AFFINITY_DOMAIN (cl_ext_device_fission; core member already cl_device_partition_property)"
+  ],
   "value": "0x4053"
  },
  "CL_DEVICE_PARTITION_BY_COUNTS": {
@@ -4530,26 +4635,42 @@
  },
  "CL_DEVICE_PARTITION_BY_COUNTS_EXT": {
   "container": "enums.4050",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_partition_property"
+  ],
+  "notes": [
+   "manual: legacy alias of CL_DEVICE_PARTITION_BY_COUNTS (cl_ext_device_fission; core member already cl_device_partition_property)"
+  ],
   "value": "0x4051"
  },
  "CL_DEVICE_PARTITION_BY_COUNTS_LIST_END": {
   "container": "MiscNumbers",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_partition_property"
+  ],
+  "notes": [
+   "manual: core spec: list terminator for cl_device_partition_property (CL_DEVICE_PARTITION_BY_COUNTS_EXT)"
+  ],
   "value": "0x0"
  },
  "CL_DEVICE_PARTITION_BY_NAMES_EXT": {
   "container": "enums.4050",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_partition_property"
+  ],
+  "notes": [
+   "manual: legacy alias of CL_DEVICE_PARTITION_BY_NAMES (cl_ext_device_fission)"
+  ],
   "value": "0x4052"
  },
  "CL_DEVICE_PARTITION_BY_NAMES_INTEL": {
   "container": "enums.4050",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_partition_property"
+  ],
+  "notes": [
+   "manual: legacy alias of CL_DEVICE_PARTITION_BY_NAMES (cl_intel_device_partition_by_names; same value 0x4052)"
+  ],
   "value": "0x4052"
  },
  "CL_DEVICE_PARTITION_EQUALLY": {
@@ -4564,8 +4685,12 @@
  },
  "CL_DEVICE_PARTITION_EQUALLY_EXT": {
   "container": "enums.4050",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_partition_property"
+  ],
+  "notes": [
+   "manual: legacy alias of CL_DEVICE_PARTITION_EQUALLY (cl_ext_device_fission; core member already cl_device_partition_property)"
+  ],
   "value": "0x4050"
  },
  "CL_DEVICE_PARTITION_FAILED": {
@@ -4978,8 +5103,12 @@
  },
  "CL_DEVICE_SAFETY_MEM_SIZE_IMG": {
   "container": "enums.40D0",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_info"
+  ],
+  "notes": [
+   "manual: cl_img_safety_mechanisms L80-85 + Table 5 param_names of clGetDeviceInfo"
+  ],
   "value": "0x40DC"
  },
  "CL_DEVICE_SCHEDULING_COMPUTE_UNIT_BATCH_QUEUE_SIZE_ARM": {
@@ -5004,8 +5133,12 @@
  },
  "CL_DEVICE_SCHEDULING_CONTROLS_CAPABILITIES_ARM": {
   "container": "enums.41E0",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_info"
+  ],
+  "notes": [
+   "manual: cl_arm_scheduling_controls L49-66 param_name of clGetDeviceInfo"
+  ],
   "value": "0x41E4"
  },
  "CL_DEVICE_SCHEDULING_CONTROLS_CAPABILITIES_IMG": {
@@ -5250,14 +5383,22 @@
  },
  "CL_DEVICE_SUB_GROUP_SIZES_INTEL": {
   "container": "enums.4100",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_info"
+  ],
+  "notes": [
+   "manual: cl_intel_required_subgroup_size L102-112 Additions to Table 4.3 cl_device_info"
+  ],
   "value": "0x4108"
  },
  "CL_DEVICE_SUPPORTED_REGISTER_ALLOCATIONS_ARM": {
   "container": "enums.41E0",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_info"
+  ],
+  "notes": [
+   "manual: cl_arm_scheduling_controls L49-66 param_name of clGetDeviceInfo"
+  ],
   "value": "0x41EB"
  },
  "CL_DEVICE_SVM_ATOMICS": {
@@ -5358,8 +5499,11 @@
  },
  "CL_DEVICE_SVM_TYPE_CAPABILITIES_KHR": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_device_info"
+  ],
   "notes": [
+   "manual: cl_khr_unified_svm param_name of clGetDeviceInfo",
    "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
   ],
   "value": "0x1077"
@@ -5540,14 +5684,22 @@
  },
  "CL_DEVICE_WORKGROUP_PROTECTION_DEVICE_ENQUEUE_CAPABILITIES_IMG": {
   "container": "enums.40D0",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_info"
+  ],
+  "notes": [
+   "manual: cl_img_safety_mechanisms L80-85 + Table 5 param_names of clGetDeviceInfo"
+  ],
   "value": "0x40DB"
  },
  "CL_DEVICE_WORKGROUP_PROTECTION_SVM_CAPABILITIES_IMG": {
   "container": "enums.40D0",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_info"
+  ],
+  "notes": [
+   "manual: cl_img_safety_mechanisms L80-85 + Table 5 param_names of clGetDeviceInfo"
+  ],
   "value": "0x40DA"
  },
  "CL_DEVICE_WORK_GROUP_ARBITRATION_ALGORITHM_ROUND_ROBIN_IMG": {
@@ -5710,8 +5862,12 @@
  },
  "CL_ECC_RECOVERED_IMG": {
   "container": "enums.40D0",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "clCommandExecutionStatus"
+  ],
+  "notes": [
+   "manual: core command-execution-status value set of clGetEventInfo/CL_EVENT_COMMAND_EXECUTION_STATUS (registry type clCommandExecutionStatus; + cl_img_safety_mechanisms for ECC_RECOVERED)"
+  ],
   "value": "0x40DD"
  },
  "CL_ECC_UNRECOVERED_IMG": {
@@ -5813,8 +5969,12 @@
  },
  "CL_EVENT_COMMAND_TERMINATION_REASON_ARM": {
   "container": "enums.41E0",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_event_info"
+  ],
+  "notes": [
+   "manual: cl_arm_controlled_kernel_termination param_name of clGetEventInfo (query key, not a bit value)"
+  ],
   "value": "0x41ED"
  },
  "CL_EVENT_COMMAND_TYPE": {
@@ -5979,62 +6139,102 @@
  },
  "CL_FLT_DIG": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "6"
  },
  "CL_FLT_EPSILON": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "1.1920928955078125e-7f"
  },
  "CL_FLT_MANT_DIG": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "24"
  },
  "CL_FLT_MAX": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "340282346638528859811704183484516925440.0f"
  },
  "CL_FLT_MAX_10_EXP": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "+38"
  },
  "CL_FLT_MAX_EXP": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "+128"
  },
  "CL_FLT_MIN": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "1.175494350822287507969e-38f"
  },
  "CL_FLT_MIN_10_EXP": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "-37"
  },
  "CL_FLT_MIN_EXP": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "-125"
  },
  "CL_FLT_RADIX": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "2"
  },
  "CL_FP_CORRECTLY_ROUNDED_DIVIDE_SQRT": {
@@ -6269,20 +6469,32 @@
  },
  "CL_GRALLOC_RESOURCE_NOT_ACQUIRED_IMG": {
   "container": "enums.40D0",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "ErrorCode"
+  ],
+  "notes": [
+   "manual: cl_img_use_gralloc_ptr error return code"
+  ],
   "value": "0x40D4"
  },
  "CL_HALF_DIG": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "3"
  },
  "CL_HALF_EPSILON": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "9.765625e-04f"
  },
  "CL_HALF_FLOAT": {
@@ -6297,62 +6509,102 @@
  },
  "CL_HALF_MANT_DIG": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "11"
  },
  "CL_HALF_MAX": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "65504.0f"
  },
  "CL_HALF_MAX_10_EXP": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "+4"
  },
  "CL_HALF_MAX_EXP": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "+16"
  },
  "CL_HALF_MIN": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "6.103515625e-05f"
  },
  "CL_HALF_MIN_10_EXP": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "-4"
  },
  "CL_HALF_MIN_EXP": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "-13"
  },
  "CL_HALF_RADIX": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "2"
  },
  "CL_HUGE_VAL": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "((cl_double) 1e500)"
  },
  "CL_HUGE_VALF": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "((cl_float) 1e50)"
  },
  "CL_ICDL_NAME": {
@@ -6726,8 +6978,12 @@
  },
  "CL_INFINITY": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "CL_HUGE_VALF"
  },
  "CL_INTENSITY": {
@@ -6742,14 +6998,22 @@
  },
  "CL_INT_MAX": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "2147483647"
  },
  "CL_INT_MIN": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "(-2147483647-1)"
  },
  "CL_INVALID_ACCELERATOR_DESCRIPTOR_INTEL": {
@@ -7083,8 +7347,12 @@
  },
  "CL_INVALID_GRALLOC_OBJECT_IMG": {
   "container": "enums.40D0",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "ErrorCode"
+  ],
+  "notes": [
+   "manual: cl_img_use_gralloc_ptr error return code"
+  ],
   "value": "0x40D5"
  },
  "CL_INVALID_HOST_PTR": {
@@ -7628,8 +7896,12 @@
  },
  "CL_KERNEL_COMPILE_SUB_GROUP_SIZE_INTEL": {
   "container": "enums.4100",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_kernel_sub_group_info"
+  ],
+  "notes": [
+   "manual: cl_intel_required_subgroup_size L83-89 param_name of clGetKernelSubGroupInfo + Table 5.22"
+  ],
   "value": "0x410A"
  },
  "CL_KERNEL_COMPILE_WORK_GROUP_SIZE": {
@@ -7654,14 +7926,22 @@
  },
  "CL_KERNEL_EXEC_INFO_COMPUTE_UNIT_MAX_QUEUED_BATCHES_ARM": {
   "container": "enums.41E0",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_kernel_exec_info"
+  ],
+  "notes": [
+   "manual: cl_arm_scheduling_controls L69-76 + Table 31 param_names of clSetKernelExecInfo"
+  ],
   "value": "0x41F1"
  },
  "CL_KERNEL_EXEC_INFO_DEVICE_PTRS_EXT": {
   "container": "enums.5000",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_kernel_exec_info"
+  ],
+  "notes": [
+   "manual: cl_ext_buffer_device_address / opencl_runtime_layer param_name of clSetKernelExecInfo"
+  ],
   "value": "0x5002"
  },
  "CL_KERNEL_EXEC_INFO_INDIRECT_DEVICE_ACCESS_INTEL": {
@@ -7696,8 +7976,11 @@
  },
  "CL_KERNEL_EXEC_INFO_SVM_FINE_GRAIN_SYSTEM": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_kernel_exec_info"
+  ],
   "notes": [
+   "manual: cl_khr_unified_svm / opencl_runtime_layer param_name of clSetKernelExecInfo",
    "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
   ],
   "value": "0x11B7"
@@ -7710,16 +7993,22 @@
  },
  "CL_KERNEL_EXEC_INFO_SVM_INDIRECT_ACCESS_KHR": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_kernel_exec_info"
+  ],
   "notes": [
+   "manual: cl_khr_unified_svm / opencl_runtime_layer param_name of clSetKernelExecInfo",
    "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
   ],
   "value": "0x11BB"
  },
  "CL_KERNEL_EXEC_INFO_SVM_PTRS": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_kernel_exec_info"
+  ],
   "notes": [
+   "manual: cl_khr_unified_svm / opencl_runtime_layer param_name of clSetKernelExecInfo",
    "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
   ],
   "value": "0x11B6"
@@ -7742,20 +8031,32 @@
  },
  "CL_KERNEL_EXEC_INFO_WARP_COUNT_LIMIT_ARM": {
   "container": "enums.41E0",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_kernel_exec_info"
+  ],
+  "notes": [
+   "manual: cl_arm_scheduling_controls L69-76 + Table 31 param_names of clSetKernelExecInfo"
+  ],
   "value": "0x41E8"
  },
  "CL_KERNEL_EXEC_INFO_WORKGROUP_BATCH_SIZE_ARM": {
   "container": "enums.41E0",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_kernel_exec_info"
+  ],
+  "notes": [
+   "manual: cl_arm_scheduling_controls L69-76 + Table 31 param_names of clSetKernelExecInfo"
+  ],
   "value": "0x41E5"
  },
  "CL_KERNEL_EXEC_INFO_WORKGROUP_BATCH_SIZE_MODIFIER_ARM": {
   "container": "enums.41E0",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_kernel_exec_info"
+  ],
+  "notes": [
+   "manual: cl_arm_scheduling_controls L69-76 + Table 31 param_names of clSetKernelExecInfo"
+  ],
   "value": "0x41E6"
  },
  "CL_KERNEL_FUNCTION_NAME": {
@@ -7830,8 +8131,12 @@
  },
  "CL_KERNEL_MAX_WARP_COUNT_ARM": {
   "container": "enums.41E0",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_kernel_info"
+  ],
+  "notes": [
+   "manual: cl_arm_scheduling_controls L87-92 + Table 32 param_names of clGetKernelInfo"
+  ],
   "value": "0x41E9"
  },
  "CL_KERNEL_NUM_ARGS": {
@@ -7886,8 +8191,12 @@
  },
  "CL_KERNEL_SPILL_MEM_SIZE_INTEL": {
   "container": "enums.4100",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_kernel_work_group_info"
+  ],
+  "notes": [
+   "manual: cl_intel_required_subgroup_size L76-81 param_name of clGetKernelWorkGroupInfo + Table 5.21"
+  ],
   "value": "0x4109"
  },
  "CL_KERNEL_SUB_GROUP_COUNT_FOR_NDRANGE": {
@@ -7952,8 +8261,12 @@
  },
  "CL_LAYER_API_VERSION_100": {
   "container": "Constants.cl_loader_layers",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_layer_properties"
+  ],
+  "notes": [
+   "manual: cl_loader_layers L109 'CL_LAYER_API_VERSION_100 100' legacy alias of CL_LAYER_API_VERSION (0x4240, group cl_layer_properties)"
+  ],
   "value": "100"
  },
  "CL_LAYER_NAME": {
@@ -7968,8 +8281,12 @@
  },
  "CL_LAYER_PROPERTIES_LIST_END": {
   "container": "Constants.cl_loader_layers",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_layer_properties"
+  ],
+  "notes": [
+   "manual: cl_loader_layers L117 'CL_LAYER_PROPERTIES_LIST_END ((cl_layer_properties)0)' list terminator; L239-240 'list is terminated with CL_LAYER_PROPERTIES_LIST_END'"
+  ],
   "value": "((cl_layer_properties)0)"
  },
  "CL_LINKER_NOT_AVAILABLE": {
@@ -8004,14 +8321,22 @@
  },
  "CL_LONG_MAX": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "((cl_long) 0x7FFFFFFFFFFFFFFFLL)"
  },
  "CL_LONG_MIN": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "((cl_long) -0x7FFFFFFFFFFFFFFFLL - 1LL)"
  },
  "CL_LUID_SIZE": {
@@ -8078,8 +8403,12 @@
  },
  "CL_MAXFLOAT": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "CL_FLT_MAX"
  },
  "CL_MAX_SIZE_RESTRICTION_EXCEEDED": {
@@ -8292,8 +8621,12 @@
  },
  "CL_MEM_CHANNEL_INTEL": {
   "container": "enums.4210",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_mem_properties_intel"
+  ],
+  "notes": [
+   "manual: cl_intel_mem_channel_property: property for clCreateBufferWithPropertiesINTEL"
+  ],
   "value": "0x4213"
  },
  "CL_MEM_CONTEXT": {
@@ -8386,8 +8719,12 @@
  },
  "CL_MEM_DEVICE_PRIVATE_ADDRESS_EXT": {
   "container": "enums.5000",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_mem_properties"
+  ],
+  "notes": [
+   "manual: cl_ext_buffer_device_address: clCreateBufferWithProperties creation property flag"
+  ],
   "value": "0x5000"
  },
  "CL_MEM_DX9_MEDIA_ADAPTER_TYPE_KHR": {
@@ -8586,64 +8923,88 @@
  },
  "CL_MEM_OBJECT_BUFFER": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_mem_object_type"
+  ],
   "notes": [
+   "manual: core spec: value set of cl_mem_object_type (image_type param of clCreateImage / clCreateImage2D)",
    "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
   ],
   "value": "0x10F0"
  },
  "CL_MEM_OBJECT_IMAGE1D": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_mem_object_type"
+  ],
   "notes": [
+   "manual: core spec: value set of cl_mem_object_type (image_type param of clCreateImage / clCreateImage2D)",
    "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
   ],
   "value": "0x10F4"
  },
  "CL_MEM_OBJECT_IMAGE1D_ARRAY": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_mem_object_type"
+  ],
   "notes": [
+   "manual: core spec: value set of cl_mem_object_type (image_type param of clCreateImage / clCreateImage2D)",
    "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
   ],
   "value": "0x10F5"
  },
  "CL_MEM_OBJECT_IMAGE1D_BUFFER": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_mem_object_type"
+  ],
   "notes": [
+   "manual: core spec: value set of cl_mem_object_type (image_type param of clCreateImage / clCreateImage2D)",
    "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
   ],
   "value": "0x10F6"
  },
  "CL_MEM_OBJECT_IMAGE2D": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_mem_object_type"
+  ],
   "notes": [
+   "manual: core spec: value set of cl_mem_object_type (image_type param of clCreateImage / clCreateImage2D)",
    "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
   ],
   "value": "0x10F1"
  },
  "CL_MEM_OBJECT_IMAGE2D_ARRAY": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_mem_object_type"
+  ],
   "notes": [
+   "manual: core spec: value set of cl_mem_object_type (image_type param of clCreateImage / clCreateImage2D)",
    "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
   ],
   "value": "0x10F3"
  },
  "CL_MEM_OBJECT_IMAGE3D": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_mem_object_type"
+  ],
   "notes": [
+   "manual: core spec: value set of cl_mem_object_type (image_type param of clCreateImage / clCreateImage2D)",
    "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
   ],
   "value": "0x10F2"
  },
  "CL_MEM_OBJECT_PIPE": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_mem_object_type"
+  ],
   "notes": [
+   "manual: core spec: value set of cl_mem_object_type (image_type param of clCreateImage / clCreateImage2D)",
    "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
   ],
   "value": "0x10F7"
@@ -9692,158 +10053,262 @@
  },
  "CL_M_1_PI": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "0.31830988618379067154"
  },
  "CL_M_1_PI_F": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "0.318309886f"
  },
  "CL_M_2_PI": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "0.63661977236758134308"
  },
  "CL_M_2_PI_F": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "0.636619772f"
  },
  "CL_M_2_SQRTPI": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "1.12837916709551257390"
  },
  "CL_M_2_SQRTPI_F": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "1.128379167f"
  },
  "CL_M_E": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "2.7182818284590452354"
  },
  "CL_M_E_F": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "2.718281828f"
  },
  "CL_M_LN10": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "2.30258509299404568402"
  },
  "CL_M_LN10_F": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "2.302585093f"
  },
  "CL_M_LN2": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "0.69314718055994530942"
  },
  "CL_M_LN2_F": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "0.693147181f"
  },
  "CL_M_LOG10E": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "0.43429448190325182765"
  },
  "CL_M_LOG10E_F": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "0.434294482f"
  },
  "CL_M_LOG2E": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "1.4426950408889634074"
  },
  "CL_M_LOG2E_F": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "1.442695041f"
  },
  "CL_M_PI": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "3.14159265358979323846"
  },
  "CL_M_PI_2": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "1.57079632679489661923"
  },
  "CL_M_PI_2_F": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "1.570796327f"
  },
  "CL_M_PI_4": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "0.78539816339744830962"
  },
  "CL_M_PI_4_F": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "0.785398163f"
  },
  "CL_M_PI_F": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "3.141592654f"
  },
  "CL_M_SQRT1_2": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "0.70710678118654752440"
  },
  "CL_M_SQRT1_2_F": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "0.707106781f"
  },
  "CL_M_SQRT2": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "1.41421356237309504880"
  },
  "CL_M_SQRT2_F": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "1.414213562f"
  },
  "CL_NAME_VERSION_MAX_NAME_SIZE": {
@@ -9860,8 +10325,12 @@
  },
  "CL_NAN": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "(CL_INFINITY - CL_INFINITY)"
  },
  "CL_NONE": {
@@ -9896,14 +10365,22 @@
  },
  "CL_NV21": {
   "container": "enums.40D0",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_channel_order"
+  ],
+  "notes": [
+   "manual: cl_img_yuv_image image_channel_order (or deprecated pre-IMG alias)"
+  ],
   "value": "0x40D0"
  },
  "CL_NV21_IMG": {
   "container": "enums.40D0",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_channel_order"
+  ],
+  "notes": [
+   "manual: cl_img_yuv_image image_channel_order (or deprecated pre-IMG alias)"
+  ],
   "value": "0x40D0"
  },
  "CL_OUT_OF_HOST_MEMORY": {
@@ -9938,38 +10415,62 @@
  },
  "CL_PARTITION_BY_COUNTS_LIST_END_EXT": {
   "container": "MiscNumbers",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_partition_property"
+  ],
+  "notes": [
+   "manual: KHR-inherited: list terminator for cl_device_partition_property"
+  ],
   "value": "((cl_device_partition_property_ext)0)"
  },
  "CL_PARTITION_BY_NAMES_LIST_END_EXT": {
   "container": "MiscNumbers",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_partition_property"
+  ],
+  "notes": [
+   "manual: list terminator of the EXT partition-property list; value cast to cl_device_partition_property_ext; sibling _COUNTS_ already cl_device_partition_property"
+  ],
   "value": "((cl_device_partition_property_ext)0 - 1)"
  },
  "CL_PARTITION_BY_NAMES_LIST_END_INTEL": {
   "container": "MiscNumbers",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_partition_property"
+  ],
+  "notes": [
+   "manual: list terminator of the INTEL partition-property list; sibling CL_PARTITION_BY_COUNTS_LIST_END_EXT already cl_device_partition_property"
+  ],
   "value": "-1"
  },
  "CL_PERF_HINT_HIGH_QCOM": {
   "container": "enums.40C0",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_perf_hint_qcom"
+  ],
+  "notes": [
+   "manual: extensions/cl_qcom_perf_hint.asciidoc L90-98 'New list of supported values for CL_CONTEXT_PERF_HINT_QCOM property'; L137-142 Table 13a, member type cl_perf_hint_qcom"
+  ],
   "value": "0x40C3"
  },
  "CL_PERF_HINT_LOW_QCOM": {
   "container": "enums.40C0",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_perf_hint_qcom"
+  ],
+  "notes": [
+   "manual: extensions/cl_qcom_perf_hint.asciidoc L90-98 'New list of supported values for CL_CONTEXT_PERF_HINT_QCOM property'; L137-142 Table 13a, member type cl_perf_hint_qcom"
+  ],
   "value": "0x40C5"
  },
  "CL_PERF_HINT_NORMAL_QCOM": {
   "container": "enums.40C0",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_perf_hint_qcom"
+  ],
+  "notes": [
+   "manual: extensions/cl_qcom_perf_hint.asciidoc L90-98 'New list of supported values for CL_CONTEXT_PERF_HINT_QCOM property'; L137-142 Table 13a, member type cl_perf_hint_qcom"
+  ],
   "value": "0x40C4"
  },
  "CL_PIPE_EMPTY_INTEL": {
@@ -10256,14 +10757,22 @@
  },
  "CL_PRINTF_BUFFERSIZE_ARM": {
   "container": "enums.40B0",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_context_properties"
+  ],
+  "notes": [
+   "manual: cl_arm_printf: context creation property value (size_t)"
+  ],
   "value": "0x40B1"
  },
  "CL_PRINTF_CALLBACK_ARM": {
   "container": "enums.40B0",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_context_properties"
+  ],
+  "notes": [
+   "manual: cl_arm_printf: context creation property (Table 7 param_name + value pair)"
+  ],
   "value": "0x40B0"
  },
  "CL_PROFILING_COMMAND_COMPLETE": {
@@ -10468,8 +10977,12 @@
  },
  "CL_PROGRAM_HOST_PIPE_NAMES_INTEL": {
   "container": "enums.4210",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_program_info"
+  ],
+  "notes": [
+   "manual: cl_intel_program_scope_host_pipe param_name of clGetProgramInfo"
+  ],
   "value": "0x4217"
  },
  "CL_PROGRAM_IL": {
@@ -10514,8 +11027,12 @@
  },
  "CL_PROGRAM_NUM_HOST_PIPES_INTEL": {
   "container": "enums.4210",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_program_info"
+  ],
+  "notes": [
+   "manual: cl_intel_program_scope_host_pipe param_name of clGetProgramInfo"
+  ],
   "value": "0x4216"
  },
  "CL_PROGRAM_NUM_KERNELS": {
@@ -10576,8 +11093,12 @@
  },
  "CL_QUEUED": {
   "container": "clCommandExecutionStatus",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "clCommandExecutionStatus"
+  ],
+  "notes": [
+   "manual: core command-execution-status value set of clGetEventInfo/CL_EVENT_COMMAND_EXECUTION_STATUS (registry type clCommandExecutionStatus; + cl_img_safety_mechanisms for ECC_RECOVERED)"
+  ],
   "value": "0x3"
  },
  "CL_QUEUE_CAPABILITY_BARRIER_INTEL": {
@@ -10742,8 +11263,12 @@
  },
  "CL_QUEUE_COMPUTE_UNIT_LIMIT_ARM": {
   "container": "enums.41E0",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_command_queue_properties"
+  ],
+  "notes": [
+   "manual: cl_arm_scheduling_controls L79-85 + Table 9 queue creation properties"
+  ],
   "value": "0x41F3"
  },
  "CL_QUEUE_CONTEXT": {
@@ -10768,8 +11293,12 @@
  },
  "CL_QUEUE_DEFERRED_FLUSH_ARM": {
   "container": "enums.41E0",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_command_queue_properties"
+  ],
+  "notes": [
+   "manual: cl_arm_scheduling_controls L79-85 + Table 9 queue creation properties"
+  ],
   "value": "0x41EC"
  },
  "CL_QUEUE_DEVICE": {
@@ -10834,8 +11363,12 @@
  },
  "CL_QUEUE_KERNEL_BATCHING_ARM": {
   "container": "enums.41E0",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_command_queue_properties"
+  ],
+  "notes": [
+   "manual: cl_arm_scheduling_controls L79-85 + Table 9 queue creation properties"
+  ],
   "value": "0x41E7"
  },
  "CL_QUEUE_NO_SYNC_OPERATIONS_INTEL": {
@@ -11108,30 +11641,43 @@
  },
  "CL_RGBx": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_channel_order"
+  ],
   "notes": [
+   "manual: core spec image channel order value set; appendix_e 'Optional image formats'",
    "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
   ],
   "value": "0x10BC"
  },
  "CL_RGx": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_channel_order"
+  ],
   "notes": [
+   "manual: core spec image channel order value set; appendix_e 'Optional image formats'",
    "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
   ],
   "value": "0x10BB"
  },
  "CL_RUNNING": {
   "container": "clCommandExecutionStatus",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "clCommandExecutionStatus"
+  ],
+  "notes": [
+   "manual: core command-execution-status value set of clGetEventInfo/CL_EVENT_COMMAND_EXECUTION_STATUS (registry type clCommandExecutionStatus; + cl_img_safety_mechanisms for ECC_RECOVERED)"
+  ],
   "value": "0x1"
  },
  "CL_Rx": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_channel_order"
+  ],
   "notes": [
+   "manual: core spec image channel order value set; appendix_e 'Optional image formats'",
    "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
   ],
   "value": "0x10BA"
@@ -11182,8 +11728,11 @@
  },
  "CL_SAMPLER_LOD_MAX": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_sampler_properties"
+  ],
   "notes": [
+   "manual: opencl_runtime_layer L8782+: 'List of supported sampler creation properties by clCreateSamplerWithProperties' (KHR-inherited, sibling _KHR variant in cl_sampler_properties already assigned or same set)",
    "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
   ],
   "value": "0x1157"
@@ -11200,8 +11749,11 @@
  },
  "CL_SAMPLER_LOD_MIN": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_sampler_properties"
+  ],
   "notes": [
+   "manual: opencl_runtime_layer L8782+: 'List of supported sampler creation properties by clCreateSamplerWithProperties' (KHR-inherited, sibling _KHR variant in cl_sampler_properties already assigned or same set)",
    "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
   ],
   "value": "0x1156"
@@ -11218,8 +11770,11 @@
  },
  "CL_SAMPLER_MIP_FILTER_MODE": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_sampler_properties"
+  ],
   "notes": [
+   "manual: opencl_runtime_layer: sampler creation property (KHR-inherited, sibling _KHR already cl_sampler_properties)",
    "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
   ],
   "value": "0x1155"
@@ -11268,14 +11823,22 @@
  },
  "CL_SCHAR_MAX": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "127"
  },
  "CL_SCHAR_MIN": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "(-127-1)"
  },
  "CL_SEMAPHORE_CONTEXT_KHR": {
@@ -11456,14 +12019,22 @@
  },
  "CL_SHRT_MAX": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "32767"
  },
  "CL_SHRT_MIN": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "(-32767-1)"
  },
  "CL_SIGNED_INT16": {
@@ -11528,8 +12099,12 @@
  },
  "CL_SUBMITTED": {
   "container": "clCommandExecutionStatus",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "clCommandExecutionStatus"
+  ],
+  "notes": [
+   "manual: core command-execution-status value set of clGetEventInfo/CL_EVENT_COMMAND_EXECUTION_STATUS (registry type clCommandExecutionStatus; + cl_img_safety_mechanisms for ECC_RECOVERED)"
+  ],
   "value": "0x2"
  },
  "CL_SUCCESS": {
@@ -11564,8 +12139,12 @@
  },
  "CL_SVM_ALLOC_ACCESS_FLAGS_KHR": {
   "container": "enums.2000",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_svm_alloc_properties_khr"
+  ],
+  "notes": [
+   "manual: cl_khr_unified_svm accepted as properties of clSVMAlloc"
+  ],
   "value": "0x2079"
  },
  "CL_SVM_ALLOC_ACCESS_HOST_NOREAD_KHR": {
@@ -11590,26 +12169,42 @@
  },
  "CL_SVM_ALLOC_ALIGNMENT_KHR": {
   "container": "enums.2000",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_svm_alloc_properties_khr"
+  ],
+  "notes": [
+   "manual: cl_khr_unified_svm accepted as properties of clSVMAlloc"
+  ],
   "value": "0x207A"
  },
  "CL_SVM_ALLOC_ASSOCIATED_DEVICE_HANDLE_KHR": {
   "container": "enums.2000",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_svm_alloc_properties_khr"
+  ],
+  "notes": [
+   "manual: cl_khr_unified_svm accepted as properties of clSVMAlloc"
+  ],
   "value": "0x2078"
  },
  "CL_SVM_ALLOC_EXTERNAL_MEMORY_DMA_BUF_IMG": {
   "container": "enums.4220",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_svm_alloc_properties_khr"
+  ],
+  "notes": [
+   "manual: cl_img_unified_svm_external_memory_dma_buf: new row in SVM Allocation Properties table"
+  ],
   "value": "0x4221"
  },
  "CL_SVM_ALLOC_EXTERNAL_MEMORY_DMA_BUF_VIRTUAL_ADDRESS_IMG": {
   "container": "enums.4220",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_svm_alloc_properties_khr"
+  ],
+  "notes": [
+   "manual: cl_img_unified_svm_external_memory_dma_buf: new row in SVM Allocation Properties table"
+  ],
   "value": "0x4220"
  },
  "CL_SVM_CAPABILITY_CONCURRENT_ACCESS_KHR": {
@@ -11764,44 +12359,72 @@
  },
  "CL_SVM_INFO_ACCESS_FLAGS_KHR": {
   "container": "enums.2000",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_svm_pointer_info_khr"
+  ],
+  "notes": [
+   "manual: cl_khr_unified_svm: member of cl_svm_pointer_info_khr value set (param_names of clSVMGetInfo)"
+  ],
   "value": "0x208B"
  },
  "CL_SVM_INFO_ASSOCIATED_DEVICE_HANDLE_KHR": {
   "container": "enums.4190",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_svm_pointer_info_khr"
+  ],
+  "notes": [
+   "manual: cl_khr_unified_svm: member of cl_svm_pointer_info_khr value set (param_names of clSVMGetInfo)"
+  ],
   "value": "0x419D"
  },
  "CL_SVM_INFO_BASE_PTR_KHR": {
   "container": "enums.4190",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_svm_pointer_info_khr"
+  ],
+  "notes": [
+   "manual: cl_khr_unified_svm: member of cl_svm_pointer_info_khr (param_names of clSVMGetInfo)"
+  ],
   "value": "0x419B"
  },
  "CL_SVM_INFO_CAPABILITIES_KHR": {
   "container": "enums.2000",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_svm_pointer_info_khr"
+  ],
+  "notes": [
+   "manual: cl_khr_unified_svm: member of cl_svm_pointer_info_khr (param_names of clSVMGetInfo)"
+  ],
   "value": "0x2089"
  },
  "CL_SVM_INFO_PROPERTIES_KHR": {
   "container": "enums.2000",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_svm_pointer_info_khr"
+  ],
+  "notes": [
+   "manual: cl_khr_unified_svm: member of cl_svm_pointer_info_khr (param_names of clSVMGetInfo)"
+  ],
   "value": "0x208A"
  },
  "CL_SVM_INFO_SIZE_KHR": {
   "container": "enums.4190",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_svm_pointer_info_khr"
+  ],
+  "notes": [
+   "manual: cl_khr_unified_svm: member of cl_svm_pointer_info_khr (param_names of clSVMGetInfo)"
+  ],
   "value": "0x419C"
  },
  "CL_SVM_INFO_TYPE_INDEX_KHR": {
   "container": "enums.2000",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_svm_pointer_info_khr"
+  ],
+  "notes": [
+   "manual: cl_khr_unified_svm: member of cl_svm_pointer_info_khr (param_names of clSVMGetInfo)"
+  ],
   "value": "0x2088"
  },
  "CL_TRUE": {
@@ -11816,20 +12439,32 @@
  },
  "CL_UCHAR_MAX": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "255"
  },
  "CL_UINT_MAX": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "0xffffffffU"
  },
  "CL_ULONG_MAX": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "((cl_ulong) 0xFFFFFFFFFFFFFFFFULL)"
  },
  "CL_UNIFIED_SHARED_MEMORY_ACCESS_INTEL": {
@@ -12044,24 +12679,34 @@
  },
  "CL_UNSIGNED_INT_RAW10_EXT": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_channel_type"
+  ],
   "notes": [
+   "manual: cl_ext_image_raw10_raw12: member of image channel data type value set (cl_channel_type)",
    "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
   ],
   "value": "0x10E3"
  },
  "CL_UNSIGNED_INT_RAW12_EXT": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_channel_type"
+  ],
   "notes": [
+   "manual: cl_ext_image_raw10_raw12: member of image channel data type value set (cl_channel_type)",
    "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
   ],
   "value": "0x10E4"
  },
  "CL_USHRT_MAX": {
   "container": "Constants",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "C99MathConstants"
+  ],
+  "notes": [
+   "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
+  ],
   "value": "65535"
  },
  "CL_UUID_SIZE": {
@@ -12078,8 +12723,12 @@
  },
  "CL_UYVY_INTEL": {
   "container": "enums.4070",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_channel_order"
+  ],
+  "notes": [
+   "manual: cl_intel_packed_yuv L81 image_channel_order value set"
+  ],
   "value": "0x4077"
  },
  "CL_VA_API_DISPLAY_INTEL": {
@@ -12146,8 +12795,12 @@
  },
  "CL_VYUY_INTEL": {
   "container": "enums.4070",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_channel_order"
+  ],
+  "notes": [
+   "manual: cl_intel_packed_yuv L81 image_channel_order value set"
+  ],
   "value": "0x4079"
  },
  "CL_WGL_HDC_KHR": {
@@ -12166,56 +12819,81 @@
    "cl_channel_order"
   ],
   "notes": [
+   "manual: cl_intel_packed_yuv L81 image_channel_order value set",
    "spec evidence [cl_channel_order] value cell col0 (List of supported Image Channel Order Values)"
   ],
   "value": "0x4076"
  },
  "CL_YV12": {
   "container": "enums.40D0",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_channel_order"
+  ],
+  "notes": [
+   "manual: cl_img_yuv_image image_channel_order (or deprecated pre-IMG alias)"
+  ],
   "value": "0x40D1"
  },
  "CL_YV12_IMG": {
   "container": "enums.40D0",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_channel_order"
+  ],
+  "notes": [
+   "manual: cl_img_yuv_image image_channel_order (or deprecated pre-IMG alias)"
+  ],
   "value": "0x40D1"
  },
  "CL_YVYU_INTEL": {
   "container": "enums.4070",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_channel_order"
+  ],
+  "notes": [
+   "manual: cl_intel_packed_yuv L81 image_channel_order value set"
+  ],
   "value": "0x4078"
  },
  "CL_sBGRA": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_channel_order"
+  ],
   "notes": [
+   "manual: core spec image channel order value set; appendix_e 'Optional image formats'",
    "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
   ],
   "value": "0x10C2"
  },
  "CL_sRGB": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_channel_order"
+  ],
   "notes": [
+   "manual: core spec image channel order value set; appendix_e 'Optional image formats'",
    "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
   ],
   "value": "0x10BF"
  },
  "CL_sRGBA": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_channel_order"
+  ],
   "notes": [
+   "manual: core spec image channel order value set; appendix_e 'Optional image formats'",
    "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
   ],
   "value": "0x10C1"
  },
  "CL_sRGBx": {
   "container": "cl_device_info",
-  "groups": [],
+  "groups": [
+   "cl_channel_order"
+  ],
   "notes": [
+   "manual: core spec image channel order value set; appendix_e 'Optional image formats'",
    "cl_device_info mega-container token; no spec value-set found \u2014 left ungrouped"
   ],
   "value": "0x10C0"

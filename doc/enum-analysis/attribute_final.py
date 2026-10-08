@@ -700,8 +700,40 @@ SELF_TESTS = {
     "CL_PROGRAM_IL": {"cl_program_info"},
     "CL_COMMAND_SVM_MIGRATE_MEM": {"cl_command_type"},
     "CL_D3D10_DEVICE_KHR": None,      # may be ungrouped (opaque handle-ish)
-    "CL_CHAR_BIT": None,              # may be ungrouped (platform constant)
-    "CL_NV21": None,                  # image format — check manually
+    "CL_CHAR_BIT": {"C99MathConstants"},  # appendix_c C99 constant (was 'may be ungrouped')
+    "CL_NV21": {"cl_channel_order"},      # cl_img_yuv_image image channel order
+    # QCOM perf hint (Brice-flagged 2026-10-07): the property NAME is a clCreateContext
+    # creation property; the HIGH/NORMAL/LOW values are the cl_perf_hint_qcom value set
+    "CL_CONTEXT_PERF_HINT_QCOM": {"cl_context_properties"},
+    "CL_PERF_HINT_HIGH_QCOM":  {"cl_perf_hint_qcom"},
+    "CL_PERF_HINT_NORMAL_QCOM": {"cl_perf_hint_qcom"},
+    "CL_PERF_HINT_LOW_QCOM":   {"cl_perf_hint_qcom"},
+    # ARM scheduling controls: one token per spec-documented role table
+    "CL_DEVICE_SCHEDULING_CONTROLS_CAPABILITIES_ARM": {"cl_device_info"},
+    "CL_KERNEL_EXEC_INFO_WORKGROUP_BATCH_SIZE_ARM": {"cl_kernel_exec_info"},
+    "CL_KERNEL_MAX_WARP_COUNT_ARM": {"cl_kernel_info"},
+    "CL_QUEUE_KERNEL_BATCHING_ARM": {"cl_command_queue_properties"},
+    # ARM controlled termination: query key vs bit set
+    "CL_EVENT_COMMAND_TERMINATION_REASON_ARM": {"cl_event_info"},
+    "CL_DEVICE_CONTROLLED_TERMINATION_CAPABILITIES_ARM": {"cl_device_info"},
+    # Intel required subgroup size: three distinct query tables
+    "CL_DEVICE_SUB_GROUP_SIZES_INTEL": {"cl_device_info"},
+    "CL_KERNEL_SPILL_MEM_SIZE_INTEL": {"cl_kernel_work_group_info"},
+    "CL_KERNEL_COMPILE_SUB_GROUP_SIZE_INTEL": {"cl_kernel_sub_group_info"},
+    # KHR unified SVM: pointer-info query set vs alloc property set
+    "CL_SVM_INFO_BASE_PTR_KHR": {"cl_svm_pointer_info_khr"},
+    "CL_SVM_ALLOC_ACCESS_FLAGS_KHR": {"cl_svm_alloc_properties_khr"},
+    # command execution status value set (registry name)
+    "CL_COMPLETE": {"clCommandExecutionStatus"},
+    "CL_RUNNING": {"clCommandExecutionStatus"},
+}
+
+# negative guard: QCOM perf-hint pair must not cross-contaminate (the original bug)
+NEG_TESTS_QCOM = {
+    "CL_CONTEXT_PERF_HINT_QCOM": {"cl_perf_hint_qcom"},
+    "CL_PERF_HINT_HIGH_QCOM":  {"cl_context_properties"},
+    "CL_PERF_HINT_NORMAL_QCOM": {"cl_context_properties"},
+    "CL_PERF_HINT_LOW_QCOM":   {"cl_context_properties"},
 }
 
 # negative containment: these tokens must NOT appear in these sets
@@ -752,6 +784,26 @@ def main():
     ev = mine()
     out = attribute(ev)
 
+    # Manual overrides: every entry is a spec-cited adjudication recorded by
+    # hand in manual_overrides.json (see doc/enum-analysis/README.md).  These
+    # are applied AFTER the rule engine so re-running the engine never clobbers
+    # them, and they carry their own 'manual:' note so the table documents the
+    # spec citation.
+    ovr_path = os.path.join(HERE, "manual_overrides.json")
+    applied_o = 0
+    if os.path.exists(ovr_path):
+        with open(ovr_path) as fh:
+            ovr = json.load(fh)
+        for tok, spec in ovr.items():
+            if tok not in out:
+                continue
+            out[tok]["groups"] = list(spec["groups"])
+            citem = spec["spec_evidence"]
+            note = citem if citem.startswith("manual:") else "manual: " + citem
+            out[tok]["notes"] = [note] + [n for n in out[tok].get("notes", []) if not n.startswith("manual:")]
+            applied_o += 1
+        print("applied %d manual overrides (manual_overrides.json)" % applied_o)
+
     # self tests (positive subset)
     fails = []
     for tok, expected in SELF_TESTS.items():
@@ -763,6 +815,11 @@ def main():
             fails.append((tok, missing, got))
     # self tests (negative containment — contamination guard)
     for tok, forbidden in NEGATIVE_TESTS.items():
+        extra = forbidden & set(out[tok]["groups"])
+        if extra:
+            fails.append((tok, "MUST NOT be in " + str(forbidden), extra))
+    # QCOM perf-hint cross-contamination guard (the original mis-attribution)
+    for tok, forbidden in NEG_TESTS_QCOM.items():
         extra = forbidden & set(out[tok]["groups"])
         if extra:
             fails.append((tok, "MUST NOT be in " + str(forbidden), extra))
