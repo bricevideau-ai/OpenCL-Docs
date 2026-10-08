@@ -671,10 +671,11 @@ SELF_TESTS = {
     "CL_MEM_ALLOC_FLAGS_INTEL": {"cl_mem_properties_intel"},
     # CL_QUEUE_FAMILY_INTEL / CL_QUEUE_INDEX_INTEL: dual role per spec
     # (Table 8 creation property + Table 9 clGetCommandQueueInfo query)
-    # — owner-confirmed 2026-10-08; cl_queue_properties (not a _intel
-    # typedef) is the property-list carrier
-    "CL_QUEUE_FAMILY_INTEL": {"cl_command_queue_info", "cl_queue_properties"},
-    "CL_QUEUE_INDEX_INTEL":  {"cl_command_queue_info", "cl_queue_properties"},
+    # — owner-confirmed 2026-10-08; 3-entry pattern like SIZE/PROPERTIES
+    # (cl_queue_properties and cl_queue_properties_khr are both aliases
+    # of the 2.0 cl_properties list)
+    "CL_QUEUE_FAMILY_INTEL": {"cl_command_queue_info", "cl_queue_properties", "cl_queue_properties_khr"},
+    "CL_QUEUE_INDEX_INTEL":  {"cl_command_queue_info", "cl_queue_properties", "cl_queue_properties_khr"},
     # bit-members live in their cl_bitfield capacity set ONLY.
     # (Positive membership asserted here; the NEGATIVE_TESTS above forbid
     # the cl_device_info / cl_event_info sentence-anchor contamination.)

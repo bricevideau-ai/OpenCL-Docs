@@ -2388,8 +2388,8 @@ server's OpenCL/api-docs repository.
     <enums start="0x4180" end="0x418F" name="enums.4180" vendor="Intel" comment="Per OpenCL-Registry #22">
             <unused start="0x4180" end="0x418A"/>
         <enum value="0x418B"        name="CL_DEVICE_QUEUE_FAMILY_PROPERTIES_INTEL" group="cl_device_info"/>
-        <enum value="0x418C"        name="CL_QUEUE_FAMILY_INTEL" group="cl_command_queue_info,cl_queue_properties"/>
-        <enum value="0x418D"        name="CL_QUEUE_INDEX_INTEL" group="cl_command_queue_info,cl_queue_properties"/>
+        <enum value="0x418C"        name="CL_QUEUE_FAMILY_INTEL" group="cl_command_queue_info,cl_queue_properties,cl_queue_properties_khr"/>
+        <enum value="0x418D"        name="CL_QUEUE_INDEX_INTEL" group="cl_command_queue_info,cl_queue_properties,cl_queue_properties_khr"/>
             <unused start="0x418E" end="0x418F"/>
     </enums>
 
