@@ -2105,13 +2105,13 @@ server's OpenCL/api-docs repository.
     </enums>
 
     <enums start="0x4000" end="0x400F" name="enums.4000" vendor="NVIDIA" comment="Per Bug 5673">
-        <enum value="0x4000"        name="CL_DEVICE_COMPUTE_CAPABILITY_MAJOR_NV"/>
-        <enum value="0x4001"        name="CL_DEVICE_COMPUTE_CAPABILITY_MINOR_NV"/>
-        <enum value="0x4002"        name="CL_DEVICE_REGISTERS_PER_BLOCK_NV"/>
-        <enum value="0x4003"        name="CL_DEVICE_WARP_SIZE_NV"/>
-        <enum value="0x4004"        name="CL_DEVICE_GPU_OVERLAP_NV"/>
-        <enum value="0x4005"        name="CL_DEVICE_KERNEL_EXEC_TIMEOUT_NV"/>
-        <enum value="0x4006"        name="CL_DEVICE_INTEGRATED_MEMORY_NV"/>
+        <enum value="0x4000"        name="CL_DEVICE_COMPUTE_CAPABILITY_MAJOR_NV" group="cl_device_info"/>
+        <enum value="0x4001"        name="CL_DEVICE_COMPUTE_CAPABILITY_MINOR_NV" group="cl_device_info"/>
+        <enum value="0x4002"        name="CL_DEVICE_REGISTERS_PER_BLOCK_NV" group="cl_device_info"/>
+        <enum value="0x4003"        name="CL_DEVICE_WARP_SIZE_NV" group="cl_device_info"/>
+        <enum value="0x4004"        name="CL_DEVICE_GPU_OVERLAP_NV" group="cl_device_info"/>
+        <enum value="0x4005"        name="CL_DEVICE_KERNEL_EXEC_TIMEOUT_NV" group="cl_device_info"/>
+        <enum value="0x4006"        name="CL_DEVICE_INTEGRATED_MEMORY_NV" group="cl_device_info"/>
             <unused start="0x4007" end="0x400F"/>
     </enums>
 
@@ -2152,11 +2152,11 @@ server's OpenCL/api-docs repository.
         <!-- unused <enum value="0x401F"      name="CL_IMAGE_D3D11_SUBRESOURCE_NV"/> -->
         <!-- unused <enum value="0x4020"      name="CL_COMMAND_ACQUIRE_D3D11_OBJECTS_NV"/> -->
         <!-- unused <enum value="0x4021"      name="CL_COMMAND_RELEASE_D3D11_OBJECTS_NV"/> -->
-        <enum value="0x4022"        name="CL_D3D9_DEVICE_INTEL"/>
-        <enum value="0x4024"        name="CL_PREFERRED_DEVICES_FOR_DX9_INTEL"/>
-        <enum value="0x4025"        name="CL_ALL_DEVICES_FOR_DX9_INTEL"/>
-        <enum value="0x4026"        name="CL_CONTEXT_D3D9_DEVICE_INTEL"/>
-        <enum value="0x4027"        name="CL_MEM_DX9_RESOURCE_INTEL"/>
+        <enum value="0x4022"        name="CL_D3D9_DEVICE_INTEL" group="cl_dx9_device_source_intel"/>
+        <enum value="0x4024"        name="CL_PREFERRED_DEVICES_FOR_DX9_INTEL" group="cl_dx9_device_set_intel"/>
+        <enum value="0x4025"        name="CL_ALL_DEVICES_FOR_DX9_INTEL" group="cl_dx9_device_set_intel"/>
+        <enum value="0x4026"        name="CL_CONTEXT_D3D9_DEVICE_INTEL" group="cl_context_properties"/>
+        <enum value="0x4027"        name="CL_MEM_DX9_RESOURCE_INTEL" group="cl_mem_info"/>
         <enum value="0x402A"        name="CL_COMMAND_ACQUIRE_DX9_OBJECTS_INTEL"/>
         <enum value="0x402B"        name="CL_COMMAND_RELEASE_DX9_OBJECTS_INTEL"/>
         <!-- unused <enum value="0x4022"      name="CL_D3D9_DEVICE_NV"/> -->
@@ -2182,34 +2182,34 @@ server's OpenCL/api-docs repository.
         <!-- <enum value="0x4030"      name="CL_DEVICE_PARENT_DEVICE_EXT"/> -->
         <!-- <enum value="0x4031"      name="CL_DEVICE_PARTITION_STYLE_EXT"/> -->
         <!-- <enum value="0x4032"      name="CL_DEVICE_MAX_ATOMIC_COUNTERS_EXT"/> -->
-        <enum value="0x4030"        name="CL_DEVICE_PREFERRED_WORK_GROUP_SIZE_AMD"/>
-        <enum value="0x4031"        name="CL_DEVICE_MAX_WORK_GROUP_SIZE_AMD"/>
+        <enum value="0x4030"        name="CL_DEVICE_PREFERRED_WORK_GROUP_SIZE_AMD" group="cl_device_info"/>
+        <enum value="0x4031"        name="CL_DEVICE_MAX_WORK_GROUP_SIZE_AMD" group="cl_device_info"/>
             <unused start="0x4032" end="0x4032"/>
-        <enum value="0x4033"        name="CL_DEVICE_PREFERRED_CONSTANT_BUFFER_SIZE_AMD"/>
-        <enum value="0x4034"        name="CL_DEVICE_PCIE_ID_AMD"/>
+        <enum value="0x4033"        name="CL_DEVICE_PREFERRED_CONSTANT_BUFFER_SIZE_AMD" group="cl_device_info"/>
+        <enum value="0x4034"        name="CL_DEVICE_PCIE_ID_AMD" group="cl_device_info"/>
             <unused start="0x4035" end="0x4035"/>
-        <enum value="0x4036"        name="CL_DEVICE_PROFILING_TIMER_OFFSET_AMD"/>
-        <enum value="0x4037"        name="CL_DEVICE_TOPOLOGY_AMD"/>
-        <enum value="0x4038"        name="CL_DEVICE_BOARD_NAME_AMD"/>
-        <enum value="0x4039"        name="CL_DEVICE_GLOBAL_FREE_MEMORY_AMD"/>
+        <enum value="0x4036"        name="CL_DEVICE_PROFILING_TIMER_OFFSET_AMD" group="cl_device_info"/>
+        <enum value="0x4037"        name="CL_DEVICE_TOPOLOGY_AMD" group="cl_device_info"/>
+        <enum value="0x4038"        name="CL_DEVICE_BOARD_NAME_AMD" group="cl_device_info"/>
+        <enum value="0x4039"        name="CL_DEVICE_GLOBAL_FREE_MEMORY_AMD" group="cl_device_info"/>
             <unused start="0x403A" end="0x403F"/>
     </enums>
 
     <enums start="0x4040" end="0x404F" name="enums.4040" vendor="AMD" comment="Per Bug 6261 (IBM), then Bug 13603 giving control to AMD">
-        <enum value="0x4040"        name="CL_COMMAND_MIGRATE_MEM_OBJECT_EXT" comment="From cl_ext_migrate_memobject. Benign collision with the following enum."/>
-        <enum value="0x4040"        name="CL_DEVICE_SIMD_PER_COMPUTE_UNIT_AMD"/>
-        <enum value="0x4041"        name="CL_DEVICE_SIMD_WIDTH_AMD"/>
-        <enum value="0x4042"        name="CL_DEVICE_SIMD_INSTRUCTION_WIDTH_AMD"/>
-        <enum value="0x4043"        name="CL_DEVICE_WAVEFRONT_WIDTH_AMD"/>
-        <enum value="0x4044"        name="CL_DEVICE_GLOBAL_MEM_CHANNELS_AMD"/>
-        <enum value="0x4045"        name="CL_DEVICE_GLOBAL_MEM_CHANNEL_BANKS_AMD"/>
-        <enum value="0x4046"        name="CL_DEVICE_GLOBAL_MEM_CHANNEL_BANK_WIDTH_AMD"/>
-        <enum value="0x4047"        name="CL_DEVICE_LOCAL_MEM_SIZE_PER_COMPUTE_UNIT_AMD"/>
-        <enum value="0x4048"        name="CL_DEVICE_LOCAL_MEM_BANKS_AMD"/>
-        <enum value="0x4049"        name="CL_DEVICE_THREAD_TRACE_SUPPORTED_AMD"/>
-        <enum value="0x404A"        name="CL_DEVICE_GFXIP_MAJOR_AMD"/>
-        <enum value="0x404B"        name="CL_DEVICE_GFXIP_MINOR_AMD"/>
-        <enum value="0x404C"        name="CL_DEVICE_AVAILABLE_ASYNC_QUEUES_AMD"/>
+        <enum value="0x4040"        name="CL_COMMAND_MIGRATE_MEM_OBJECT_EXT" group="cl_command_type" comment="From cl_ext_migrate_memobject. Benign collision with the following enum."/>
+        <enum value="0x4040"        name="CL_DEVICE_SIMD_PER_COMPUTE_UNIT_AMD" group="cl_device_info"/>
+        <enum value="0x4041"        name="CL_DEVICE_SIMD_WIDTH_AMD" group="cl_device_info"/>
+        <enum value="0x4042"        name="CL_DEVICE_SIMD_INSTRUCTION_WIDTH_AMD" group="cl_device_info"/>
+        <enum value="0x4043"        name="CL_DEVICE_WAVEFRONT_WIDTH_AMD" group="cl_device_info"/>
+        <enum value="0x4044"        name="CL_DEVICE_GLOBAL_MEM_CHANNELS_AMD" group="cl_device_info"/>
+        <enum value="0x4045"        name="CL_DEVICE_GLOBAL_MEM_CHANNEL_BANKS_AMD" group="cl_device_info"/>
+        <enum value="0x4046"        name="CL_DEVICE_GLOBAL_MEM_CHANNEL_BANK_WIDTH_AMD" group="cl_device_info"/>
+        <enum value="0x4047"        name="CL_DEVICE_LOCAL_MEM_SIZE_PER_COMPUTE_UNIT_AMD" group="cl_device_info"/>
+        <enum value="0x4048"        name="CL_DEVICE_LOCAL_MEM_BANKS_AMD" group="cl_device_info"/>
+        <enum value="0x4049"        name="CL_DEVICE_THREAD_TRACE_SUPPORTED_AMD" group="cl_device_info"/>
+        <enum value="0x404A"        name="CL_DEVICE_GFXIP_MAJOR_AMD" group="cl_device_info"/>
+        <enum value="0x404B"        name="CL_DEVICE_GFXIP_MINOR_AMD" group="cl_device_info"/>
+        <enum value="0x404C"        name="CL_DEVICE_AVAILABLE_ASYNC_QUEUES_AMD" group="cl_device_info"/>
             <unused start="0x404D" end="0x404F"/>
     </enums>
 
@@ -2219,11 +2219,11 @@ server's OpenCL/api-docs repository.
         <enum value="0x4052"        name="CL_DEVICE_PARTITION_BY_NAMES_EXT" group="cl_device_partition_property"/>
         <enum value="0x4052"        name="CL_DEVICE_PARTITION_BY_NAMES_INTEL" group="cl_device_partition_property"/>
         <enum value="0x4053"        name="CL_DEVICE_PARTITION_BY_AFFINITY_DOMAIN_EXT" group="cl_device_partition_property"/>
-        <enum value="0x4054"        name="CL_DEVICE_PARENT_DEVICE_EXT"/>
-        <enum value="0x4055"        name="CL_DEVICE_PARTITION_TYPES_EXT"/>
-        <enum value="0x4056"        name="CL_DEVICE_AFFINITY_DOMAINS_EXT"/>
-        <enum value="0x4057"        name="CL_DEVICE_REFERENCE_COUNT_EXT"/>
-        <enum value="0x4058"        name="CL_DEVICE_PARTITION_STYLE_EXT"/>
+        <enum value="0x4054"        name="CL_DEVICE_PARENT_DEVICE_EXT" group="cl_device_info"/>
+        <enum value="0x4055"        name="CL_DEVICE_PARTITION_TYPES_EXT" group="cl_device_info"/>
+        <enum value="0x4056"        name="CL_DEVICE_AFFINITY_DOMAINS_EXT" group="cl_device_info"/>
+        <enum value="0x4057"        name="CL_DEVICE_REFERENCE_COUNT_EXT" group="cl_device_info"/>
+        <enum value="0x4058"        name="CL_DEVICE_PARTITION_STYLE_EXT" group="cl_device_info"/>
             <unused start="0x4059" end="0x405F"/>
     </enums>
 
@@ -2232,18 +2232,18 @@ server's OpenCL/api-docs repository.
     </enums>
 
     <enums start="0x4070" end="0x407F" name="enums.4070" vendor="Intel" comment="Per Bug 7836">
-        <enum value="0x4070"        name="CL_D3D9EX_DEVICE_INTEL"/>
-        <enum value="0x4071"        name="CL_DXVA_DEVICE_INTEL"/>
-        <enum value="0x4072"        name="CL_CONTEXT_D3D9EX_DEVICE_INTEL"/>
-        <enum value="0x4073"        name="CL_CONTEXT_DXVA_DEVICE_INTEL"/>
-        <enum value="0x4074"        name="CL_MEM_DX9_SHARED_HANDLE_INTEL"/>
-        <enum value="0x4075"        name="CL_IMAGE_DX9_PLANE_INTEL"/>
+        <enum value="0x4070"        name="CL_D3D9EX_DEVICE_INTEL" group="cl_dx9_device_source_intel"/>
+        <enum value="0x4071"        name="CL_DXVA_DEVICE_INTEL" group="cl_dx9_device_source_intel"/>
+        <enum value="0x4072"        name="CL_CONTEXT_D3D9EX_DEVICE_INTEL" group="cl_context_properties"/>
+        <enum value="0x4073"        name="CL_CONTEXT_DXVA_DEVICE_INTEL" group="cl_context_properties"/>
+        <enum value="0x4074"        name="CL_MEM_DX9_SHARED_HANDLE_INTEL" group="cl_mem_info"/>
+        <enum value="0x4075"        name="CL_IMAGE_DX9_PLANE_INTEL" group="cl_image_info"/>
         <enum value="0x4076"        name="CL_YUYV_INTEL" group="cl_channel_order"/>
         <enum value="0x4077"        name="CL_UYVY_INTEL" group="cl_channel_order"/>
         <enum value="0x4078"        name="CL_YVYU_INTEL" group="cl_channel_order"/>
         <enum value="0x4079"        name="CL_VYUY_INTEL" group="cl_channel_order"/>
             <unused start="0x407A" end="0x407D"/>
-        <enum value="0x407E"        name="CL_DEVICE_ME_VERSION_INTEL"/>
+        <enum value="0x407E"        name="CL_DEVICE_ME_VERSION_INTEL" group="cl_device_info"/>
             <unused start="0x407F"/>
     </enums>
 
@@ -2255,26 +2255,26 @@ server's OpenCL/api-docs repository.
     </enums>
 
     <enums start="0x4090" end="0x409F" name="enums.4090" vendor="Intel" comment="Per kevin.smith@intel.com 2013/04/11">
-        <enum value="0x4090"        name="CL_ACCELERATOR_DESCRIPTOR_INTEL"/>
-        <enum value="0x4091"        name="CL_ACCELERATOR_REFERENCE_COUNT_INTEL"/>
-        <enum value="0x4092"        name="CL_ACCELERATOR_CONTEXT_INTEL"/>
-        <enum value="0x4093"        name="CL_ACCELERATOR_TYPE_INTEL"/>
-        <enum value="0x4094"        name="CL_VA_API_DISPLAY_INTEL"/>
-        <enum value="0x4095"        name="CL_PREFERRED_DEVICES_FOR_VA_API_INTEL"/>
-        <enum value="0x4096"        name="CL_ALL_DEVICES_FOR_VA_API_INTEL"/>
-        <enum value="0x4097"        name="CL_CONTEXT_VA_API_DISPLAY_INTEL"/>
-        <enum value="0x4098"        name="CL_MEM_VA_API_MEDIA_SURFACE_INTEL"/>
-        <enum value="0x4099"        name="CL_IMAGE_VA_API_PLANE_INTEL"/>
-        <enum value="0x409A"        name="CL_COMMAND_ACQUIRE_VA_API_MEDIA_SURFACES_INTEL"/>
-        <enum value="0x409B"        name="CL_COMMAND_RELEASE_VA_API_MEDIA_SURFACES_INTEL"/>
+        <enum value="0x4090"        name="CL_ACCELERATOR_DESCRIPTOR_INTEL" group="cl_accelerator_info_intel"/>
+        <enum value="0x4091"        name="CL_ACCELERATOR_REFERENCE_COUNT_INTEL" group="cl_accelerator_info_intel"/>
+        <enum value="0x4092"        name="CL_ACCELERATOR_CONTEXT_INTEL" group="cl_accelerator_info_intel"/>
+        <enum value="0x4093"        name="CL_ACCELERATOR_TYPE_INTEL" group="cl_accelerator_info_intel"/>
+        <enum value="0x4094"        name="CL_VA_API_DISPLAY_INTEL" group="cl_va_api_device_source_intel"/>
+        <enum value="0x4095"        name="CL_PREFERRED_DEVICES_FOR_VA_API_INTEL" group="cl_va_api_device_set_intel"/>
+        <enum value="0x4096"        name="CL_ALL_DEVICES_FOR_VA_API_INTEL" group="cl_va_api_device_set_intel"/>
+        <enum value="0x4097"        name="CL_CONTEXT_VA_API_DISPLAY_INTEL" group="cl_context_properties"/>
+        <enum value="0x4098"        name="CL_MEM_VA_API_MEDIA_SURFACE_INTEL" group="cl_mem_info"/>
+        <enum value="0x4099"        name="CL_IMAGE_VA_API_PLANE_INTEL" group="cl_image_info"/>
+        <enum value="0x409A"        name="CL_COMMAND_ACQUIRE_VA_API_MEDIA_SURFACES_INTEL" group="cl_command_type"/>
+        <enum value="0x409B"        name="CL_COMMAND_RELEASE_VA_API_MEDIA_SURFACES_INTEL" group="cl_command_type"/>
             <unused start="0x409C" end="0x409F"/>
     </enums>
 
     <enums start="0x40A0" end="0x40AF" name="enums.40A0" vendor="Qualcomm" comment="Per Bug 10214">
-        <enum value="0x40A0"        name="CL_DEVICE_EXT_MEM_PADDING_IN_BYTES_QCOM"/>
-        <enum value="0x40A1"        name="CL_DEVICE_PAGE_SIZE_QCOM"/>
-        <enum value="0x40A2"        name="CL_IMAGE_ROW_ALIGNMENT_QCOM"/>
-        <enum value="0x40A3"        name="CL_IMAGE_SLICE_ALIGNMENT_QCOM"/>
+        <enum value="0x40A0"        name="CL_DEVICE_EXT_MEM_PADDING_IN_BYTES_QCOM" group="cl_device_info"/>
+        <enum value="0x40A1"        name="CL_DEVICE_PAGE_SIZE_QCOM" group="cl_device_info"/>
+        <enum value="0x40A2"        name="CL_IMAGE_ROW_ALIGNMENT_QCOM" group="cl_image_pitch_info_qcom"/>
+        <enum value="0x40A3"        name="CL_IMAGE_SLICE_ALIGNMENT_QCOM" group="cl_image_pitch_info_qcom"/>
         <enum value="0x40A4"        name="CL_MEM_HOST_UNCACHED_QCOM"/>
         <enum value="0x40A5"        name="CL_MEM_HOST_WRITEBACK_QCOM"/>
         <enum value="0x40A6"        name="CL_MEM_HOST_WRITETHROUGH_QCOM"/>
@@ -2287,20 +2287,20 @@ server's OpenCL/api-docs repository.
     <enums start="0x40B0" end="0x40BF" name="enums.40B0" vendor="Arm" comment="Per Bug 10337">
         <enum value="0x40B0"        name="CL_PRINTF_CALLBACK_ARM" group="cl_context_properties"/>
         <enum value="0x40B1"        name="CL_PRINTF_BUFFERSIZE_ARM" group="cl_context_properties"/>
-        <enum value="0x40B2"        name="CL_IMPORT_TYPE_ARM"/>
-        <enum value="0x40B3"        name="CL_IMPORT_TYPE_HOST_ARM"/>
-        <enum value="0x40B4"        name="CL_IMPORT_TYPE_DMA_BUF_ARM"/>
-        <enum value="0x40B5"        name="CL_IMPORT_TYPE_PROTECTED_ARM"/>
-        <enum value="0x40B6"        name="CL_DEVICE_SVM_CAPABILITIES_ARM"/>
-        <enum value="0x40B7"        name="CL_MEM_USES_SVM_POINTER_ARM"/>
-        <enum value="0x40B8"        name="CL_KERNEL_EXEC_INFO_SVM_PTRS_ARM"/>
-        <enum value="0x40B9"        name="CL_KERNEL_EXEC_INFO_SVM_FINE_GRAIN_SYSTEM_ARM"/>
-        <enum value="0x40BA"        name="CL_COMMAND_SVM_FREE_ARM"/>
-        <enum value="0x40BB"        name="CL_COMMAND_SVM_MEMCPY_ARM"/>
-        <enum value="0x40BC"        name="CL_COMMAND_SVM_MEMFILL_ARM"/>
-        <enum value="0x40BD"        name="CL_COMMAND_SVM_MAP_ARM"/>
-        <enum value="0x40BE"        name="CL_COMMAND_SVM_UNMAP_ARM"/>
-        <enum value="0x40BF"        name="CL_DEVICE_COMPUTE_UNITS_BITFIELD_ARM"/>
+        <enum value="0x40B2"        name="CL_IMPORT_TYPE_ARM" group="cl_import_properties_arm"/>
+        <enum value="0x40B3"        name="CL_IMPORT_TYPE_HOST_ARM" group="cl_import_properties_arm"/>
+        <enum value="0x40B4"        name="CL_IMPORT_TYPE_DMA_BUF_ARM" group="cl_import_properties_arm"/>
+        <enum value="0x40B5"        name="CL_IMPORT_TYPE_PROTECTED_ARM" group="cl_import_properties_arm"/>
+        <enum value="0x40B6"        name="CL_DEVICE_SVM_CAPABILITIES_ARM" group="cl_device_info"/>
+        <enum value="0x40B7"        name="CL_MEM_USES_SVM_POINTER_ARM" group="cl_mem_info"/>
+        <enum value="0x40B8"        name="CL_KERNEL_EXEC_INFO_SVM_PTRS_ARM" group="cl_kernel_exec_info_arm"/>
+        <enum value="0x40B9"        name="CL_KERNEL_EXEC_INFO_SVM_FINE_GRAIN_SYSTEM_ARM" group="cl_kernel_exec_info_arm"/>
+        <enum value="0x40BA"        name="CL_COMMAND_SVM_FREE_ARM" group="cl_command_type"/>
+        <enum value="0x40BB"        name="CL_COMMAND_SVM_MEMCPY_ARM" group="cl_command_type"/>
+        <enum value="0x40BC"        name="CL_COMMAND_SVM_MEMFILL_ARM" group="cl_command_type"/>
+        <enum value="0x40BD"        name="CL_COMMAND_SVM_MAP_ARM" group="cl_command_type"/>
+        <enum value="0x40BE"        name="CL_COMMAND_SVM_UNMAP_ARM" group="cl_command_type"/>
+        <enum value="0x40BF"        name="CL_DEVICE_COMPUTE_UNITS_BITFIELD_ARM" group="cl_device_info"/>
     </enums>
 
     <enums start="0x40C0" end="0x40CF" name="enums.40C0" vendor="Qualcomm" comment="Per Bug 10726">
@@ -2349,16 +2349,16 @@ server's OpenCL/api-docs repository.
 
     <enums start="0x4100" end="0x410F" name="enums.4100" vendor="Intel" comment="Per bug 12258.">
             <unused start="0x4100" end="0x4103"/>
-        <enum value="0x4104"        name="CL_DEVICE_SIMULTANEOUS_INTEROPS_INTEL"/>
-        <enum value="0x4105"        name="CL_DEVICE_NUM_SIMULTANEOUS_INTEROPS_INTEL"/>
-        <enum value="0x4106"        name="CL_CONTEXT_SHOW_DIAGNOSTICS_INTEL"/>
-        <enum value="0x4107"        name="CL_EGL_YUV_PLANE_INTEL"/>
+        <enum value="0x4104"        name="CL_DEVICE_SIMULTANEOUS_INTEROPS_INTEL" group="cl_device_info"/>
+        <enum value="0x4105"        name="CL_DEVICE_NUM_SIMULTANEOUS_INTEROPS_INTEL" group="cl_device_info"/>
+        <enum value="0x4106"        name="CL_CONTEXT_SHOW_DIAGNOSTICS_INTEL" group="cl_context_properties"/>
+        <enum value="0x4107"        name="CL_EGL_YUV_PLANE_INTEL" group="cl_image_info"/>
         <enum value="0x4108"        name="CL_DEVICE_SUB_GROUP_SIZES_INTEL" group="cl_device_info"/>
         <enum value="0x4109"        name="CL_KERNEL_SPILL_MEM_SIZE_INTEL" group="cl_kernel_work_group_info"/>
         <enum value="0x410A"        name="CL_KERNEL_COMPILE_SUB_GROUP_SIZE_INTEL" group="cl_kernel_sub_group_info"/>
-        <enum value="0x410B"        name="CL_DEVICE_AVC_ME_VERSION_INTEL"/>
-        <enum value="0x410C"        name="CL_DEVICE_AVC_ME_SUPPORTS_TEXTURE_SAMPLER_USE_INTEL"/>
-        <enum value="0x410D"        name="CL_DEVICE_AVC_ME_SUPPORTS_PREEMPTION_INTEL"/>
+        <enum value="0x410B"        name="CL_DEVICE_AVC_ME_VERSION_INTEL" group="cl_device_info"/>
+        <enum value="0x410C"        name="CL_DEVICE_AVC_ME_SUPPORTS_TEXTURE_SAMPLER_USE_INTEL" group="cl_device_info"/>
+        <enum value="0x410D"        name="CL_DEVICE_AVC_ME_SUPPORTS_PREEMPTION_INTEL" group="cl_device_info"/>
         <enum value="0x410E"        name="CL_NV12_INTEL" group="cl_channel_order"/>
         <enum value="0x410F"        name="CL_DEVICE_PCI_BUS_INFO_KHR" group="cl_device_info"/>
     </enums>
@@ -2420,10 +2420,10 @@ server's OpenCL/api-docs repository.
     </enums>
 
     <enums start="0x41E0" end="0x41FF" name="enums.41E0" vendor="Arm">
-        <enum value="0x41E0"        name="CL_DEVICE_JOB_SLOTS_ARM"/>
-        <enum value="0x41E1"        name="CL_QUEUE_JOB_SLOT_ARM"/>
-        <enum value="0x41E2"        name="CL_IMPORT_TYPE_ANDROID_HARDWARE_BUFFER_ARM"/>
-        <enum value="0x41E3"        name="CL_IMPORT_DMA_BUF_DATA_CONSISTENCY_WITH_HOST_ARM"/>
+        <enum value="0x41E0"        name="CL_DEVICE_JOB_SLOTS_ARM" group="cl_device_info"/>
+        <enum value="0x41E1"        name="CL_QUEUE_JOB_SLOT_ARM" group="cl_queue_properties"/>
+        <enum value="0x41E2"        name="CL_IMPORT_TYPE_ANDROID_HARDWARE_BUFFER_ARM" group="cl_import_properties_arm"/>
+        <enum value="0x41E3"        name="CL_IMPORT_DMA_BUF_DATA_CONSISTENCY_WITH_HOST_ARM" group="cl_import_properties_arm"/>
         <enum value="0x41E4"        name="CL_DEVICE_SCHEDULING_CONTROLS_CAPABILITIES_ARM" group="cl_device_info"/>
         <enum value="0x41E5"        name="CL_KERNEL_EXEC_INFO_WORKGROUP_BATCH_SIZE_ARM" group="cl_kernel_exec_info"/>
         <enum value="0x41E6"        name="CL_KERNEL_EXEC_INFO_WORKGROUP_BATCH_SIZE_MODIFIER_ARM" group="cl_kernel_exec_info"/>
@@ -2435,8 +2435,8 @@ server's OpenCL/api-docs repository.
         <enum value="0x41EC"        name="CL_QUEUE_DEFERRED_FLUSH_ARM" group="cl_command_queue_properties"/>
         <enum value="0x41ED"        name="CL_EVENT_COMMAND_TERMINATION_REASON_ARM" group="cl_event_info"/>
         <enum value="0x41EE"        name="CL_DEVICE_CONTROLLED_TERMINATION_CAPABILITIES_ARM" group="cl_device_info"/>
-        <enum value="0x41EF"        name="CL_IMPORT_ANDROID_HARDWARE_BUFFER_PLANE_INDEX_ARM"/>
-        <enum value="0x41F0"        name="CL_IMPORT_ANDROID_HARDWARE_BUFFER_LAYER_INDEX_ARM"/>
+        <enum value="0x41EF"        name="CL_IMPORT_ANDROID_HARDWARE_BUFFER_PLANE_INDEX_ARM" group="cl_import_properties_arm"/>
+        <enum value="0x41F0"        name="CL_IMPORT_ANDROID_HARDWARE_BUFFER_LAYER_INDEX_ARM" group="cl_import_properties_arm"/>
         <enum value="0x41F1"        name="CL_KERNEL_EXEC_INFO_COMPUTE_UNIT_MAX_QUEUED_BATCHES_ARM" group="cl_kernel_exec_info"/>
         <unused start="0x41F2" end="0x41F2" comment="Reserved for cl_arm_core_builtins"/>
         <enum value="0x41F3"        name="CL_QUEUE_COMPUTE_UNIT_LIMIT_ARM" group="cl_command_queue_properties"/>

@@ -21,26 +21,42 @@
  },
  "CL_ACCELERATOR_CONTEXT_INTEL": {
   "container": "enums.4090",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_accelerator_info_intel"
+  ],
+  "notes": [
+   "manual: /regspec/all/intel/cl_intel_accelerator.txt \u2014 pointed to by <param_value>.  This size is dependent on the param_name, and [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x4092"
  },
  "CL_ACCELERATOR_DESCRIPTOR_INTEL": {
   "container": "enums.4090",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_accelerator_info_intel"
+  ],
+  "notes": [
+   "manual: /regspec/all/intel/cl_intel_accelerator.txt \u2014 pointed to by <param_value>.  This size is dependent on the param_name, and [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x4090"
  },
  "CL_ACCELERATOR_REFERENCE_COUNT_INTEL": {
   "container": "enums.4090",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_accelerator_info_intel"
+  ],
+  "notes": [
+   "manual: /regspec/all/intel/cl_intel_accelerator.txt \u2014 pointed to by <param_value>.  This size is dependent on the param_name, and [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x4091"
  },
  "CL_ACCELERATOR_TYPE_INTEL": {
   "container": "enums.4090",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_accelerator_info_intel"
+  ],
+  "notes": [
+   "manual: /regspec/all/intel/cl_intel_accelerator.txt \u2014 pointed to by <param_value>.  This size is dependent on the param_name, and [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x4093"
  },
  "CL_ACCELERATOR_TYPE_MOTION_ESTIMATION_INTEL": {
@@ -225,8 +241,12 @@
  },
  "CL_ALL_DEVICES_FOR_DX9_INTEL": {
   "container": "enums.4010",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_dx9_device_set_intel"
+  ],
+  "notes": [
+   "manual: /regspec/all/intel/cl_intel_dx9_media_sharing.txt \u2014 OpenCL devices are being queried by clGetDeviceIDsFromDX9INTEL. [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x4025"
  },
  "CL_ALL_DEVICES_FOR_DX9_MEDIA_ADAPTER_KHR": {
@@ -241,8 +261,12 @@
  },
  "CL_ALL_DEVICES_FOR_VA_API_INTEL": {
   "container": "enums.4090",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_va_api_device_set_intel"
+  ],
+  "notes": [
+   "manual: /regspec/all/intel/cl_intel_va_api_media_sharing.txt \u2014 parameter of clGetDeviceIDsFromVA_APIMediaAdapterINTEL: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x4096"
  },
  "CL_ARGB": {
@@ -1479,8 +1503,12 @@
  },
  "CL_COMMAND_ACQUIRE_VA_API_MEDIA_SURFACES_INTEL": {
   "container": "enums.4090",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_command_type"
+  ],
+  "notes": [
+   "manual: /regspec/all/intel/cl_intel_va_api_media_sharing.txt \u2014 surface using clCreateFromVA_APIMediaSurfaceINTEL.\" [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x409A"
  },
  "CL_COMMAND_BARRIER": {
@@ -1895,8 +1923,12 @@
  },
  "CL_COMMAND_MIGRATE_MEM_OBJECT_EXT": {
   "container": "enums.4040",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_command_type"
+  ],
+  "notes": [
+   "manual: /regspec/all/ext/cl_ext_migrate_memobject.txt \u2014 <param_name> is CL_EVENT_COMMAND_TYPE: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x4040"
  },
  "CL_COMMAND_NATIVE_KERNEL": {
@@ -2097,8 +2129,12 @@
  },
  "CL_COMMAND_RELEASE_VA_API_MEDIA_SURFACES_INTEL": {
   "container": "enums.4090",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_command_type"
+  ],
+  "notes": [
+   "manual: /regspec/all/intel/cl_intel_va_api_media_sharing.txt \u2014 surface using clCreateFromVA_APIMediaSurfaceINTEL.\" [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x409B"
  },
  "CL_COMMAND_SEMAPHORE_SIGNAL_KHR": {
@@ -2133,8 +2169,12 @@
  },
  "CL_COMMAND_SVM_FREE_ARM": {
   "container": "enums.40B0",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_command_type"
+  ],
+  "notes": [
+   "manual: /regspec/all/arm/cl_arm_shared_virtual_memory.txt \u2014 To be used by clGetEventInfo: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x40BA"
  },
  "CL_COMMAND_SVM_MAP": {
@@ -2149,8 +2189,12 @@
  },
  "CL_COMMAND_SVM_MAP_ARM": {
   "container": "enums.40B0",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_command_type"
+  ],
+  "notes": [
+   "manual: /regspec/all/arm/cl_arm_shared_virtual_memory.txt \u2014 To be used by clGetEventInfo: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x40BD"
  },
  "CL_COMMAND_SVM_MEMCPY": {
@@ -2165,8 +2209,12 @@
  },
  "CL_COMMAND_SVM_MEMCPY_ARM": {
   "container": "enums.40B0",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_command_type"
+  ],
+  "notes": [
+   "manual: /regspec/all/arm/cl_arm_shared_virtual_memory.txt \u2014 To be used by clGetEventInfo: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x40BB"
  },
  "CL_COMMAND_SVM_MEMFILL": {
@@ -2181,8 +2229,12 @@
  },
  "CL_COMMAND_SVM_MEMFILL_ARM": {
   "container": "enums.40B0",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_command_type"
+  ],
+  "notes": [
+   "manual: /regspec/all/arm/cl_arm_shared_virtual_memory.txt \u2014 To be used by clGetEventInfo: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x40BC"
  },
  "CL_COMMAND_SVM_MIGRATE_MEM": {
@@ -2207,8 +2259,12 @@
  },
  "CL_COMMAND_SVM_UNMAP_ARM": {
   "container": "enums.40B0",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_command_type"
+  ],
+  "notes": [
+   "manual: /regspec/all/arm/cl_arm_shared_virtual_memory.txt \u2014 To be used by clGetEventInfo: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x40BE"
  },
  "CL_COMMAND_TASK": {
@@ -2439,14 +2495,22 @@
  },
  "CL_CONTEXT_D3D9EX_DEVICE_INTEL": {
   "container": "enums.4070",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_context_properties"
+  ],
+  "notes": [
+   "manual: /regspec/all/intel/cl_intel_dx9_media_sharing.txt \u2014 clCreateContext and clCreateContextFromType: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x4072"
  },
  "CL_CONTEXT_D3D9_DEVICE_INTEL": {
   "container": "enums.4010",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_context_properties"
+  ],
+  "notes": [
+   "manual: intel/cl_intel_dx9_media_sharing.txt L98-99: property name in <properties> of clCreateContext [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x4026"
  },
  "CL_CONTEXT_DEVICES": {
@@ -2501,8 +2565,12 @@
  },
  "CL_CONTEXT_DXVA_DEVICE_INTEL": {
   "container": "enums.4070",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_context_properties"
+  ],
+  "notes": [
+   "manual: /regspec/all/intel/cl_intel_dx9_media_sharing.txt \u2014 Add to the list of errors for clCreateContext: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x4073"
  },
  "CL_CONTEXT_ENHANCED_EVENT_EXECUTION_STATUS_IMG": {
@@ -2618,8 +2686,12 @@
  },
  "CL_CONTEXT_SHOW_DIAGNOSTICS_INTEL": {
   "container": "enums.4100",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_context_properties"
+  ],
+  "notes": [
+   "manual: /regspec/all/intel/cl_intel_driver_diagnostics.txt \u2014 clCreateContext and clCreateContextFromType: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x4106"
  },
  "CL_CONTEXT_TERMINATED_KHR": {
@@ -2645,8 +2717,12 @@
  },
  "CL_CONTEXT_VA_API_DISPLAY_INTEL": {
   "container": "enums.4090",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_context_properties"
+  ],
+  "notes": [
+   "manual: /regspec/all/intel/cl_intel_va_api_media_sharing.txt \u2014 Add to the list of errors for clCreateContext: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x4097"
  },
  "CL_CONTEXT_WORKGROUP_PROTECTION_IMG": {
@@ -2755,14 +2831,22 @@
  },
  "CL_D3D9EX_DEVICE_INTEL": {
   "container": "enums.4070",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_dx9_device_source_intel"
+  ],
+  "notes": [
+   "manual: /regspec/all/intel/cl_intel_dx9_media_sharing.txt \u2014 clGetDeviceIDsFromDX9INTEL returns CL_SUCCESS if the function is executed [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x4070"
  },
  "CL_D3D9_DEVICE_INTEL": {
   "container": "enums.4010",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_dx9_device_source_intel"
+  ],
+  "notes": [
+   "manual: /regspec/all/intel/cl_intel_dx9_media_sharing.txt \u2014 clGetDeviceIDsFromDX9INTEL returns CL_SUCCESS if the function is executed [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x4022"
  },
  "CL_DBL_DIG": {
@@ -2907,8 +2991,12 @@
  },
  "CL_DEVICE_AFFINITY_DOMAINS_EXT": {
   "container": "enums.4050",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_info"
+  ],
+  "notes": [
+   "manual: /regspec/all/ext/cl_ext_device_fission.txt \u2014 clGetDeviceInfo: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x4056"
  },
  "CL_DEVICE_AFFINITY_DOMAIN_L1_CACHE": {
@@ -3073,32 +3161,52 @@
  },
  "CL_DEVICE_AVAILABLE_ASYNC_QUEUES_AMD": {
   "container": "enums.4040",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_info"
+  ],
+  "notes": [
+   "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt \u2014 Return the number of available async queues: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x404C"
  },
  "CL_DEVICE_AVC_ME_SUPPORTS_PREEMPTION_INTEL": {
   "container": "enums.4100",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_info"
+  ],
+  "notes": [
+   "manual: /regspec/all/intel/cl_intel_device_side_avc_motion_estimation.txt \u2014 Accepted as arguments to clGetDeviceInfo [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x410D"
  },
  "CL_DEVICE_AVC_ME_SUPPORTS_TEXTURE_SAMPLER_USE_INTEL": {
   "container": "enums.4100",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_info"
+  ],
+  "notes": [
+   "manual: /regspec/all/intel/cl_intel_device_side_avc_motion_estimation.txt \u2014 Accepted as arguments to clGetDeviceInfo [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x410C"
  },
  "CL_DEVICE_AVC_ME_VERSION_INTEL": {
   "container": "enums.4100",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_info"
+  ],
+  "notes": [
+   "manual: /regspec/all/intel/cl_intel_device_side_avc_motion_estimation.txt \u2014 Accepted as arguments to clGetDeviceInfo [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x410B"
  },
  "CL_DEVICE_BOARD_NAME_AMD": {
   "container": "enums.4030",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_info"
+  ],
+  "notes": [
+   "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt \u2014 Return the SKU board name for the device: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x4038"
  },
  "CL_DEVICE_BUILT_IN_KERNELS": {
@@ -3193,20 +3301,32 @@
  },
  "CL_DEVICE_COMPUTE_CAPABILITY_MAJOR_NV": {
   "container": "enums.4000",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_info"
+  ],
+  "notes": [
+   "manual: nv/cl_nv_device_attribute_query.txt \u2014 table 4.3 extension: 'Returns the major revision number that defines the CUDA compute capability' [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x4000"
  },
  "CL_DEVICE_COMPUTE_CAPABILITY_MINOR_NV": {
   "container": "enums.4000",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_info"
+  ],
+  "notes": [
+   "manual: nv/cl_nv_device_attribute_query.txt \u2014 same table: 'Returns the minor revision number' [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x4001"
  },
  "CL_DEVICE_COMPUTE_UNITS_BITFIELD_ARM": {
   "container": "enums.40B0",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_info"
+  ],
+  "notes": [
+   "manual: /regspec/all/arm/cl_arm_core_id.txt \u2014 New Procedures and Functions [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x40BF"
  },
  "CL_DEVICE_CONTROLLED_TERMINATION_CAPABILITIES_ARM": {
@@ -3391,8 +3511,12 @@
  },
  "CL_DEVICE_EXT_MEM_PADDING_IN_BYTES_QCOM": {
   "container": "enums.40A0",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_info"
+  ],
+  "notes": [
+   "manual: /regspec/all/qcom/cl_qcom_ext_host_ptr.txt \u2014 Add the following token to Table 4.3 (clGetDeviceInfo OpenCL Device [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x40A0"
  },
  "CL_DEVICE_FEATURE_CAPABILITIES_INTEL": {
@@ -3437,14 +3561,22 @@
  },
  "CL_DEVICE_GFXIP_MAJOR_AMD": {
   "container": "enums.4040",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_info"
+  ],
+  "notes": [
+   "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt \u2014 Return the core engine GFXIP major version: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x404A"
  },
  "CL_DEVICE_GFXIP_MINOR_AMD": {
   "container": "enums.4040",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_info"
+  ],
+  "notes": [
+   "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt \u2014 Return the core engine GFXIP minor version: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x404B"
  },
  "CL_DEVICE_GLOBAL_FP_ATOMIC_ADD_EXT": {
@@ -3479,8 +3611,12 @@
  },
  "CL_DEVICE_GLOBAL_FREE_MEMORY_AMD": {
   "container": "enums.4030",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_info"
+  ],
+  "notes": [
+   "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt \u2014 Return the global free memory in KBytes for the device: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x4039"
  },
  "CL_DEVICE_GLOBAL_MEM_CACHELINE_SIZE": {
@@ -3515,20 +3651,32 @@
  },
  "CL_DEVICE_GLOBAL_MEM_CHANNELS_AMD": {
   "container": "enums.4040",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_info"
+  ],
+  "notes": [
+   "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt \u2014 Return the number of global memory channels: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x4044"
  },
  "CL_DEVICE_GLOBAL_MEM_CHANNEL_BANKS_AMD": {
   "container": "enums.4040",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_info"
+  ],
+  "notes": [
+   "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt \u2014 Return the number of banks in each global memory channel: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x4045"
  },
  "CL_DEVICE_GLOBAL_MEM_CHANNEL_BANK_WIDTH_AMD": {
   "container": "enums.4040",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_info"
+  ],
+  "notes": [
+   "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt \u2014 Return the width in bytes of each of global memory bank: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x4046"
  },
  "CL_DEVICE_GLOBAL_MEM_SIZE": {
@@ -3553,8 +3701,12 @@
  },
  "CL_DEVICE_GPU_OVERLAP_NV": {
   "container": "enums.4000",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_info"
+  ],
+  "notes": [
+   "manual: nv/cl_nv_device_attribute_query.txt \u2014 'Returns CL_TRUE if the device can concurrently copy memory' [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x4004"
  },
  "CL_DEVICE_HALF_FP_ATOMIC_CAPABILITIES_EXT": {
@@ -3873,8 +4025,12 @@
  },
  "CL_DEVICE_INTEGRATED_MEMORY_NV": {
   "container": "enums.4000",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_info"
+  ],
+  "notes": [
+   "manual: nv/cl_nv_device_attribute_query.txt \u2014 'CL_TRUE if the device is integrated with the memory' [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x4006"
  },
  "CL_DEVICE_IP_VERSION_INTEL": {
@@ -3889,8 +4045,12 @@
  },
  "CL_DEVICE_JOB_SLOTS_ARM": {
   "container": "enums.41E0",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_info"
+  ],
+  "notes": [
+   "manual: /regspec/all/arm/cl_arm_job_slot_selection.txt \u2014 New Procedures and Functions [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x41E0"
  },
  "CL_DEVICE_KERNEL_CLOCK_CAPABILITIES_KHR": {
@@ -3935,8 +4095,12 @@
  },
  "CL_DEVICE_KERNEL_EXEC_TIMEOUT_NV": {
   "container": "enums.4000",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_info"
+  ],
+  "notes": [
+   "manual: nv/cl_nv_device_attribute_query.txt \u2014 'CL_TRUE if there is a run time limit for kernels executed on the device' [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x4005"
  },
  "CL_DEVICE_LATEST_CONFORMANCE_VERSION_PASSED": {
@@ -3991,8 +4155,12 @@
  },
  "CL_DEVICE_LOCAL_MEM_BANKS_AMD": {
   "container": "enums.4040",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_info"
+  ],
+  "notes": [
+   "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt \u2014 Return the number of banks of local memory: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x4048"
  },
  "CL_DEVICE_LOCAL_MEM_SIZE": {
@@ -4007,8 +4175,12 @@
  },
  "CL_DEVICE_LOCAL_MEM_SIZE_PER_COMPUTE_UNIT_AMD": {
   "container": "enums.4040",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_info"
+  ],
+  "notes": [
+   "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt \u2014 Return the local memory size in bytes per CU: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x4047"
  },
  "CL_DEVICE_LOCAL_MEM_TYPE": {
@@ -4255,8 +4427,12 @@
  },
  "CL_DEVICE_MAX_WORK_GROUP_SIZE_AMD": {
   "container": "enums.4030",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_info"
+  ],
+  "notes": [
+   "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt \u2014 Return the extended maximum work group size [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x4031"
  },
  "CL_DEVICE_MAX_WORK_ITEM_DIMENSIONS": {
@@ -4311,8 +4487,12 @@
  },
  "CL_DEVICE_ME_VERSION_INTEL": {
   "container": "enums.4070",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_info"
+  ],
+  "notes": [
+   "manual: /regspec/all/intel/cl_intel_advanced_motion_estimation.txt \u2014 Modify the description of function clGetDeviceInfo [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x407E"
  },
  "CL_DEVICE_MIN_DATA_TYPE_ALIGN_SIZE": {
@@ -4497,8 +4677,12 @@
  },
  "CL_DEVICE_NUM_SIMULTANEOUS_INTEROPS_INTEL": {
   "container": "enums.4100",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_info"
+  ],
+  "notes": [
+   "manual: /regspec/all/intel/cl_intel_simultaneous_sharing.txt \u2014 RESOLVED: Added description of all changes explicitly. [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x4105"
  },
  "CL_DEVICE_NUM_SLICES_INTEL": {
@@ -4573,8 +4757,12 @@
  },
  "CL_DEVICE_PAGE_SIZE_QCOM": {
   "container": "enums.40A0",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_info"
+  ],
+  "notes": [
+   "manual: /regspec/all/qcom/cl_qcom_ext_host_ptr.txt \u2014 Add the following token to Table 4.3 (clGetDeviceInfo OpenCL Device [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x40A1"
  },
  "CL_DEVICE_PARENT_DEVICE": {
@@ -4589,8 +4777,12 @@
  },
  "CL_DEVICE_PARENT_DEVICE_EXT": {
   "container": "enums.4050",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_info"
+  ],
+  "notes": [
+   "manual: /regspec/all/ext/cl_ext_device_fission.txt \u2014 clGetDeviceInfo: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x4054"
  },
  "CL_DEVICE_PARTITION_AFFINITY_DOMAIN": {
@@ -4735,8 +4927,12 @@
  },
  "CL_DEVICE_PARTITION_STYLE_EXT": {
   "container": "enums.4050",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_info"
+  ],
+  "notes": [
+   "manual: /regspec/all/ext/cl_ext_device_fission.txt \u2014 clGetDeviceInfo: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x4058"
  },
  "CL_DEVICE_PARTITION_TYPE": {
@@ -4751,14 +4947,22 @@
  },
  "CL_DEVICE_PARTITION_TYPES_EXT": {
   "container": "enums.4050",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_info"
+  ],
+  "notes": [
+   "manual: ext/cl_ext_device_fission.txt L382 \u2014 'CL_DEVICE_PARTITION_TYPES_EXT - a selector to get a list of supported partition styles' (clGetDeviceInfo) [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x4055"
  },
  "CL_DEVICE_PCIE_ID_AMD": {
   "container": "enums.4030",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_info"
+  ],
+  "notes": [
+   "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt \u2014 Return the device PCIe ID [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x4034"
  },
  "CL_DEVICE_PCI_BUS_INFO_KHR": {
@@ -4833,8 +5037,12 @@
  },
  "CL_DEVICE_PREFERRED_CONSTANT_BUFFER_SIZE_AMD": {
   "container": "enums.4030",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_info"
+  ],
+  "notes": [
+   "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt \u2014 Return the preferred constant buffer size [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x4033"
  },
  "CL_DEVICE_PREFERRED_GLOBAL_ATOMIC_ALIGNMENT": {
@@ -4949,8 +5157,12 @@
  },
  "CL_DEVICE_PREFERRED_WORK_GROUP_SIZE_AMD": {
   "container": "enums.4030",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_info"
+  ],
+  "notes": [
+   "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt \u2014 Return the preferred work group size: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x4030"
  },
  "CL_DEVICE_PREFERRED_WORK_GROUP_SIZE_MULTIPLE": {
@@ -4985,8 +5197,12 @@
  },
  "CL_DEVICE_PROFILING_TIMER_OFFSET_AMD": {
   "container": "enums.4030",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_info"
+  ],
+  "notes": [
+   "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt \u2014 Return the offset in nano-seconds between an event timestamp and Epoch: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x4036"
  },
  "CL_DEVICE_PROFILING_TIMER_RESOLUTION": {
@@ -5091,14 +5307,22 @@
  },
  "CL_DEVICE_REFERENCE_COUNT_EXT": {
   "container": "enums.4050",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_info"
+  ],
+  "notes": [
+   "manual: /regspec/all/ext/cl_ext_device_fission.txt \u2014 If no partition style is supported then the size of the returned [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x4057"
  },
  "CL_DEVICE_REGISTERS_PER_BLOCK_NV": {
   "container": "enums.4000",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_info"
+  ],
+  "notes": [
+   "manual: nv/cl_nv_device_attribute_query.txt \u2014 'Maximum number of 32-bit registers available to a thread' [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x4002"
  },
  "CL_DEVICE_SAFETY_MEM_SIZE_IMG": {
@@ -5249,26 +5473,42 @@
  },
  "CL_DEVICE_SIMD_INSTRUCTION_WIDTH_AMD": {
   "container": "enums.4040",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_info"
+  ],
+  "notes": [
+   "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt \u2014 Return the number of instructions that a SIMD can execute in parallel: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x4042"
  },
  "CL_DEVICE_SIMD_PER_COMPUTE_UNIT_AMD": {
   "container": "enums.4040",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_info"
+  ],
+  "notes": [
+   "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt \u2014 Return number of SIMD (Single Instruction Multiple Data) units per compute [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x4040"
  },
  "CL_DEVICE_SIMD_WIDTH_AMD": {
   "container": "enums.4040",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_info"
+  ],
+  "notes": [
+   "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt \u2014 Return the maximum number of work items from the same work group that can [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x4041"
  },
  "CL_DEVICE_SIMULTANEOUS_INTEROPS_INTEL": {
   "container": "enums.4100",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_info"
+  ],
+  "notes": [
+   "manual: /regspec/all/intel/cl_intel_simultaneous_sharing.txt \u2014 of clGetDeviceInfo: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x4104"
  },
  "CL_DEVICE_SINGLE_DEVICE_SHARED_MEM_CAPABILITIES_INTEL": {
@@ -5433,8 +5673,12 @@
  },
  "CL_DEVICE_SVM_CAPABILITIES_ARM": {
   "container": "enums.40B0",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_info"
+  ],
+  "notes": [
+   "manual: /regspec/all/arm/cl_arm_shared_virtual_memory.txt \u2014 Flag values returned by clGetDeviceInfo with [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x40B6"
  },
  "CL_DEVICE_SVM_COARSE_GRAIN_BUFFER": {
@@ -5530,14 +5774,22 @@
  },
  "CL_DEVICE_THREAD_TRACE_SUPPORTED_AMD": {
   "container": "enums.4040",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_info"
+  ],
+  "notes": [
+   "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt \u2014 Return 1 if thread trace is supported, 0 otherwise: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x4049"
  },
  "CL_DEVICE_TOPOLOGY_AMD": {
   "container": "enums.4030",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_info"
+  ],
+  "notes": [
+   "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt \u2014 Return the topology for the device: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x4037"
  },
  "CL_DEVICE_TYPE": {
@@ -5672,14 +5924,22 @@
  },
  "CL_DEVICE_WARP_SIZE_NV": {
   "container": "enums.4000",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_info"
+  ],
+  "notes": [
+   "manual: nv/cl_nv_device_attribute_query.txt \u2014 'Warp size in work-items' [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x4003"
  },
  "CL_DEVICE_WAVEFRONT_WIDTH_AMD": {
   "container": "enums.4040",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_info"
+  ],
+  "notes": [
+   "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt \u2014 Return the number of workitems per wavefront: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x4043"
  },
  "CL_DEVICE_WORKGROUP_PROTECTION_DEVICE_ENQUEUE_CAPABILITIES_IMG": {
@@ -5856,8 +6116,12 @@
  },
  "CL_DXVA_DEVICE_INTEL": {
   "container": "enums.4070",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_dx9_device_source_intel"
+  ],
+  "notes": [
+   "manual: /regspec/all/intel/cl_intel_dx9_media_sharing.txt \u2014 clGetDeviceIDsFromDX9INTEL returns CL_SUCCESS if the function is executed [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x4071"
  },
  "CL_ECC_RECOVERED_IMG": {
@@ -5903,8 +6167,12 @@
  },
  "CL_EGL_YUV_PLANE_INTEL": {
   "container": "enums.4100",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_image_info"
+  ],
+  "notes": [
+   "manual: /regspec/all/intel/cl_intel_egl_image_yuv.txt \u2014 and <image> was not created by the function clCreateFromEGLImageKHR. [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x4107"
  },
  "CL_ERROR_RESERVED0_IMG": {
@@ -6709,8 +6977,12 @@
  },
  "CL_IMAGE_DX9_PLANE_INTEL": {
   "container": "enums.4070",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_image_info"
+  ],
+  "notes": [
+   "manual: /regspec/all/intel/cl_intel_dx9_media_sharing.txt \u2014 using clGetMemObjectInfo and clGetImageInfo with <param_name> [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x4075"
  },
  "CL_IMAGE_ELEMENT_SIZE": {
@@ -6865,8 +7137,12 @@
  },
  "CL_IMAGE_ROW_ALIGNMENT_QCOM": {
   "container": "enums.40A0",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_image_pitch_info_qcom"
+  ],
+  "notes": [
+   "manual: /regspec/all/qcom/cl_qcom_ext_host_ptr.txt \u2014 Accepted by the <param_name> argument of clGetDeviceImageInfoQCOM [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x40A2"
  },
  "CL_IMAGE_ROW_PITCH": {
@@ -6881,8 +7157,12 @@
  },
  "CL_IMAGE_SLICE_ALIGNMENT_QCOM": {
   "container": "enums.40A0",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_image_pitch_info_qcom"
+  ],
+  "notes": [
+   "manual: /regspec/all/qcom/cl_qcom_ext_host_ptr.txt \u2014 Accepted by the <param_name> argument of clGetDeviceImageInfoQCOM [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x40A3"
  },
  "CL_IMAGE_SLICE_PITCH": {
@@ -6897,8 +7177,12 @@
  },
  "CL_IMAGE_VA_API_PLANE_INTEL": {
   "container": "enums.4090",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_image_info"
+  ],
+  "notes": [
+   "manual: /regspec/all/intel/cl_intel_va_api_media_sharing.txt \u2014 \"* CL_INVALID_VA_API_MEDIA_SURFACE_INTEL if <param_name> is [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x4099"
  },
  "CL_IMAGE_WIDTH": {
@@ -6913,20 +7197,32 @@
  },
  "CL_IMPORT_ANDROID_HARDWARE_BUFFER_LAYER_INDEX_ARM": {
   "container": "enums.41E0",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_import_properties_arm"
+  ],
+  "notes": [
+   "manual: /regspec/all/arm/cl_arm_import_memory.txt \u2014 Valid values for CL_IMPORT_ANDROID_HARDWARE_BUFFER_PLANE_INDEX_ARM and [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x41F0"
  },
  "CL_IMPORT_ANDROID_HARDWARE_BUFFER_PLANE_INDEX_ARM": {
   "container": "enums.41E0",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_import_properties_arm"
+  ],
+  "notes": [
+   "manual: /regspec/all/arm/cl_arm_import_memory.txt \u2014 Multiplanar buffers are only supported when backed by a single dma_buf. [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x41EF"
  },
  "CL_IMPORT_DMA_BUF_DATA_CONSISTENCY_WITH_HOST_ARM": {
   "container": "enums.41E0",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_import_properties_arm"
+  ],
+  "notes": [
+   "manual: arm/cl_arm_import_memory.txt \u2014 listed in 'Valid <properties> are:' [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x41E3"
  },
  "CL_IMPORT_MEMORY_WHOLE_ALLOCATION_ARM": {
@@ -6937,32 +7233,52 @@
  },
  "CL_IMPORT_TYPE_ANDROID_HARDWARE_BUFFER_ARM": {
   "container": "enums.41E0",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_import_properties_arm"
+  ],
+  "notes": [
+   "manual: /regspec/all/arm/cl_arm_import_memory.txt \u2014 New Tokens [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x41E2"
  },
  "CL_IMPORT_TYPE_ARM": {
   "container": "enums.40B0",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_import_properties_arm"
+  ],
+  "notes": [
+   "manual: arm/cl_arm_import_memory.txt \u2014 listed in 'Valid <properties> are:' [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x40B2"
  },
  "CL_IMPORT_TYPE_DMA_BUF_ARM": {
   "container": "enums.40B0",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_import_properties_arm"
+  ],
+  "notes": [
+   "manual: arm/cl_arm_import_memory.txt L118-123: same [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x40B4"
  },
  "CL_IMPORT_TYPE_HOST_ARM": {
   "container": "enums.40B0",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_import_properties_arm"
+  ],
+  "notes": [
+   "manual: arm/cl_arm_import_memory.txt L118-122: valid value of CL_IMPORT_TYPE_ARM; cl_import_type_arm typedef does not exist in cl.xml [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x40B3"
  },
  "CL_IMPORT_TYPE_PROTECTED_ARM": {
   "container": "enums.40B0",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_import_properties_arm"
+  ],
+  "notes": [
+   "manual: arm/cl_arm_import_memory.txt \u2014 listed in 'Valid <properties> are:' [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x40B5"
  },
  "CL_INCOMPATIBLE_COMMAND_QUEUE_KHR": {
@@ -7987,8 +8303,12 @@
  },
  "CL_KERNEL_EXEC_INFO_SVM_FINE_GRAIN_SYSTEM_ARM": {
   "container": "enums.40B0",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_kernel_exec_info_arm"
+  ],
+  "notes": [
+   "manual: /regspec/all/arm/cl_arm_shared_virtual_memory.txt \u2014 To be used by clSetKernelExecInfoARM: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x40B9"
  },
  "CL_KERNEL_EXEC_INFO_SVM_INDIRECT_ACCESS_KHR": {
@@ -8015,8 +8335,12 @@
  },
  "CL_KERNEL_EXEC_INFO_SVM_PTRS_ARM": {
   "container": "enums.40B0",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_kernel_exec_info_arm"
+  ],
+  "notes": [
+   "manual: /regspec/all/arm/cl_arm_shared_virtual_memory.txt \u2014 To be used by clSetKernelExecInfoARM: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x40B8"
  },
  "CL_KERNEL_EXEC_INFO_USM_PTRS_INTEL": {
@@ -8751,14 +9075,22 @@
  },
  "CL_MEM_DX9_RESOURCE_INTEL": {
   "container": "enums.4010",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_mem_info"
+  ],
+  "notes": [
+   "manual: /regspec/all/intel/cl_intel_dx9_media_sharing.txt \u2014 DirectX 9 resource using clCreateFromDX9MediaSurfaceIntel.\" [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x4027"
  },
  "CL_MEM_DX9_SHARED_HANDLE_INTEL": {
   "container": "enums.4070",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_mem_info"
+  ],
+  "notes": [
+   "manual: /regspec/all/intel/cl_intel_dx9_media_sharing.txt \u2014 clCreateFromDX9MediaSurfaceINTEL, [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x4074"
  },
  "CL_MEM_EXT_HOST_PTR_QCOM": {
@@ -9283,8 +9615,12 @@
  },
  "CL_MEM_USES_SVM_POINTER_ARM": {
   "container": "enums.40B0",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_mem_info"
+  ],
+  "notes": [
+   "manual: arm/cl_arm_shared_virtual_memory.txt L178: clGetMemObjectInfo param_name [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x40B7"
  },
  "CL_MEM_USE_CACHED_CPU_MEMORY_IMG": {
@@ -9329,8 +9665,12 @@
  },
  "CL_MEM_VA_API_MEDIA_SURFACE_INTEL": {
   "container": "enums.4090",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_mem_info"
+  ],
+  "notes": [
+   "manual: /regspec/all/intel/cl_intel_va_api_media_sharing.txt \u2014 using clGetMemObjectInfo and clGetImageInfo with <param_name> [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x4098"
  },
  "CL_MEM_WRITE_ONLY": {
@@ -10737,8 +11077,12 @@
  },
  "CL_PREFERRED_DEVICES_FOR_DX9_INTEL": {
   "container": "enums.4010",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_dx9_device_set_intel"
+  ],
+  "notes": [
+   "manual: /regspec/all/intel/cl_intel_dx9_media_sharing.txt \u2014 OpenCL devices are being queried by clGetDeviceIDsFromDX9INTEL. [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x4024"
  },
  "CL_PREFERRED_DEVICES_FOR_DX9_MEDIA_ADAPTER_KHR": {
@@ -10753,8 +11097,12 @@
  },
  "CL_PREFERRED_DEVICES_FOR_VA_API_INTEL": {
   "container": "enums.4090",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_va_api_device_set_intel"
+  ],
+  "notes": [
+   "manual: /regspec/all/intel/cl_intel_va_api_media_sharing.txt \u2014 parameter of clGetDeviceIDsFromVA_APIMediaAdapterINTEL: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x4095"
  },
  "CL_PRINTF_BUFFERSIZE_ARM": {
@@ -11359,8 +11707,12 @@
  },
  "CL_QUEUE_JOB_SLOT_ARM": {
   "container": "enums.41E0",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_queue_properties"
+  ],
+  "notes": [
+   "manual: /regspec/all/arm/cl_arm_job_slot_selection.txt \u2014 Command queue property [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x41E1"
  },
  "CL_QUEUE_KERNEL_BATCHING_ARM": {
@@ -12735,8 +13087,12 @@
  },
  "CL_VA_API_DISPLAY_INTEL": {
   "container": "enums.4090",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_va_api_device_source_intel"
+  ],
+  "notes": [
+   "manual: /regspec/all/intel/cl_intel_va_api_media_sharing.txt \u2014 clGetDeviceIDsFromVA_APIMediaAdapterINTEL returns CL_SUCCESS if the [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
+  ],
   "value": "0x4094"
  },
  "CL_VA_API_MEDIA_SURFACE_ALREADY_ACQUIRED_INTEL": {

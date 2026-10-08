@@ -1,0 +1,602 @@
+[
+ {
+  "token": "CL_ACCELERATOR_CONTEXT_INTEL",
+  "pr1587_group": "cl_accelerator_info_intel",
+  "spec_source": "/regspec/all/intel/cl_intel_accelerator.txt",
+  "spec_sentence": "pointed to by <param_value>.  This size is dependent on the param_name, and"
+ },
+ {
+  "token": "CL_ACCELERATOR_DESCRIPTOR_INTEL",
+  "pr1587_group": "cl_accelerator_info_intel",
+  "spec_source": "/regspec/all/intel/cl_intel_accelerator.txt",
+  "spec_sentence": "pointed to by <param_value>.  This size is dependent on the param_name, and"
+ },
+ {
+  "token": "CL_ACCELERATOR_REFERENCE_COUNT_INTEL",
+  "pr1587_group": "cl_accelerator_info_intel",
+  "spec_source": "/regspec/all/intel/cl_intel_accelerator.txt",
+  "spec_sentence": "pointed to by <param_value>.  This size is dependent on the param_name, and"
+ },
+ {
+  "token": "CL_ACCELERATOR_TYPE_INTEL",
+  "pr1587_group": "cl_accelerator_info_intel",
+  "spec_source": "/regspec/all/intel/cl_intel_accelerator.txt",
+  "spec_sentence": "pointed to by <param_value>.  This size is dependent on the param_name, and"
+ },
+ {
+  "token": "CL_ALL_DEVICES_FOR_DX9_INTEL",
+  "pr1587_group": "cl_dx9_device_set_intel",
+  "spec_source": "/regspec/all/intel/cl_intel_dx9_media_sharing.txt",
+  "spec_sentence": "OpenCL devices are being queried by clGetDeviceIDsFromDX9INTEL."
+ },
+ {
+  "token": "CL_ALL_DEVICES_FOR_VA_API_INTEL",
+  "pr1587_group": "cl_va_api_device_set_intel",
+  "spec_source": "/regspec/all/intel/cl_intel_va_api_media_sharing.txt",
+  "spec_sentence": "parameter of clGetDeviceIDsFromVA_APIMediaAdapterINTEL:"
+ },
+ {
+  "token": "CL_COMMAND_ACQUIRE_D3D9_OBJECTS_INTEL",
+  "pr1587_group": "cl_command_type",
+  "spec_source": "",
+  "spec_sentence": "(no spec line found)"
+ },
+ {
+  "token": "CL_COMMAND_ACQUIRE_VA_API_MEDIA_SURFACES_INTEL",
+  "pr1587_group": "cl_command_type",
+  "spec_source": "/regspec/all/intel/cl_intel_va_api_media_sharing.txt",
+  "spec_sentence": "surface using clCreateFromVA_APIMediaSurfaceINTEL.\""
+ },
+ {
+  "token": "CL_COMMAND_MIGRATE_MEM_OBJECT_EXT",
+  "pr1587_group": "cl_command_type",
+  "spec_source": "/regspec/all/ext/cl_ext_migrate_memobject.txt",
+  "spec_sentence": "<param_name> is CL_EVENT_COMMAND_TYPE:"
+ },
+ {
+  "token": "CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_ARBITRATION_ALGORITHM_IMG",
+  "pr1587_group": "cl_queue_properties",
+  "spec_source": "",
+  "spec_sentence": "(no spec line found)"
+ },
+ {
+  "token": "CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_EXECUTE_COUNT_IMG",
+  "pr1587_group": "cl_queue_properties",
+  "spec_source": "",
+  "spec_sentence": "(no spec line found)"
+ },
+ {
+  "token": "CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_SCHEDULING_ALGORITHM_IMG",
+  "pr1587_group": "cl_queue_properties",
+  "spec_source": "",
+  "spec_sentence": "(no spec line found)"
+ },
+ {
+  "token": "CL_COMMAND_RELEASE_D3D9_OBJECTS_INTEL",
+  "pr1587_group": "cl_command_type",
+  "spec_source": "",
+  "spec_sentence": "(no spec line found)"
+ },
+ {
+  "token": "CL_COMMAND_RELEASE_VA_API_MEDIA_SURFACES_INTEL",
+  "pr1587_group": "cl_command_type",
+  "spec_source": "/regspec/all/intel/cl_intel_va_api_media_sharing.txt",
+  "spec_sentence": "surface using clCreateFromVA_APIMediaSurfaceINTEL.\""
+ },
+ {
+  "token": "CL_COMMAND_SVM_FREE_ARM",
+  "pr1587_group": "cl_command_type",
+  "spec_source": "/regspec/all/arm/cl_arm_shared_virtual_memory.txt",
+  "spec_sentence": "To be used by clGetEventInfo:"
+ },
+ {
+  "token": "CL_COMMAND_SVM_MAP_ARM",
+  "pr1587_group": "cl_command_type",
+  "spec_source": "/regspec/all/arm/cl_arm_shared_virtual_memory.txt",
+  "spec_sentence": "To be used by clGetEventInfo:"
+ },
+ {
+  "token": "CL_COMMAND_SVM_MEMCPY_ARM",
+  "pr1587_group": "cl_command_type",
+  "spec_source": "/regspec/all/arm/cl_arm_shared_virtual_memory.txt",
+  "spec_sentence": "To be used by clGetEventInfo:"
+ },
+ {
+  "token": "CL_COMMAND_SVM_MEMFILL_ARM",
+  "pr1587_group": "cl_command_type",
+  "spec_source": "/regspec/all/arm/cl_arm_shared_virtual_memory.txt",
+  "spec_sentence": "To be used by clGetEventInfo:"
+ },
+ {
+  "token": "CL_COMMAND_SVM_UNMAP_ARM",
+  "pr1587_group": "cl_command_type",
+  "spec_source": "/regspec/all/arm/cl_arm_shared_virtual_memory.txt",
+  "spec_sentence": "To be used by clGetEventInfo:"
+ },
+ {
+  "token": "CL_CONTEXT_D3D9EX_DEVICE_INTEL",
+  "pr1587_group": "cl_context_properties",
+  "spec_source": "/regspec/all/intel/cl_intel_dx9_media_sharing.txt",
+  "spec_sentence": "clCreateContext and clCreateContextFromType:"
+ },
+ {
+  "token": "CL_CONTEXT_D3D9_DEVICE_INTEL",
+  "pr1587_group": "cl_context_info",
+  "spec_source": "/regspec/all/intel/cl_intel_dx9_media_sharing.txt",
+  "spec_sentence": "clCreateContext and clCreateContextFromType:"
+ },
+ {
+  "token": "CL_CONTEXT_DXVA_DEVICE_INTEL",
+  "pr1587_group": "cl_context_properties",
+  "spec_source": "/regspec/all/intel/cl_intel_dx9_media_sharing.txt",
+  "spec_sentence": "Add to the list of errors for clCreateContext:"
+ },
+ {
+  "token": "CL_CONTEXT_SHOW_DIAGNOSTICS_INTEL",
+  "pr1587_group": "cl_context_properties",
+  "spec_source": "/regspec/all/intel/cl_intel_driver_diagnostics.txt",
+  "spec_sentence": "clCreateContext and clCreateContextFromType:"
+ },
+ {
+  "token": "CL_CONTEXT_VA_API_DISPLAY_INTEL",
+  "pr1587_group": "cl_context_properties",
+  "spec_source": "/regspec/all/intel/cl_intel_va_api_media_sharing.txt",
+  "spec_sentence": "Add to the list of errors for clCreateContext:"
+ },
+ {
+  "token": "CL_D3D9EX_DEVICE_INTEL",
+  "pr1587_group": "cl_dx9_device_source_intel",
+  "spec_source": "/regspec/all/intel/cl_intel_dx9_media_sharing.txt",
+  "spec_sentence": "clGetDeviceIDsFromDX9INTEL returns CL_SUCCESS if the function is executed"
+ },
+ {
+  "token": "CL_D3D9_DEVICE_INTEL",
+  "pr1587_group": "cl_dx9_device_source_intel",
+  "spec_source": "/regspec/all/intel/cl_intel_dx9_media_sharing.txt",
+  "spec_sentence": "clGetDeviceIDsFromDX9INTEL returns CL_SUCCESS if the function is executed"
+ },
+ {
+  "token": "CL_DEVICE_AFFINITY_DOMAINS_EXT",
+  "pr1587_group": "cl_device_info",
+  "spec_source": "/regspec/all/ext/cl_ext_device_fission.txt",
+  "spec_sentence": "clGetDeviceInfo:"
+ },
+ {
+  "token": "CL_DEVICE_AVAILABLE_ASYNC_QUEUES_AMD",
+  "pr1587_group": "cl_device_info",
+  "spec_source": "/regspec/all/amd/cl_amd_device_attribute_query.txt",
+  "spec_sentence": "Return the number of available async queues:"
+ },
+ {
+  "token": "CL_DEVICE_AVC_ME_SUPPORTS_PREEMPTION_INTEL",
+  "pr1587_group": "cl_device_info",
+  "spec_source": "/regspec/all/intel/cl_intel_device_side_avc_motion_estimation.txt",
+  "spec_sentence": "Accepted as arguments to clGetDeviceInfo"
+ },
+ {
+  "token": "CL_DEVICE_AVC_ME_SUPPORTS_TEXTURE_SAMPLER_USE_INTEL",
+  "pr1587_group": "cl_device_info",
+  "spec_source": "/regspec/all/intel/cl_intel_device_side_avc_motion_estimation.txt",
+  "spec_sentence": "Accepted as arguments to clGetDeviceInfo"
+ },
+ {
+  "token": "CL_DEVICE_AVC_ME_VERSION_INTEL",
+  "pr1587_group": "cl_device_info",
+  "spec_source": "/regspec/all/intel/cl_intel_device_side_avc_motion_estimation.txt",
+  "spec_sentence": "Accepted as arguments to clGetDeviceInfo"
+ },
+ {
+  "token": "CL_DEVICE_BOARD_NAME_AMD",
+  "pr1587_group": "cl_device_info",
+  "spec_source": "/regspec/all/amd/cl_amd_device_attribute_query.txt",
+  "spec_sentence": "Return the SKU board name for the device:"
+ },
+ {
+  "token": "CL_DEVICE_COMPUTE_CAPABILITY_MAJOR_NV",
+  "pr1587_group": "cl_device_info",
+  "spec_source": "",
+  "spec_sentence": "(no spec line found)"
+ },
+ {
+  "token": "CL_DEVICE_COMPUTE_CAPABILITY_MINOR_NV",
+  "pr1587_group": "cl_device_info",
+  "spec_source": "",
+  "spec_sentence": "(no spec line found)"
+ },
+ {
+  "token": "CL_DEVICE_COMPUTE_UNITS_BITFIELD_ARM",
+  "pr1587_group": "cl_device_info",
+  "spec_source": "/regspec/all/arm/cl_arm_core_id.txt",
+  "spec_sentence": "New Procedures and Functions"
+ },
+ {
+  "token": "CL_DEVICE_EXT_MEM_PADDING_IN_BYTES_QCOM",
+  "pr1587_group": "cl_device_info",
+  "spec_source": "/regspec/all/qcom/cl_qcom_ext_host_ptr.txt",
+  "spec_sentence": "Add the following token to Table 4.3 (clGetDeviceInfo OpenCL Device"
+ },
+ {
+  "token": "CL_DEVICE_GFXIP_MAJOR_AMD",
+  "pr1587_group": "cl_device_info",
+  "spec_source": "/regspec/all/amd/cl_amd_device_attribute_query.txt",
+  "spec_sentence": "Return the core engine GFXIP major version:"
+ },
+ {
+  "token": "CL_DEVICE_GFXIP_MINOR_AMD",
+  "pr1587_group": "cl_device_info",
+  "spec_source": "/regspec/all/amd/cl_amd_device_attribute_query.txt",
+  "spec_sentence": "Return the core engine GFXIP minor version:"
+ },
+ {
+  "token": "CL_DEVICE_GLOBAL_FREE_MEMORY_AMD",
+  "pr1587_group": "cl_device_info",
+  "spec_source": "/regspec/all/amd/cl_amd_device_attribute_query.txt",
+  "spec_sentence": "Return the global free memory in KBytes for the device:"
+ },
+ {
+  "token": "CL_DEVICE_GLOBAL_MEM_CHANNELS_AMD",
+  "pr1587_group": "cl_device_info",
+  "spec_source": "/regspec/all/amd/cl_amd_device_attribute_query.txt",
+  "spec_sentence": "Return the number of global memory channels:"
+ },
+ {
+  "token": "CL_DEVICE_GLOBAL_MEM_CHANNEL_BANKS_AMD",
+  "pr1587_group": "cl_device_info",
+  "spec_source": "/regspec/all/amd/cl_amd_device_attribute_query.txt",
+  "spec_sentence": "Return the number of banks in each global memory channel:"
+ },
+ {
+  "token": "CL_DEVICE_GLOBAL_MEM_CHANNEL_BANK_WIDTH_AMD",
+  "pr1587_group": "cl_device_info",
+  "spec_source": "/regspec/all/amd/cl_amd_device_attribute_query.txt",
+  "spec_sentence": "Return the width in bytes of each of global memory bank:"
+ },
+ {
+  "token": "CL_DEVICE_GPU_OVERLAP_NV",
+  "pr1587_group": "cl_device_info",
+  "spec_source": "",
+  "spec_sentence": "(no spec line found)"
+ },
+ {
+  "token": "CL_DEVICE_INTEGRATED_MEMORY_NV",
+  "pr1587_group": "cl_device_info",
+  "spec_source": "",
+  "spec_sentence": "(no spec line found)"
+ },
+ {
+  "token": "CL_DEVICE_JOB_SLOTS_ARM",
+  "pr1587_group": "cl_device_info",
+  "spec_source": "/regspec/all/arm/cl_arm_job_slot_selection.txt",
+  "spec_sentence": "New Procedures and Functions"
+ },
+ {
+  "token": "CL_DEVICE_KERNEL_EXEC_TIMEOUT_NV",
+  "pr1587_group": "cl_device_info",
+  "spec_source": "",
+  "spec_sentence": "(no spec line found)"
+ },
+ {
+  "token": "CL_DEVICE_LOCAL_MEM_BANKS_AMD",
+  "pr1587_group": "cl_device_info",
+  "spec_source": "/regspec/all/amd/cl_amd_device_attribute_query.txt",
+  "spec_sentence": "Return the number of banks of local memory:"
+ },
+ {
+  "token": "CL_DEVICE_LOCAL_MEM_SIZE_PER_COMPUTE_UNIT_AMD",
+  "pr1587_group": "cl_device_info",
+  "spec_source": "/regspec/all/amd/cl_amd_device_attribute_query.txt",
+  "spec_sentence": "Return the local memory size in bytes per CU:"
+ },
+ {
+  "token": "CL_DEVICE_MAX_HOST_READ_PIPES_INTEL",
+  "pr1587_group": "cl_device_info",
+  "spec_source": "",
+  "spec_sentence": "(no spec line found)"
+ },
+ {
+  "token": "CL_DEVICE_MAX_HOST_WRITE_PIPES_INTEL",
+  "pr1587_group": "cl_device_info",
+  "spec_source": "",
+  "spec_sentence": "(no spec line found)"
+ },
+ {
+  "token": "CL_DEVICE_MAX_WORK_GROUP_SIZE_AMD",
+  "pr1587_group": "cl_device_info",
+  "spec_source": "/regspec/all/amd/cl_amd_device_attribute_query.txt",
+  "spec_sentence": "Return the extended maximum work group size"
+ },
+ {
+  "token": "CL_DEVICE_ME_VERSION_INTEL",
+  "pr1587_group": "cl_device_info",
+  "spec_source": "/regspec/all/intel/cl_intel_advanced_motion_estimation.txt",
+  "spec_sentence": "Modify the description of function clGetDeviceInfo"
+ },
+ {
+  "token": "CL_DEVICE_NUM_SIMULTANEOUS_INTEROPS_INTEL",
+  "pr1587_group": "cl_device_info",
+  "spec_source": "/regspec/all/intel/cl_intel_simultaneous_sharing.txt",
+  "spec_sentence": "RESOLVED: Added description of all changes explicitly."
+ },
+ {
+  "token": "CL_DEVICE_PAGE_SIZE_QCOM",
+  "pr1587_group": "cl_device_info",
+  "spec_source": "/regspec/all/qcom/cl_qcom_ext_host_ptr.txt",
+  "spec_sentence": "Add the following token to Table 4.3 (clGetDeviceInfo OpenCL Device"
+ },
+ {
+  "token": "CL_DEVICE_PARENT_DEVICE_EXT",
+  "pr1587_group": "cl_device_info",
+  "spec_source": "/regspec/all/ext/cl_ext_device_fission.txt",
+  "spec_sentence": "clGetDeviceInfo:"
+ },
+ {
+  "token": "CL_DEVICE_PARTITION_STYLE_EXT",
+  "pr1587_group": "cl_device_info",
+  "spec_source": "/regspec/all/ext/cl_ext_device_fission.txt",
+  "spec_sentence": "clGetDeviceInfo:"
+ },
+ {
+  "token": "CL_DEVICE_PARTITION_TYPES_EXT",
+  "pr1587_group": "cl_device_info",
+  "spec_source": "",
+  "spec_sentence": "(no spec line found)"
+ },
+ {
+  "token": "CL_DEVICE_PCIE_ID_AMD",
+  "pr1587_group": "cl_device_info",
+  "spec_source": "/regspec/all/amd/cl_amd_device_attribute_query.txt",
+  "spec_sentence": "Return the device PCIe ID"
+ },
+ {
+  "token": "CL_DEVICE_PREFERRED_CONSTANT_BUFFER_SIZE_AMD",
+  "pr1587_group": "cl_device_info",
+  "spec_source": "/regspec/all/amd/cl_amd_device_attribute_query.txt",
+  "spec_sentence": "Return the preferred constant buffer size"
+ },
+ {
+  "token": "CL_DEVICE_PREFERRED_WORK_GROUP_SIZE_AMD",
+  "pr1587_group": "cl_device_info",
+  "spec_source": "/regspec/all/amd/cl_amd_device_attribute_query.txt",
+  "spec_sentence": "Return the preferred work group size:"
+ },
+ {
+  "token": "CL_DEVICE_PROFILING_TIMER_OFFSET_AMD",
+  "pr1587_group": "cl_device_info",
+  "spec_source": "/regspec/all/amd/cl_amd_device_attribute_query.txt",
+  "spec_sentence": "Return the offset in nano-seconds between an event timestamp and Epoch:"
+ },
+ {
+  "token": "CL_DEVICE_REFERENCE_COUNT_EXT",
+  "pr1587_group": "cl_device_info",
+  "spec_source": "/regspec/all/ext/cl_ext_device_fission.txt",
+  "spec_sentence": "If no partition style is supported then the size of the returned"
+ },
+ {
+  "token": "CL_DEVICE_REGISTERS_PER_BLOCK_NV",
+  "pr1587_group": "cl_device_info",
+  "spec_source": "",
+  "spec_sentence": "(no spec line found)"
+ },
+ {
+  "token": "CL_DEVICE_SCHEDULING_CONTROLS_CAPABILITIES_IMG",
+  "pr1587_group": "cl_device_info",
+  "spec_source": "",
+  "spec_sentence": "(no spec line found)"
+ },
+ {
+  "token": "CL_DEVICE_SIMD_INSTRUCTION_WIDTH_AMD",
+  "pr1587_group": "cl_device_info",
+  "spec_source": "/regspec/all/amd/cl_amd_device_attribute_query.txt",
+  "spec_sentence": "Return the number of instructions that a SIMD can execute in parallel:"
+ },
+ {
+  "token": "CL_DEVICE_SIMD_PER_COMPUTE_UNIT_AMD",
+  "pr1587_group": "cl_device_info",
+  "spec_source": "/regspec/all/amd/cl_amd_device_attribute_query.txt",
+  "spec_sentence": "Return number of SIMD (Single Instruction Multiple Data) units per compute"
+ },
+ {
+  "token": "CL_DEVICE_SIMD_WIDTH_AMD",
+  "pr1587_group": "cl_device_info",
+  "spec_source": "/regspec/all/amd/cl_amd_device_attribute_query.txt",
+  "spec_sentence": "Return the maximum number of work items from the same work group that can"
+ },
+ {
+  "token": "CL_DEVICE_SIMULTANEOUS_INTEROPS_INTEL",
+  "pr1587_group": "cl_device_info",
+  "spec_source": "/regspec/all/intel/cl_intel_simultaneous_sharing.txt",
+  "spec_sentence": "of clGetDeviceInfo:"
+ },
+ {
+  "token": "CL_DEVICE_SVM_CAPABILITIES_ARM",
+  "pr1587_group": "cl_device_info",
+  "spec_source": "/regspec/all/arm/cl_arm_shared_virtual_memory.txt",
+  "spec_sentence": "Flag values returned by clGetDeviceInfo with"
+ },
+ {
+  "token": "CL_DEVICE_THREAD_TRACE_SUPPORTED_AMD",
+  "pr1587_group": "cl_device_info",
+  "spec_source": "/regspec/all/amd/cl_amd_device_attribute_query.txt",
+  "spec_sentence": "Return 1 if thread trace is supported, 0 otherwise:"
+ },
+ {
+  "token": "CL_DEVICE_TOPOLOGY_AMD",
+  "pr1587_group": "cl_device_info",
+  "spec_source": "/regspec/all/amd/cl_amd_device_attribute_query.txt",
+  "spec_sentence": "Return the topology for the device:"
+ },
+ {
+  "token": "CL_DEVICE_WARP_SIZE_NV",
+  "pr1587_group": "cl_device_info",
+  "spec_source": "",
+  "spec_sentence": "(no spec line found)"
+ },
+ {
+  "token": "CL_DEVICE_WAVEFRONT_WIDTH_AMD",
+  "pr1587_group": "cl_device_info",
+  "spec_source": "/regspec/all/amd/cl_amd_device_attribute_query.txt",
+  "spec_sentence": "Return the number of workitems per wavefront:"
+ },
+ {
+  "token": "CL_DXVA_DEVICE_INTEL",
+  "pr1587_group": "cl_dx9_device_source_intel",
+  "spec_source": "/regspec/all/intel/cl_intel_dx9_media_sharing.txt",
+  "spec_sentence": "clGetDeviceIDsFromDX9INTEL returns CL_SUCCESS if the function is executed"
+ },
+ {
+  "token": "CL_EGL_YUV_PLANE_INTEL",
+  "pr1587_group": "cl_image_info",
+  "spec_source": "/regspec/all/intel/cl_intel_egl_image_yuv.txt",
+  "spec_sentence": "and <image> was not created by the function clCreateFromEGLImageKHR."
+ },
+ {
+  "token": "CL_IMAGE_DX9_PLANE_INTEL",
+  "pr1587_group": "cl_image_info",
+  "spec_source": "/regspec/all/intel/cl_intel_dx9_media_sharing.txt",
+  "spec_sentence": "using clGetMemObjectInfo and clGetImageInfo with <param_name>"
+ },
+ {
+  "token": "CL_IMAGE_ROW_ALIGNMENT_QCOM",
+  "pr1587_group": "cl_image_pitch_info_qcom",
+  "spec_source": "/regspec/all/qcom/cl_qcom_ext_host_ptr.txt",
+  "spec_sentence": "Accepted by the <param_name> argument of clGetDeviceImageInfoQCOM"
+ },
+ {
+  "token": "CL_IMAGE_SLICE_ALIGNMENT_QCOM",
+  "pr1587_group": "cl_image_pitch_info_qcom",
+  "spec_source": "/regspec/all/qcom/cl_qcom_ext_host_ptr.txt",
+  "spec_sentence": "Accepted by the <param_name> argument of clGetDeviceImageInfoQCOM"
+ },
+ {
+  "token": "CL_IMAGE_VA_API_PLANE_INTEL",
+  "pr1587_group": "cl_image_info",
+  "spec_source": "/regspec/all/intel/cl_intel_va_api_media_sharing.txt",
+  "spec_sentence": "\"* CL_INVALID_VA_API_MEDIA_SURFACE_INTEL if <param_name> is"
+ },
+ {
+  "token": "CL_IMPORT_ANDROID_HARDWARE_BUFFER_LAYER_INDEX_ARM",
+  "pr1587_group": "cl_import_properties_arm",
+  "spec_source": "/regspec/all/arm/cl_arm_import_memory.txt",
+  "spec_sentence": "Valid values for CL_IMPORT_ANDROID_HARDWARE_BUFFER_PLANE_INDEX_ARM and"
+ },
+ {
+  "token": "CL_IMPORT_ANDROID_HARDWARE_BUFFER_PLANE_INDEX_ARM",
+  "pr1587_group": "cl_import_properties_arm",
+  "spec_source": "/regspec/all/arm/cl_arm_import_memory.txt",
+  "spec_sentence": "Multiplanar buffers are only supported when backed by a single dma_buf."
+ },
+ {
+  "token": "CL_IMPORT_DMA_BUF_DATA_CONSISTENCY_WITH_HOST_ARM",
+  "pr1587_group": "cl_import_properties_arm",
+  "spec_source": "",
+  "spec_sentence": "(no spec line found)"
+ },
+ {
+  "token": "CL_IMPORT_TYPE_ANDROID_HARDWARE_BUFFER_ARM",
+  "pr1587_group": "cl_import_properties_arm",
+  "spec_source": "/regspec/all/arm/cl_arm_import_memory.txt",
+  "spec_sentence": "New Tokens"
+ },
+ {
+  "token": "CL_IMPORT_TYPE_ARM",
+  "pr1587_group": "cl_import_properties_arm",
+  "spec_source": "",
+  "spec_sentence": "(no spec line found)"
+ },
+ {
+  "token": "CL_IMPORT_TYPE_DMA_BUF_ARM",
+  "pr1587_group": "cl_import_type_arm",
+  "spec_source": "",
+  "spec_sentence": "(no spec line found)"
+ },
+ {
+  "token": "CL_IMPORT_TYPE_HOST_ARM",
+  "pr1587_group": "cl_import_type_arm",
+  "spec_source": "",
+  "spec_sentence": "(no spec line found)"
+ },
+ {
+  "token": "CL_IMPORT_TYPE_PROTECTED_ARM",
+  "pr1587_group": "cl_import_properties_arm",
+  "spec_source": "",
+  "spec_sentence": "(no spec line found)"
+ },
+ {
+  "token": "CL_KERNEL_ARG_HOST_ACCESSIBLE_PIPE_INTEL",
+  "pr1587_group": "cl_kernel_arg_info",
+  "spec_source": "",
+  "spec_sentence": "(no spec line found)"
+ },
+ {
+  "token": "CL_KERNEL_EXEC_INFO_SVM_FINE_GRAIN_SYSTEM_ARM",
+  "pr1587_group": "cl_kernel_exec_info_arm",
+  "spec_source": "/regspec/all/arm/cl_arm_shared_virtual_memory.txt",
+  "spec_sentence": "To be used by clSetKernelExecInfoARM:"
+ },
+ {
+  "token": "CL_KERNEL_EXEC_INFO_SVM_PTRS_ARM",
+  "pr1587_group": "cl_kernel_exec_info_arm",
+  "spec_source": "/regspec/all/arm/cl_arm_shared_virtual_memory.txt",
+  "spec_sentence": "To be used by clSetKernelExecInfoARM:"
+ },
+ {
+  "token": "CL_MEM_DEVICE_ID_INTEL",
+  "pr1587_group": "cl_mem_properties",
+  "spec_source": "",
+  "spec_sentence": "(no spec line found)"
+ },
+ {
+  "token": "CL_MEM_DX9_RESOURCE_INTEL",
+  "pr1587_group": "cl_mem_info",
+  "spec_source": "/regspec/all/intel/cl_intel_dx9_media_sharing.txt",
+  "spec_sentence": "DirectX 9 resource using clCreateFromDX9MediaSurfaceIntel.\""
+ },
+ {
+  "token": "CL_MEM_DX9_SHARED_HANDLE_INTEL",
+  "pr1587_group": "cl_mem_info",
+  "spec_source": "/regspec/all/intel/cl_intel_dx9_media_sharing.txt",
+  "spec_sentence": "clCreateFromDX9MediaSurfaceINTEL,"
+ },
+ {
+  "token": "CL_MEM_LOCALLY_UNCACHED_RESOURCE_INTEL",
+  "pr1587_group": "cl_mem_properties",
+  "spec_source": "",
+  "spec_sentence": "(no spec line found)"
+ },
+ {
+  "token": "CL_MEM_USES_SVM_POINTER_ARM",
+  "pr1587_group": "cl_device_info",
+  "spec_source": "/regspec/all/arm/cl_arm_shared_virtual_memory.txt",
+  "spec_sentence": "To be used by clGetDeviceInfo"
+ },
+ {
+  "token": "CL_MEM_VA_API_MEDIA_SURFACE_INTEL",
+  "pr1587_group": "cl_mem_info",
+  "spec_source": "/regspec/all/intel/cl_intel_va_api_media_sharing.txt",
+  "spec_sentence": "using clGetMemObjectInfo and clGetImageInfo with <param_name>"
+ },
+ {
+  "token": "CL_PREFERRED_DEVICES_FOR_DX9_INTEL",
+  "pr1587_group": "cl_dx9_device_set_intel",
+  "spec_source": "/regspec/all/intel/cl_intel_dx9_media_sharing.txt",
+  "spec_sentence": "OpenCL devices are being queried by clGetDeviceIDsFromDX9INTEL."
+ },
+ {
+  "token": "CL_PREFERRED_DEVICES_FOR_VA_API_INTEL",
+  "pr1587_group": "cl_va_api_device_set_intel",
+  "spec_source": "/regspec/all/intel/cl_intel_va_api_media_sharing.txt",
+  "spec_sentence": "parameter of clGetDeviceIDsFromVA_APIMediaAdapterINTEL:"
+ },
+ {
+  "token": "CL_QUEUE_JOB_SLOT_ARM",
+  "pr1587_group": "cl_queue_properties",
+  "spec_source": "/regspec/all/arm/cl_arm_job_slot_selection.txt",
+  "spec_sentence": "Command queue property"
+ },
+ {
+  "token": "CL_VA_API_DISPLAY_INTEL",
+  "pr1587_group": "cl_va_api_device_source_intel",
+  "spec_source": "/regspec/all/intel/cl_intel_va_api_media_sharing.txt",
+  "spec_sentence": "clGetDeviceIDsFromVA_APIMediaAdapterINTEL returns CL_SUCCESS if the"
+ }
+]

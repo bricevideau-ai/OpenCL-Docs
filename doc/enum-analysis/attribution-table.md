@@ -9,8 +9,8 @@ when a value is valid in several sets.
 ## Coverage
 
 - Total `<enum>` entries in cl.xml: **1334**
-- Assigned one or more groups: **1204**
-- Left ungrouped: **130** (GL precedent: gl.xml leaves ~12,000 of 15,392 ungrouped;
+- Assigned one or more groups: **1293**
+- Left ungrouped: **41** (GL precedent: gl.xml leaves ~12,000 of 15,392 ungrouped;
   ungrouped = platform constants, opaque-handle values, and other context-dependent values
   whose meaning is defined by the API call site rather than by a named value set)
 - Multi-group values: **13** (e.g. ['cl_context_info', 'cl_context_properties'])
@@ -31,19 +31,19 @@ when a value is valid in several sets.
 
 | token | groups | reason (spec evidence) |
 |---|---|---|
-| `CL_CONTEXT_ADAPTER_D3D9EX_KHR` | `cl_context_info, cl_context_properties` | spec evidence [cl_context_info] G3 new-enums list / spec evidence [cl_context_properties] value cell col0 (List of supported context creation properties by {) |
-| `CL_CONTEXT_ADAPTER_D3D9_KHR` | `cl_context_info, cl_context_properties` | spec evidence [cl_context_info] G3 new-enums list / spec evidence [cl_context_properties] value cell col0 (List of supported context creation properties by {) |
-| `CL_CONTEXT_ADAPTER_DXVA_KHR` | `cl_context_info, cl_context_properties` | spec evidence [cl_context_info] G3 new-enums list / spec evidence [cl_context_properties] value cell col0 (List of supported context creation properties by {) |
-| `CL_MEM_ALLOC_FLAGS_INTEL` | `cl_mem_info_intel, cl_mem_properties_intel` | spec evidence [cl_mem_properties_intel] G4 typedef+define / spec evidence [cl_mem_info_intel] value cell col0 (List of supported param_names by clGetMemAllocInf |
-| `CL_QUEUE_FAMILY_INTEL` | `cl_command_queue_info, cl_command_queue_properties` | spec evidence [cl_command_queue_info] G4 sentence+define / spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation propert |
-| `CL_QUEUE_INDEX_INTEL` | `cl_command_queue_info, cl_command_queue_properties` | spec evidence [cl_command_queue_info] G4 sentence+define / spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation propert |
-| `CL_QUEUE_PRIORITY_KHR` | `cl_command_queue_properties, cl_queue_properties` | spec evidence [cl_queue_properties] G3 new-enums list / spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties |
+| `CL_CONTEXT_ADAPTER_D3D9EX_KHR` | `cl_context_info, cl_context_properties` | spec evidence [cl_context_properties] value cell col0 (List of supported context creation properties by {) / spec evidence [cl_context_info] G3 new-enums list |
+| `CL_CONTEXT_ADAPTER_D3D9_KHR` | `cl_context_info, cl_context_properties` | spec evidence [cl_context_properties] value cell col0 (List of supported context creation properties by {) / spec evidence [cl_context_info] G3 new-enums list |
+| `CL_CONTEXT_ADAPTER_DXVA_KHR` | `cl_context_info, cl_context_properties` | spec evidence [cl_context_properties] value cell col0 (List of supported context creation properties by {) / spec evidence [cl_context_info] G3 new-enums list |
+| `CL_MEM_ALLOC_FLAGS_INTEL` | `cl_mem_info_intel, cl_mem_properties_intel` | spec evidence [cl_mem_info_intel] value cell col0 (List of supported param_names by clGetMemAllocInfo) / spec evidence [cl_mem_properties_intel] G4 typedef+defi |
+| `CL_QUEUE_FAMILY_INTEL` | `cl_command_queue_info, cl_command_queue_properties` | spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties by clC) / spec evidence [cl_command_queue_info] G4 sent |
+| `CL_QUEUE_INDEX_INTEL` | `cl_command_queue_info, cl_command_queue_properties` | spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties by clC) / spec evidence [cl_command_queue_info] G4 sent |
+| `CL_QUEUE_PRIORITY_KHR` | `cl_command_queue_properties, cl_queue_properties` | spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties by {cl) / spec evidence [cl_queue_properties] G3 new-en |
 | `CL_QUEUE_PROPERTIES` | `cl_command_queue_info, cl_command_queue_properties` | spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties by {cl) / spec evidence [cl_command_queue_info] value c |
 | `CL_QUEUE_SIZE` | `cl_command_queue_info, cl_command_queue_properties` | spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties by {cl) / spec evidence [cl_command_queue_info] value c |
-| `CL_QUEUE_THROTTLE_KHR` | `cl_command_queue_properties, cl_queue_properties` | spec evidence [cl_queue_properties] G3 new-enums list / spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties |
-| `CL_SAMPLER_ADDRESSING_MODE` | `cl_sampler_info, cl_sampler_properties` | spec evidence [cl_sampler_info] value cell col0 (List of supported param_names by {clGetSamplerInfo) / spec evidence [cl_sampler_properties] value cell col0 (Li |
-| `CL_SAMPLER_FILTER_MODE` | `cl_sampler_info, cl_sampler_properties` | spec evidence [cl_sampler_info] value cell col0 (List of supported param_names by {clGetSamplerInfo) / spec evidence [cl_sampler_properties] value cell col0 (Li |
-| `CL_SAMPLER_NORMALIZED_COORDS` | `cl_sampler_info, cl_sampler_properties` | spec evidence [cl_sampler_info] value cell col0 (List of supported param_names by {clGetSamplerInfo) / spec evidence [cl_sampler_properties] value cell col0 (Li |
+| `CL_QUEUE_THROTTLE_KHR` | `cl_command_queue_properties, cl_queue_properties` | spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties by {cl) / spec evidence [cl_queue_properties] G3 new-en |
+| `CL_SAMPLER_ADDRESSING_MODE` | `cl_sampler_info, cl_sampler_properties` | spec evidence [cl_sampler_properties] value cell col0 (List of supported sampler creation properties by {) / spec evidence [cl_sampler_info] value cell col0 (Li |
+| `CL_SAMPLER_FILTER_MODE` | `cl_sampler_info, cl_sampler_properties` | spec evidence [cl_sampler_properties] value cell col0 (List of supported sampler creation properties by {) / spec evidence [cl_sampler_info] value cell col0 (Li |
+| `CL_SAMPLER_NORMALIZED_COORDS` | `cl_sampler_info, cl_sampler_properties` | spec evidence [cl_sampler_properties] value cell col0 (List of supported sampler creation properties by {) / spec evidence [cl_sampler_info] value cell col0 (Li |
 
 ## Full assignment table
 
@@ -51,10 +51,10 @@ when a value is valid in several sets.
 |---|---|---|---|
 | `CL_A` | cl_device_info | `cl_channel_order` | spec evidence [cl_channel_order] value cell col0 (Image Channel Order mapping) |
 | `CL_ABGR` | cl_device_info | `cl_channel_order` | spec evidence [cl_channel_order] value cell col0 (Image Channel Order mapping) |
-| `CL_ACCELERATOR_CONTEXT_INTEL` | enums.4090 | — (ungrouped, GL precedent) |  |
-| `CL_ACCELERATOR_DESCRIPTOR_INTEL` | enums.4090 | — (ungrouped, GL precedent) |  |
-| `CL_ACCELERATOR_REFERENCE_COUNT_INTEL` | enums.4090 | — (ungrouped, GL precedent) |  |
-| `CL_ACCELERATOR_TYPE_INTEL` | enums.4090 | — (ungrouped, GL precedent) |  |
+| `CL_ACCELERATOR_CONTEXT_INTEL` | enums.4090 | `cl_accelerator_info_intel` | manual: /regspec/all/intel/cl_intel_accelerator.txt — pointed to by <param_value>.  This size is dependent on the param_name, and [verified vs Khronos |
+| `CL_ACCELERATOR_DESCRIPTOR_INTEL` | enums.4090 | `cl_accelerator_info_intel` | manual: /regspec/all/intel/cl_intel_accelerator.txt — pointed to by <param_value>.  This size is dependent on the param_name, and [verified vs Khronos |
+| `CL_ACCELERATOR_REFERENCE_COUNT_INTEL` | enums.4090 | `cl_accelerator_info_intel` | manual: /regspec/all/intel/cl_intel_accelerator.txt — pointed to by <param_value>.  This size is dependent on the param_name, and [verified vs Khronos |
+| `CL_ACCELERATOR_TYPE_INTEL` | enums.4090 | `cl_accelerator_info_intel` | manual: /regspec/all/intel/cl_intel_accelerator.txt — pointed to by <param_value>.  This size is dependent on the param_name, and [verified vs Khronos |
 | `CL_ACCELERATOR_TYPE_MOTION_ESTIMATION_INTEL` | cl_accelerator_type_intel | `cl_accelerator_type_intel` | R1 C typedef container cl_accelerator_type_intel (container-declared) |
 | `CL_ACCELERATOR_TYPE_NOT_SUPPORTED_INTEL` | ErrorCodes.1094 | `ErrorCode` | R3 cl.xml ErrorCodes container (GL precedent group=ErrorCode; spec: same set as API return values) |
 | `CL_ADAPTER_D3D9EX_KHR` | enums.2000 | `cl_dx9_media_adapter_type_khr` | spec evidence [cl_dx9_media_adapter_type_khr] G3 new-enums list |
@@ -73,9 +73,9 @@ when a value is valid in several sets.
 | `CL_AFFINITY_DOMAIN_NUMA_EXT` | cl_affinity_domain_ext | `cl_affinity_domain_ext` | R1 C typedef container cl_affinity_domain_ext (container-declared) |
 | `CL_ALL_DEVICES_FOR_D3D10_KHR` | enums.4010 | `cl_d3d10_device_set_khr` | spec evidence [cl_d3d10_device_set_khr] G3 new-enums list |
 | `CL_ALL_DEVICES_FOR_D3D11_KHR` | enums.4010 | `cl_d3d11_device_set_khr` | spec evidence [cl_d3d11_device_set_khr] G3 new-enums list |
-| `CL_ALL_DEVICES_FOR_DX9_INTEL` | enums.4010 | — (ungrouped, GL precedent) |  |
+| `CL_ALL_DEVICES_FOR_DX9_INTEL` | enums.4010 | `cl_dx9_device_set_intel` | manual: /regspec/all/intel/cl_intel_dx9_media_sharing.txt — OpenCL devices are being queried by clGetDeviceIDsFromDX9INTEL. [verified vs KhronosGroup/ |
 | `CL_ALL_DEVICES_FOR_DX9_MEDIA_ADAPTER_KHR` | enums.2000 | `cl_dx9_media_adapter_set_khr` | spec evidence [cl_dx9_media_adapter_set_khr] G3 new-enums list |
-| `CL_ALL_DEVICES_FOR_VA_API_INTEL` | enums.4090 | — (ungrouped, GL precedent) |  |
+| `CL_ALL_DEVICES_FOR_VA_API_INTEL` | enums.4090 | `cl_va_api_device_set_intel` | manual: /regspec/all/intel/cl_intel_va_api_media_sharing.txt — parameter of clGetDeviceIDsFromVA_APIMediaAdapterINTEL: [verified vs KhronosGroup/OpenC |
 | `CL_ARGB` | cl_device_info | `cl_channel_order` | spec evidence [cl_channel_order] value cell col0 (Image Channel Order mapping) |
 | `CL_AVC_ME_BIDIR_WEIGHT_HALF_INTEL` | cl_intel_device_side_avc_motion_estimation.weight | `cl_intel_device_side_avc_motion_estimation.weight` | R1 C typedef container cl_intel_device_side_avc_motion_estimation.weight (container-declared) |
 | `CL_AVC_ME_BIDIR_WEIGHT_QUARTER_INTEL` | cl_intel_device_side_avc_motion_estimation.weight | `cl_intel_device_side_avc_motion_estimation.weight` | R1 C typedef container cl_intel_device_side_avc_motion_estimation.weight (container-declared) |
@@ -200,7 +200,7 @@ when a value is valid in several sets.
 | `CL_COMMAND_ACQUIRE_EXTERNAL_MEM_OBJECTS_KHR` | enums.2000 | `cl_command_type` | spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types) |
 | `CL_COMMAND_ACQUIRE_GL_OBJECTS` | cl_device_info | `cl_command_type` | spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types) |
 | `CL_COMMAND_ACQUIRE_GRALLOC_OBJECTS_IMG` | enums.40D0 | `cl_command_type` | manual: cl_img_use_gralloc_ptr new command type (clEnqueueAcquire/ReleaseGrallocObject) |
-| `CL_COMMAND_ACQUIRE_VA_API_MEDIA_SURFACES_INTEL` | enums.4090 | — (ungrouped, GL precedent) |  |
+| `CL_COMMAND_ACQUIRE_VA_API_MEDIA_SURFACES_INTEL` | enums.4090 | `cl_command_type` | manual: /regspec/all/intel/cl_intel_va_api_media_sharing.txt — surface using clCreateFromVA_APIMediaSurfaceINTEL." [verified vs KhronosGroup/OpenCL-Re |
 | `CL_COMMAND_BARRIER` | cl_device_info | `cl_command_type` | spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types) |
 | `CL_COMMAND_BUFFER_CAPABILITY_DEVICE_SIDE_ENQUEUE_KHR` | cl_device_command_buffer_capabilities_khr | `cl_device_command_buffer_capabilities_khr` | R1 C typedef container cl_device_command_buffer_capabilities_khr (spec-listed) |
 | `CL_COMMAND_BUFFER_CAPABILITY_KERNEL_PRINTF_KHR` | cl_device_command_buffer_capabilities_khr | `cl_device_command_buffer_capabilities_khr` | R1 C typedef container cl_device_command_buffer_capabilities_khr (spec-listed) |
@@ -242,7 +242,7 @@ when a value is valid in several sets.
 | `CL_COMMAND_MEMFILL_INTEL` | enums.4200 | `cl_kernel_exec_info` | spec evidence [cl_kernel_exec_info] G4 sentence+define |
 | `CL_COMMAND_MIGRATEMEM_INTEL` | enums.4200 | `cl_kernel_exec_info` | spec evidence [cl_kernel_exec_info] G4 sentence+define |
 | `CL_COMMAND_MIGRATE_MEM_OBJECTS` | cl_device_info | `cl_command_type` | spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types) |
-| `CL_COMMAND_MIGRATE_MEM_OBJECT_EXT` | enums.4040 | — (ungrouped, GL precedent) |  |
+| `CL_COMMAND_MIGRATE_MEM_OBJECT_EXT` | enums.4040 | `cl_command_type` | manual: /regspec/all/ext/cl_ext_migrate_memobject.txt — <param_name> is CL_EVENT_COMMAND_TYPE: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08] |
 | `CL_COMMAND_NATIVE_KERNEL` | cl_device_info | `cl_command_type` | spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types) |
 | `CL_COMMAND_NDRANGE_KERNEL` | cl_device_info | `cl_command_type` | spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types) |
 | `CL_COMMAND_QUEUE_SCHEDULING_WORK_GROUP_ARBITRATION_ALGORITHM_IMG` | enums.4220 | — (ungrouped, GL precedent) |  |
@@ -267,20 +267,20 @@ when a value is valid in several sets.
 | `CL_COMMAND_RELEASE_EXTERNAL_MEM_OBJECTS_KHR` | enums.2000 | `cl_command_type` | spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types) |
 | `CL_COMMAND_RELEASE_GL_OBJECTS` | cl_device_info | `cl_command_type` | spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types) |
 | `CL_COMMAND_RELEASE_GRALLOC_OBJECTS_IMG` | enums.40D0 | `cl_command_type` | manual: cl_img_use_gralloc_ptr new command type |
-| `CL_COMMAND_RELEASE_VA_API_MEDIA_SURFACES_INTEL` | enums.4090 | — (ungrouped, GL precedent) |  |
+| `CL_COMMAND_RELEASE_VA_API_MEDIA_SURFACES_INTEL` | enums.4090 | `cl_command_type` | manual: /regspec/all/intel/cl_intel_va_api_media_sharing.txt — surface using clCreateFromVA_APIMediaSurfaceINTEL." [verified vs KhronosGroup/OpenCL-Re |
 | `CL_COMMAND_SEMAPHORE_SIGNAL_KHR` | enums.2000 | `cl_command_type` | spec evidence [cl_command_type] G3 new-enums list |
 | `CL_COMMAND_SEMAPHORE_WAIT_KHR` | enums.2000 | `cl_command_type` | spec evidence [cl_command_type] G3 new-enums list |
 | `CL_COMMAND_SVM_FREE` | cl_device_info | `cl_command_type` | spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types) |
-| `CL_COMMAND_SVM_FREE_ARM` | enums.40B0 | — (ungrouped, GL precedent) |  |
+| `CL_COMMAND_SVM_FREE_ARM` | enums.40B0 | `cl_command_type` | manual: /regspec/all/arm/cl_arm_shared_virtual_memory.txt — To be used by clGetEventInfo: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08] |
 | `CL_COMMAND_SVM_MAP` | cl_device_info | `cl_command_type` | spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types) |
-| `CL_COMMAND_SVM_MAP_ARM` | enums.40B0 | — (ungrouped, GL precedent) |  |
+| `CL_COMMAND_SVM_MAP_ARM` | enums.40B0 | `cl_command_type` | manual: /regspec/all/arm/cl_arm_shared_virtual_memory.txt — To be used by clGetEventInfo: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08] |
 | `CL_COMMAND_SVM_MEMCPY` | cl_device_info | `cl_command_type` | spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types) |
-| `CL_COMMAND_SVM_MEMCPY_ARM` | enums.40B0 | — (ungrouped, GL precedent) |  |
+| `CL_COMMAND_SVM_MEMCPY_ARM` | enums.40B0 | `cl_command_type` | manual: /regspec/all/arm/cl_arm_shared_virtual_memory.txt — To be used by clGetEventInfo: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08] |
 | `CL_COMMAND_SVM_MEMFILL` | cl_device_info | `cl_command_type` | spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types) |
-| `CL_COMMAND_SVM_MEMFILL_ARM` | enums.40B0 | — (ungrouped, GL precedent) |  |
+| `CL_COMMAND_SVM_MEMFILL_ARM` | enums.40B0 | `cl_command_type` | manual: /regspec/all/arm/cl_arm_shared_virtual_memory.txt — To be used by clGetEventInfo: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08] |
 | `CL_COMMAND_SVM_MIGRATE_MEM` | cl_device_info | `cl_command_type` | spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types) |
 | `CL_COMMAND_SVM_UNMAP` | cl_device_info | `cl_command_type` | spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types) |
-| `CL_COMMAND_SVM_UNMAP_ARM` | enums.40B0 | — (ungrouped, GL precedent) |  |
+| `CL_COMMAND_SVM_UNMAP_ARM` | enums.40B0 | `cl_command_type` | manual: /regspec/all/arm/cl_arm_shared_virtual_memory.txt — To be used by clGetEventInfo: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08] |
 | `CL_COMMAND_TASK` | cl_device_info | `cl_command_type` | spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types) |
 | `CL_COMMAND_TERMINATED_ITSELF_WITH_FAILURE_ARM` | ErrorCodes.1108 | `ErrorCode` | R3 cl.xml ErrorCodes container (GL precedent group=ErrorCode; spec: same set as API return values) |
 | `CL_COMMAND_TERMINATION_COMPLETION_ARM` | cl_command_termination_reason_arm | `cl_command_termination_reason_arm` | R1 C typedef container cl_command_termination_reason_arm (spec-listed) |
@@ -303,14 +303,14 @@ when a value is valid in several sets.
 | `CL_CONTEXT_D3D10_PREFER_SHARED_RESOURCES_KHR` | enums.4010 | `cl_context_info` | spec evidence [cl_context_info] G3 new-enums list |
 | `CL_CONTEXT_D3D11_DEVICE_KHR` | enums.4010 | `cl_context_properties` | spec evidence [cl_context_properties] G3 new-enums list |
 | `CL_CONTEXT_D3D11_PREFER_SHARED_RESOURCES_KHR` | enums.4010 | `cl_context_info` | spec evidence [cl_context_info] G3 new-enums list |
-| `CL_CONTEXT_D3D9EX_DEVICE_INTEL` | enums.4070 | — (ungrouped, GL precedent) |  |
-| `CL_CONTEXT_D3D9_DEVICE_INTEL` | enums.4010 | — (ungrouped, GL precedent) |  |
+| `CL_CONTEXT_D3D9EX_DEVICE_INTEL` | enums.4070 | `cl_context_properties` | manual: /regspec/all/intel/cl_intel_dx9_media_sharing.txt — clCreateContext and clCreateContextFromType: [verified vs KhronosGroup/OpenCL-Registry 202 |
+| `CL_CONTEXT_D3D9_DEVICE_INTEL` | enums.4010 | `cl_context_properties` | manual: intel/cl_intel_dx9_media_sharing.txt L98-99: property name in <properties> of clCreateContext [verified vs KhronosGroup/OpenCL-Registry 2026-1 |
 | `CL_CONTEXT_DEVICES` | cl_device_info | `cl_context_info` | spec evidence [cl_context_info] value cell col0 (List of supported param_names by {clGetContextInfo) |
 | `CL_CONTEXT_DIAGNOSTICS_LEVEL_ALL_INTEL` | cl_diagnostic_verbose_level_intel | `cl_diagnostic_verbose_level_intel` | R1 C typedef container cl_diagnostic_verbose_level_intel (container-declared) |
 | `CL_CONTEXT_DIAGNOSTICS_LEVEL_BAD_INTEL` | cl_diagnostic_verbose_level_intel | `cl_diagnostic_verbose_level_intel` | R1 C typedef container cl_diagnostic_verbose_level_intel (container-declared) |
 | `CL_CONTEXT_DIAGNOSTICS_LEVEL_GOOD_INTEL` | cl_diagnostic_verbose_level_intel | `cl_diagnostic_verbose_level_intel` | R1 C typedef container cl_diagnostic_verbose_level_intel (container-declared) |
 | `CL_CONTEXT_DIAGNOSTICS_LEVEL_NEUTRAL_INTEL` | cl_diagnostic_verbose_level_intel | `cl_diagnostic_verbose_level_intel` | R1 C typedef container cl_diagnostic_verbose_level_intel (container-declared) |
-| `CL_CONTEXT_DXVA_DEVICE_INTEL` | enums.4070 | — (ungrouped, GL precedent) |  |
+| `CL_CONTEXT_DXVA_DEVICE_INTEL` | enums.4070 | `cl_context_properties` | manual: /regspec/all/intel/cl_intel_dx9_media_sharing.txt — Add to the list of errors for clCreateContext: [verified vs KhronosGroup/OpenCL-Registry 2 |
 | `CL_CONTEXT_ENHANCED_EVENT_EXECUTION_STATUS_IMG` | cl_context_safety_properties_img | `cl_context_safety_properties_img` | R1 C typedef container cl_context_safety_properties_img (container-declared) |
 | `CL_CONTEXT_INTEROP_USER_SYNC` | cl_device_info | `cl_context_properties` | spec evidence [cl_context_properties] value cell col0 (List of supported context creation properties by {) |
 | `CL_CONTEXT_MEMORY_INITIALIZE_KHR` | enums.2000 | `cl_context_properties` | spec evidence [cl_context_properties] G3 new-enums list |
@@ -322,10 +322,10 @@ when a value is valid in several sets.
 | `CL_CONTEXT_PROPERTIES` | cl_device_info | `cl_context_info` | spec evidence [cl_context_info] value cell col0 (List of supported param_names by {clGetContextInfo) |
 | `CL_CONTEXT_REFERENCE_COUNT` | cl_device_info | `cl_context_info` | spec evidence [cl_context_info] value cell col0 (List of supported param_names by {clGetContextInfo) |
 | `CL_CONTEXT_SAFETY_PROPERTIES_IMG` | enums.40D0 | `cl_context_safety_properties_img` | spec evidence [cl_context_safety_properties_img] G4 typedef+define |
-| `CL_CONTEXT_SHOW_DIAGNOSTICS_INTEL` | enums.4100 | — (ungrouped, GL precedent) |  |
+| `CL_CONTEXT_SHOW_DIAGNOSTICS_INTEL` | enums.4100 | `cl_context_properties` | manual: /regspec/all/intel/cl_intel_driver_diagnostics.txt — clCreateContext and clCreateContextFromType: [verified vs KhronosGroup/OpenCL-Registry 20 |
 | `CL_CONTEXT_TERMINATED_KHR` | ErrorCodes.1121 | `ErrorCode` | R3 cl.xml ErrorCodes container (GL precedent group=ErrorCode; spec: same set as API return values); spec evidence [ErrorCode] G3 new-error-codes list |
 | `CL_CONTEXT_TERMINATE_KHR` | enums.2000 | `cl_context_properties` | spec evidence [cl_context_properties] G3 new-enums list |
-| `CL_CONTEXT_VA_API_DISPLAY_INTEL` | enums.4090 | — (ungrouped, GL precedent) |  |
+| `CL_CONTEXT_VA_API_DISPLAY_INTEL` | enums.4090 | `cl_context_properties` | manual: /regspec/all/intel/cl_intel_va_api_media_sharing.txt — Add to the list of errors for clCreateContext: [verified vs KhronosGroup/OpenCL-Registr |
 | `CL_CONTEXT_WORKGROUP_PROTECTION_IMG` | cl_context_safety_properties_img | `cl_context_safety_properties_img` | R1 C typedef container cl_context_safety_properties_img (container-declared) |
 | `CL_CURRENT_DEVICE_FOR_GL_CONTEXT_KHR` | enums.2000 | `cl_gl_context_info` | spec evidence [cl_gl_context_info] G3 new-enums list |
 | `CL_D3D10_DEVICE_KHR` | enums.4010 | `cl_d3d10_device_source_khr` | spec evidence [cl_d3d10_device_source_khr] G3 new-enums list |
@@ -336,8 +336,8 @@ when a value is valid in several sets.
 | `CL_D3D11_DXGI_ADAPTER_KHR` | enums.4010 | `cl_d3d11_device_source_khr` | spec evidence [cl_d3d11_device_source_khr] G3 new-enums list |
 | `CL_D3D11_RESOURCE_ALREADY_ACQUIRED_KHR` | ErrorCodes.1002 | `ErrorCode` | R3 cl.xml ErrorCodes container (GL precedent group=ErrorCode; spec: same set as API return values); spec evidence [ErrorCode] G3 new-error-codes list |
 | `CL_D3D11_RESOURCE_NOT_ACQUIRED_KHR` | ErrorCodes.1002 | `ErrorCode` | R3 cl.xml ErrorCodes container (GL precedent group=ErrorCode; spec: same set as API return values); spec evidence [ErrorCode] G3 new-error-codes list |
-| `CL_D3D9EX_DEVICE_INTEL` | enums.4070 | — (ungrouped, GL precedent) |  |
-| `CL_D3D9_DEVICE_INTEL` | enums.4010 | — (ungrouped, GL precedent) |  |
+| `CL_D3D9EX_DEVICE_INTEL` | enums.4070 | `cl_dx9_device_source_intel` | manual: /regspec/all/intel/cl_intel_dx9_media_sharing.txt — clGetDeviceIDsFromDX9INTEL returns CL_SUCCESS if the function is executed [verified vs Khr |
+| `CL_D3D9_DEVICE_INTEL` | enums.4010 | `cl_dx9_device_source_intel` | manual: /regspec/all/intel/cl_intel_dx9_media_sharing.txt — clGetDeviceIDsFromDX9INTEL returns CL_SUCCESS if the function is executed [verified vs Khr |
 | `CL_DBL_DIG` | Constants | `C99MathConstants` | manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...) |
 | `CL_DBL_EPSILON` | Constants | `C99MathConstants` | manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...) |
 | `CL_DBL_MANT_DIG` | Constants | `C99MathConstants` | manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...) |
@@ -352,7 +352,7 @@ when a value is valid in several sets.
 | `CL_DEPTH_STENCIL` | cl_device_info | `cl_channel_order` | spec evidence [cl_channel_order] G3 new-enums list |
 | `CL_DEVICES_FOR_GL_CONTEXT_KHR` | enums.2000 | `cl_gl_context_info` | spec evidence [cl_gl_context_info] G3 new-enums list |
 | `CL_DEVICE_ADDRESS_BITS` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo}) |
-| `CL_DEVICE_AFFINITY_DOMAINS_EXT` | enums.4050 | — (ungrouped, GL precedent) |  |
+| `CL_DEVICE_AFFINITY_DOMAINS_EXT` | enums.4050 | `cl_device_info` | manual: /regspec/all/ext/cl_ext_device_fission.txt — clGetDeviceInfo: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08] |
 | `CL_DEVICE_AFFINITY_DOMAIN_L1_CACHE` | cl_device_affinity_domain | `cl_device_affinity_domain` | R1 C typedef container cl_device_affinity_domain (container-declared) |
 | `CL_DEVICE_AFFINITY_DOMAIN_L2_CACHE` | cl_device_affinity_domain | `cl_device_affinity_domain` | R1 C typedef container cl_device_affinity_domain (container-declared) |
 | `CL_DEVICE_AFFINITY_DOMAIN_L3_CACHE` | cl_device_affinity_domain | `cl_device_affinity_domain` | R1 C typedef container cl_device_affinity_domain (container-declared) |
@@ -369,11 +369,11 @@ when a value is valid in several sets.
 | `CL_DEVICE_ATOMIC_SCOPE_WORK_GROUP` | cl_device_atomic_capabilities | `cl_device_atomic_capabilities` | R1 C typedef container cl_device_atomic_capabilities (container-declared) |
 | `CL_DEVICE_ATOMIC_SCOPE_WORK_ITEM` | cl_device_atomic_capabilities | `cl_device_atomic_capabilities` | R1 C typedef container cl_device_atomic_capabilities (container-declared) |
 | `CL_DEVICE_AVAILABLE` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo}) |
-| `CL_DEVICE_AVAILABLE_ASYNC_QUEUES_AMD` | enums.4040 | — (ungrouped, GL precedent) |  |
-| `CL_DEVICE_AVC_ME_SUPPORTS_PREEMPTION_INTEL` | enums.4100 | — (ungrouped, GL precedent) |  |
-| `CL_DEVICE_AVC_ME_SUPPORTS_TEXTURE_SAMPLER_USE_INTEL` | enums.4100 | — (ungrouped, GL precedent) |  |
-| `CL_DEVICE_AVC_ME_VERSION_INTEL` | enums.4100 | — (ungrouped, GL precedent) |  |
-| `CL_DEVICE_BOARD_NAME_AMD` | enums.4030 | — (ungrouped, GL precedent) |  |
+| `CL_DEVICE_AVAILABLE_ASYNC_QUEUES_AMD` | enums.4040 | `cl_device_info` | manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the number of available async queues: [verified vs KhronosGroup/OpenCL-Registry 20 |
+| `CL_DEVICE_AVC_ME_SUPPORTS_PREEMPTION_INTEL` | enums.4100 | `cl_device_info` | manual: /regspec/all/intel/cl_intel_device_side_avc_motion_estimation.txt — Accepted as arguments to clGetDeviceInfo [verified vs KhronosGroup/OpenCL- |
+| `CL_DEVICE_AVC_ME_SUPPORTS_TEXTURE_SAMPLER_USE_INTEL` | enums.4100 | `cl_device_info` | manual: /regspec/all/intel/cl_intel_device_side_avc_motion_estimation.txt — Accepted as arguments to clGetDeviceInfo [verified vs KhronosGroup/OpenCL- |
+| `CL_DEVICE_AVC_ME_VERSION_INTEL` | enums.4100 | `cl_device_info` | manual: /regspec/all/intel/cl_intel_device_side_avc_motion_estimation.txt — Accepted as arguments to clGetDeviceInfo [verified vs KhronosGroup/OpenCL- |
+| `CL_DEVICE_BOARD_NAME_AMD` | enums.4030 | `cl_device_info` | manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the SKU board name for the device: [verified vs KhronosGroup/OpenCL-Registry 2026- |
 | `CL_DEVICE_BUILT_IN_KERNELS` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo}) |
 | `CL_DEVICE_BUILT_IN_KERNELS_WITH_VERSION` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo}) |
 | `CL_DEVICE_BUILT_IN_KERNELS_WITH_VERSION_KHR` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] G3 new-enums list |
@@ -383,9 +383,9 @@ when a value is valid in several sets.
 | `CL_DEVICE_COMMAND_BUFFER_SUPPORTED_QUEUE_PROPERTIES_KHR` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] G3 new-enums list |
 | `CL_DEVICE_COMMAND_BUFFER_SYNC_DEVICES_KHR` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] G3 new-enums list |
 | `CL_DEVICE_COMPILER_AVAILABLE` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo}) |
-| `CL_DEVICE_COMPUTE_CAPABILITY_MAJOR_NV` | enums.4000 | — (ungrouped, GL precedent) |  |
-| `CL_DEVICE_COMPUTE_CAPABILITY_MINOR_NV` | enums.4000 | — (ungrouped, GL precedent) |  |
-| `CL_DEVICE_COMPUTE_UNITS_BITFIELD_ARM` | enums.40B0 | — (ungrouped, GL precedent) |  |
+| `CL_DEVICE_COMPUTE_CAPABILITY_MAJOR_NV` | enums.4000 | `cl_device_info` | manual: nv/cl_nv_device_attribute_query.txt — table 4.3 extension: 'Returns the major revision number that defines the CUDA compute capability' [verif |
+| `CL_DEVICE_COMPUTE_CAPABILITY_MINOR_NV` | enums.4000 | `cl_device_info` | manual: nv/cl_nv_device_attribute_query.txt — same table: 'Returns the minor revision number' [verified vs KhronosGroup/OpenCL-Registry 2026-10-08] |
+| `CL_DEVICE_COMPUTE_UNITS_BITFIELD_ARM` | enums.40B0 | `cl_device_info` | manual: /regspec/all/arm/cl_arm_core_id.txt — New Procedures and Functions [verified vs KhronosGroup/OpenCL-Registry 2026-10-08] |
 | `CL_DEVICE_CONTROLLED_TERMINATION_CAPABILITIES_ARM` | enums.41E0 | `cl_device_info` | manual: cl_arm_controlled_kernel_termination: param_name of clGetDeviceInfo returning cl_device_controlled_termination_capabilities_arm bitfield |
 | `CL_DEVICE_CONTROLLED_TERMINATION_FAILURE_ARM` | cl_device_controlled_termination_capabilities_arm | `cl_device_controlled_termination_capabilities_arm` | R1 C typedef container cl_device_controlled_termination_capabilities_arm (container-declared) |
 | `CL_DEVICE_CONTROLLED_TERMINATION_QUERY_ARM` | cl_device_controlled_termination_capabilities_arm | `cl_device_controlled_termination_capabilities_arm` | R1 C typedef container cl_device_controlled_termination_capabilities_arm (container-declared) |
@@ -404,26 +404,26 @@ when a value is valid in several sets.
 | `CL_DEVICE_EXTENSIONS_WITH_VERSION_KHR` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] G3 new-enums list |
 | `CL_DEVICE_EXTERNAL_MEMORY_IMPORT_ASSUME_LINEAR_IMAGES_HANDLE_TYPES_KHR` | enums.2000 | `cl_device_info` | spec evidence [cl_device_info] G3 new-enums list |
 | `CL_DEVICE_EXTERNAL_MEMORY_IMPORT_HANDLE_TYPES_KHR` | enums.2000 | `cl_device_info` | spec evidence [cl_device_info] G3 new-enums list |
-| `CL_DEVICE_EXT_MEM_PADDING_IN_BYTES_QCOM` | enums.40A0 | — (ungrouped, GL precedent) |  |
+| `CL_DEVICE_EXT_MEM_PADDING_IN_BYTES_QCOM` | enums.40A0 | `cl_device_info` | manual: /regspec/all/qcom/cl_qcom_ext_host_ptr.txt — Add the following token to Table 4.3 (clGetDeviceInfo OpenCL Device [verified vs KhronosGroup/Ope |
 | `CL_DEVICE_FEATURE_CAPABILITIES_INTEL` | enums.4250 | `cl_device_info` | spec evidence [cl_device_info] value cell col0 (List of supported param_names by clGetDeviceInfo) |
 | `CL_DEVICE_FEATURE_FLAG_DP4A_INTEL` | cl_device_feature_capabilities_intel | `cl_device_feature_capabilities_intel` | R1 C typedef container cl_device_feature_capabilities_intel (container-declared) |
 | `CL_DEVICE_FEATURE_FLAG_DPAS_INTEL` | cl_device_feature_capabilities_intel | `cl_device_feature_capabilities_intel` | R1 C typedef container cl_device_feature_capabilities_intel (container-declared) |
 | `CL_DEVICE_GENERIC_ADDRESS_SPACE_SUPPORT` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo}) |
-| `CL_DEVICE_GFXIP_MAJOR_AMD` | enums.4040 | — (ungrouped, GL precedent) |  |
-| `CL_DEVICE_GFXIP_MINOR_AMD` | enums.4040 | — (ungrouped, GL precedent) |  |
+| `CL_DEVICE_GFXIP_MAJOR_AMD` | enums.4040 | `cl_device_info` | manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the core engine GFXIP major version: [verified vs KhronosGroup/OpenCL-Registry 202 |
+| `CL_DEVICE_GFXIP_MINOR_AMD` | enums.4040 | `cl_device_info` | manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the core engine GFXIP minor version: [verified vs KhronosGroup/OpenCL-Registry 202 |
 | `CL_DEVICE_GLOBAL_FP_ATOMIC_ADD_EXT` | cl_device_fp_atomic_capabilities_ext | `cl_device_fp_atomic_capabilities_ext` | R1 C typedef container cl_device_fp_atomic_capabilities_ext (container-declared) |
 | `CL_DEVICE_GLOBAL_FP_ATOMIC_LOAD_STORE_EXT` | cl_device_fp_atomic_capabilities_ext | `cl_device_fp_atomic_capabilities_ext` | R1 C typedef container cl_device_fp_atomic_capabilities_ext (container-declared) |
 | `CL_DEVICE_GLOBAL_FP_ATOMIC_MIN_MAX_EXT` | cl_device_fp_atomic_capabilities_ext | `cl_device_fp_atomic_capabilities_ext` | R1 C typedef container cl_device_fp_atomic_capabilities_ext (container-declared) |
-| `CL_DEVICE_GLOBAL_FREE_MEMORY_AMD` | enums.4030 | — (ungrouped, GL precedent) |  |
+| `CL_DEVICE_GLOBAL_FREE_MEMORY_AMD` | enums.4030 | `cl_device_info` | manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the global free memory in KBytes for the device: [verified vs KhronosGroup/OpenCL- |
 | `CL_DEVICE_GLOBAL_MEM_CACHELINE_SIZE` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo}) |
 | `CL_DEVICE_GLOBAL_MEM_CACHE_SIZE` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo}) |
 | `CL_DEVICE_GLOBAL_MEM_CACHE_TYPE` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo}) |
-| `CL_DEVICE_GLOBAL_MEM_CHANNELS_AMD` | enums.4040 | — (ungrouped, GL precedent) |  |
-| `CL_DEVICE_GLOBAL_MEM_CHANNEL_BANKS_AMD` | enums.4040 | — (ungrouped, GL precedent) |  |
-| `CL_DEVICE_GLOBAL_MEM_CHANNEL_BANK_WIDTH_AMD` | enums.4040 | — (ungrouped, GL precedent) |  |
+| `CL_DEVICE_GLOBAL_MEM_CHANNELS_AMD` | enums.4040 | `cl_device_info` | manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the number of global memory channels: [verified vs KhronosGroup/OpenCL-Registry 20 |
+| `CL_DEVICE_GLOBAL_MEM_CHANNEL_BANKS_AMD` | enums.4040 | `cl_device_info` | manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the number of banks in each global memory channel: [verified vs KhronosGroup/OpenC |
+| `CL_DEVICE_GLOBAL_MEM_CHANNEL_BANK_WIDTH_AMD` | enums.4040 | `cl_device_info` | manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the width in bytes of each of global memory bank: [verified vs KhronosGroup/OpenCL |
 | `CL_DEVICE_GLOBAL_MEM_SIZE` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo}) |
 | `CL_DEVICE_GLOBAL_VARIABLE_PREFERRED_TOTAL_SIZE` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo}) |
-| `CL_DEVICE_GPU_OVERLAP_NV` | enums.4000 | — (ungrouped, GL precedent) |  |
+| `CL_DEVICE_GPU_OVERLAP_NV` | enums.4000 | `cl_device_info` | manual: nv/cl_nv_device_attribute_query.txt — 'Returns CL_TRUE if the device can concurrently copy memory' [verified vs KhronosGroup/OpenCL-Registry 2 |
 | `CL_DEVICE_HALF_FP_ATOMIC_CAPABILITIES_EXT` | enums.4230 | `cl_device_info` | spec evidence [cl_device_info] G4 sentence+define |
 | `CL_DEVICE_HALF_FP_CONFIG` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] G3 new-enums list |
 | `CL_DEVICE_HOST_MEM_CAPABILITIES_INTEL` | enums.4190 | `cl_device_info` | spec evidence [cl_device_info] G4 sentence+define |
@@ -455,22 +455,22 @@ when a value is valid in several sets.
 | `CL_DEVICE_INTEGER_DOT_PRODUCT_INPUT_4x8BIT_KHR` | cl_device_integer_dot_product_capabilities_khr | `cl_device_integer_dot_product_capabilities_khr` | R1 C typedef container cl_device_integer_dot_product_capabilities_khr (container-declared) |
 | `CL_DEVICE_INTEGER_DOT_PRODUCT_INPUT_4x8BIT_PACKED` | cl_device_integer_dot_product_capabilities | `cl_device_integer_dot_product_capabilities` | R1 C typedef container cl_device_integer_dot_product_capabilities (container-declared) |
 | `CL_DEVICE_INTEGER_DOT_PRODUCT_INPUT_4x8BIT_PACKED_KHR` | cl_device_integer_dot_product_capabilities_khr | `cl_device_integer_dot_product_capabilities_khr` | R1 C typedef container cl_device_integer_dot_product_capabilities_khr (container-declared) |
-| `CL_DEVICE_INTEGRATED_MEMORY_NV` | enums.4000 | — (ungrouped, GL precedent) |  |
+| `CL_DEVICE_INTEGRATED_MEMORY_NV` | enums.4000 | `cl_device_info` | manual: nv/cl_nv_device_attribute_query.txt — 'CL_TRUE if the device is integrated with the memory' [verified vs KhronosGroup/OpenCL-Registry 2026-10- |
 | `CL_DEVICE_IP_VERSION_INTEL` | enums.4250 | `cl_device_info` | spec evidence [cl_device_info] value cell col0 (List of supported param_names by clGetDeviceInfo) |
-| `CL_DEVICE_JOB_SLOTS_ARM` | enums.41E0 | — (ungrouped, GL precedent) |  |
+| `CL_DEVICE_JOB_SLOTS_ARM` | enums.41E0 | `cl_device_info` | manual: /regspec/all/arm/cl_arm_job_slot_selection.txt — New Procedures and Functions [verified vs KhronosGroup/OpenCL-Registry 2026-10-08] |
 | `CL_DEVICE_KERNEL_CLOCK_CAPABILITIES_KHR` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] G3 new-enums list |
 | `CL_DEVICE_KERNEL_CLOCK_SCOPE_DEVICE_KHR` | cl_device_kernel_clock_capabilities_khr | `cl_device_kernel_clock_capabilities_khr` | R1 C typedef container cl_device_kernel_clock_capabilities_khr (spec-listed) |
 | `CL_DEVICE_KERNEL_CLOCK_SCOPE_SUB_GROUP_KHR` | cl_device_kernel_clock_capabilities_khr | `cl_device_kernel_clock_capabilities_khr` | R1 C typedef container cl_device_kernel_clock_capabilities_khr (spec-listed) |
 | `CL_DEVICE_KERNEL_CLOCK_SCOPE_WORK_GROUP_KHR` | cl_device_kernel_clock_capabilities_khr | `cl_device_kernel_clock_capabilities_khr` | R1 C typedef container cl_device_kernel_clock_capabilities_khr (spec-listed) |
-| `CL_DEVICE_KERNEL_EXEC_TIMEOUT_NV` | enums.4000 | — (ungrouped, GL precedent) |  |
+| `CL_DEVICE_KERNEL_EXEC_TIMEOUT_NV` | enums.4000 | `cl_device_info` | manual: nv/cl_nv_device_attribute_query.txt — 'CL_TRUE if there is a run time limit for kernels executed on the device' [verified vs KhronosGroup/Open |
 | `CL_DEVICE_LATEST_CONFORMANCE_VERSION_PASSED` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo}) |
 | `CL_DEVICE_LINKER_AVAILABLE` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo}) |
 | `CL_DEVICE_LOCAL_FP_ATOMIC_ADD_EXT` | cl_device_fp_atomic_capabilities_ext | `cl_device_fp_atomic_capabilities_ext` | R1 C typedef container cl_device_fp_atomic_capabilities_ext (container-declared) |
 | `CL_DEVICE_LOCAL_FP_ATOMIC_LOAD_STORE_EXT` | cl_device_fp_atomic_capabilities_ext | `cl_device_fp_atomic_capabilities_ext` | R1 C typedef container cl_device_fp_atomic_capabilities_ext (container-declared) |
 | `CL_DEVICE_LOCAL_FP_ATOMIC_MIN_MAX_EXT` | cl_device_fp_atomic_capabilities_ext | `cl_device_fp_atomic_capabilities_ext` | R1 C typedef container cl_device_fp_atomic_capabilities_ext (container-declared) |
-| `CL_DEVICE_LOCAL_MEM_BANKS_AMD` | enums.4040 | — (ungrouped, GL precedent) |  |
+| `CL_DEVICE_LOCAL_MEM_BANKS_AMD` | enums.4040 | `cl_device_info` | manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the number of banks of local memory: [verified vs KhronosGroup/OpenCL-Registry 202 |
 | `CL_DEVICE_LOCAL_MEM_SIZE` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo}) |
-| `CL_DEVICE_LOCAL_MEM_SIZE_PER_COMPUTE_UNIT_AMD` | enums.4040 | — (ungrouped, GL precedent) |  |
+| `CL_DEVICE_LOCAL_MEM_SIZE_PER_COMPUTE_UNIT_AMD` | enums.4040 | `cl_device_info` | manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the local memory size in bytes per CU: [verified vs KhronosGroup/OpenCL-Registry 2 |
 | `CL_DEVICE_LOCAL_MEM_TYPE` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo}) |
 | `CL_DEVICE_LUID` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo}) |
 | `CL_DEVICE_LUID_KHR` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] G3 new-enums list |
@@ -496,13 +496,13 @@ when a value is valid in several sets.
 | `CL_DEVICE_MAX_WARP_COUNT_ARM` | enums.41E0 | `cl_device_info` | manual: cl_arm_scheduling_controls L49-66 param_name of clGetDeviceInfo |
 | `CL_DEVICE_MAX_WORK_GROUP_SIZE` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo}) |
 | `CL_DEVICE_MAX_WORK_GROUP_SIZES` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo}) |
-| `CL_DEVICE_MAX_WORK_GROUP_SIZE_AMD` | enums.4030 | — (ungrouped, GL precedent) |  |
+| `CL_DEVICE_MAX_WORK_GROUP_SIZE_AMD` | enums.4030 | `cl_device_info` | manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the extended maximum work group size [verified vs KhronosGroup/OpenCL-Registry 202 |
 | `CL_DEVICE_MAX_WORK_ITEM_DIMENSIONS` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo}) |
 | `CL_DEVICE_MAX_WORK_ITEM_SIZES` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo}) |
 | `CL_DEVICE_MAX_WRITE_IMAGE_ARGS` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo}) |
 | `CL_DEVICE_MEMORY_CAPABILITIES_IMG` | enums.40D0 | `cl_device_info` | manual: cl_img_mem_properties 'List of supported param name by clGetDeviceInfo' |
 | `CL_DEVICE_MEM_BASE_ADDR_ALIGN` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo}) |
-| `CL_DEVICE_ME_VERSION_INTEL` | enums.4070 | — (ungrouped, GL precedent) |  |
+| `CL_DEVICE_ME_VERSION_INTEL` | enums.4070 | `cl_device_info` | manual: /regspec/all/intel/cl_intel_advanced_motion_estimation.txt — Modify the description of function clGetDeviceInfo [verified vs KhronosGroup/Open |
 | `CL_DEVICE_MIN_DATA_TYPE_ALIGN_SIZE` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo}) |
 | `CL_DEVICE_MUTABLE_DISPATCH_CAPABILITIES_KHR` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] G3 new-enums list |
 | `CL_DEVICE_NAME` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo}) |
@@ -521,7 +521,7 @@ when a value is valid in several sets.
 | `CL_DEVICE_NUMERIC_VERSION` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo}) |
 | `CL_DEVICE_NUMERIC_VERSION_KHR` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] G3 new-enums list |
 | `CL_DEVICE_NUM_EUS_PER_SUB_SLICE_INTEL` | enums.4250 | `cl_device_info` | spec evidence [cl_device_info] value cell col0 (List of supported param_names by clGetDeviceInfo) |
-| `CL_DEVICE_NUM_SIMULTANEOUS_INTEROPS_INTEL` | enums.4100 | — (ungrouped, GL precedent) |  |
+| `CL_DEVICE_NUM_SIMULTANEOUS_INTEROPS_INTEL` | enums.4100 | `cl_device_info` | manual: /regspec/all/intel/cl_intel_simultaneous_sharing.txt — RESOLVED: Added description of all changes explicitly. [verified vs KhronosGroup/OpenCL |
 | `CL_DEVICE_NUM_SLICES_INTEL` | enums.4250 | `cl_device_info` | spec evidence [cl_device_info] value cell col0 (List of supported param_names by clGetDeviceInfo) |
 | `CL_DEVICE_NUM_SUB_SLICES_PER_SLICE_INTEL` | enums.4250 | `cl_device_info` | spec evidence [cl_device_info] value cell col0 (List of supported param_names by clGetDeviceInfo) |
 | `CL_DEVICE_NUM_THREADS_PER_EU_INTEL` | enums.4250 | `cl_device_info` | spec evidence [cl_device_info] value cell col0 (List of supported param_names by clGetDeviceInfo) |
@@ -529,9 +529,9 @@ when a value is valid in several sets.
 | `CL_DEVICE_OPENCL_C_FEATURES` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo}) |
 | `CL_DEVICE_OPENCL_C_NUMERIC_VERSION_KHR` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] G3 new-enums list |
 | `CL_DEVICE_OPENCL_C_VERSION` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo}) |
-| `CL_DEVICE_PAGE_SIZE_QCOM` | enums.40A0 | — (ungrouped, GL precedent) |  |
+| `CL_DEVICE_PAGE_SIZE_QCOM` | enums.40A0 | `cl_device_info` | manual: /regspec/all/qcom/cl_qcom_ext_host_ptr.txt — Add the following token to Table 4.3 (clGetDeviceInfo OpenCL Device [verified vs KhronosGroup/Ope |
 | `CL_DEVICE_PARENT_DEVICE` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo}) |
-| `CL_DEVICE_PARENT_DEVICE_EXT` | enums.4050 | — (ungrouped, GL precedent) |  |
+| `CL_DEVICE_PARENT_DEVICE_EXT` | enums.4050 | `cl_device_info` | manual: /regspec/all/ext/cl_ext_device_fission.txt — clGetDeviceInfo: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08] |
 | `CL_DEVICE_PARTITION_AFFINITY_DOMAIN` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo}) |
 | `CL_DEVICE_PARTITION_BY_AFFINITY_DOMAIN` | cl_device_info | `cl_device_partition_property` | spec evidence [cl_device_partition_property] value cell col0 (List of supported partition schemes by {clCreateSu) |
 | `CL_DEVICE_PARTITION_BY_AFFINITY_DOMAIN_EXT` | enums.4050 | `cl_device_partition_property` | manual: legacy alias of CL_DEVICE_PARTITION_BY_AFFINITY_DOMAIN (cl_ext_device_fission; core member already cl_device_partition_property) |
@@ -546,10 +546,10 @@ when a value is valid in several sets.
 | `CL_DEVICE_PARTITION_FAILED_EXT` | ErrorCodes.1057 | `ErrorCode` | R3 cl.xml ErrorCodes container (GL precedent group=ErrorCode; spec: same set as API return values) |
 | `CL_DEVICE_PARTITION_MAX_SUB_DEVICES` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo}) |
 | `CL_DEVICE_PARTITION_PROPERTIES` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo}) |
-| `CL_DEVICE_PARTITION_STYLE_EXT` | enums.4050 | — (ungrouped, GL precedent) |  |
+| `CL_DEVICE_PARTITION_STYLE_EXT` | enums.4050 | `cl_device_info` | manual: /regspec/all/ext/cl_ext_device_fission.txt — clGetDeviceInfo: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08] |
 | `CL_DEVICE_PARTITION_TYPE` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo}) |
-| `CL_DEVICE_PARTITION_TYPES_EXT` | enums.4050 | — (ungrouped, GL precedent) |  |
-| `CL_DEVICE_PCIE_ID_AMD` | enums.4030 | — (ungrouped, GL precedent) |  |
+| `CL_DEVICE_PARTITION_TYPES_EXT` | enums.4050 | `cl_device_info` | manual: ext/cl_ext_device_fission.txt L382 — 'CL_DEVICE_PARTITION_TYPES_EXT - a selector to get a list of supported partition styles' (clGetDeviceInfo |
+| `CL_DEVICE_PCIE_ID_AMD` | enums.4030 | `cl_device_info` | manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the device PCIe ID [verified vs KhronosGroup/OpenCL-Registry 2026-10-08] |
 | `CL_DEVICE_PCI_BUS_INFO_KHR` | enums.4100 | `cl_device_info` | spec evidence [cl_device_info] G3 new-enums list |
 | `CL_DEVICE_PIPE_MAX_ACTIVE_RESERVATIONS` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo}) |
 | `CL_DEVICE_PIPE_MAX_PACKET_SIZE` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo}) |
@@ -557,7 +557,7 @@ when a value is valid in several sets.
 | `CL_DEVICE_PLANAR_YUV_MAX_HEIGHT_INTEL` | enums.4170 | `cl_device_info` | spec evidence [cl_device_info] G4 sentence+define |
 | `CL_DEVICE_PLANAR_YUV_MAX_WIDTH_INTEL` | enums.4170 | `cl_device_info` | spec evidence [cl_device_info] G4 sentence+define |
 | `CL_DEVICE_PLATFORM` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo}) |
-| `CL_DEVICE_PREFERRED_CONSTANT_BUFFER_SIZE_AMD` | enums.4030 | — (ungrouped, GL precedent) |  |
+| `CL_DEVICE_PREFERRED_CONSTANT_BUFFER_SIZE_AMD` | enums.4030 | `cl_device_info` | manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the preferred constant buffer size [verified vs KhronosGroup/OpenCL-Registry 2026- |
 | `CL_DEVICE_PREFERRED_GLOBAL_ATOMIC_ALIGNMENT` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo}) |
 | `CL_DEVICE_PREFERRED_INTEROP_USER_SYNC` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo}) |
 | `CL_DEVICE_PREFERRED_LOCAL_ATOMIC_ALIGNMENT` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo}) |
@@ -569,11 +569,11 @@ when a value is valid in several sets.
 | `CL_DEVICE_PREFERRED_VECTOR_WIDTH_INT` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] value chain col0 (List of supported param_names by {clGetDeviceInfo}) |
 | `CL_DEVICE_PREFERRED_VECTOR_WIDTH_LONG` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] value chain col0 (List of supported param_names by {clGetDeviceInfo}) |
 | `CL_DEVICE_PREFERRED_VECTOR_WIDTH_SHORT` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] value chain col0 (List of supported param_names by {clGetDeviceInfo}) |
-| `CL_DEVICE_PREFERRED_WORK_GROUP_SIZE_AMD` | enums.4030 | — (ungrouped, GL precedent) |  |
+| `CL_DEVICE_PREFERRED_WORK_GROUP_SIZE_AMD` | enums.4030 | `cl_device_info` | manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the preferred work group size: [verified vs KhronosGroup/OpenCL-Registry 2026-10-0 |
 | `CL_DEVICE_PREFERRED_WORK_GROUP_SIZE_MULTIPLE` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo}) |
 | `CL_DEVICE_PRINTF_BUFFER_SIZE` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo}) |
 | `CL_DEVICE_PROFILE` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo}) |
-| `CL_DEVICE_PROFILING_TIMER_OFFSET_AMD` | enums.4030 | — (ungrouped, GL precedent) |  |
+| `CL_DEVICE_PROFILING_TIMER_OFFSET_AMD` | enums.4030 | `cl_device_info` | manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the offset in nano-seconds between an event timestamp and Epoch: [verified vs Khro |
 | `CL_DEVICE_PROFILING_TIMER_RESOLUTION` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo}) |
 | `CL_DEVICE_QUEUE_FAMILY_PROPERTIES_INTEL` | enums.4180 | `cl_device_info` | spec evidence [cl_device_info] G4 sentence+define |
 | `CL_DEVICE_QUEUE_ON_DEVICE_MAX_SIZE` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo}) |
@@ -584,8 +584,8 @@ when a value is valid in several sets.
 | `CL_DEVICE_QUEUE_REPLACEABLE_DEFAULT` | cl_device_device_enqueue_capabilities | `cl_device_device_enqueue_capabilities` | R1 C typedef container cl_device_device_enqueue_capabilities (container-declared) |
 | `CL_DEVICE_QUEUE_SUPPORTED` | cl_device_device_enqueue_capabilities | `cl_device_device_enqueue_capabilities` | R1 C typedef container cl_device_device_enqueue_capabilities (container-declared) |
 | `CL_DEVICE_REFERENCE_COUNT` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo}) |
-| `CL_DEVICE_REFERENCE_COUNT_EXT` | enums.4050 | — (ungrouped, GL precedent) |  |
-| `CL_DEVICE_REGISTERS_PER_BLOCK_NV` | enums.4000 | — (ungrouped, GL precedent) |  |
+| `CL_DEVICE_REFERENCE_COUNT_EXT` | enums.4050 | `cl_device_info` | manual: /regspec/all/ext/cl_ext_device_fission.txt — If no partition style is supported then the size of the returned [verified vs KhronosGroup/OpenCL |
+| `CL_DEVICE_REGISTERS_PER_BLOCK_NV` | enums.4000 | `cl_device_info` | manual: nv/cl_nv_device_attribute_query.txt — 'Maximum number of 32-bit registers available to a thread' [verified vs KhronosGroup/OpenCL-Registry 202 |
 | `CL_DEVICE_SAFETY_MEM_SIZE_IMG` | enums.40D0 | `cl_device_info` | manual: cl_img_safety_mechanisms L80-85 + Table 5 param_names of clGetDeviceInfo |
 | `CL_DEVICE_SCHEDULING_COMPUTE_UNIT_BATCH_QUEUE_SIZE_ARM` | cl_device_scheduling_controls_capabilities_arm | `cl_device_scheduling_controls_capabilities_arm` | R1 C typedef container cl_device_scheduling_controls_capabilities_arm (container-declared) |
 | `CL_DEVICE_SCHEDULING_COMPUTE_UNIT_LIMIT_ARM` | cl_device_scheduling_controls_capabilities_arm | `cl_device_scheduling_controls_capabilities_arm` | R1 C typedef container cl_device_scheduling_controls_capabilities_arm (container-declared) |
@@ -601,10 +601,10 @@ when a value is valid in several sets.
 | `CL_DEVICE_SEMAPHORE_IMPORT_HANDLE_TYPES_KHR` | enums.2000 | `cl_device_info` | spec evidence [cl_device_info] G3 new-enums list |
 | `CL_DEVICE_SEMAPHORE_TYPES_KHR` | enums.2000 | `cl_device_info` | spec evidence [cl_device_info] G3 new-enums list |
 | `CL_DEVICE_SHARED_SYSTEM_MEM_CAPABILITIES_INTEL` | enums.4190 | `cl_device_info` | spec evidence [cl_device_info] G4 sentence+define |
-| `CL_DEVICE_SIMD_INSTRUCTION_WIDTH_AMD` | enums.4040 | — (ungrouped, GL precedent) |  |
-| `CL_DEVICE_SIMD_PER_COMPUTE_UNIT_AMD` | enums.4040 | — (ungrouped, GL precedent) |  |
-| `CL_DEVICE_SIMD_WIDTH_AMD` | enums.4040 | — (ungrouped, GL precedent) |  |
-| `CL_DEVICE_SIMULTANEOUS_INTEROPS_INTEL` | enums.4100 | — (ungrouped, GL precedent) |  |
+| `CL_DEVICE_SIMD_INSTRUCTION_WIDTH_AMD` | enums.4040 | `cl_device_info` | manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the number of instructions that a SIMD can execute in parallel: [verified vs Khron |
+| `CL_DEVICE_SIMD_PER_COMPUTE_UNIT_AMD` | enums.4040 | `cl_device_info` | manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return number of SIMD (Single Instruction Multiple Data) units per compute [verified vs K |
+| `CL_DEVICE_SIMD_WIDTH_AMD` | enums.4040 | `cl_device_info` | manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the maximum number of work items from the same work group that can [verified vs Kh |
+| `CL_DEVICE_SIMULTANEOUS_INTEROPS_INTEL` | enums.4100 | `cl_device_info` | manual: /regspec/all/intel/cl_intel_simultaneous_sharing.txt — of clGetDeviceInfo: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08] |
 | `CL_DEVICE_SINGLE_DEVICE_SHARED_MEM_CAPABILITIES_INTEL` | enums.4190 | `cl_device_info` | spec evidence [cl_device_info] G4 sentence+define |
 | `CL_DEVICE_SINGLE_FP_ATOMIC_CAPABILITIES_EXT` | enums.4230 | `cl_device_info` | spec evidence [cl_device_info] G4 sentence+define |
 | `CL_DEVICE_SINGLE_FP_CONFIG` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo}) |
@@ -621,7 +621,7 @@ when a value is valid in several sets.
 | `CL_DEVICE_SVM_ATOMICS` | cl_device_svm_capabilities | `cl_device_svm_capabilities` | R1 C typedef container cl_device_svm_capabilities (container-declared) |
 | `CL_DEVICE_SVM_ATOMICS_ARM` | cl_arm_device_svm_capabilities.flags | `cl_arm_device_svm_capabilities.flags` | R1 C typedef container cl_arm_device_svm_capabilities.flags (container-declared) |
 | `CL_DEVICE_SVM_CAPABILITIES` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo}) |
-| `CL_DEVICE_SVM_CAPABILITIES_ARM` | enums.40B0 | — (ungrouped, GL precedent) |  |
+| `CL_DEVICE_SVM_CAPABILITIES_ARM` | enums.40B0 | `cl_device_info` | manual: /regspec/all/arm/cl_arm_shared_virtual_memory.txt — Flag values returned by clGetDeviceInfo with [verified vs KhronosGroup/OpenCL-Registry 202 |
 | `CL_DEVICE_SVM_COARSE_GRAIN_BUFFER` | cl_device_svm_capabilities | `cl_device_svm_capabilities` | R1 C typedef container cl_device_svm_capabilities (container-declared) |
 | `CL_DEVICE_SVM_COARSE_GRAIN_BUFFER_ARM` | cl_arm_device_svm_capabilities.flags | `cl_arm_device_svm_capabilities.flags` | R1 C typedef container cl_arm_device_svm_capabilities.flags (container-declared) |
 | `CL_DEVICE_SVM_FINE_GRAIN_BUFFER` | cl_device_svm_capabilities | `cl_device_svm_capabilities` | R1 C typedef container cl_device_svm_capabilities (container-declared) |
@@ -631,8 +631,8 @@ when a value is valid in several sets.
 | `CL_DEVICE_SVM_TYPE_CAPABILITIES_KHR` | cl_device_info | `cl_device_info` | manual: cl_khr_unified_svm param_name of clGetDeviceInfo; cl_device_info mega-container token; no spec value-set found — left ungrouped |
 | `CL_DEVICE_TERMINATE_CAPABILITY_CONTEXT_KHR` | cl_device_terminate_capability_khr | `cl_device_terminate_capability_khr` | R1 C typedef container cl_device_terminate_capability_khr (spec-listed) |
 | `CL_DEVICE_TERMINATE_CAPABILITY_KHR` | enums.2000 | `cl_device_info` | spec evidence [cl_device_info] G3 new-enums list |
-| `CL_DEVICE_THREAD_TRACE_SUPPORTED_AMD` | enums.4040 | — (ungrouped, GL precedent) |  |
-| `CL_DEVICE_TOPOLOGY_AMD` | enums.4030 | — (ungrouped, GL precedent) |  |
+| `CL_DEVICE_THREAD_TRACE_SUPPORTED_AMD` | enums.4040 | `cl_device_info` | manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return 1 if thread trace is supported, 0 otherwise: [verified vs KhronosGroup/OpenCL-Regi |
+| `CL_DEVICE_TOPOLOGY_AMD` | enums.4030 | `cl_device_info` | manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the topology for the device: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08] |
 | `CL_DEVICE_TYPE` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo}) |
 | `CL_DEVICE_TYPE_ACCELERATOR` | cl_device_type | `cl_device_type` | R1 C typedef container cl_device_type (spec-listed) |
 | `CL_DEVICE_TYPE_ALL` | cl_device_type | `cl_device_type` | R1 C typedef container cl_device_type (spec-listed) |
@@ -646,8 +646,8 @@ when a value is valid in several sets.
 | `CL_DEVICE_VENDOR` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo}) |
 | `CL_DEVICE_VENDOR_ID` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo}) |
 | `CL_DEVICE_VERSION` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo}) |
-| `CL_DEVICE_WARP_SIZE_NV` | enums.4000 | — (ungrouped, GL precedent) |  |
-| `CL_DEVICE_WAVEFRONT_WIDTH_AMD` | enums.4040 | — (ungrouped, GL precedent) |  |
+| `CL_DEVICE_WARP_SIZE_NV` | enums.4000 | `cl_device_info` | manual: nv/cl_nv_device_attribute_query.txt — 'Warp size in work-items' [verified vs KhronosGroup/OpenCL-Registry 2026-10-08] |
+| `CL_DEVICE_WAVEFRONT_WIDTH_AMD` | enums.4040 | `cl_device_info` | manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the number of workitems per wavefront: [verified vs KhronosGroup/OpenCL-Registry 2 |
 | `CL_DEVICE_WORKGROUP_PROTECTION_DEVICE_ENQUEUE_CAPABILITIES_IMG` | enums.40D0 | `cl_device_info` | manual: cl_img_safety_mechanisms L80-85 + Table 5 param_names of clGetDeviceInfo |
 | `CL_DEVICE_WORKGROUP_PROTECTION_SVM_CAPABILITIES_IMG` | enums.40D0 | `cl_device_info` | manual: cl_img_safety_mechanisms L80-85 + Table 5 param_names of clGetDeviceInfo |
 | `CL_DEVICE_WORK_GROUP_ARBITRATION_ALGORITHM_ROUND_ROBIN_IMG` | cl_device_scheduling_controls_capabilities_img | `cl_device_scheduling_controls_capabilities_img` | R1 C typedef container cl_device_scheduling_controls_capabilities_img (container-declared) |
@@ -665,12 +665,12 @@ when a value is valid in several sets.
 | `CL_DX9_MEDIA_SURFACE_NOT_ACQUIRED_KHR` | ErrorCodes.1002 | `ErrorCode` | R3 cl.xml ErrorCodes container (GL precedent group=ErrorCode; spec: same set as API return values); spec evidence [ErrorCode] G3 new-error-codes list |
 | `CL_DX9_RESOURCE_ALREADY_ACQUIRED_INTEL` | ErrorCodes.1002 | `ErrorCode` | R3 cl.xml ErrorCodes container (GL precedent group=ErrorCode; spec: same set as API return values) |
 | `CL_DX9_RESOURCE_NOT_ACQUIRED_INTEL` | ErrorCodes.1002 | `ErrorCode` | R3 cl.xml ErrorCodes container (GL precedent group=ErrorCode; spec: same set as API return values) |
-| `CL_DXVA_DEVICE_INTEL` | enums.4070 | — (ungrouped, GL precedent) |  |
+| `CL_DXVA_DEVICE_INTEL` | enums.4070 | `cl_dx9_device_source_intel` | manual: /regspec/all/intel/cl_intel_dx9_media_sharing.txt — clGetDeviceIDsFromDX9INTEL returns CL_SUCCESS if the function is executed [verified vs Khr |
 | `CL_ECC_RECOVERED_IMG` | enums.40D0 | `clCommandExecutionStatus` | manual: core command-execution-status value set of clGetEventInfo/CL_EVENT_COMMAND_EXECUTION_STATUS (registry type clCommandExecutionStatus; + cl_img_ |
 | `CL_ECC_UNRECOVERED_IMG` | ErrorCodes.1122 | `ErrorCode` | R3 cl.xml ErrorCodes container (GL precedent group=ErrorCode; spec: same set as API return values) |
 | `CL_EGL_DISPLAY_KHR` | enums.2000 | `cl_context_properties` | spec evidence [cl_context_properties] G3 new-enums list |
 | `CL_EGL_RESOURCE_NOT_ACQUIRED_KHR` | ErrorCodes.1092 | `ErrorCode` | R3 cl.xml ErrorCodes container (GL precedent group=ErrorCode; spec: same set as API return values); spec evidence [ErrorCode] G3 new-error-codes list |
-| `CL_EGL_YUV_PLANE_INTEL` | enums.4100 | — (ungrouped, GL precedent) |  |
+| `CL_EGL_YUV_PLANE_INTEL` | enums.4100 | `cl_image_info` | manual: /regspec/all/intel/cl_intel_egl_image_yuv.txt — and <image> was not created by the function clCreateFromEGLImageKHR. [verified vs KhronosGroup |
 | `CL_ERROR_RESERVED0_IMG` | ErrorCodes.1122 | `ErrorCode` | R3 cl.xml ErrorCodes container (GL precedent group=ErrorCode; spec: same set as API return values) |
 | `CL_ERROR_RESERVED1_IMG` | ErrorCodes.1122 | `ErrorCode` | R3 cl.xml ErrorCodes container (GL precedent group=ErrorCode; spec: same set as API return values) |
 | `CL_ERROR_RESERVED2_IMG` | ErrorCodes.1122 | `ErrorCode` | R3 cl.xml ErrorCodes container (GL precedent group=ErrorCode; spec: same set as API return values) |
@@ -751,7 +751,7 @@ when a value is valid in several sets.
 | `CL_IMAGE_D3D11_SUBRESOURCE_KHR` | enums.4010 | `cl_image_info` | spec evidence [cl_image_info] G3 new-enums list |
 | `CL_IMAGE_DEPTH` | cl_device_info | `cl_image_info` | spec evidence [cl_image_info] value cell col0 (List of supported param_names by {clGetImageInfo}) |
 | `CL_IMAGE_DX9_MEDIA_PLANE_KHR` | enums.2000 | `cl_image_info` | spec evidence [cl_image_info] G3 new-enums list |
-| `CL_IMAGE_DX9_PLANE_INTEL` | enums.4070 | — (ungrouped, GL precedent) |  |
+| `CL_IMAGE_DX9_PLANE_INTEL` | enums.4070 | `cl_image_info` | manual: /regspec/all/intel/cl_intel_dx9_media_sharing.txt — using clGetMemObjectInfo and clGetImageInfo with <param_name> [verified vs KhronosGroup/Op |
 | `CL_IMAGE_ELEMENT_SIZE` | cl_device_info | `cl_image_info` | spec evidence [cl_image_info] value cell col0 (List of supported param_names by {clGetImageInfo}) |
 | `CL_IMAGE_FORMAT` | cl_device_info | `cl_image_info` | spec evidence [cl_image_info] value cell col0 (List of supported param_names by {clGetImageInfo}) |
 | `CL_IMAGE_FORMAT_MISMATCH` | ErrorCodes.0 | `ErrorCode` | R3 cl.xml ErrorCodes container (GL precedent group=ErrorCode; spec: same set as API return values) |
@@ -767,21 +767,21 @@ when a value is valid in several sets.
 | `CL_IMAGE_REQUIREMENTS_ROW_PITCH_ALIGNMENT_EXT` | cl_device_info | `cl_image_requirements_info_ext` | spec evidence [cl_image_requirements_info_ext] value cell col0 (List of supported param_names by {clGetImageRequir) |
 | `CL_IMAGE_REQUIREMENTS_SIZE_EXT` | cl_device_info | `cl_image_requirements_info_ext` | spec evidence [cl_image_requirements_info_ext] value cell col0 (List of supported param_names by {clGetImageRequir) |
 | `CL_IMAGE_REQUIREMENTS_SLICE_PITCH_ALIGNMENT_EXT` | cl_device_info | `cl_image_requirements_info_ext` | spec evidence [cl_image_requirements_info_ext] value cell col0 (List of supported param_names by {clGetImageRequir) |
-| `CL_IMAGE_ROW_ALIGNMENT_QCOM` | enums.40A0 | — (ungrouped, GL precedent) |  |
+| `CL_IMAGE_ROW_ALIGNMENT_QCOM` | enums.40A0 | `cl_image_pitch_info_qcom` | manual: /regspec/all/qcom/cl_qcom_ext_host_ptr.txt — Accepted by the <param_name> argument of clGetDeviceImageInfoQCOM [verified vs KhronosGroup/OpenC |
 | `CL_IMAGE_ROW_PITCH` | cl_device_info | `cl_image_info` | spec evidence [cl_image_info] value cell col0 (List of supported param_names by {clGetImageInfo}) |
-| `CL_IMAGE_SLICE_ALIGNMENT_QCOM` | enums.40A0 | — (ungrouped, GL precedent) |  |
+| `CL_IMAGE_SLICE_ALIGNMENT_QCOM` | enums.40A0 | `cl_image_pitch_info_qcom` | manual: /regspec/all/qcom/cl_qcom_ext_host_ptr.txt — Accepted by the <param_name> argument of clGetDeviceImageInfoQCOM [verified vs KhronosGroup/OpenC |
 | `CL_IMAGE_SLICE_PITCH` | cl_device_info | `cl_image_info` | spec evidence [cl_image_info] value cell col0 (List of supported param_names by {clGetImageInfo}) |
-| `CL_IMAGE_VA_API_PLANE_INTEL` | enums.4090 | — (ungrouped, GL precedent) |  |
+| `CL_IMAGE_VA_API_PLANE_INTEL` | enums.4090 | `cl_image_info` | manual: /regspec/all/intel/cl_intel_va_api_media_sharing.txt — "* CL_INVALID_VA_API_MEDIA_SURFACE_INTEL if <param_name> is [verified vs KhronosGroup/O |
 | `CL_IMAGE_WIDTH` | cl_device_info | `cl_image_info` | spec evidence [cl_image_info] value cell col0 (List of supported param_names by {clGetImageInfo}) |
-| `CL_IMPORT_ANDROID_HARDWARE_BUFFER_LAYER_INDEX_ARM` | enums.41E0 | — (ungrouped, GL precedent) |  |
-| `CL_IMPORT_ANDROID_HARDWARE_BUFFER_PLANE_INDEX_ARM` | enums.41E0 | — (ungrouped, GL precedent) |  |
-| `CL_IMPORT_DMA_BUF_DATA_CONSISTENCY_WITH_HOST_ARM` | enums.41E0 | — (ungrouped, GL precedent) |  |
+| `CL_IMPORT_ANDROID_HARDWARE_BUFFER_LAYER_INDEX_ARM` | enums.41E0 | `cl_import_properties_arm` | manual: /regspec/all/arm/cl_arm_import_memory.txt — Valid values for CL_IMPORT_ANDROID_HARDWARE_BUFFER_PLANE_INDEX_ARM and [verified vs KhronosGroup/O |
+| `CL_IMPORT_ANDROID_HARDWARE_BUFFER_PLANE_INDEX_ARM` | enums.41E0 | `cl_import_properties_arm` | manual: /regspec/all/arm/cl_arm_import_memory.txt — Multiplanar buffers are only supported when backed by a single dma_buf. [verified vs KhronosGroup/ |
+| `CL_IMPORT_DMA_BUF_DATA_CONSISTENCY_WITH_HOST_ARM` | enums.41E0 | `cl_import_properties_arm` | manual: arm/cl_arm_import_memory.txt — listed in 'Valid <properties> are:' [verified vs KhronosGroup/OpenCL-Registry 2026-10-08] |
 | `CL_IMPORT_MEMORY_WHOLE_ALLOCATION_ARM` | Constants.cl_arm_import_memory | — (ungrouped, GL precedent) |  |
-| `CL_IMPORT_TYPE_ANDROID_HARDWARE_BUFFER_ARM` | enums.41E0 | — (ungrouped, GL precedent) |  |
-| `CL_IMPORT_TYPE_ARM` | enums.40B0 | — (ungrouped, GL precedent) |  |
-| `CL_IMPORT_TYPE_DMA_BUF_ARM` | enums.40B0 | — (ungrouped, GL precedent) |  |
-| `CL_IMPORT_TYPE_HOST_ARM` | enums.40B0 | — (ungrouped, GL precedent) |  |
-| `CL_IMPORT_TYPE_PROTECTED_ARM` | enums.40B0 | — (ungrouped, GL precedent) |  |
+| `CL_IMPORT_TYPE_ANDROID_HARDWARE_BUFFER_ARM` | enums.41E0 | `cl_import_properties_arm` | manual: /regspec/all/arm/cl_arm_import_memory.txt — New Tokens [verified vs KhronosGroup/OpenCL-Registry 2026-10-08] |
+| `CL_IMPORT_TYPE_ARM` | enums.40B0 | `cl_import_properties_arm` | manual: arm/cl_arm_import_memory.txt — listed in 'Valid <properties> are:' [verified vs KhronosGroup/OpenCL-Registry 2026-10-08] |
+| `CL_IMPORT_TYPE_DMA_BUF_ARM` | enums.40B0 | `cl_import_properties_arm` | manual: arm/cl_arm_import_memory.txt L118-123: same [verified vs KhronosGroup/OpenCL-Registry 2026-10-08] |
+| `CL_IMPORT_TYPE_HOST_ARM` | enums.40B0 | `cl_import_properties_arm` | manual: arm/cl_arm_import_memory.txt L118-122: valid value of CL_IMPORT_TYPE_ARM; cl_import_type_arm typedef does not exist in cl.xml [verified vs Khr |
+| `CL_IMPORT_TYPE_PROTECTED_ARM` | enums.40B0 | `cl_import_properties_arm` | manual: arm/cl_arm_import_memory.txt — listed in 'Valid <properties> are:' [verified vs KhronosGroup/OpenCL-Registry 2026-10-08] |
 | `CL_INCOMPATIBLE_COMMAND_QUEUE_KHR` | ErrorCodes.1138 | `ErrorCode` | R3 cl.xml ErrorCodes container (GL precedent group=ErrorCode; spec: same set as API return values); spec evidence [ErrorCode] G3 new-error-codes list |
 | `CL_INFINITY` | Constants | `C99MathConstants` | manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...) |
 | `CL_INTENSITY` | cl_device_info | `cl_channel_order` | spec evidence [cl_channel_order] value cell col0 (List of supported Image Channel Order Values) |
@@ -883,10 +883,10 @@ when a value is valid in several sets.
 | `CL_KERNEL_EXEC_INFO_INDIRECT_HOST_ACCESS_INTEL` | enums.4200 | `cl_kernel_exec_info` | spec evidence [cl_kernel_exec_info] G4 sentence+define |
 | `CL_KERNEL_EXEC_INFO_INDIRECT_SHARED_ACCESS_INTEL` | enums.4200 | `cl_kernel_exec_info` | spec evidence [cl_kernel_exec_info] G4 sentence+define |
 | `CL_KERNEL_EXEC_INFO_SVM_FINE_GRAIN_SYSTEM` | cl_device_info | `cl_kernel_exec_info` | manual: cl_khr_unified_svm / opencl_runtime_layer param_name of clSetKernelExecInfo; cl_device_info mega-container token; no spec value-set found — le |
-| `CL_KERNEL_EXEC_INFO_SVM_FINE_GRAIN_SYSTEM_ARM` | enums.40B0 | — (ungrouped, GL precedent) |  |
+| `CL_KERNEL_EXEC_INFO_SVM_FINE_GRAIN_SYSTEM_ARM` | enums.40B0 | `cl_kernel_exec_info_arm` | manual: /regspec/all/arm/cl_arm_shared_virtual_memory.txt — To be used by clSetKernelExecInfoARM: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08 |
 | `CL_KERNEL_EXEC_INFO_SVM_INDIRECT_ACCESS_KHR` | cl_device_info | `cl_kernel_exec_info` | manual: cl_khr_unified_svm / opencl_runtime_layer param_name of clSetKernelExecInfo; cl_device_info mega-container token; no spec value-set found — le |
 | `CL_KERNEL_EXEC_INFO_SVM_PTRS` | cl_device_info | `cl_kernel_exec_info` | manual: cl_khr_unified_svm / opencl_runtime_layer param_name of clSetKernelExecInfo; cl_device_info mega-container token; no spec value-set found — le |
-| `CL_KERNEL_EXEC_INFO_SVM_PTRS_ARM` | enums.40B0 | — (ungrouped, GL precedent) |  |
+| `CL_KERNEL_EXEC_INFO_SVM_PTRS_ARM` | enums.40B0 | `cl_kernel_exec_info_arm` | manual: /regspec/all/arm/cl_arm_shared_virtual_memory.txt — To be used by clSetKernelExecInfoARM: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08 |
 | `CL_KERNEL_EXEC_INFO_USM_PTRS_INTEL` | enums.4200 | `cl_kernel_exec_info` | spec evidence [cl_kernel_exec_info] G4 sentence+define |
 | `CL_KERNEL_EXEC_INFO_WARP_COUNT_LIMIT_ARM` | enums.41E0 | `cl_kernel_exec_info` | manual: cl_arm_scheduling_controls L69-76 + Table 31 param_names of clSetKernelExecInfo |
 | `CL_KERNEL_EXEC_INFO_WORKGROUP_BATCH_SIZE_ARM` | enums.41E0 | `cl_kernel_exec_info` | manual: cl_arm_scheduling_controls L69-76 + Table 31 param_names of clSetKernelExecInfo |
@@ -961,8 +961,8 @@ when a value is valid in several sets.
 | `CL_MEM_DEVICE_PRIVATE_ADDRESS_EXT` | enums.5000 | `cl_mem_properties` | manual: cl_ext_buffer_device_address: clCreateBufferWithProperties creation property flag |
 | `CL_MEM_DX9_MEDIA_ADAPTER_TYPE_KHR` | enums.2000 | `cl_mem_info` | spec evidence [cl_mem_info] G3 new-enums list |
 | `CL_MEM_DX9_MEDIA_SURFACE_INFO_KHR` | enums.2000 | `cl_mem_info` | spec evidence [cl_mem_info] G3 new-enums list |
-| `CL_MEM_DX9_RESOURCE_INTEL` | enums.4010 | — (ungrouped, GL precedent) |  |
-| `CL_MEM_DX9_SHARED_HANDLE_INTEL` | enums.4070 | — (ungrouped, GL precedent) |  |
+| `CL_MEM_DX9_RESOURCE_INTEL` | enums.4010 | `cl_mem_info` | manual: /regspec/all/intel/cl_intel_dx9_media_sharing.txt — DirectX 9 resource using clCreateFromDX9MediaSurfaceIntel." [verified vs KhronosGroup/Open |
+| `CL_MEM_DX9_SHARED_HANDLE_INTEL` | enums.4070 | `cl_mem_info` | manual: /regspec/all/intel/cl_intel_dx9_media_sharing.txt — clCreateFromDX9MediaSurfaceINTEL, [verified vs KhronosGroup/OpenCL-Registry 2026-10-08] |
 | `CL_MEM_EXT_HOST_PTR_QCOM` | cl_mem_flags | `cl_mem_flags` | R1 C typedef container cl_mem_flags (container-declared) |
 | `CL_MEM_FLAGS` | cl_device_info | `cl_mem_info` | spec evidence [cl_mem_info] value cell col0 (List of supported param_names by {clGetMemObjectIn) |
 | `CL_MEM_FORCE_HOST_MEMORY_INTEL` | cl_mem_flags | `cl_mem_flags` | R1 C typedef container cl_mem_flags (spec-listed) |
@@ -1017,12 +1017,12 @@ when a value is valid in several sets.
 | `CL_MEM_TYPE_SHARED_INTEL` | enums.4190 | `cl_unified_shared_memory_type_intel` | spec evidence [cl_unified_shared_memory_type_intel] G4 typedef+define |
 | `CL_MEM_TYPE_UNKNOWN_INTEL` | enums.4190 | `cl_unified_shared_memory_type_intel` | spec evidence [cl_unified_shared_memory_type_intel] G4 typedef+define |
 | `CL_MEM_USES_SVM_POINTER` | cl_device_info | `cl_mem_info` | spec evidence [cl_mem_info] value cell col0 (List of supported param_names by {clGetMemObjectIn) |
-| `CL_MEM_USES_SVM_POINTER_ARM` | enums.40B0 | — (ungrouped, GL precedent) |  |
+| `CL_MEM_USES_SVM_POINTER_ARM` | enums.40B0 | `cl_mem_info` | manual: arm/cl_arm_shared_virtual_memory.txt L178: clGetMemObjectInfo param_name [verified vs KhronosGroup/OpenCL-Registry 2026-10-08] |
 | `CL_MEM_USE_CACHED_CPU_MEMORY_IMG` | cl_mem_flags | `cl_mem_flags` | R1 C typedef container cl_mem_flags (container-declared) |
 | `CL_MEM_USE_GRALLOC_PTR_IMG` | cl_mem_flags | `cl_mem_flags` | R1 C typedef container cl_mem_flags (container-declared) |
 | `CL_MEM_USE_HOST_PTR` | cl_mem_flags | `cl_mem_flags` | R1 C typedef container cl_mem_flags (spec-listed) |
 | `CL_MEM_USE_UNCACHED_CPU_MEMORY_IMG` | cl_mem_flags | `cl_mem_flags` | R1 C typedef container cl_mem_flags (container-declared) |
-| `CL_MEM_VA_API_MEDIA_SURFACE_INTEL` | enums.4090 | — (ungrouped, GL precedent) |  |
+| `CL_MEM_VA_API_MEDIA_SURFACE_INTEL` | enums.4090 | `cl_mem_info` | manual: /regspec/all/intel/cl_intel_va_api_media_sharing.txt — using clGetMemObjectInfo and clGetImageInfo with <param_name> [verified vs KhronosGroup |
 | `CL_MEM_WRITE_ONLY` | cl_mem_flags | `cl_mem_flags` | R1 C typedef container cl_mem_flags (spec-listed) |
 | `CL_ME_BACKWARD_INPUT_MODE_INTEL` | cl_intel_advanced_motion_estimation.cl_motion_detect_desc_intel | `cl_intel_advanced_motion_estimation.cl_motion_detect_desc_intel` | R1 C typedef container cl_intel_advanced_motion_estimation.cl_motion_detect_desc_intel (container-declared) |
 | `CL_ME_BIDIRECTION_INPUT_MODE_INTEL` | cl_intel_advanced_motion_estimation.cl_motion_detect_desc_intel | `cl_intel_advanced_motion_estimation.cl_motion_detect_desc_intel` | R1 C typedef container cl_intel_advanced_motion_estimation.cl_motion_detect_desc_intel (container-declared) |
@@ -1164,9 +1164,9 @@ when a value is valid in several sets.
 | `CL_PLATFORM_VERSION` | cl_platform_info | `cl_platform_info` | R1 C typedef container cl_platform_info (spec-listed) |
 | `CL_PREFERRED_DEVICES_FOR_D3D10_KHR` | enums.4010 | `cl_d3d10_device_set_khr` | spec evidence [cl_d3d10_device_set_khr] G3 new-enums list |
 | `CL_PREFERRED_DEVICES_FOR_D3D11_KHR` | enums.4010 | `cl_d3d11_device_set_khr` | spec evidence [cl_d3d11_device_set_khr] G3 new-enums list |
-| `CL_PREFERRED_DEVICES_FOR_DX9_INTEL` | enums.4010 | — (ungrouped, GL precedent) |  |
+| `CL_PREFERRED_DEVICES_FOR_DX9_INTEL` | enums.4010 | `cl_dx9_device_set_intel` | manual: /regspec/all/intel/cl_intel_dx9_media_sharing.txt — OpenCL devices are being queried by clGetDeviceIDsFromDX9INTEL. [verified vs KhronosGroup/ |
 | `CL_PREFERRED_DEVICES_FOR_DX9_MEDIA_ADAPTER_KHR` | enums.2000 | `cl_dx9_media_adapter_set_khr` | spec evidence [cl_dx9_media_adapter_set_khr] G3 new-enums list |
-| `CL_PREFERRED_DEVICES_FOR_VA_API_INTEL` | enums.4090 | — (ungrouped, GL precedent) |  |
+| `CL_PREFERRED_DEVICES_FOR_VA_API_INTEL` | enums.4090 | `cl_va_api_device_set_intel` | manual: /regspec/all/intel/cl_intel_va_api_media_sharing.txt — parameter of clGetDeviceIDsFromVA_APIMediaAdapterINTEL: [verified vs KhronosGroup/OpenC |
 | `CL_PRINTF_BUFFERSIZE_ARM` | enums.40B0 | `cl_context_properties` | manual: cl_arm_printf: context creation property value (size_t) |
 | `CL_PRINTF_CALLBACK_ARM` | enums.40B0 | `cl_context_properties` | manual: cl_arm_printf: context creation property (Table 7 param_name + value pair) |
 | `CL_PROFILING_COMMAND_COMPLETE` | cl_device_info | `cl_profiling_info` | spec evidence [cl_profiling_info] value cell col0 (List of supported param_names by {clGetEventProfil) |
@@ -1227,7 +1227,7 @@ when a value is valid in several sets.
 | `CL_QUEUE_FAMILY_INTEL` | enums.4180 | `cl_command_queue_info`, `cl_command_queue_properties` | spec evidence [cl_command_queue_info] G4 sentence+define; spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creatio |
 | `CL_QUEUE_FAMILY_MAX_NAME_SIZE_INTEL` | Constants.cl_intel_command_queue_families | `cl_command_queue_info` | spec evidence [cl_command_queue_info] G4 sentence+define |
 | `CL_QUEUE_INDEX_INTEL` | enums.4180 | `cl_command_queue_info`, `cl_command_queue_properties` | spec evidence [cl_command_queue_info] G4 sentence+define; spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creatio |
-| `CL_QUEUE_JOB_SLOT_ARM` | enums.41E0 | — (ungrouped, GL precedent) |  |
+| `CL_QUEUE_JOB_SLOT_ARM` | enums.41E0 | `cl_queue_properties` | manual: /regspec/all/arm/cl_arm_job_slot_selection.txt — Command queue property [verified vs KhronosGroup/OpenCL-Registry 2026-10-08] |
 | `CL_QUEUE_KERNEL_BATCHING_ARM` | enums.41E0 | `cl_command_queue_properties` | manual: cl_arm_scheduling_controls L79-85 + Table 9 queue creation properties |
 | `CL_QUEUE_NO_SYNC_OPERATIONS_INTEL` | cl_command_queue_properties | `cl_command_queue_properties` | R1 C typedef container cl_command_queue_properties (container-declared) |
 | `CL_QUEUE_ON_DEVICE` | cl_command_queue_properties | `cl_command_queue_properties` | R1 C typedef container cl_command_queue_properties (container-declared) |
@@ -1364,7 +1364,7 @@ when a value is valid in several sets.
 | `CL_UUID_SIZE` | Constants.uuid | — (ungrouped, GL precedent) |  |
 | `CL_UUID_SIZE_KHR` | Constants.cl_khr_device_uuid | — (ungrouped, GL precedent) |  |
 | `CL_UYVY_INTEL` | enums.4070 | `cl_channel_order` | manual: cl_intel_packed_yuv L81 image_channel_order value set |
-| `CL_VA_API_DISPLAY_INTEL` | enums.4090 | — (ungrouped, GL precedent) |  |
+| `CL_VA_API_DISPLAY_INTEL` | enums.4090 | `cl_va_api_device_source_intel` | manual: /regspec/all/intel/cl_intel_va_api_media_sharing.txt — clGetDeviceIDsFromVA_APIMediaAdapterINTEL returns CL_SUCCESS if the [verified vs Khrono |
 | `CL_VA_API_MEDIA_SURFACE_ALREADY_ACQUIRED_INTEL` | ErrorCodes.1094 | `ErrorCode` | R3 cl.xml ErrorCodes container (GL precedent group=ErrorCode; spec: same set as API return values) |
 | `CL_VA_API_MEDIA_SURFACE_NOT_ACQUIRED_INTEL` | ErrorCodes.1094 | `ErrorCode` | R3 cl.xml ErrorCodes container (GL precedent group=ErrorCode; spec: same set as API return values) |
 | `CL_VERSION_MAJOR_BITS` | Constants.Versioning | — (ungrouped, GL precedent) |  |
