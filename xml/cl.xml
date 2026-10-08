@@ -2167,9 +2167,9 @@ server's OpenCL/api-docs repository.
         <!-- unused <enum value="0x4027"      name="CL_MEM_D3D9_RESOURCE_NV"/> -->
         <!-- unused <enum value="0x4028"      name="CL_IMAGE_D3D9_FACE_NV"/> -->
         <!-- unused <enum value="0x4029"      name="CL_IMAGE_D3D9_LEVEL_NV"/> -->
-        <enum value="0x402A"        name="CL_COMMAND_ACQUIRE_D3D9_OBJECTS_INTEL"/>
+        <enum value="0x402A"        name="CL_COMMAND_ACQUIRE_D3D9_OBJECTS_INTEL" group="cl_command_type"/>
         <!-- unused <enum value="0x402A"      name="CL_COMMAND_ACQUIRE_D3D9_OBJECTS_NV"/> -->
-        <enum value="0x402B"        name="CL_COMMAND_RELEASE_D3D9_OBJECTS_INTEL"/>
+        <enum value="0x402B"        name="CL_COMMAND_RELEASE_D3D9_OBJECTS_INTEL" group="cl_command_type"/>
         <!-- unused <enum value="0x402B"      name="CL_COMMAND_RELEASE_D3D9_OBJECTS_NV"/> -->
         <enum value="0x402C"        name="CL_CONTEXT_D3D10_PREFER_SHARED_RESOURCES_KHR" group="cl_context_info"/>
         <enum value="0x402D"        name="CL_CONTEXT_D3D11_PREFER_SHARED_RESOURCES_KHR" group="cl_context_info"/>

@@ -1441,8 +1441,12 @@
  },
  "CL_COMMAND_ACQUIRE_D3D9_OBJECTS_INTEL": {
   "container": "enums.4010",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_command_type"
+  ],
+  "notes": [
+   "manual: user adjudication 2026-10-08 (Brice): safely cl_command_type. Naming drift from 2011 spec's CL_COMMAND_ACQUIRE_DX9_OBJECTS_INTEL (0x402A); token introduced #67 (2019 header extraction), no require block in cl.xml. Matches PR#1587."
+  ],
   "value": "0x402A"
  },
  "CL_COMMAND_ACQUIRE_DX9_MEDIA_SURFACES_KHR": {
@@ -2079,8 +2083,12 @@
  },
  "CL_COMMAND_RELEASE_D3D9_OBJECTS_INTEL": {
   "container": "enums.4010",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_command_type"
+  ],
+  "notes": [
+   "manual: user adjudication 2026-10-08 (Brice): safely cl_command_type. Naming drift from 2011 spec's CL_COMMAND_RELEASE_DX9_OBJECTS_INTEL (0x402B); token introduced #67 (2019 header extraction), no require block in cl.xml. Matches PR#1587."
+  ],
   "value": "0x402B"
  },
  "CL_COMMAND_RELEASE_DX9_MEDIA_SURFACES_KHR": {

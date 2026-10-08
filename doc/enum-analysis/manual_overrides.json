@@ -53,6 +53,12 @@
     ],
    "spec_evidence": "manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...)"
   },
+ "CL_COMMAND_ACQUIRE_D3D9_OBJECTS_INTEL": {
+   "groups": [
+     "cl_command_type"
+    ],
+   "spec_evidence": "user adjudication 2026-10-08 (Brice): safely cl_command_type. Naming drift from 2011 spec's CL_COMMAND_ACQUIRE_DX9_OBJECTS_INTEL (0x402A); token introduced #67 (2019 header extraction), no require block in cl.xml. Matches PR#1587."
+  },
  "CL_COMMAND_ACQUIRE_GRALLOC_OBJECTS_IMG": {
    "groups": [
      "cl_command_type"
@@ -100,6 +106,12 @@
      "cl_command_type"
     ],
    "spec_evidence": "manual: cl_intel_program_scope_host_pipe Table 37 supported event command type"
+  },
+ "CL_COMMAND_RELEASE_D3D9_OBJECTS_INTEL": {
+   "groups": [
+     "cl_command_type"
+    ],
+   "spec_evidence": "user adjudication 2026-10-08 (Brice): safely cl_command_type. Naming drift from 2011 spec's CL_COMMAND_RELEASE_DX9_OBJECTS_INTEL (0x402B); token introduced #67 (2019 header extraction), no require block in cl.xml. Matches PR#1587."
   },
  "CL_COMMAND_RELEASE_GRALLOC_OBJECTS_IMG": {
    "groups": [

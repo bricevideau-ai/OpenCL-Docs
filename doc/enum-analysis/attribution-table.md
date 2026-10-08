@@ -9,8 +9,8 @@ when a value is valid in several sets.
 ## Coverage
 
 - Total `<enum>` entries in cl.xml: **1334**
-- Assigned one or more groups: **1299**
-- Left ungrouped: **35** (GL precedent: gl.xml leaves ~12,000 of 15,392 ungrouped;
+- Assigned one or more groups: **1301**
+- Left ungrouped: **33** (GL precedent: gl.xml leaves ~12,000 of 15,392 ungrouped;
   ungrouped = platform constants, opaque-handle values, and other context-dependent values
   whose meaning is defined by the API call site rather than by a named value set)
 - Multi-group values: **13** (e.g. ['cl_context_info', 'cl_context_properties'])
@@ -38,8 +38,8 @@ when a value is valid in several sets.
 | `CL_QUEUE_FAMILY_INTEL` | `cl_command_queue_info, cl_command_queue_properties` | spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties by clC) / spec evidence [cl_command_queue_info] G4 sent |
 | `CL_QUEUE_INDEX_INTEL` | `cl_command_queue_info, cl_command_queue_properties` | spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties by clC) / spec evidence [cl_command_queue_info] G4 sent |
 | `CL_QUEUE_PRIORITY_KHR` | `cl_command_queue_properties, cl_queue_properties` | spec evidence [cl_queue_properties] G3 new-enums list / spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties |
-| `CL_QUEUE_PROPERTIES` | `cl_command_queue_info, cl_command_queue_properties` | spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties by {cl) / spec evidence [cl_command_queue_info] value c |
-| `CL_QUEUE_SIZE` | `cl_command_queue_info, cl_command_queue_properties` | spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties by {cl) / spec evidence [cl_command_queue_info] value c |
+| `CL_QUEUE_PROPERTIES` | `cl_command_queue_info, cl_command_queue_properties` | spec evidence [cl_command_queue_info] value cell col0 (List of supported param_names by {clGetCommandQueu) / spec evidence [cl_command_queue_properties] value c |
+| `CL_QUEUE_SIZE` | `cl_command_queue_info, cl_command_queue_properties` | spec evidence [cl_command_queue_info] value cell col0 (List of supported param_names by {clGetCommandQueu) / spec evidence [cl_command_queue_properties] value c |
 | `CL_QUEUE_THROTTLE_KHR` | `cl_command_queue_properties, cl_queue_properties` | spec evidence [cl_queue_properties] G3 new-enums list / spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties |
 | `CL_SAMPLER_ADDRESSING_MODE` | `cl_sampler_info, cl_sampler_properties` | spec evidence [cl_sampler_properties] value cell col0 (List of supported sampler creation properties by {) / spec evidence [cl_sampler_info] value cell col0 (Li |
 | `CL_SAMPLER_FILTER_MODE` | `cl_sampler_info, cl_sampler_properties` | spec evidence [cl_sampler_properties] value cell col0 (List of supported sampler creation properties by {) / spec evidence [cl_sampler_info] value cell col0 (Li |
@@ -193,7 +193,7 @@ when a value is valid in several sets.
 | `CL_CHAR_MIN` | Constants | `C99MathConstants` | manual: api/appendix_c.asciidoc: C99 standard mathematical constants (CL_FLT_*/CL_DBL_*/CL_M_*/...) |
 | `CL_COMMAND_ACQUIRE_D3D10_OBJECTS_KHR` | enums.4010 | `cl_command_type` | spec evidence [cl_command_type] G3 new-enums list |
 | `CL_COMMAND_ACQUIRE_D3D11_OBJECTS_KHR` | enums.4010 | `cl_command_type` | spec evidence [cl_command_type] G3 new-enums list |
-| `CL_COMMAND_ACQUIRE_D3D9_OBJECTS_INTEL` | enums.4010 | — (ungrouped, GL precedent) |  |
+| `CL_COMMAND_ACQUIRE_D3D9_OBJECTS_INTEL` | enums.4010 | `cl_command_type` | manual: user adjudication 2026-10-08 (Brice): safely cl_command_type. Naming drift from 2011 spec's CL_COMMAND_ACQUIRE_DX9_OBJECTS_INTEL (0x402A); tok |
 | `CL_COMMAND_ACQUIRE_DX9_MEDIA_SURFACES_KHR` | enums.2000 | `cl_command_type` | spec evidence [cl_command_type] G3 new-enums list |
 | `CL_COMMAND_ACQUIRE_DX9_OBJECTS_INTEL` | enums.4010 | — (ungrouped, GL precedent) |  |
 | `CL_COMMAND_ACQUIRE_EGL_OBJECTS_KHR` | enums.2000 | `cl_command_type` | spec evidence [cl_command_type] G3 new-enums list |
@@ -260,7 +260,7 @@ when a value is valid in several sets.
 | `CL_COMMAND_READ_IMAGE` | cl_device_info | `cl_command_type` | spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types) |
 | `CL_COMMAND_RELEASE_D3D10_OBJECTS_KHR` | enums.4010 | `cl_command_type` | spec evidence [cl_command_type] G3 new-enums list |
 | `CL_COMMAND_RELEASE_D3D11_OBJECTS_KHR` | enums.4010 | `cl_command_type` | spec evidence [cl_command_type] G3 new-enums list |
-| `CL_COMMAND_RELEASE_D3D9_OBJECTS_INTEL` | enums.4010 | — (ungrouped, GL precedent) |  |
+| `CL_COMMAND_RELEASE_D3D9_OBJECTS_INTEL` | enums.4010 | `cl_command_type` | manual: user adjudication 2026-10-08 (Brice): safely cl_command_type. Naming drift from 2011 spec's CL_COMMAND_RELEASE_DX9_OBJECTS_INTEL (0x402B); tok |
 | `CL_COMMAND_RELEASE_DX9_MEDIA_SURFACES_KHR` | enums.2000 | `cl_command_type` | spec evidence [cl_command_type] G3 new-enums list |
 | `CL_COMMAND_RELEASE_DX9_OBJECTS_INTEL` | enums.4010 | — (ungrouped, GL precedent) |  |
 | `CL_COMMAND_RELEASE_EGL_OBJECTS_KHR` | enums.2000 | `cl_command_type` | spec evidence [cl_command_type] G3 new-enums list |
