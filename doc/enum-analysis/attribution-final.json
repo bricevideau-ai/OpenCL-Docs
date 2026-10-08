@@ -8252,9 +8252,10 @@
  "CL_LAYER_API_VERSION": {
   "container": "enums.4240",
   "groups": [
-   "cl_layer_properties"
+   "cl_layer_info"
   ],
   "notes": [
+   "manual: extensions/cl_loader_layers.asciidoc L91-97: 'Accepted as _param_name_ to the function *clGetLayerInfo*' (L95 #define CL_LAYER_API_VERSION 0x4240). Cross-checked vs PR#1587 on 2026-10-06: their 'cl_layer_info' was spec-correct; our earlier 'cl_layer_properties' was wrong.",
    "spec evidence [cl_layer_properties] G4 typedef+define"
   ],
   "value": "0x4240"
@@ -8262,19 +8263,20 @@
  "CL_LAYER_API_VERSION_100": {
   "container": "Constants.cl_loader_layers",
   "groups": [
-   "cl_layer_properties"
+   "cl_layer_info"
   ],
   "notes": [
-   "manual: cl_loader_layers L109 'CL_LAYER_API_VERSION_100 100' legacy alias of CL_LAYER_API_VERSION (0x4240, group cl_layer_properties)"
+   "manual: extensions/cl_loader_layers.asciidoc L100-110: 'Returned by *clGetLayerInfo* when supplied CL_LAYER_API_VERSION and the corresponding layer implements version 1.0.0 of the layer API' (L109 #define CL_LAYER_API_VERSION_100 100). Cross-checked vs PR#1587 on 2026-10-06: their 'cl_layer_info' was spec-correct; our earlier 'cl_layer_properties' was wrong."
   ],
   "value": "100"
  },
  "CL_LAYER_NAME": {
   "container": "enums.4240",
   "groups": [
-   "cl_layer_properties"
+   "cl_layer_info"
   ],
   "notes": [
+   "manual: extensions/cl_loader_layers.asciidoc L91-97: same 'Accepted as _param_name_ to *clGetLayerInfo*' block (L96 #define CL_LAYER_NAME 0x4241). Cross-checked vs PR#1587 on 2026-10-06: their 'cl_layer_info' was spec-correct; we had these unassigned.",
    "spec evidence [cl_layer_properties] G4 typedef+define"
   ],
   "value": "0x4241"

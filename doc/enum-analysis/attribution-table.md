@@ -31,19 +31,19 @@ when a value is valid in several sets.
 
 | token | groups | reason (spec evidence) |
 |---|---|---|
-| `CL_CONTEXT_ADAPTER_D3D9EX_KHR` | `cl_context_info, cl_context_properties` | spec evidence [cl_context_properties] value cell col0 (List of supported context creation properties by {) / spec evidence [cl_context_info] G3 new-enums list |
-| `CL_CONTEXT_ADAPTER_D3D9_KHR` | `cl_context_info, cl_context_properties` | spec evidence [cl_context_properties] value cell col0 (List of supported context creation properties by {) / spec evidence [cl_context_info] G3 new-enums list |
-| `CL_CONTEXT_ADAPTER_DXVA_KHR` | `cl_context_info, cl_context_properties` | spec evidence [cl_context_properties] value cell col0 (List of supported context creation properties by {) / spec evidence [cl_context_info] G3 new-enums list |
-| `CL_MEM_ALLOC_FLAGS_INTEL` | `cl_mem_info_intel, cl_mem_properties_intel` | spec evidence [cl_mem_info_intel] value cell col0 (List of supported param_names by clGetMemAllocInfo) / spec evidence [cl_mem_properties_intel] G4 typedef+defi |
-| `CL_QUEUE_FAMILY_INTEL` | `cl_command_queue_info, cl_command_queue_properties` | spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties by clC) / spec evidence [cl_command_queue_info] G4 sent |
-| `CL_QUEUE_INDEX_INTEL` | `cl_command_queue_info, cl_command_queue_properties` | spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties by clC) / spec evidence [cl_command_queue_info] G4 sent |
-| `CL_QUEUE_PRIORITY_KHR` | `cl_command_queue_properties, cl_queue_properties` | spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties by {cl) / spec evidence [cl_queue_properties] G3 new-en |
+| `CL_CONTEXT_ADAPTER_D3D9EX_KHR` | `cl_context_info, cl_context_properties` | spec evidence [cl_context_info] G3 new-enums list / spec evidence [cl_context_properties] value cell col0 (List of supported context creation properties by {) |
+| `CL_CONTEXT_ADAPTER_D3D9_KHR` | `cl_context_info, cl_context_properties` | spec evidence [cl_context_info] G3 new-enums list / spec evidence [cl_context_properties] value cell col0 (List of supported context creation properties by {) |
+| `CL_CONTEXT_ADAPTER_DXVA_KHR` | `cl_context_info, cl_context_properties` | spec evidence [cl_context_info] G3 new-enums list / spec evidence [cl_context_properties] value cell col0 (List of supported context creation properties by {) |
+| `CL_MEM_ALLOC_FLAGS_INTEL` | `cl_mem_info_intel, cl_mem_properties_intel` | spec evidence [cl_mem_properties_intel] G4 typedef+define / spec evidence [cl_mem_info_intel] value cell col0 (List of supported param_names by clGetMemAllocInf |
+| `CL_QUEUE_FAMILY_INTEL` | `cl_command_queue_info, cl_command_queue_properties` | spec evidence [cl_command_queue_info] G4 sentence+define / spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation propert |
+| `CL_QUEUE_INDEX_INTEL` | `cl_command_queue_info, cl_command_queue_properties` | spec evidence [cl_command_queue_info] G4 sentence+define / spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation propert |
+| `CL_QUEUE_PRIORITY_KHR` | `cl_command_queue_properties, cl_queue_properties` | spec evidence [cl_queue_properties] G3 new-enums list / spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties |
 | `CL_QUEUE_PROPERTIES` | `cl_command_queue_info, cl_command_queue_properties` | spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties by {cl) / spec evidence [cl_command_queue_info] value c |
 | `CL_QUEUE_SIZE` | `cl_command_queue_info, cl_command_queue_properties` | spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties by {cl) / spec evidence [cl_command_queue_info] value c |
-| `CL_QUEUE_THROTTLE_KHR` | `cl_command_queue_properties, cl_queue_properties` | spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties by {cl) / spec evidence [cl_queue_properties] G3 new-en |
-| `CL_SAMPLER_ADDRESSING_MODE` | `cl_sampler_info, cl_sampler_properties` | spec evidence [cl_sampler_properties] value cell col0 (List of supported sampler creation properties by {) / spec evidence [cl_sampler_info] value cell col0 (Li |
-| `CL_SAMPLER_FILTER_MODE` | `cl_sampler_info, cl_sampler_properties` | spec evidence [cl_sampler_properties] value cell col0 (List of supported sampler creation properties by {) / spec evidence [cl_sampler_info] value cell col0 (Li |
-| `CL_SAMPLER_NORMALIZED_COORDS` | `cl_sampler_info, cl_sampler_properties` | spec evidence [cl_sampler_properties] value cell col0 (List of supported sampler creation properties by {) / spec evidence [cl_sampler_info] value cell col0 (Li |
+| `CL_QUEUE_THROTTLE_KHR` | `cl_command_queue_properties, cl_queue_properties` | spec evidence [cl_queue_properties] G3 new-enums list / spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties |
+| `CL_SAMPLER_ADDRESSING_MODE` | `cl_sampler_info, cl_sampler_properties` | spec evidence [cl_sampler_info] value cell col0 (List of supported param_names by {clGetSamplerInfo) / spec evidence [cl_sampler_properties] value cell col0 (Li |
+| `CL_SAMPLER_FILTER_MODE` | `cl_sampler_info, cl_sampler_properties` | spec evidence [cl_sampler_info] value cell col0 (List of supported param_names by {clGetSamplerInfo) / spec evidence [cl_sampler_properties] value cell col0 (Li |
+| `CL_SAMPLER_NORMALIZED_COORDS` | `cl_sampler_info, cl_sampler_properties` | spec evidence [cl_sampler_info] value cell col0 (List of supported param_names by {clGetSamplerInfo) / spec evidence [cl_sampler_properties] value cell col0 (Li |
 
 ## Full assignment table
 
@@ -910,9 +910,9 @@ when a value is valid in several sets.
 | `CL_KERNEL_WORK_GROUP_SIZE` | cl_device_info | `cl_kernel_work_group_info` | spec evidence [cl_kernel_work_group_info] value cell col0 (List of supported param_names by {clGetKernelWorkG) |
 | `CL_KHRONOS_VENDOR_ID_CODEPLAY` | cl_khronos_vendor_id | `cl_khronos_vendor_id` | R1 C typedef container cl_khronos_vendor_id (container-declared) |
 | `CL_KHRONOS_VENDOR_ID_POCL` | cl_khronos_vendor_id | `cl_khronos_vendor_id` | R1 C typedef container cl_khronos_vendor_id (container-declared) |
-| `CL_LAYER_API_VERSION` | enums.4240 | `cl_layer_properties` | spec evidence [cl_layer_properties] G4 typedef+define |
-| `CL_LAYER_API_VERSION_100` | Constants.cl_loader_layers | `cl_layer_properties` | manual: cl_loader_layers L109 'CL_LAYER_API_VERSION_100 100' legacy alias of CL_LAYER_API_VERSION (0x4240, group cl_layer_properties) |
-| `CL_LAYER_NAME` | enums.4240 | `cl_layer_properties` | spec evidence [cl_layer_properties] G4 typedef+define |
+| `CL_LAYER_API_VERSION` | enums.4240 | `cl_layer_info` | manual: extensions/cl_loader_layers.asciidoc L91-97: 'Accepted as _param_name_ to the function *clGetLayerInfo*' (L95 #define CL_LAYER_API_VERSION 0x4 |
+| `CL_LAYER_API_VERSION_100` | Constants.cl_loader_layers | `cl_layer_info` | manual: extensions/cl_loader_layers.asciidoc L100-110: 'Returned by *clGetLayerInfo* when supplied CL_LAYER_API_VERSION and the corresponding layer im |
+| `CL_LAYER_NAME` | enums.4240 | `cl_layer_info` | manual: extensions/cl_loader_layers.asciidoc L91-97: same 'Accepted as _param_name_ to *clGetLayerInfo*' block (L96 #define CL_LAYER_NAME 0x4241). Cro |
 | `CL_LAYER_PROPERTIES_LIST_END` | Constants.cl_loader_layers | `cl_layer_properties` | manual: cl_loader_layers L117 'CL_LAYER_PROPERTIES_LIST_END ((cl_layer_properties)0)' list terminator; L239-240 'list is terminated with CL_LAYER_PROP |
 | `CL_LINKER_NOT_AVAILABLE` | ErrorCodes.0 | `ErrorCode` | R3 cl.xml ErrorCodes container (GL precedent group=ErrorCode; spec: same set as API return values) |
 | `CL_LINK_PROGRAM_FAILURE` | ErrorCodes.0 | `ErrorCode` | R3 cl.xml ErrorCodes container (GL precedent group=ErrorCode; spec: same set as API return values) |
