@@ -1740,11 +1740,11 @@ server's OpenCL/api-docs repository.
         <enum value="0x1090"        name="CL_QUEUE_CONTEXT" group="cl_command_queue_info"/>
         <enum value="0x1091"        name="CL_QUEUE_DEVICE" group="cl_command_queue_info"/>
         <enum value="0x1092"        name="CL_QUEUE_REFERENCE_COUNT" group="cl_command_queue_info"/>
-        <enum value="0x1093"        name="CL_QUEUE_PROPERTIES" group="cl_command_queue_info,cl_command_queue_properties"/>
-        <enum value="0x1094"        name="CL_QUEUE_SIZE" group="cl_command_queue_info,cl_command_queue_properties"/>
+        <enum value="0x1093"        name="CL_QUEUE_PROPERTIES" group="cl_command_queue_info,cl_queue_properties,cl_queue_properties_khr"/>
+        <enum value="0x1094"        name="CL_QUEUE_SIZE" group="cl_command_queue_info,cl_queue_properties,cl_queue_properties_khr"/>
         <enum value="0x1095"        name="CL_QUEUE_DEVICE_DEFAULT" group="cl_command_queue_info"/>
-        <enum value="0x1096"        name="CL_QUEUE_PRIORITY_KHR" group="cl_command_queue_properties,cl_queue_properties"/>
-        <enum value="0x1097"        name="CL_QUEUE_THROTTLE_KHR" group="cl_command_queue_properties,cl_queue_properties"/>
+        <enum value="0x1096"        name="CL_QUEUE_PRIORITY_KHR" group="cl_queue_properties,cl_queue_properties_khr"/>
+        <enum value="0x1097"        name="CL_QUEUE_THROTTLE_KHR" group="cl_queue_properties,cl_queue_properties_khr"/>
         <enum value="0x1098"        name="CL_QUEUE_PROPERTIES_ARRAY" group="cl_command_queue_info"/>
             <unused start="0x1099" end="0x109F" comment="Reserved for cl_command_queue_info"/>
             <unused start="0x10A0" end="0x10AB" comment="Reserved for core API tokens"/>
