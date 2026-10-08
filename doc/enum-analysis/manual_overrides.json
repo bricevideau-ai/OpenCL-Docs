@@ -515,6 +515,12 @@
   ],
   "spec_evidence": "manual: cl_intel_mem_channel_property: property for clCreateBufferWithPropertiesINTEL"
  },
+ "CL_MEM_DEVICE_HANDLE_LIST_KHR": {
+  "groups": [
+   "cl_mem_properties"
+  ],
+  "spec_evidence": "cl_khr_external_memory.asciidoc L60-61: listed under cl_mem_properties_TYPE; cl_image_properties is not a cl.xml type (removed)"
+ },
  "CL_MEM_DEVICE_PRIVATE_ADDRESS_EXT": {
   "groups": [
    "cl_mem_properties"

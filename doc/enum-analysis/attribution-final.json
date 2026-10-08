@@ -8702,10 +8702,10 @@
  "CL_MEM_DEVICE_HANDLE_LIST_KHR": {
   "container": "enums.2000",
   "groups": [
-   "cl_image_properties",
    "cl_mem_properties"
   ],
   "notes": [
+   "manual: cl_khr_external_memory.asciidoc L60-61: listed under cl_mem_properties_TYPE; cl_image_properties is not a cl.xml type (removed)",
    "spec evidence [cl_image_properties] value cell col0 (List of supported image creation properties)",
    "spec evidence [cl_mem_properties] G3 new-enums list"
   ],
