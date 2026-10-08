@@ -437,6 +437,18 @@
     ],
    "spec_evidence": "manual: /regspec/all/amd/cl_amd_device_attribute_query.txt — Return the local memory size in bytes per CU: [verified vs KhronosGroup/OpenCL-Registry 2026-10-08]"
   },
+ "CL_DEVICE_MAX_HOST_READ_PIPES_INTEL": {
+   "groups": [
+     "cl_device_info"
+    ],
+   "spec_evidence": "user adjudication 2026-10-08 (Brice): device info query. Allocated #144 2019, no spec chapter, no require block; matches PR#1587."
+  },
+ "CL_DEVICE_MAX_HOST_WRITE_PIPES_INTEL": {
+   "groups": [
+     "cl_device_info"
+    ],
+   "spec_evidence": "user adjudication 2026-10-08 (Brice): device info query. Allocated #144 2019, no spec chapter, no require block; matches PR#1587."
+  },
  "CL_DEVICE_MAX_WARP_COUNT_ARM": {
    "groups": [
      "cl_device_info"
@@ -922,6 +934,12 @@
      "ErrorCode"
     ],
    "spec_evidence": "manual: cl_img_use_gralloc_ptr error return code"
+  },
+ "CL_KERNEL_ARG_HOST_ACCESSIBLE_PIPE_INTEL": {
+   "groups": [
+     "cl_kernel_arg_info"
+    ],
+   "spec_evidence": "PENDING (2026-10-08): Brice — 'Maybe more of an answer to kernel arg type query'; will confirm with Intel colleague 2026-10-09. Current value cl_kernel_arg_info is provisional (his first guess), NOT settled. Allocated #144 2019, no spec chapter, no require block."
   },
  "CL_KERNEL_COMPILE_SUB_GROUP_SIZE_INTEL": {
    "groups": [

@@ -9,8 +9,8 @@ when a value is valid in several sets.
 ## Coverage
 
 - Total `<enum>` entries in cl.xml: **1334**
-- Assigned one or more groups: **1301**
-- Left ungrouped: **33** (GL precedent: gl.xml leaves ~12,000 of 15,392 ungrouped;
+- Assigned one or more groups: **1304**
+- Left ungrouped: **30** (GL precedent: gl.xml leaves ~12,000 of 15,392 ungrouped;
   ungrouped = platform constants, opaque-handle values, and other context-dependent values
   whose meaning is defined by the API call site rather than by a named value set)
 - Multi-group values: **13** (e.g. ['cl_context_info', 'cl_context_properties'])
@@ -31,16 +31,16 @@ when a value is valid in several sets.
 
 | token | groups | reason (spec evidence) |
 |---|---|---|
-| `CL_CONTEXT_ADAPTER_D3D9EX_KHR` | `cl_context_info, cl_context_properties` | spec evidence [cl_context_properties] value cell col0 (List of supported context creation properties by {) / spec evidence [cl_context_info] G3 new-enums list |
-| `CL_CONTEXT_ADAPTER_D3D9_KHR` | `cl_context_info, cl_context_properties` | spec evidence [cl_context_properties] value cell col0 (List of supported context creation properties by {) / spec evidence [cl_context_info] G3 new-enums list |
-| `CL_CONTEXT_ADAPTER_DXVA_KHR` | `cl_context_info, cl_context_properties` | spec evidence [cl_context_properties] value cell col0 (List of supported context creation properties by {) / spec evidence [cl_context_info] G3 new-enums list |
-| `CL_MEM_ALLOC_FLAGS_INTEL` | `cl_mem_info_intel, cl_mem_properties_intel` | spec evidence [cl_mem_properties_intel] G4 typedef+define / spec evidence [cl_mem_info_intel] value cell col0 (List of supported param_names by clGetMemAllocInf |
+| `CL_CONTEXT_ADAPTER_D3D9EX_KHR` | `cl_context_info, cl_context_properties` | spec evidence [cl_context_info] G3 new-enums list / spec evidence [cl_context_properties] value cell col0 (List of supported context creation properties by {) |
+| `CL_CONTEXT_ADAPTER_D3D9_KHR` | `cl_context_info, cl_context_properties` | spec evidence [cl_context_info] G3 new-enums list / spec evidence [cl_context_properties] value cell col0 (List of supported context creation properties by {) |
+| `CL_CONTEXT_ADAPTER_DXVA_KHR` | `cl_context_info, cl_context_properties` | spec evidence [cl_context_info] G3 new-enums list / spec evidence [cl_context_properties] value cell col0 (List of supported context creation properties by {) |
+| `CL_MEM_ALLOC_FLAGS_INTEL` | `cl_mem_info_intel, cl_mem_properties_intel` | spec evidence [cl_mem_info_intel] value cell col0 (List of supported param_names by clGetMemAllocInfo) / spec evidence [cl_mem_properties_intel] G4 typedef+defi |
 | `CL_QUEUE_FAMILY_INTEL` | `cl_command_queue_info, cl_command_queue_properties` | spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties by clC) / spec evidence [cl_command_queue_info] G4 sent |
 | `CL_QUEUE_INDEX_INTEL` | `cl_command_queue_info, cl_command_queue_properties` | spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties by clC) / spec evidence [cl_command_queue_info] G4 sent |
-| `CL_QUEUE_PRIORITY_KHR` | `cl_command_queue_properties, cl_queue_properties` | spec evidence [cl_queue_properties] G3 new-enums list / spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties |
+| `CL_QUEUE_PRIORITY_KHR` | `cl_command_queue_properties, cl_queue_properties` | spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties by {cl) / spec evidence [cl_queue_properties] G3 new-en |
 | `CL_QUEUE_PROPERTIES` | `cl_command_queue_info, cl_command_queue_properties` | spec evidence [cl_command_queue_info] value cell col0 (List of supported param_names by {clGetCommandQueu) / spec evidence [cl_command_queue_properties] value c |
 | `CL_QUEUE_SIZE` | `cl_command_queue_info, cl_command_queue_properties` | spec evidence [cl_command_queue_info] value cell col0 (List of supported param_names by {clGetCommandQueu) / spec evidence [cl_command_queue_properties] value c |
-| `CL_QUEUE_THROTTLE_KHR` | `cl_command_queue_properties, cl_queue_properties` | spec evidence [cl_queue_properties] G3 new-enums list / spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties |
+| `CL_QUEUE_THROTTLE_KHR` | `cl_command_queue_properties, cl_queue_properties` | spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties by {cl) / spec evidence [cl_queue_properties] G3 new-en |
 | `CL_SAMPLER_ADDRESSING_MODE` | `cl_sampler_info, cl_sampler_properties` | spec evidence [cl_sampler_properties] value cell col0 (List of supported sampler creation properties by {) / spec evidence [cl_sampler_info] value cell col0 (Li |
 | `CL_SAMPLER_FILTER_MODE` | `cl_sampler_info, cl_sampler_properties` | spec evidence [cl_sampler_properties] value cell col0 (List of supported sampler creation properties by {) / spec evidence [cl_sampler_info] value cell col0 (Li |
 | `CL_SAMPLER_NORMALIZED_COORDS` | `cl_sampler_info, cl_sampler_properties` | spec evidence [cl_sampler_properties] value cell col0 (List of supported sampler creation properties by {) / spec evidence [cl_sampler_info] value cell col0 (Li |
@@ -481,8 +481,8 @@ when a value is valid in several sets.
 | `CL_DEVICE_MAX_CONSTANT_ARGS` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo}) |
 | `CL_DEVICE_MAX_CONSTANT_BUFFER_SIZE` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo}) |
 | `CL_DEVICE_MAX_GLOBAL_VARIABLE_SIZE` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo}) |
-| `CL_DEVICE_MAX_HOST_READ_PIPES_INTEL` | enums.4210 | — (ungrouped, GL precedent) |  |
-| `CL_DEVICE_MAX_HOST_WRITE_PIPES_INTEL` | enums.4210 | — (ungrouped, GL precedent) |  |
+| `CL_DEVICE_MAX_HOST_READ_PIPES_INTEL` | enums.4210 | `cl_device_info` | manual: user adjudication 2026-10-08 (Brice): device info query. Allocated #144 2019, no spec chapter, no require block; matches PR#1587. |
+| `CL_DEVICE_MAX_HOST_WRITE_PIPES_INTEL` | enums.4210 | `cl_device_info` | manual: user adjudication 2026-10-08 (Brice): device info query. Allocated #144 2019, no spec chapter, no require block; matches PR#1587. |
 | `CL_DEVICE_MAX_MEM_ALLOC_SIZE` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo}) |
 | `CL_DEVICE_MAX_NAMED_BARRIER_COUNT_KHR` | enums.2000 | `cl_device_info` | spec evidence [cl_device_info] G3 new-enums list |
 | `CL_DEVICE_MAX_NUM_SUB_GROUPS` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo}) |
@@ -862,7 +862,7 @@ when a value is valid in several sets.
 | `CL_KERNEL_ARG_ADDRESS_LOCAL` | cl_device_info | `cl_kernel_arg_address_qualifier` | spec evidence [cl_kernel_arg_address_qualifier] inline value-set of cl_kernel_arg_address_qualifier (row {CL_KERNEL_ARG_ADDRESS_QUALIFIER_anchor}) |
 | `CL_KERNEL_ARG_ADDRESS_PRIVATE` | cl_device_info | `cl_kernel_arg_address_qualifier` | spec evidence [cl_kernel_arg_address_qualifier] inline value-set of cl_kernel_arg_address_qualifier (row {CL_KERNEL_ARG_ADDRESS_QUALIFIER_anchor}) |
 | `CL_KERNEL_ARG_ADDRESS_QUALIFIER` | cl_device_info | `cl_kernel_arg_info` | spec evidence [cl_kernel_arg_info] value cell col0 (List of supported param_names by {clGetKernelArgIn) |
-| `CL_KERNEL_ARG_HOST_ACCESSIBLE_PIPE_INTEL` | enums.4210 | — (ungrouped, GL precedent) |  |
+| `CL_KERNEL_ARG_HOST_ACCESSIBLE_PIPE_INTEL` | enums.4210 | `cl_kernel_arg_info` | manual: PENDING (2026-10-08): Brice — 'Maybe more of an answer to kernel arg type query'; will confirm with Intel colleague 2026-10-09. Current value  |
 | `CL_KERNEL_ARG_INFO_NOT_AVAILABLE` | ErrorCodes.0 | `ErrorCode` | R3 cl.xml ErrorCodes container (GL precedent group=ErrorCode; spec: same set as API return values) |
 | `CL_KERNEL_ARG_NAME` | cl_device_info | `cl_kernel_arg_info` | spec evidence [cl_kernel_arg_info] value cell col0 (List of supported param_names by {clGetKernelArgIn) |
 | `CL_KERNEL_ARG_TYPE_CONST` | cl_kernel_arg_type_qualifier | `cl_kernel_arg_type_qualifier` | R1 C typedef container cl_kernel_arg_type_qualifier (container-declared) |

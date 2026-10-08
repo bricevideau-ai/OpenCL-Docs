@@ -158,11 +158,14 @@ Traced each to its introducing commit in full history (repo unshallowed, 921 com
 |---|---|---|
 | CL_COMMAND_ACQUIRE_D3D9_OBJECTS_INTEL / CL_COMMAND_RELEASE_D3D9_OBJECTS_INTEL | Jon Leech, #67 "Extract refpages from C/API spec sources", 2019-04-05 | **`cl_command_type`** — naming drift: the 2011 official `cl_intel_dx9_media_sharing` spec defines **CL_COMMAND_ACQUIRE/RELEASE_DX9_OBJECTS_INTEL** at 0x402A/0x402B; the D3D9-named pair exists only in extracted headers, no require block in cl.xml. *Brice adjudicated (2026-10-08): safely cl_command_type* — matches PR#1587 |
 
-**3 remain without spec provenance or owner adjudication — ungrouped, PR#1587's groups NOT adopted:**
+**3 remain without spec or author provenance:**
 
-| token | origin | why unresolvable |
+| token | origin | disposition |
 |---|---|---|
-| CL_DEVICE_MAX_HOST_READ_PIPES_INTEL / CL_DEVICE_MAX_HOST_WRITE_PIPES_INTEL / CL_KERNEL_ARG_HOST_ACCESSIBLE_PIPE_INTEL | Mike Kinsner (Intel), #144 "Allocate ranges/enums for Intel extension", 2019-10-23 | Allocated as bare enum names for an *upcoming* extension that never produced a spec chapter in this repo; the local host-pipe chapter (`cl_intel_program_scope_host_pipe`) defines 0x4214-0x4217, not these (0x4210-0x4212), and has no require block for them |
+| CL_DEVICE_MAX_HOST_READ_PIPES_INTEL / CL_DEVICE_MAX_HOST_WRITE_PIPES_INTEL | Mike Kinsner (Intel), #144 "Allocate ranges/enums for Intel extension", 2019-10-23 | **`cl_device_info`** — *Brice adjudicated 2026-10-08: "The first 2 are device info queries."* Matches PR#1587 |
+| CL_KERNEL_ARG_HOST_ACCESSIBLE_PIPE_INTEL | same #144 2019 | **PENDING — not a settled group.** Current value `cl_kernel_arg_info` is provisional: *"Maybe more of an answer to kernel arg type query" (Brice, 2026-10-08); he will confirm with his Intel colleague 2026-10-09.* PR#1587 also has `cl_kernel_arg_info` |
+
+(All three come from the same 2019 bare allocation; the local host-pipe chapter `cl_intel_program_scope_host_pipe` defines 0x4214-0x4217 only and has no require block for 0x4210-0x4212, so none of them has a spec citation — these rest on owner adjudication.)
 
 Caveat on the 6: `<require comment=>` is registry author-intent, not published spec text.
 It is the only available source, it is authored by the extension owners, and it matches
@@ -175,6 +178,6 @@ PR#1587 in all 6 cases — but a future spec publication could revise it.
 | Agree with PR#1587, spec-verified (applied) | 85 |
 | Agree with PR#1587 via author-committed registry provenance (applied, labeled) | 6 |
 | PR#1587 wrong or invalid (verified against spec text + registry typedefs; corrected, applied) | 4 |
-| Owner-adjudicated (applied: CL_COMMAND_ACQUIRE/RELEASE_D3D9_OBJECTS_INTEL → cl_command_type) | 2 |
-| No spec source, no author provenance — ungrouped (PR#1587's groups NOT adopted) | 3 |
+| Owner-adjudicated, applied (D3D9 acquire/release → cl_command_type; 2x host-pipe MAX_HOST_READ/WRITE_PIPES → cl_device_info) | 4 |
+| Pending owner confirmation — provisional group `cl_kernel_arg_info` set, flagged PENDING (CL_KERNEL_ARG_HOST_ACCESSIBLE_PIPE_INTEL; Brice consulting Intel colleague 2026-10-09) | 1 |
 | tokens | **100** |

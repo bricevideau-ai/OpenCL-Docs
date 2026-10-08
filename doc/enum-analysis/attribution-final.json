@@ -4305,14 +4305,22 @@
  },
  "CL_DEVICE_MAX_HOST_READ_PIPES_INTEL": {
   "container": "enums.4210",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_info"
+  ],
+  "notes": [
+   "manual: user adjudication 2026-10-08 (Brice): device info query. Allocated #144 2019, no spec chapter, no require block; matches PR#1587."
+  ],
   "value": "0x4211"
  },
  "CL_DEVICE_MAX_HOST_WRITE_PIPES_INTEL": {
   "container": "enums.4210",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_device_info"
+  ],
+  "notes": [
+   "manual: user adjudication 2026-10-08 (Brice): device info query. Allocated #144 2019, no spec chapter, no require block; matches PR#1587."
+  ],
   "value": "0x4212"
  },
  "CL_DEVICE_MAX_MEM_ALLOC_SIZE": {
@@ -8120,8 +8128,12 @@
  },
  "CL_KERNEL_ARG_HOST_ACCESSIBLE_PIPE_INTEL": {
   "container": "enums.4210",
-  "groups": [],
-  "notes": [],
+  "groups": [
+   "cl_kernel_arg_info"
+  ],
+  "notes": [
+   "manual: PENDING (2026-10-08): Brice \u2014 'Maybe more of an answer to kernel arg type query'; will confirm with Intel colleague 2026-10-09. Current value cl_kernel_arg_info is provisional (his first guess), NOT settled. Allocated #144 2019, no spec chapter, no require block."
+  ],
   "value": "0x4210"
  },
  "CL_KERNEL_ARG_INFO_NOT_AVAILABLE": {
