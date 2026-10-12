@@ -52,6 +52,17 @@ corrected in `group=` and in `manual_overrides.json`.)
 **clCreateContext / clCreateContextFromType `<properties>`** (creation property
 names), not a `clGetContextInfo` query:
 
+**Refinement (re-verified live 2026-10-12 against api/cl_khr_d3d1{0,1}_sharing.asciidoc
+value lists):** the D3D10/D3D11 blocks are **mixed** — only the `..._DEVICE_KHR`
+tokens are creation properties; `CL_CONTEXT_D3D10/11_PREFER_SHARED_RESOURCES_KHR`
+genuinely ARE `cl_context_info` queries (the spec source lists them under
+{cl_context_info_TYPE} on the line right below {cl_context_properties_TYPE} for
+the DEVICE token). Same for the `cl_khr_dx9_media_sharing` block: the
+`CL_CONTEXT_ADAPTER_*_KHR` tokens are dual-role (appear in both the
+creation-properties and context-info lists), which is why our `group=` carries
+`cl_context_info,cl_context_properties`. **When reporting upstream, cite the
+specific tokens, not whole blocks.**
+
 | Extension | Tokens |
 |---|---|
 | cl_intel_dx9_media_sharing | `CL_CONTEXT_D3D9_DEVICE_INTEL`, `CL_CONTEXT_D3D9EX_DEVICE_INTEL`, `CL_CONTEXT_DXVA_DEVICE_INTEL` |
