@@ -610,12 +610,12 @@ server's OpenCL/api-docs repository.
     </enums>
 
     <enums name="Constants.cl_intel_command_queue_families" vendor="Intel" comment="cl_intel_command_queue_families constants, in cl_ext.h">
-        <enum value="64"            name="CL_QUEUE_FAMILY_MAX_NAME_SIZE_INTEL" group="cl_command_queue_info"/>
+        <enum value="64"            name="CL_QUEUE_FAMILY_MAX_NAME_SIZE_INTEL"/>
         <enum value="0"             name="CL_QUEUE_DEFAULT_CAPABILITIES_INTEL" group="cl_command_queue_capabilities_intel"/>
     </enums>
 
     <enums name="Constants.cl_loader_layers" vendor="Khronos" comment="Defined Layer API version, in cl_layer.h">
-        <enum value="100"                        name="CL_LAYER_API_VERSION_100" group="cl_layer_info"/>
+        <enum value="100"                        name="CL_LAYER_API_VERSION_100" group="cl_layer_api_version"/>
         <enum value="((cl_layer_properties)0)"   name="CL_LAYER_PROPERTIES_LIST_END" group="cl_layer_properties"/>
     </enums>
 
@@ -853,10 +853,10 @@ server's OpenCL/api-docs repository.
     </enums>
 
     <enums name="clCommandExecutionStatus" vendor="Khronos">
-        <enum value="0x0"           name="CL_COMPLETE" group="clCommandExecutionStatus"/>
-        <enum value="0x1"           name="CL_RUNNING" group="clCommandExecutionStatus"/>
-        <enum value="0x2"           name="CL_SUBMITTED" group="clCommandExecutionStatus"/>
-        <enum value="0x3"           name="CL_QUEUED" group="clCommandExecutionStatus"/>
+        <enum value="0x0"           name="CL_COMPLETE" group="CommandExecutionStatus"/>
+        <enum value="0x1"           name="CL_RUNNING" group="CommandExecutionStatus"/>
+        <enum value="0x2"           name="CL_SUBMITTED" group="CommandExecutionStatus"/>
+        <enum value="0x3"           name="CL_QUEUED" group="CommandExecutionStatus"/>
             <unused start="0x4" end="9999"/>
     </enums>
 
@@ -1039,7 +1039,7 @@ server's OpenCL/api-docs repository.
 
     <enums name="cl_mem_migration_flags" vendor="Khronos" type="bitmask">
         <enum bitpos="0"            name="CL_MIGRATE_MEM_OBJECT_HOST" group="cl_mem_migration_flags"/>
-        <enum bitpos="0"            name="CL_MIGRATE_MEM_OBJECT_HOST_EXT" group="cl_mem_migration_flags"/>
+        <enum bitpos="0"            name="CL_MIGRATE_MEM_OBJECT_HOST_EXT" group="cl_mem_migration_flags_ext"/>
         <enum bitpos="1"            name="CL_MIGRATE_MEM_OBJECT_CONTENT_UNDEFINED" group="cl_mem_migration_flags"/>
             <unused start="2" end="31"/>
     </enums>
@@ -1092,16 +1092,16 @@ server's OpenCL/api-docs repository.
     </enums>
 
     <enums name="cl_arm_device_svm_capabilities.flags" vendor="Arm" type="bitmask">
-        <enum bitpos="0"            name="CL_DEVICE_SVM_COARSE_GRAIN_BUFFER_ARM" group="cl_arm_device_svm_capabilities.flags"/>
-        <enum bitpos="1"            name="CL_DEVICE_SVM_FINE_GRAIN_BUFFER_ARM" group="cl_arm_device_svm_capabilities.flags"/>
-        <enum bitpos="2"            name="CL_DEVICE_SVM_FINE_GRAIN_SYSTEM_ARM" group="cl_arm_device_svm_capabilities.flags"/>
-        <enum bitpos="3"            name="CL_DEVICE_SVM_ATOMICS_ARM" group="cl_arm_device_svm_capabilities.flags"/>
+        <enum bitpos="0"            name="CL_DEVICE_SVM_COARSE_GRAIN_BUFFER_ARM" group="cl_device_svm_capabilities_arm"/>
+        <enum bitpos="1"            name="CL_DEVICE_SVM_FINE_GRAIN_BUFFER_ARM" group="cl_device_svm_capabilities_arm"/>
+        <enum bitpos="2"            name="CL_DEVICE_SVM_FINE_GRAIN_SYSTEM_ARM" group="cl_device_svm_capabilities_arm"/>
+        <enum bitpos="3"            name="CL_DEVICE_SVM_ATOMICS_ARM" group="cl_device_svm_capabilities_arm"/>
             <unused start="0x10" end="0x80000000"/>
     </enums>
 
     <enums name="cl_arm_svm_alloc.flags" vendor="Arm" type="bitmask">
-        <enum bitpos="10"           name="CL_MEM_SVM_FINE_GRAIN_BUFFER_ARM" group="cl_arm_svm_alloc.flags"/>
-        <enum bitpos="11"           name="CL_MEM_SVM_ATOMICS_ARM" group="cl_arm_svm_alloc.flags"/>
+        <enum bitpos="10"           name="CL_MEM_SVM_FINE_GRAIN_BUFFER_ARM" group="cl_svm_mem_flags_arm"/>
+        <enum bitpos="11"           name="CL_MEM_SVM_ATOMICS_ARM" group="cl_svm_mem_flags_arm"/>
             <unused start="0x4" end="0x80000000"/>
     </enums>
 

@@ -728,9 +728,11 @@ SELF_TESTS = {
     # KHR unified SVM: pointer-info query set vs alloc property set
     "CL_SVM_INFO_BASE_PTR_KHR": {"cl_svm_pointer_info_khr"},
     "CL_SVM_ALLOC_ACCESS_FLAGS_KHR": {"cl_svm_alloc_properties_khr"},
-    # command execution status value set (registry name)
-    "CL_COMPLETE": {"clCommandExecutionStatus"},
-    "CL_RUNNING": {"clCommandExecutionStatus"},    # QCOM host-ptr values -> host_ptr-struct group (2026-10-08 adjudication)
+    # command execution status value set (renamed per PR#1636 review:
+    # clCommandExecutionStatus read like a function name -> CommandExecutionStatus)
+    "CL_COMPLETE": {"CommandExecutionStatus"},
+    "CL_RUNNING": {"CommandExecutionStatus"},
+    # QCOM host-ptr values -> host_ptr-struct group (2026-10-08 adjudication)
     "CL_MEM_HOST_UNCACHED_QCOM": {"cl_mem_ext_host_ptr"},
     "CL_MEM_HOST_WRITEBACK_QCOM": {"cl_mem_ext_host_ptr"},
     "CL_MEM_HOST_WRITETHROUGH_QCOM": {"cl_mem_ext_host_ptr"},

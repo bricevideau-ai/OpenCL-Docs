@@ -9,8 +9,8 @@ when a value is valid in several sets.
 ## Coverage
 
 - Total `<enum>` entries in cl.xml: **1334**
-- Assigned one or more groups: **1316**
-- Left ungrouped: **18** (GL precedent: gl.xml leaves ~12,000 of 15,392 ungrouped;
+- Assigned one or more groups: **1315**
+- Left ungrouped: **19** (GL precedent: gl.xml leaves ~12,000 of 15,392 ungrouped;
   ungrouped = platform constants, opaque-handle values, and other context-dependent values
   whose meaning is defined by the API call site rather than by a named value set)
 - Multi-group values: **21** (e.g. ['cl_queue_properties', 'cl_queue_properties_khr'])
@@ -41,17 +41,17 @@ when a value is valid in several sets.
 | `CL_MEM_ALLOC_FLAGS_INTEL` | `cl_mem_info_intel, cl_mem_properties_intel` | spec evidence [cl_mem_properties_intel] G4 typedef+define / spec evidence [cl_mem_info_intel] value cell col0 (List of supported param_names by clGetMemAllocInf |
 | `CL_QUEUE_COMPUTE_UNIT_LIMIT_ARM` | `cl_queue_properties, cl_queue_properties_khr` | manual: cl_arm_scheduling_controls (spec in repo, extensions/cl_arm_scheduling_controls.asciidoc L79): 'Accepted value for the _properties_ parameter to clCreat |
 | `CL_QUEUE_DEFERRED_FLUSH_ARM` | `cl_queue_properties, cl_queue_properties_khr` | manual: cl_arm_scheduling_controls (spec in repo, extensions/cl_arm_scheduling_controls.asciidoc L79): 'Accepted value for the _properties_ parameter to clCreat |
-| `CL_QUEUE_FAMILY_INTEL` | `cl_command_queue_info, cl_queue_properties, cl_queue_properties_khr` | spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties by clC) / spec evidence [cl_command_queue_info] G4 sent |
-| `CL_QUEUE_INDEX_INTEL` | `cl_command_queue_info, cl_queue_properties, cl_queue_properties_khr` | spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties by clC) / spec evidence [cl_command_queue_info] G4 sent |
+| `CL_QUEUE_FAMILY_INTEL` | `cl_command_queue_info, cl_queue_properties, cl_queue_properties_khr` | spec evidence [cl_command_queue_info] G4 sentence+define / spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation propert |
+| `CL_QUEUE_INDEX_INTEL` | `cl_command_queue_info, cl_queue_properties, cl_queue_properties_khr` | spec evidence [cl_command_queue_info] G4 sentence+define / spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation propert |
 | `CL_QUEUE_JOB_SLOT_ARM` | `cl_queue_properties, cl_queue_properties_khr` | manual: arm scheduler extension: require comment cl_queue_properties for CL_QUEUE_JOB_SLOT_ARM + companion CL_DEVICE_JOB_SLOTS_ARM under cl_device_info (creatio |
 | `CL_QUEUE_KERNEL_BATCHING_ARM` | `cl_queue_properties, cl_queue_properties_khr` | manual: cl_arm_scheduling_controls (spec in repo, extensions/cl_arm_scheduling_controls.asciidoc L79): 'Accepted value for the _properties_ parameter to clCreat |
-| `CL_QUEUE_PRIORITY_KHR` | `cl_queue_properties, cl_queue_properties_khr` | manual: OpenCL 3.0 spec, api/opencl_runtime_layer.asciidoc: queue-properties-table (clCreateCommandQueueWithProperties) lists CL_QUEUE_PRIORITY_KHR (property va |
+| `CL_QUEUE_PRIORITY_KHR` | `cl_queue_properties, cl_queue_properties_khr` | spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties by {cl) / manual: OpenCL 3.0 spec, api/opencl_runtime_l |
 | `CL_QUEUE_PROPERTIES` | `cl_command_queue_info, cl_queue_properties, cl_queue_properties_khr` | manual: OpenCL 3.0 spec, api/opencl_runtime_layer.asciidoc: CL_QUEUE_PROPERTIES and CL_QUEUE_SIZE appear in BOTH the queue-properties-table (creation property n |
 | `CL_QUEUE_SIZE` | `cl_command_queue_info, cl_queue_properties, cl_queue_properties_khr` | manual: OpenCL 3.0 spec, api/opencl_runtime_layer.asciidoc: CL_QUEUE_PROPERTIES and CL_QUEUE_SIZE appear in BOTH the queue-properties-table (creation property n |
-| `CL_QUEUE_THROTTLE_KHR` | `cl_queue_properties, cl_queue_properties_khr` | manual: OpenCL 3.0 spec, api/opencl_runtime_layer.asciidoc: queue-properties-table (clCreateCommandQueueWithProperties) lists CL_QUEUE_PRIORITY_KHR (property va |
-| `CL_SAMPLER_ADDRESSING_MODE` | `cl_sampler_info, cl_sampler_properties` | spec evidence [cl_sampler_info] value cell col0 (List of supported param_names by {clGetSamplerInfo) / spec evidence [cl_sampler_properties] value cell col0 (Li |
-| `CL_SAMPLER_FILTER_MODE` | `cl_sampler_info, cl_sampler_properties` | spec evidence [cl_sampler_info] value cell col0 (List of supported param_names by {clGetSamplerInfo) / spec evidence [cl_sampler_properties] value cell col0 (Li |
-| `CL_SAMPLER_NORMALIZED_COORDS` | `cl_sampler_info, cl_sampler_properties` | spec evidence [cl_sampler_info] value cell col0 (List of supported param_names by {clGetSamplerInfo) / spec evidence [cl_sampler_properties] value cell col0 (Li |
+| `CL_QUEUE_THROTTLE_KHR` | `cl_queue_properties, cl_queue_properties_khr` | spec evidence [cl_command_queue_properties] value cell col0 (List of supported queue creation properties by {cl) / manual: OpenCL 3.0 spec, api/opencl_runtime_l |
+| `CL_SAMPLER_ADDRESSING_MODE` | `cl_sampler_info, cl_sampler_properties` | spec evidence [cl_sampler_properties] value cell col0 (List of supported sampler creation properties by {) / spec evidence [cl_sampler_info] value cell col0 (Li |
+| `CL_SAMPLER_FILTER_MODE` | `cl_sampler_info, cl_sampler_properties` | spec evidence [cl_sampler_properties] value cell col0 (List of supported sampler creation properties by {) / spec evidence [cl_sampler_info] value cell col0 (Li |
+| `CL_SAMPLER_NORMALIZED_COORDS` | `cl_sampler_info, cl_sampler_properties` | spec evidence [cl_sampler_properties] value cell col0 (List of supported sampler creation properties by {) / spec evidence [cl_sampler_info] value cell col0 (Li |
 
 ## Full assignment table
 
@@ -303,7 +303,7 @@ when a value is valid in several sets.
 | `CL_COMMAND_WRITE_IMAGE` | cl_device_info | `cl_command_type` | spec evidence [cl_command_type] event-type col1-of-fn (List of supported event command types) |
 | `CL_COMPILER_NOT_AVAILABLE` | ErrorCodes.0 | `ErrorCode` | R3 cl.xml ErrorCodes container (GL precedent group=ErrorCode; spec: same set as API return values) |
 | `CL_COMPILE_PROGRAM_FAILURE` | ErrorCodes.0 | `ErrorCode` | R3 cl.xml ErrorCodes container (GL precedent group=ErrorCode; spec: same set as API return values) |
-| `CL_COMPLETE` | clCommandExecutionStatus | `clCommandExecutionStatus` | manual: core command-execution-status value set of clGetEventInfo/CL_EVENT_COMMAND_EXECUTION_STATUS (registry type clCommandExecutionStatus; + cl_img_ |
+| `CL_COMPLETE` | clCommandExecutionStatus | `CommandExecutionStatus` | manual: Pull request #1636 review feedback (bashbaug/Kerilk, applied by Brice via GitHub web UI 2026-10-20); synced to provenance branch 2026-10-20. b |
 | `CL_CONTEXT_ADAPTER_D3D9EX_KHR` | enums.2000 | `cl_context_info`, `cl_context_properties` | spec evidence [cl_context_info] G3 new-enums list; spec evidence [cl_context_properties] value cell col0 (List of supported context creation propertie |
 | `CL_CONTEXT_ADAPTER_D3D9_KHR` | enums.2000 | `cl_context_info`, `cl_context_properties` | spec evidence [cl_context_info] G3 new-enums list; spec evidence [cl_context_properties] value cell col0 (List of supported context creation propertie |
 | `CL_CONTEXT_ADAPTER_DXVA_KHR` | enums.2000 | `cl_context_info`, `cl_context_properties` | spec evidence [cl_context_info] G3 new-enums list; spec evidence [cl_context_properties] value cell col0 (List of supported context creation propertie |
@@ -627,15 +627,15 @@ when a value is valid in several sets.
 | `CL_DEVICE_SUB_GROUP_SIZES_INTEL` | enums.4100 | `cl_device_info` | manual: cl_intel_required_subgroup_size L102-112 Additions to Table 4.3 cl_device_info |
 | `CL_DEVICE_SUPPORTED_REGISTER_ALLOCATIONS_ARM` | enums.41E0 | `cl_device_info` | manual: cl_arm_scheduling_controls L49-66 param_name of clGetDeviceInfo |
 | `CL_DEVICE_SVM_ATOMICS` | cl_device_svm_capabilities | `cl_device_svm_capabilities` | R1 C typedef container cl_device_svm_capabilities (container-declared) |
-| `CL_DEVICE_SVM_ATOMICS_ARM` | cl_arm_device_svm_capabilities.flags | `cl_arm_device_svm_capabilities.flags` | R1 C typedef container cl_arm_device_svm_capabilities.flags (container-declared) |
+| `CL_DEVICE_SVM_ATOMICS_ARM` | cl_arm_device_svm_capabilities.flags | `cl_device_svm_capabilities_arm` | manual: Pull request #1636 review feedback (bashbaug/Kerilk, applied by Brice via GitHub web UI 2026-10-20); synced to provenance branch 2026-10-20. b |
 | `CL_DEVICE_SVM_CAPABILITIES` | cl_device_info | `cl_device_info` | spec evidence [cl_device_info] value cell col0 (List of supported param_names by {clGetDeviceInfo}) |
 | `CL_DEVICE_SVM_CAPABILITIES_ARM` | enums.40B0 | `cl_device_info` | manual: /regspec/all/arm/cl_arm_shared_virtual_memory.txt — Flag values returned by clGetDeviceInfo with [verified vs KhronosGroup/OpenCL-Registry 202 |
 | `CL_DEVICE_SVM_COARSE_GRAIN_BUFFER` | cl_device_svm_capabilities | `cl_device_svm_capabilities` | R1 C typedef container cl_device_svm_capabilities (container-declared) |
-| `CL_DEVICE_SVM_COARSE_GRAIN_BUFFER_ARM` | cl_arm_device_svm_capabilities.flags | `cl_arm_device_svm_capabilities.flags` | R1 C typedef container cl_arm_device_svm_capabilities.flags (container-declared) |
+| `CL_DEVICE_SVM_COARSE_GRAIN_BUFFER_ARM` | cl_arm_device_svm_capabilities.flags | `cl_device_svm_capabilities_arm` | manual: Pull request #1636 review feedback (bashbaug/Kerilk, applied by Brice via GitHub web UI 2026-10-20); synced to provenance branch 2026-10-20. b |
 | `CL_DEVICE_SVM_FINE_GRAIN_BUFFER` | cl_device_svm_capabilities | `cl_device_svm_capabilities` | R1 C typedef container cl_device_svm_capabilities (container-declared) |
-| `CL_DEVICE_SVM_FINE_GRAIN_BUFFER_ARM` | cl_arm_device_svm_capabilities.flags | `cl_arm_device_svm_capabilities.flags` | R1 C typedef container cl_arm_device_svm_capabilities.flags (container-declared) |
+| `CL_DEVICE_SVM_FINE_GRAIN_BUFFER_ARM` | cl_arm_device_svm_capabilities.flags | `cl_device_svm_capabilities_arm` | manual: Pull request #1636 review feedback (bashbaug/Kerilk, applied by Brice via GitHub web UI 2026-10-20); synced to provenance branch 2026-10-20. b |
 | `CL_DEVICE_SVM_FINE_GRAIN_SYSTEM` | cl_device_svm_capabilities | `cl_device_svm_capabilities` | R1 C typedef container cl_device_svm_capabilities (container-declared) |
-| `CL_DEVICE_SVM_FINE_GRAIN_SYSTEM_ARM` | cl_arm_device_svm_capabilities.flags | `cl_arm_device_svm_capabilities.flags` | R1 C typedef container cl_arm_device_svm_capabilities.flags (container-declared) |
+| `CL_DEVICE_SVM_FINE_GRAIN_SYSTEM_ARM` | cl_arm_device_svm_capabilities.flags | `cl_device_svm_capabilities_arm` | manual: Pull request #1636 review feedback (bashbaug/Kerilk, applied by Brice via GitHub web UI 2026-10-20); synced to provenance branch 2026-10-20. b |
 | `CL_DEVICE_SVM_TYPE_CAPABILITIES_KHR` | cl_device_info | `cl_device_info` | manual: cl_khr_unified_svm param_name of clGetDeviceInfo; cl_device_info mega-container token; no spec value-set found — left ungrouped |
 | `CL_DEVICE_TERMINATE_CAPABILITY_CONTEXT_KHR` | cl_device_terminate_capability_khr | `cl_device_terminate_capability_khr` | R1 C typedef container cl_device_terminate_capability_khr (spec-listed) |
 | `CL_DEVICE_TERMINATE_CAPABILITY_KHR` | enums.2000 | `cl_device_info` | spec evidence [cl_device_info] G3 new-enums list |
@@ -919,7 +919,7 @@ when a value is valid in several sets.
 | `CL_KHRONOS_VENDOR_ID_CODEPLAY` | cl_khronos_vendor_id | `cl_khronos_vendor_id` | R1 C typedef container cl_khronos_vendor_id (container-declared) |
 | `CL_KHRONOS_VENDOR_ID_POCL` | cl_khronos_vendor_id | `cl_khronos_vendor_id` | R1 C typedef container cl_khronos_vendor_id (container-declared) |
 | `CL_LAYER_API_VERSION` | enums.4240 | `cl_layer_info` | manual: extensions/cl_loader_layers.asciidoc L91-97: 'Accepted as _param_name_ to the function *clGetLayerInfo*' (L95 #define CL_LAYER_API_VERSION 0x4 |
-| `CL_LAYER_API_VERSION_100` | Constants.cl_loader_layers | `cl_layer_info` | manual: extensions/cl_loader_layers.asciidoc L100-110: 'Returned by *clGetLayerInfo* when supplied CL_LAYER_API_VERSION and the corresponding layer im |
+| `CL_LAYER_API_VERSION_100` | Constants.cl_loader_layers | `cl_layer_api_version` | manual: Pull request #1636 review feedback (bashbaug/Kerilk, applied by Brice via GitHub web UI 2026-10-20); synced to provenance branch 2026-10-20. K |
 | `CL_LAYER_NAME` | enums.4240 | `cl_layer_info` | manual: extensions/cl_loader_layers.asciidoc L91-97: same 'Accepted as _param_name_ to *clGetLayerInfo*' block (L96 #define CL_LAYER_NAME 0x4241). Cro |
 | `CL_LAYER_PROPERTIES_LIST_END` | Constants.cl_loader_layers | `cl_layer_properties` | manual: cl_loader_layers L117 'CL_LAYER_PROPERTIES_LIST_END ((cl_layer_properties)0)' list terminator; L239-240 'list is terminated with CL_LAYER_PROP |
 | `CL_LINKER_NOT_AVAILABLE` | ErrorCodes.0 | `ErrorCode` | R3 cl.xml ErrorCodes container (GL precedent group=ErrorCode; spec: same set as API return values) |
@@ -1016,9 +1016,9 @@ when a value is valid in several sets.
 | `CL_MEM_RESERVED3_QCOM` | cl_mem_flags | `cl_mem_flags` | R1 C typedef container cl_mem_flags (container-declared) |
 | `CL_MEM_SIZE` | cl_device_info | `cl_mem_info` | spec evidence [cl_mem_info] value cell col0 (List of supported param_names by {clGetMemObjectIn) |
 | `CL_MEM_SVM_ATOMICS` | cl_mem_flags | `cl_mem_flags` | R1 C typedef container cl_mem_flags (spec-listed) |
-| `CL_MEM_SVM_ATOMICS_ARM` | cl_arm_svm_alloc.flags | `cl_arm_svm_alloc.flags` | R1 C typedef container cl_arm_svm_alloc.flags (container-declared) |
+| `CL_MEM_SVM_ATOMICS_ARM` | cl_arm_svm_alloc.flags | `cl_svm_mem_flags_arm` | manual: Pull request #1636 review feedback (bashbaug/Kerilk, applied by Brice via GitHub web UI 2026-10-20); synced to provenance branch 2026-10-20. b |
 | `CL_MEM_SVM_FINE_GRAIN_BUFFER` | cl_mem_flags | `cl_mem_flags` | R1 C typedef container cl_mem_flags (spec-listed) |
-| `CL_MEM_SVM_FINE_GRAIN_BUFFER_ARM` | cl_arm_svm_alloc.flags | `cl_arm_svm_alloc.flags` | R1 C typedef container cl_arm_svm_alloc.flags (container-declared) |
+| `CL_MEM_SVM_FINE_GRAIN_BUFFER_ARM` | cl_arm_svm_alloc.flags | `cl_svm_mem_flags_arm` | manual: Pull request #1636 review feedback (bashbaug/Kerilk, applied by Brice via GitHub web UI 2026-10-20); synced to provenance branch 2026-10-20. b |
 | `CL_MEM_TYPE` | cl_device_info | `cl_mem_info` | spec evidence [cl_mem_info] value cell col0 (List of supported param_names by {clGetMemObjectIn) |
 | `CL_MEM_TYPE_DEVICE_INTEL` | enums.4190 | `cl_unified_shared_memory_type_intel` | spec evidence [cl_unified_shared_memory_type_intel] G4 typedef+define |
 | `CL_MEM_TYPE_HOST_INTEL` | enums.4190 | `cl_unified_shared_memory_type_intel` | spec evidence [cl_unified_shared_memory_type_intel] G4 typedef+define |
@@ -1082,7 +1082,7 @@ when a value is valid in several sets.
 | `CL_ME_VERSION_LEGACY_INTEL` | cl_intel_advanced_motion_estimation.device_me_version | `cl_intel_advanced_motion_estimation.device_me_version` | R1 C typedef container cl_intel_advanced_motion_estimation.device_me_version (container-declared) |
 | `CL_MIGRATE_MEM_OBJECT_CONTENT_UNDEFINED` | cl_mem_migration_flags | `cl_mem_migration_flags` | R1 C typedef container cl_mem_migration_flags (spec-listed) |
 | `CL_MIGRATE_MEM_OBJECT_HOST` | cl_mem_migration_flags | `cl_mem_migration_flags` | R1 C typedef container cl_mem_migration_flags (spec-listed) |
-| `CL_MIGRATE_MEM_OBJECT_HOST_EXT` | cl_mem_migration_flags | `cl_mem_migration_flags` | R1 C typedef container cl_mem_migration_flags (container-declared) |
+| `CL_MIGRATE_MEM_OBJECT_HOST_EXT` | cl_mem_migration_flags | `cl_mem_migration_flags_ext` | manual: Pull request #1636 review feedback (bashbaug/Kerilk, applied by Brice via GitHub web UI 2026-10-20); synced to provenance branch 2026-10-20. b |
 | `CL_MIPMAP_FILTER_ANY_IMG` | cl_mipmap_filter_mode_img | `cl_mipmap_filter_mode_img` | R1 C typedef container cl_mipmap_filter_mode_img (container-declared) |
 | `CL_MIPMAP_FILTER_BOX_IMG` | cl_mipmap_filter_mode_img | `cl_mipmap_filter_mode_img` | R1 C typedef container cl_mipmap_filter_mode_img (container-declared) |
 | `CL_MISALIGNED_SUB_BUFFER_OFFSET` | ErrorCodes.0 | `ErrorCode` | R3 cl.xml ErrorCodes container (GL precedent group=ErrorCode; spec: same set as API return values) |
@@ -1209,7 +1209,7 @@ when a value is valid in several sets.
 | `CL_PROGRAM_SCOPE_GLOBAL_DTORS_PRESENT` | cl_device_info | `cl_program_info` | spec evidence [cl_program_info] value cell col0 (List of supported param_names by {clGetProgramInfo) |
 | `CL_PROGRAM_SOURCE` | cl_device_info | `cl_program_info` | spec evidence [cl_program_info] value cell col0 (List of supported param_names by {clGetProgramInfo) |
 | `CL_PROPERTIES_LIST_END_EXT` | MiscNumbers | `cl_device_partition_property_ext` | manual: cl.xml declares two DISTINCT partition-property types (lines 136/171): typedef cl_ulong cl_device_partition_property_ext (EXT 1.1 list) vs typ |
-| `CL_QUEUED` | clCommandExecutionStatus | `clCommandExecutionStatus` | manual: core command-execution-status value set of clGetEventInfo/CL_EVENT_COMMAND_EXECUTION_STATUS (registry type clCommandExecutionStatus; + cl_img_ |
+| `CL_QUEUED` | clCommandExecutionStatus | `CommandExecutionStatus` | manual: Pull request #1636 review feedback (bashbaug/Kerilk, applied by Brice via GitHub web UI 2026-10-20); synced to provenance branch 2026-10-20. b |
 | `CL_QUEUE_CAPABILITY_BARRIER_INTEL` | cl_command_queue_capabilities_intel | `cl_command_queue_capabilities_intel` | R1 C typedef container cl_command_queue_capabilities_intel (container-declared) |
 | `CL_QUEUE_CAPABILITY_CREATE_CROSS_QUEUE_EVENTS_INTEL` | cl_command_queue_capabilities_intel | `cl_command_queue_capabilities_intel` | R1 C typedef container cl_command_queue_capabilities_intel (container-declared) |
 | `CL_QUEUE_CAPABILITY_CREATE_SINGLE_QUEUE_EVENTS_INTEL` | cl_command_queue_capabilities_intel | `cl_command_queue_capabilities_intel` | R1 C typedef container cl_command_queue_capabilities_intel (container-declared) |
@@ -1233,7 +1233,7 @@ when a value is valid in several sets.
 | `CL_QUEUE_DEVICE` | cl_device_info | `cl_command_queue_info` | spec evidence [cl_command_queue_info] value cell col0 (List of supported param_names by {clGetCommandQueu) |
 | `CL_QUEUE_DEVICE_DEFAULT` | cl_device_info | `cl_command_queue_info` | spec evidence [cl_command_queue_info] value cell col0 (List of supported param_names by {clGetCommandQueu) |
 | `CL_QUEUE_FAMILY_INTEL` | enums.4180 | `cl_command_queue_info`, `cl_queue_properties`, `cl_queue_properties_khr` | manual: cl_intel_command_queue_families: Table 8 (clCreateCommandQueueWithProperties creation properties) + Table 9 (Add to clGetCommandQueueInfo para |
-| `CL_QUEUE_FAMILY_MAX_NAME_SIZE_INTEL` | Constants.cl_intel_command_queue_families | `cl_command_queue_info` | spec evidence [cl_command_queue_info] G4 sentence+define |
+| `CL_QUEUE_FAMILY_MAX_NAME_SIZE_INTEL` | Constants.cl_intel_command_queue_families | — (ungrouped, GL precedent) | manual: Pull request #1636 review feedback (bashbaug/Kerilk, applied by Brice via GitHub web UI 2026-10-20); synced to provenance branch 2026-10-20. m |
 | `CL_QUEUE_INDEX_INTEL` | enums.4180 | `cl_command_queue_info`, `cl_queue_properties`, `cl_queue_properties_khr` | manual: cl_intel_command_queue_families: Table 8 (clCreateCommandQueueWithProperties creation properties) + Table 9 (Add to clGetCommandQueueInfo para |
 | `CL_QUEUE_JOB_SLOT_ARM` | enums.41E0 | `cl_queue_properties`, `cl_queue_properties_khr` | manual: arm scheduler extension: require comment cl_queue_properties for CL_QUEUE_JOB_SLOT_ARM + companion CL_DEVICE_JOB_SLOTS_ARM under cl_device_inf |
 | `CL_QUEUE_KERNEL_BATCHING_ARM` | enums.41E0 | `cl_queue_properties`, `cl_queue_properties_khr` | manual: cl_arm_scheduling_controls (spec in repo, extensions/cl_arm_scheduling_controls.asciidoc L79): 'Accepted value for the _properties_ parameter  |
@@ -1265,7 +1265,7 @@ when a value is valid in several sets.
 | `CL_RGBA` | cl_device_info | `cl_channel_order` | spec evidence [cl_channel_order] value cell col0 (List of supported Image Channel Order Values) |
 | `CL_RGBx` | cl_device_info | `cl_channel_order` | manual: core spec image channel order value set; appendix_e 'Optional image formats'; cl_device_info mega-container token; no spec value-set found — l |
 | `CL_RGx` | cl_device_info | `cl_channel_order` | manual: core spec image channel order value set; appendix_e 'Optional image formats'; cl_device_info mega-container token; no spec value-set found — l |
-| `CL_RUNNING` | clCommandExecutionStatus | `clCommandExecutionStatus` | manual: core command-execution-status value set of clGetEventInfo/CL_EVENT_COMMAND_EXECUTION_STATUS (registry type clCommandExecutionStatus; + cl_img_ |
+| `CL_RUNNING` | clCommandExecutionStatus | `CommandExecutionStatus` | manual: Pull request #1636 review feedback (bashbaug/Kerilk, applied by Brice via GitHub web UI 2026-10-20); synced to provenance branch 2026-10-20. b |
 | `CL_Rx` | cl_device_info | `cl_channel_order` | manual: core spec image channel order value set; appendix_e 'Optional image formats'; cl_device_info mega-container token; no spec value-set found — l |
 | `CL_SAFETY_FAULT_IMG` | ErrorCodes.1122 | `ErrorCode` | R3 cl.xml ErrorCodes container (GL precedent group=ErrorCode; spec: same set as API return values) |
 | `CL_SAMPLER_ADDRESSING_MODE` | cl_device_info | `cl_sampler_info`, `cl_sampler_properties` | spec evidence [cl_sampler_info] value cell col0 (List of supported param_names by {clGetSamplerInfo); spec evidence [cl_sampler_properties] value cell |
@@ -1308,7 +1308,7 @@ when a value is valid in several sets.
 | `CL_SNORM_INT16` | cl_device_info | `cl_channel_type` | spec evidence [cl_channel_type] value cell col0 (List of supported Image Channel Data Types) |
 | `CL_SNORM_INT8` | cl_device_info | `cl_channel_type` | spec evidence [cl_channel_type] value cell col0 (List of supported Image Channel Data Types) |
 | `CL_STRUCTURE_TYPE_MUTABLE_DISPATCH_CONFIG_KHR` | cl_command_buffer_update_type_khr | `cl_command_buffer_update_type_khr` | R1 C typedef container cl_command_buffer_update_type_khr (spec-listed) |
-| `CL_SUBMITTED` | clCommandExecutionStatus | `clCommandExecutionStatus` | manual: core command-execution-status value set of clGetEventInfo/CL_EVENT_COMMAND_EXECUTION_STATUS (registry type clCommandExecutionStatus; + cl_img_ |
+| `CL_SUBMITTED` | clCommandExecutionStatus | `CommandExecutionStatus` | manual: Pull request #1636 review feedback (bashbaug/Kerilk, applied by Brice via GitHub web UI 2026-10-20); synced to provenance branch 2026-10-20. b |
 | `CL_SUCCESS` | ErrorCodes.0 | `ErrorCode` | R3 cl.xml ErrorCodes container (GL precedent group=ErrorCode; spec: same set as API return values) |
 | `CL_SVM_ALLOC_ACCESS_DEVICE_NOREAD_KHR` | cl_svm_alloc_access_flags_khr | `cl_svm_alloc_access_flags_khr` | R1 C typedef container cl_svm_alloc_access_flags_khr (container-declared) |
 | `CL_SVM_ALLOC_ACCESS_DEVICE_NOWRITE_KHR` | cl_svm_alloc_access_flags_khr | `cl_svm_alloc_access_flags_khr` | R1 C typedef container cl_svm_alloc_access_flags_khr (container-declared) |
